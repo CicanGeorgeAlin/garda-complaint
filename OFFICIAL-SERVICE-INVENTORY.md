@@ -628,3 +628,63 @@ The master route record should now contain these distinct fields:
 - source_conflict
 - notes
 
+
+
+## Audit 09 — crime-reporting boundaries and emergency safeguards
+
+### Online crime reporting is not a universal crime-reporting form
+Current Garda online-crime guidance identifies categories that must not use the online declaration, including:
+- burglary / attempted burglary;
+- stolen / attempted stolen vehicle;
+- robbery involving force or threat;
+- violent crime;
+- stolen firearm;
+- emergencies.
+
+The public engine must therefore ask about the nature and urgency of the incident before displaying the online declaration.
+
+Source:
+https://www.garda.ie/en/about-us/online-services/online-crime-reporting/
+
+### Theft declaration
+The current specific Garda theft-declaration page states that the online declaration is for theft of property not exceeding €1,000 and for thefts occurring in Ireland, excluding Northern Ireland.
+
+The engine must not treat this as a general-purpose crime form.
+
+Source:
+https://www.garda.ie/en/about-us/online-services/theft-declaration/
+
+### General reporting route
+Where no specific online declaration applies, Garda guidance directs people toward local Garda stations/contact routes. The engine should therefore provide:
+- the online route when eligible;
+- otherwise the appropriate station/contact route;
+- emergency escalation when the facts indicate immediate danger.
+
+### Evidence preservation
+The website should advise users to preserve original evidence and avoid unnecessarily editing/overwriting original files, while avoiding instructions that could interfere with an active investigation.
+
+### Emergency override
+No matter which category a user initially selects, an immediate-danger answer must override the ordinary route and direct to 999/112.
+
+## Audit 09 — routing test cases
+
+The future engine should be tested against at least these cases:
+
+1. "Someone is attacking me now" → emergency.
+2. "I saw dangerous driving but nobody is in immediate danger" → Traffic Watch/appropriate traffic route.
+3. "My phone was stolen for €700" → eligible theft-declaration branch, subject to current form conditions.
+4. "My car was stolen" → not the online theft declaration; local Garda reporting route/emergency depending on circumstances.
+5. "A Garda member behaved improperly toward me" → Fiosrú complaint branch.
+6. "I want all personal data Gardaí hold about me" → F20/data-access branch.
+7. "I want Garda HR records" → FOI branch, subject to FOI scope/exemptions.
+8. "I want environmental information held by Garda" → AIE branch.
+9. "I received a Fiosrú inadmissibility decision" → statutory-review branch.
+10. "I received an FCN and want it cancelled" → FCN cancellation/review branch.
+11. "I need a firearm certificate" → firearms application branch.
+12. "I need an Age Card" → National Age Card branch.
+13. "I need a Police Certificate for an overseas purpose" → Police Certificate eligibility branch.
+14. "I need Garda Vetting for a job" → registered-organisation/eVetting branch.
+15. "I need an abnormal-load permit" → multi-authority/local-authority branch.
+
+These are routing tests, not legal advice. Each must be rechecked whenever the underlying official source changes.
+
