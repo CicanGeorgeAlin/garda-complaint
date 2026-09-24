@@ -890,7 +890,7 @@
       "status": "verified_current",
       "official_info_url": "https://www.fiosru.ie/complaints/statutory-review/",
       "official_submission_url": "https://www.fiosru.ie/complaints/statutory-review/",
-      "form_url": null,
+      "form_url": "https://www.fiosru.ie/media/hrwb5atp/v8-review-request-form-discontinue.pdf",
       "authority_role": [
         "entry_point",
         "review_body"
@@ -906,7 +906,7 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the discontinuance decision; extensions may be considered for good reason.",
       "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú.",
-      "conflict_note": "Fiosrú states statutory review covers inadmissible or discontinued complaints. No unverified direct PDF URL is published."
+      "conflict_note": "Official Fiosrú discontinuance review form verified 24 September 2026. Review normally requested within 28 days; good reasons may support extra time."
     },
     {
       "route_id": "crime_online_router",
@@ -982,5 +982,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified Fiosru statutory-review routing; removed unverified discontinuance PDF placeholder."
+  "generated_scope": "Verified direct Fiosru discontinuance review PDF and aligned route metadata with current statutory-review guidance."
 }
