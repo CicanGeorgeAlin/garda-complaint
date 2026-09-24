@@ -198,33 +198,33 @@
     {
       "route_id": "foi",
       "category": "information",
-      "citizen_question": "I want administrative records held by Gardaí",
-      "route_type": "foi_request",
-      "authority": "An Garda Síochána FOI Office",
+      "citizen_question": "I want records or administrative information from Gardaí",
+      "route_type": "freedom_of_information",
+      "authority": "An Garda Síochána FOI Unit",
       "status": "verified_current_with_conflict",
-      "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/",
+      "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/",
       "notes": "Current Garda sources describe response timing differently; preserve source-specific wording.",
       "authority_role": [
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Make an FOI request for records within the FOI regime.",
+      "purpose_plain": "Route qualifying requests for Garda administrative records under FOI.",
       "eligibility": "Subject to the Freedom of Information Act and exemptions; Garda identifies administrative areas including HR, Finance and Procurement.",
       "submission_method": [
-        "email",
-        "post"
+        "written",
+        "email"
       ],
       "form_url": "https://www.garda.ie/en/Information-centre/Freedom-of-Information/Freedom-of-Information/FOI-Application-Form1.pdf",
-      "geographic_scope": "Ireland / Garda records within FOI scope",
-      "conflict_note": "Current Garda pages describe response timing differently; do not hard-code one universal deadline.",
-      "next_steps": "Identify the records sought and request access under FOI."
+      "geographic_scope": "Ireland / records within FOI scope",
+      "conflict_note": "Current Garda pages/forms contain differing response-time wording; do not hard-code one universal deadline without qualification.",
+      "next_steps": "Check whether the information is within Garda's current FOI administrative scope and use the official application route."
     },
     {
       "route_id": "aie",
       "category": "information",
       "citizen_question": "I want environmental information held by Gardaí",
-      "route_type": "environmental_information_request",
-      "authority": "An Garda Síochána FOI Office",
+      "route_type": "access_to_environmental_information",
+      "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/how-do-i-make-a-request-for-information-on-the-environment-.html",
       "notes": "AIE is distinct from FOI.",
@@ -232,14 +232,14 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Request environmental information under the AIE regime.",
+      "purpose_plain": "Route environmental-information requests under the separate AIE regime rather than ordinary FOI.",
       "eligibility": "Subject to the AIE Regulations and applicable exceptions.",
       "submission_method": [
-        "email",
-        "post"
+        "written",
+        "email"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "The request is processed under the AIE regime."
+      "next_steps": "Describe the environmental information sought, provide contact details and state the preferred format."
     },
     {
       "route_id": "police_certificate",
@@ -670,22 +670,24 @@
     {
       "route_id": "data_access_router",
       "category": "information",
-      "citizen_question": "I want information or records from Gardaí, but I'm not sure which legal route I need",
-      "route_type": "information_router",
-      "authority": "An Garda Síochána",
+      "citizen_question": "I want to see, correct or understand personal information Gardaí hold about me",
+      "route_type": "data_access_router",
+      "authority": "An Garda Síochána Data Protection Unit",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
       "authority_role": [
         "information_router"
       ],
-      "purpose_plain": "Choose the correct access route based on what kind of information the person wants.",
+      "purpose_plain": "Separate personal-data access/correction questions from FOI and environmental-information requests.",
       "eligibility": "Depends on whether the request concerns the person's personal data, administrative records, environmental information, or another category.",
       "emergency_rule": "Not an emergency service.",
       "submission_method": [
-        "route_to_specialist_access_process"
+        "written",
+        "email"
       ],
-      "geographic_scope": "Ireland",
-      "next_steps": "Personal data → GDPR/Data Protection access route; administrative records → FOI; environmental information → AIE; otherwise check the relevant Garda information/service route."
+      "geographic_scope": "Ireland / Garda-held personal data",
+      "next_steps": "Explain the data-right sought, then use the Garda Data Protection route and its current form/contact instructions.",
+      "conflict_note": "Do not present FOI as the route for a person's own personal-data access request when the Data Protection route applies."
     },
     {
       "route_id": "emergency_sms_112",
@@ -963,5 +965,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Added dedicated Fiosru complaint pre-screening route for ordinary-language citizen entry."
+  "generated_scope": "Strengthened information-access triage: personal data vs FOI vs environmental information."
 }
