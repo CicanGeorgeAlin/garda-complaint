@@ -681,12 +681,13 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
       "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts.",
-      "source_verified": "Official Fiosrú statutory review guidance and review form checked 24 September 2026",
+      "source_verified": "Official Fiosrú source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "form_url": "https://www.fiosru.ie/media/vjnmvxnl/v8-review-request-form-inadmissibility.pdf",
       "conflict_note": "Official Fiosrú review guidance provides a downloadable review form and confirms email/post submission. A separate discontinuance form is used where applicable; the website should select the form based on the decision received.",
       "legal_basis": "Policing, Security and Community Safety Act 2024, s.224.",
-      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "review_or_appeal": "Statutory review under section 224; normally request within 28 days of being informed of the inadmissibility decision, with good reasons for extra time considered."
     },
     {
       "route_id": "victim_services",
@@ -975,11 +976,12 @@
       ],
       "geographic_scope": "Ireland / Fiosrú investigations",
       "next_steps": "Ask the Fiosrú investigating officer for the relevant information. If Fiosrú does not hold it, current guidance says the request can be forwarded to the appropriate organisation.",
-      "source_verified": "Official Fiosrú victim right-to-information page checked 24 September 2026",
+      "source_verified": "Official Fiosrú source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6; applicable victim-information provisions.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "review_or_appeal": "If the requested information concerns a decision that can be reviewed, Fiosrú should explain the applicable review procedure; do not treat every information request as an appeal."
     },
     {
       "route_id": "fiosru_post_investigation",
@@ -1001,11 +1003,12 @@
       ],
       "geographic_scope": "Ireland / Fiosrú investigations",
       "next_steps": "Follow the outcome notification; if a discontinuance decision is received, use the statutory review route within the applicable period.",
-      "source_verified": "Official Fiosrú Victims of Crime Charter checked 24 September 2026",
+      "source_verified": "Official Fiosrú source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "review_or_appeal": "Outcome-specific. A closed investigation has no internal review facility according to the current Fiosrú Victims of Crime Charter; discontinuance has a statutory review route."
     },
     {
       "route_id": "fiosru_review_discontinuance",
@@ -1034,9 +1037,10 @@
       "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú.",
       "conflict_note": "Official Fiosrú discontinuance review form verified 24 September 2026. Review normally requested within 28 days; good reasons may support extra time.",
       "legal_basis": "Policing, Security and Community Safety Act 2024, s.224.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Fiosrú source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "review_or_appeal": "Statutory review under section 224; normally request within 28 days of being informed of the discontinuance decision, with good reasons for extra time considered."
     },
     {
       "route_id": "crime_online_router",
