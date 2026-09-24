@@ -383,9 +383,9 @@
     {
       "route_id": "abnormal_loads",
       "category": "transport",
-      "citizen_question": "I need to move an abnormal load",
-      "route_type": "permit_notification",
-      "authority": "Relevant Local Authority + An Garda Síochána",
+      "citizen_question": "I need information about moving an abnormal or oversized load",
+      "route_type": "abnormal_loads",
+      "authority": "An Garda Síochána / relevant local authority",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/faqs/?id=4853",
       "notes": "Permit authority is the relevant local authority; Garda National Traffic Bureau has a notification/traffic-policing role.",
@@ -393,21 +393,21 @@
         "information_contact",
         "traffic_policing"
       ],
-      "purpose_plain": "Follow the multi-authority process for an abnormal load, including the Garda notification requirement.",
+      "purpose_plain": "Explain when an abnormal-load permit and Garda notification may be involved.",
       "eligibility": "Depends on whether the proposed load falls within the current abnormal-load requirements.",
       "submission_method": [
-        "local_authority_permit_process",
+        "local_authority",
         "garda_notification"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Identify the relevant local authority permit route and comply with the Garda notification requirement.",
+      "next_steps": "Check the current local-authority permit requirements first; then follow the Garda notification requirements that apply to the load.",
       "emergency_rule": "Not an emergency service.",
-      "deadline": "Current Garda guidance says Garda National Traffic Bureau should receive a copy of the application at least 4 working days before submission to the local authority."
+      "deadline": "For the Garda notification described in current guidance, a copy is to reach the Garda National Traffic Bureau at least 4 working days before submission to the local authority."
     },
     {
       "route_id": "collection_permit",
       "category": "permit",
-      "citizen_question": "I need a collection permit",
+      "citizen_question": "I want to organise a public collection and need a collection permit",
       "route_type": "permit_application",
       "authority": "An Garda Síochána",
       "status": "verified_current",
@@ -417,20 +417,20 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Use the official collection-permit application process where applicable.",
+      "purpose_plain": "Route qualifying public collection permit applications to the official Garda process.",
       "eligibility": "Subject to the applicable collection-permit requirements.",
       "submission_method": [
         "official_form",
-        "official_garda_route"
+        "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the current official form and instructions.",
+      "next_steps": "Use the current official collection-permit application and follow the responsible Garda instructions.",
       "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "gaming_permit",
       "category": "permit",
-      "citizen_question": "I need a gaming permit",
+      "citizen_question": "I want to run gaming or lotteries and need to know whether a Garda permit is required",
       "route_type": "permit_application",
       "authority": "An Garda Síochána / District Superintendent",
       "status": "verified_current",
@@ -440,15 +440,17 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Apply using the current GP1 gaming-permit form where the statutory conditions apply.",
+      "purpose_plain": "Screen gaming-permit questions and route qualifying applications to the current GP1 process.",
       "eligibility": "Subject to the Gaming and Lotteries Act framework and current application requirements.",
       "submission_method": [
-        "official_form"
+        "official_form",
+        "district_superintendent"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Provide the information requested by the District Superintendent and follow the current permit process.",
+      "next_steps": "Check whether the proposed activity falls within the statutory licensing/permit regime and then use the official GP1 route.",
       "emergency_rule": "Not an emergency service.",
-      "deadline": "Current GP1 material requires the proposed gaming activity date to be at least 60 days from the application date."
+      "deadline": "Current GP1 form states the proposed activity date should be at least 60 days from the application.",
+      "official_submission_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf"
     },
     {
       "route_id": "firearms_application",
@@ -540,22 +542,24 @@
     {
       "route_id": "public_cctv_institutional",
       "category": "cctv",
-      "citizen_question": "I want to apply for public CCTV",
-      "route_type": "institutional_application",
-      "authority": "Local Authority / An Garda Síochána depending on statutory route",
+      "citizen_question": "I want to request public CCTV in my area",
+      "route_type": "institutional_cctv_route",
+      "authority": "Relevant local authority / Garda institutional process",
       "status": "institutional_not_citizen_route",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/public%20cctv/",
       "notes": "Do not present the published Section 28 form as a general citizen application; community proposals follow the relevant local-authority/community-safety pathway.",
       "authority_role": [
         "entry_point"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
+      "purpose_plain": "Explain that public CCTV proposals are handled through institutional/local-authority processes, not as an ordinary individual Garda application.",
       "eligibility": "See current official requirements.",
       "submission_method": [
-        "official_route"
+        "local_authority",
+        "institutional_process"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "If the concern is a particular incident or existing footage, use the relevant crime/data/property route instead of treating this as a personal CCTV installation application.",
+      "conflict_note": "Do not present the institutional public-CCTV process as a standard citizen permit form."
     },
     {
       "route_id": "fiosru_review",
@@ -974,5 +978,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened firearms licensing and Police Certificate routing, including resident/non-resident distinction and current source conflicts."
+  "generated_scope": "Strengthened permits, abnormal-load and institutional CCTV routing."
 }
