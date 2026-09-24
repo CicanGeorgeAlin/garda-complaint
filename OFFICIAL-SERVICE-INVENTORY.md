@@ -688,3 +688,40 @@ The future engine should be tested against at least these cases:
 
 These are routing tests, not legal advice. Each must be rechecked whenever the underlying official source changes.
 
+
+
+## Audit 10 — confidentiality, direct-contact, and evidence-routing safeguards
+
+### Confidential information is a different route from a formal complaint
+Current Garda guidance confirms that members of the public can provide information about crime or other activities confidentially through the Garda Confidential Line (1800 666 111). This must not be presented as equivalent to a Fiosrú complaint, and it must not be described as anonymous evidence of a Garda complaint. Source: https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html
+
+### Fiosrú complaint eligibility language
+Current Fiosrú guidance says a complainant must normally be directly affected by, or have directly witnessed, the Garda behaviour concerned. Fiosrú also states that a complaint is not anonymous and requires name/contact details. A Garda name is not required if the complainant does not know it. Source: https://www.fiosru.ie/about-us/faqs/
+
+The citizen engine should therefore distinguish:
+- "I personally experienced this Garda behaviour" → Fiosrú complaint screening;
+- "I directly witnessed this Garda behaviour" → Fiosrú complaint screening;
+- "I heard about it from someone else / saw it in the news or social media" → do not present this as satisfying the ordinary Fiosrú complaint basis; consider whether another information/reporting route is appropriate;
+- "I want to provide confidential information about crime/other activity" → Garda Confidential route.
+
+### Evidence-routing safeguard
+For an ordinary crime report, the engine should not tell a person to wait for an online form when:
+- the incident is happening now;
+- an offender remains at or nearby the scene;
+- evidence remains at the scene.
+
+Current Garda guidance expressly identifies these circumstances for avoiding the online theft declaration. Source: https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/why-should-i-report-a-crime-/
+
+### Hate-crime routing
+The current Garda hate-crime service is specifically for hate crime and says emergencies must use 999/112. The online service should therefore appear only after the engine establishes that the person is describing a suspected hate-motivated crime/incident, rather than as a generic reporting form. Source: https://www.garda.ie/en/about-us/online-services/online-hate-crime-reporting/
+
+### Station fallback
+Where an online route is unavailable or unsuitable, the engine should provide the official Garda Station Directory rather than inventing a local contact. The current directory supports searching by division or station and includes an email-station function, while warning that emergency matters require 999/112. Source: https://www.garda.ie/en/contact-us/station-directory/
+
+### Routing principles added
+1. Emergency status is checked before category selection.
+2. Confidential-information routes are not labelled as formal complaints.
+3. Fiosrú eligibility is screened using direct-effect/direct-witness information.
+4. Specific online forms are shown only after their conditions are met.
+5. Official station fallback is used when no specific online route applies.
+6. The engine never stores or forwards the citizen's substantive complaint merely because they used this website.
