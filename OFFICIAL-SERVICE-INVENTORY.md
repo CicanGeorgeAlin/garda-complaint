@@ -861,3 +861,47 @@ Every specialist route must carry an authority_role field with values such as:
 - review_body
 - information_contact
 This prevents statutory referrals, complaints, applications and information channels from being represented as interchangeable "forms".
+
+
+## Audit 14 — public-facing vs institutional application boundary (24 September 2026)
+
+### Public CCTV is not a general citizen application
+Current Garda Public CCTV guidance confirms that sections 27 and 28 of the Garda Síochána (Recording Devices) Act 2023 provide authorisation routes for Garda personnel and Local Authorities. The published Section 28 application form is for Local Authorities. Community groups can propose schemes through their local authority but do not directly apply for new authorisation under the current regime.
+
+Therefore the citizen engine should classify Public CCTV as:
+- institutional / multi-authority route;
+- not a general "apply for CCTV" citizen service;
+- possible community proposal → local authority / Local Community Safety Partnership pathway;
+- legal information → Garda Public CCTV section.
+
+Source: https://www.garda.ie/en/about-us/online-services/public%20cctv/
+
+### National Age Card is a genuine public service but not an identity-card route
+Current Garda guidance confirms that the National Age Card is voluntary, for people aged 18+, and solely for proving age. The online application is through the Age Card service, followed by authentication at a local Garda station. It is not an identity card.
+
+Source: https://www.garda.ie/en/about-us/online-services/national-age-card/
+
+### Unclaimed property is a discovery/recovery route, not a replacement for reporting theft
+Current Garda guidance says the online unclaimed-property pilot lets members of the public view selected recovered lost/stolen property. If property is stolen, it should still be reported to Gardaí; if an item is not listed, the person should contact the local Garda station.
+
+Source: https://www.garda.ie/en/about-us/online-services/unclaimed-property/
+
+### Core inventory classification rule
+Every discovered Garda page/form must first be classified as one of:
+1. citizen action;
+2. citizen information/self-service;
+3. specialist safety/reporting route;
+4. institutional/business/professional application;
+5. multi-authority route;
+6. internal Garda form/process;
+7. information-only / background;
+8. historical or superseded material.
+
+Only categories 1–5 should normally become visible routing destinations, and categories 4–5 must clearly identify the applicant/authority relationship.
+
+### Current inventory examples
+- National Age Card → citizen service.
+- Unclaimed Property → citizen self-service/discovery.
+- Public CCTV Section 28 form → Local Authority/institutional application.
+- Public CCTV community proposal → local authority/community-safety pathway.
+- Garda internal CCTV authorisation → internal/institutional, not citizen-facing.
