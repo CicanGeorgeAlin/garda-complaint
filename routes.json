@@ -369,6 +369,166 @@
       "geographic_scope": "Ireland",
       "conflict_note": "Official Garda publications describe different review periods for different mechanisms; do not present one universal deadline.",
       "next_steps": "Use the review route identified in the decision/reasons notification."
+    },
+    {
+      "route_id": "abnormal_loads",
+      "category": "transport",
+      "citizen_question": "I need to move an abnormal load",
+      "route_type": "permit_notification",
+      "authority": "Local authority + An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/faqs/?id=4853",
+      "notes": "Permit authority is the relevant local authority; Garda National Traffic Bureau has a notification/traffic-policing role.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "collection_permit",
+      "category": "permit",
+      "citizen_question": "I need a collection permit",
+      "route_type": "permit_application",
+      "authority": "An Garda Síochána / relevant Garda authority",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/news-archive/collection-permit-application-form.html",
+      "notes": "Use the current official collection-permit application route.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "gaming_permit",
+      "category": "permit",
+      "citizen_question": "I need a gaming permit",
+      "route_type": "permit_application",
+      "authority": "An Garda Síochána / District Superintendent",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf",
+      "notes": "Current GP1 is the specified application form; proposed activity date must meet the current lead-time requirement.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "firearms_application",
+      "category": "firearms",
+      "citizen_question": "I want to apply for a firearm certificate",
+      "route_type": "licence_application",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf",
+      "notes": "FCA1 is the current first-time application form; restricted firearms have the additional current authority requirement.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "firearms_renewal",
+      "category": "firearms",
+      "citizen_question": "I want to renew a firearm certificate",
+      "route_type": "licence_renewal",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/firearm-certificate-renewals.html",
+      "notes": "Garda says the pre-populated FCR is the acceptable renewal route.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "property_found_taxis_psvs",
+      "category": "property",
+      "citizen_question": "I found property in a taxi or PSV / need the relevant property process",
+      "route_type": "property_process",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/roads-policing/roads-policing-unit/property-found-in-taxis-and-psvs-and-forms/",
+      "notes": "Specialist property process; use official instructions.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "youth_awards",
+      "category": "community",
+      "citizen_question": "I want to nominate a young person/group for a Garda Youth Award",
+      "route_type": "nomination",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/crime-prevention/community-engagement/an-garda-siochana-youth-awards/",
+      "notes": "Current awards include Individual, Group, Special Achievement and Community Safety nomination routes; age range is 13–21.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "public_cctv_institutional",
+      "category": "cctv",
+      "citizen_question": "I want to apply for public CCTV",
+      "route_type": "institutional_application",
+      "authority": "Local Authority / An Garda Síochána depending on statutory route",
+      "status": "institutional_not_citizen_route",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/public%20cctv/",
+      "notes": "Do not present the published Section 28 form as a general citizen application; community proposals follow the relevant local-authority/community-safety pathway.",
+      "authority_role": [
+        "entry_point"
+      ],
+      "purpose_plain": "Use the current official route and instructions for this service.",
+      "eligibility": "See current official requirements.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the current official instructions."
     }
   ],
   "required_fields": [
@@ -397,5 +557,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified route seed, enriched with minimum operational fields; routes with unresolved source conflicts remain explicitly flagged."
+  "generated_scope": "Verified route seed expanded with additional specialist services; institutional routes remain explicitly excluded from ordinary citizen submission."
 }
