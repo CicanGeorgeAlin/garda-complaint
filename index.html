@@ -189,6 +189,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
     const tests=[
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
+      ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
+      ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
+      ['victim|crime victim|support after crime','victim_services'],
       ['garda|guard|member of an garda|police conduct|complain about', 'fiosru_complaint_screen'],
       ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
       ['hate crime|hate incident','hate_crime'],
