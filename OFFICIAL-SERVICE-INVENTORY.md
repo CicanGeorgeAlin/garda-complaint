@@ -774,3 +774,40 @@ The engine should ask the smallest number of high-value questions first:
 7. What official route is available now?
 
 The engine should then explain the reason for the route before presenting the official destination.
+
+
+## Audit 12 — specialist crime branches and Fiosrú resolution boundary (24 September 2026)
+
+### Non-emergency crime fallback
+Current Garda guidance says non-emergency crime can be reported to the local or any Garda station, and a Garda can take a report in person at any station. The station directory is therefore a genuine national fallback, not merely a Dublin feature. Source: https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/where-can-i-get-more-information-.html
+
+### Traffic Watch is a conditional route
+The current Traffic Watch form requires the reporter to confirm the matter is not an emergency and that they are willing to make a statement and attend court if required. It also currently asks that reports be made within 6 months. Source: https://www.garda.ie/en/trafficwatchreport/
+The engine must therefore screen for emergency status and date before displaying Traffic Watch.
+
+### Domestic abuse requires its own safety branch
+Current Garda guidance provides separate domestic-abuse reporting information: immediate danger → 999/112; non-immediate danger → local Garda station/advice, with the option to request a Garda of the same gender where possible. Source: https://www.garda.ie/en/crime/domestic-abuse/how-do-i-know-if-someone-is-a-victim-of-domestic-abuse-coercive-control-.html
+The generic crime route must not obscure this specialist safety pathway.
+
+### Fiosrú complaint resolution is not the same as a new Garda complaint
+Fiosrú currently states that some admitted complaints concerning service-level/performance-management issues can be referred to An Garda Síochána for resolution. Examples include discourtesy, failure to respond/update, and certain public-desk/service issues. Fiosrú remains the entry point for the complaint; the citizen should not be redirected to start a separate Garda complaint merely because resolution may occur within Garda. Sources:
+https://www.fiosru.ie/complaints/complaints-suitable-for-resolution-by-an-garda-siochana/
+https://www.fiosru.ie/about-us/faqs/
+
+### New routing tests
+22. Non-emergency crime, no specialist form → local/any Garda station.
+23. Traffic incident, non-emergency, within current Traffic Watch conditions → Traffic Watch.
+24. Traffic incident requiring immediate response → emergency route, not Traffic Watch.
+25. Domestic abuse, immediate danger → 999/112.
+26. Domestic abuse, no immediate danger → specialist Garda/local-station route.
+27. Admissible-looking Fiosrú service-level complaint → Fiosrú complaint route; explain that Fiosrú may refer it to Garda for resolution.
+28. User asks to complain directly to Garda because Fiosrú may refer the matter to Garda → explain the distinction; do not create a duplicate complaint route.
+
+### Architectural rule
+A route can have multiple authorities involved without becoming multiple citizen submissions. The engine should identify:
+- entry authority;
+- investigating/resolving authority;
+- decision-maker;
+- review body;
+- citizen's next action.
+This prevents the common error of treating every authority mentioned in a process as a separate place the citizen must apply to.
