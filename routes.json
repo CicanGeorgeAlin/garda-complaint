@@ -49,8 +49,9 @@
       ],
       "official_submission_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
       "geographic_scope": "Ireland / Garda jurisdiction",
-      "deadline": "Normally within 12 months, subject to statutory extension provisions.",
-      "next_steps": "Fiosrú assesses admissibility and handles the statutory process."
+      "deadline": "Normally within 12 months; a late complaint may be considered where Fiosrú accepts there is good reason for the delay.",
+      "next_steps": "Fiosrú assesses admissibility; if admitted, the complaint may be resolved by Garda or investigated by Fiosrú depending on the statutory route.",
+      "conflict_note": "Fiosrú's current submission page warns that knowingly false or misleading information is a criminal offence under s.226 and explains that complaint information may be shared in specified circumstances."
     },
     {
       "route_id": "crime_general",
@@ -529,6 +530,31 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Follow the current official instructions."
+    },
+    {
+      "route_id": "fiosru_review",
+      "category": "garda_personnel",
+      "citizen_question": "Fiosrú has told me my complaint is inadmissible or that its investigation will be discontinued and I want a review.",
+      "route_type": "statutory_review",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/statutory-review/",
+      "official_submission_url": "https://www.fiosru.ie/complaints/statutory-review/how-to-request-a-review-of-your-inadmissible-complaint/",
+      "authority_role": [
+        "entry_point",
+        "review_body"
+      ],
+      "purpose_plain": "Request the statutory review of an Fiosrú inadmissibility or discontinuance decision.",
+      "eligibility": "The original complainant; sufficient information must be provided to link the request to the original complaint.",
+      "emergency_rule": "This is a post-decision review, not an emergency route.",
+      "submission_method": [
+        "email",
+        "post"
+      ],
+      "contact": "review@fiosru.ie; Review Unit, Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73",
+      "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
+      "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
+      "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts."
     }
   ],
   "required_fields": [
@@ -557,5 +583,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified route seed expanded with additional specialist services; institutional routes remain explicitly excluded from ordinary citizen submission."
+  "generated_scope": "Verified route seed enriched with current official-source verification; review route added explicitly."
 }
