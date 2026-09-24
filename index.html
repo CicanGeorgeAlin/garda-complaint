@@ -194,13 +194,22 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['confidential|anonymous information|give information','garda_confidential'],
       ['stolen|theft|property stolen','crime_online_router'],
       ['personal data|my data|data garda hold|gdpr','data_access_router'],
-      ['foi|records|administrative information','foi'],
+      ['foi|freedom of information|records|administrative information','foi'],
       ['environmental information|environmental data|aie','aie'],
-      ['vetting','garda_vetting'],
+      ['vetting|background check for work|volunteer vetting','garda_vetting'],
       ['firearm|gun licence|firearms','firearms_application'],
-      ['police certificate|criminal record certificate','police_certificate_router'],
+      ['police certificate|criminal record certificate|certificate for another country','police_certificate_router'],
       ['age card|proof of age','national_age_card'],
-      ['station|local garda','station_directory']
+      ['station|local garda|contact my station','station_directory'],
+      ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
+      ['victim|crime victim|support after crime','victim_services'],
+      ['property found|lost property|recovered property','unclaimed_property'],
+      ['abnormal load|oversized load|wide load','abnormal_loads'],
+      ['public collection|collection permit','collection_permit'],
+      ['gaming permit|lottery permit|gaming licence','gaming_permit'],
+      ['cctv|camera in my area|public camera','public_cctv_institutional'],
+      ['fiosru review|review my complaint|complaint was discontinued|complaint inadmissible','fiosru_review'],
+      ['police certificate|certificate for another country','police_certificate_router']
     ];
     for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
     return state.routes.find(r=>r.route_id==='crime_general')||null;
