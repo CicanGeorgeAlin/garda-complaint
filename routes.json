@@ -259,8 +259,9 @@
       ],
       "form_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-police-certificate-application-form-feb-2022.pdf",
       "geographic_scope": "Republic of Ireland residence/former residence as described by Garda",
-      "conflict_note": "Broader page mentions online completion while current FAQ specifies postal submission; verify current submission instruction before activation.",
-      "next_steps": "Complete current application and follow current submission instructions."
+      "conflict_note": "Current Garda material contains inconsistent wording about online completion versus postal submission; specific current submission instructions must be checked before activation.",
+      "next_steps": "Use the current official application and submission instructions.",
+      "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "garda_vetting",
@@ -572,6 +573,71 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
       "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts."
+    },
+    {
+      "route_id": "victim_services",
+      "category": "victim",
+      "citizen_question": "I am a victim of crime and need support or information about what happens next",
+      "route_type": "victim_support",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/victim-services/",
+      "authority_role": [
+        "information_contact",
+        "support_service"
+      ],
+      "purpose_plain": "Find Garda victim-service information, support and local Victim Service Office contacts.",
+      "eligibility": "Victims and people seeking information about Garda victim services.",
+      "emergency_rule": "Immediate danger → 999/112.",
+      "submission_method": [
+        "information",
+        "garda_victim_service_office"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Use the Victim Service Office/local Garda contact identified by Garda."
+    },
+    {
+      "route_id": "property_garda_possession",
+      "category": "property",
+      "citizen_question": "I need information about property held by Gardaí",
+      "route_type": "property_process",
+      "authority": "An Garda Síochána",
+      "status": "verified_guidance_only",
+      "official_info_url": "https://www.garda.ie/en/freedom-of-information/publication-scheme/services-provided.html",
+      "authority_role": [
+        "information_contact",
+        "property_handler"
+      ],
+      "purpose_plain": "Find the official Garda process for property in Garda possession.",
+      "eligibility": "Depends on the type and circumstances of the property.",
+      "emergency_rule": "Not an emergency service.",
+      "submission_method": [
+        "garda_station",
+        "official_garda_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Use the official property/station instructions; exact route depends on the property type."
+    },
+    {
+      "route_id": "traffic_fcn_information",
+      "category": "traffic",
+      "citizen_question": "I received a Fixed Charge Notice and need to understand or pay it",
+      "route_type": "notice_information",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/roads-policing/fixed-charge-notices/",
+      "authority_role": [
+        "information_contact"
+      ],
+      "purpose_plain": "Understand current Fixed Charge Notice payment and related options.",
+      "eligibility": "Recipients of a Fixed Charge Notice.",
+      "emergency_rule": "Not an emergency service.",
+      "submission_method": [
+        "online_information",
+        "official_notice_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the instructions on the specific notice and current Garda FCN guidance."
     }
   ],
   "required_fields": [
@@ -600,5 +666,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified route seed enriched with specialist application and multi-authority routes."
+  "generated_scope": "Verified route seed expanded to victim support, property, FCN information and certificate safeguards."
 }
