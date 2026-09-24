@@ -308,3 +308,65 @@ A downloadable PDF can be an official submission instrument even when it is not 
 - Police Certificate page was rechecked 24 September 2026. It currently states approximately three-week processing and contains both online-completion and postal-submission instructions; because those instructions coexist, the project should preserve the ambiguity until the live submission flow is independently checked rather than inventing a single process.
 - Garda Vetting page was rechecked 24 September 2026 and confirms the registered-organisation initiation model.
 
+
+
+## Audit 04 — additional official citizen-facing routes
+
+### Prosecution-decision review: source discrepancy resolved
+- The current Garda "Information on Prosecution" page states:
+  - summary of reasons: normally within 28 days;
+  - review of the Garda decision: normally within 28 days of receiving the summary.
+- However, the current Garda Victims Charter states a 56-day period for the review of the decision not to prosecute.
+- A separate Garda guide for families bereaved by road collisions also states 28 days for a summary and 56 days for a review request to the DPP.
+- Because official Garda sources are not consistent, the public interface must NOT present a single review deadline as universally applicable.
+- Route design: show "time limit depends on the applicable review route/source; act promptly" and direct the user to the current official form/guidance, with the distinction between a Garda review and a DPP review made explicit.
+- Sources checked 24 September 2026:
+  - https://www.garda.ie/en/victim-services/garda-victim-service/information-on-prosecution/
+  - https://www.garda.ie/en/victim-services/garda-victim-service/victims-charter.pdf
+  - https://www.garda.ie/en/roads-policing/roads-policing-unit/roads-policing-initiatives/irva-guide-for-families-bereaved-by-road-collisions.pdf
+
+### National Age Card
+- Current Garda page confirms this is a voluntary proof-of-age card for people aged 18+.
+- The process begins online at agecard.ie, then the applicant brings the generated application, specified ID and passport photograph to a local Garda station for authentication.
+- It is not an identity card and is solely for proving age.
+- Source:
+  https://www.garda.ie/en/about-us/online-services/national-age-card/
+
+### Garda Youth Awards
+- Current 2026 page provides online nomination routes and English/Irish PDF nomination forms for Individual, Group, Special Achievement and Community Safety categories.
+- Garda states forms are also available from local Garda stations.
+- Eligibility includes young people aged 13–21.
+- Local divisional arrangements may vary; the page advises contacting the local Community Garda, Juvenile Liaison Officer or Garda station to confirm whether the local area is participating.
+- Source:
+  https://www.garda.ie/en/crime-prevention/community-engagement/an-garda-siochana-youth-awards/
+
+### Firearm certificate applications
+- Current FCA1 form is a formal Garda application instrument, not merely an information leaflet.
+- Garda's current renewal page says first-time applicants must complete FCA1 and return it to the local Garda station for consideration by the relevant Superintendent, or Chief Superintendent for a restricted firearm application.
+- The master catalogue must therefore distinguish:
+  - first-time firearm certificate;
+  - restricted firearm certificate;
+  - renewal;
+  - other certificate/application types;
+  rather than treating "firearms licensing" as one generic route.
+- Sources:
+  - https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf
+  - https://www.garda.ie/en/about-us/online-services/firearms-licensing/firearm-certificate-renewals.html
+
+### Data-access / SIS-specific rights
+- Garda states that F20 is used for access to personal data held by An Garda Síochána.
+- Garda's SIS material additionally identifies rights of access, rectification and erasure for SIS data and directs people to the Garda Data Protection Unit.
+- This should be represented as a specialist sub-route under data protection rather than a new generic crime-reporting route.
+- Sources:
+  - https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/
+  - https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/what-safeguards-are-in-place-to-deal-with-this-.html
+
+## Audit 04 — implementation rules
+
+1. Never collapse two official routes merely because they have similar names.
+2. When official Garda pages conflict on a deadline, preserve the conflict and route the citizen to the authoritative current form/authority instead of inventing certainty.
+3. Distinguish Garda review, Fiosrú review and DPP review.
+4. Distinguish an application form from an information page.
+5. Distinguish national routes from local divisional/station arrangements.
+6. Record source date and verification status for every deadline-sensitive route.
+
