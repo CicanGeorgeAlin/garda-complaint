@@ -666,6 +666,26 @@
       ],
       "geographic_scope": "Ireland / legacy GSOC cases",
       "next_steps": "No resubmission is required according to current Fiosrú guidance; Fiosrú will contact the complainant about next steps."
+    },
+    {
+      "route_id": "data_access_router",
+      "category": "information",
+      "citizen_question": "I want information or records from Gardaí, but I'm not sure which legal route I need",
+      "route_type": "information_router",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
+      "authority_role": [
+        "information_router"
+      ],
+      "purpose_plain": "Choose the correct access route based on what kind of information the person wants.",
+      "eligibility": "Depends on whether the request concerns the person's personal data, administrative records, environmental information, or another category.",
+      "emergency_rule": "Not an emergency service.",
+      "submission_method": [
+        "route_to_specialist_access_process"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Personal data → GDPR/Data Protection access route; administrative records → FOI; environmental information → AIE; otherwise check the relevant Garda information/service route."
     }
   ],
   "required_fields": [
@@ -694,5 +714,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Fresh official-source pass completed 24 September 2026; added legacy GSOC transition and preserved unresolved review-form asset URL rather than inventing it."
+  "generated_scope": "Verified information-access routing layer added: personal data vs FOI vs AIE."
 }
