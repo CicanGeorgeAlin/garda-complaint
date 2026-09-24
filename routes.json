@@ -59,25 +59,26 @@
     {
       "route_id": "crime_general",
       "category": "crime",
-      "citizen_question": "I need to report a non-emergency crime",
+      "citizen_question": "I need to report a crime that does not fit a specialist online reporting route",
       "route_type": "crime_report",
       "authority": "An Garda Síochána",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/",
+      "official_info_url": "https://www.garda.ie/en/contact-us/report-a-crime/",
       "notes": "Use a Garda station when no specialist online route fits.",
       "authority_role": [
         "entry_point",
         "investigating_body"
       ],
-      "purpose_plain": "Report a non-emergency crime to Gardaí.",
+      "purpose_plain": "Route general crime reports to the local Garda station or the appropriate official service after emergency and specialist screening.",
       "eligibility": "Use when the matter falls within Garda jurisdiction and no more specific current online route is appropriate.",
-      "emergency_rule": "Immediate danger, crime in progress, serious injury risk or offender at/near scene → 999/112.",
+      "emergency_rule": "Emergency, danger to life, serious injury risk, crime in progress or offender at/near scene → 999/112.",
       "submission_method": [
         "garda_station",
-        "specialist_official_route_if_available"
+        "telephone",
+        "official_online_specialist_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Garda records and assesses the report and may investigate."
+      "next_steps": "Use the station directory or the specialist online service identified by the router."
     },
     {
       "route_id": "theft_declaration",
@@ -129,31 +130,32 @@
     {
       "route_id": "hate_crime",
       "category": "crime",
-      "citizen_question": "I want to report a suspected hate crime or hate incident",
-      "route_type": "specialist_crime_report",
+      "citizen_question": "I experienced or witnessed a hate crime or hate-related incident",
+      "route_type": "hate_crime_report",
       "authority": "An Garda Síochána",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/reportahatecrime/",
+      "official_info_url": "https://www.garda.ie/en/crime/hate-crime/",
       "notes": "Emergency → 999/112.",
       "authority_role": [
         "entry_point",
         "investigating_body"
       ],
-      "purpose_plain": "Report a suspected hate crime or hate incident.",
+      "purpose_plain": "Route hate crime and hate-related incident reports to the dedicated Garda service or local station.",
       "eligibility": "Non-emergency suspected hate crime/hate incident.",
-      "emergency_rule": "Emergency → 999/112.",
+      "emergency_rule": "Emergency or immediate danger → 999/112.",
       "submission_method": [
         "online",
-        "garda_station"
+        "garda_station",
+        "garda_confidential"
       ],
-      "official_submission_url": "https://www.garda.ie/en/reportahatecrime/",
+      "official_submission_url": "https://www.garda.ie/en/about-us/online-services/online-hate-crime-reporting/",
       "geographic_scope": "Ireland",
-      "next_steps": "Garda assesses and responds under its hate-crime procedures."
+      "next_steps": "A Garda will take the report and assess whether to commence an investigation; victim-support referral is available."
     },
     {
       "route_id": "garda_confidential",
       "category": "information",
-      "citizen_question": "I want to give confidential information about crime or other activity",
+      "citizen_question": "I have information about crime or other activity and want to provide it confidentially",
       "route_type": "confidential_information",
       "authority": "An Garda Síochána",
       "status": "verified_current",
@@ -162,14 +164,15 @@
       "authority_role": [
         "information_contact"
       ],
-      "purpose_plain": "Provide information confidentially to Gardaí.",
+      "purpose_plain": "Provide the dedicated confidential-information channel without confusing it with an ordinary crime report or Fiosrú complaint.",
       "eligibility": "People wishing to provide relevant confidential information.",
       "submission_method": [
-        "phone"
+        "telephone"
       ],
-      "contact": "Garda Confidential: 1800 666 111",
+      "contact": "1800 666 111",
       "geographic_scope": "Ireland",
-      "next_steps": "Garda receives and assesses the information."
+      "next_steps": "Provide information through the Garda Confidential Line. The Garda site states callers can provide crime-related information confidentially.",
+      "emergency_rule": "Emergency → 999/112, not the confidential line."
     },
     {
       "route_id": "personal_data_f20",
@@ -978,5 +981,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened permits, abnormal-load and institutional CCTV routing."
+  "generated_scope": "Re-verified current hate-crime, confidential-information and general-crime routing against Garda pages on 24 September 2026."
 }
