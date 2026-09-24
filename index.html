@@ -223,12 +223,12 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['age card|proof of age','national_age_card'],
       ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
       ['victim|crime victim|support after crime','victim_services'],
-      ['personal data|my data|data garda hold|gdpr','data_access_router'],
+      ['personal data|my data|data garda hold|personal records.*about me|gdpr','data_access_router'],
+      ['environmental information|environmental data|environmental records|pollution information|aie','aie'],
       ['foi|freedom of information|records|administrative information','foi'],
-      ['environmental information|environmental data|aie','aie'],
       ['abnormal load|oversized load|wide load','abnormal_loads'],
       ['public collection|collection permit','collection_permit'],
-      ['gaming permit|lottery permit|gaming licence','gaming_permit'],
+      ['gaming permit|permit for gaming|lottery permit|gaming licence','gaming_permit'],
       ['cctv|camera in my area|public camera','public_cctv_institutional'],
       ['property found|lost property|recovered property','unclaimed_property'],
       ['cannot speak|cannot hear|speech impaired|deaf|hard of hearing|emergency sms|sms 112','emergency_sms_112'],
@@ -239,6 +239,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
       ['hate crime|hate incident','hate_crime'],
       ['stolen|theft|property stolen','crime_online_router'],
+      ['report (a )?(crime|incident)|want to report (a )?(crime|incident)','crime_general'],
       ['station|local garda|contact my station','station_directory'],
     ];    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
     return null;
