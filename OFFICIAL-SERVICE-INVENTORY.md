@@ -905,3 +905,71 @@ Only categories 1–5 should normally become visible routing destinations, and c
 - Public CCTV Section 28 form → Local Authority/institutional application.
 - Public CCTV community proposal → local authority/community-safety pathway.
 - Garda internal CCTV authorisation → internal/institutional, not citizen-facing.
+
+
+## Audit 15 — route-destination integrity and deadline safeguards (24 September 2026)
+
+### Destination integrity
+A citizen-facing route must always identify the official destination separately from the explanation layer. The project must never substitute a Garda webpage, Fiosrú information page, or third-party summary for the actual submission mechanism when a specific official form or submission channel exists.
+
+For each route, the data should therefore distinguish:
+- official information page;
+- actual submission URL/form;
+- submission email;
+- postal/in-person destination;
+- telephone/help contact;
+- responsible authority;
+- decision-maker.
+
+### Deadline safeguards
+The interface must not convert a source-specific deadline into a universal rule. Where official sources differ, the route record should preserve:
+- the exact source;
+- the exact wording/period;
+- the date verified;
+- a conflict flag;
+- a plain-English warning to act promptly.
+
+This is particularly important for review routes where Garda publications can state different periods for different review mechanisms.
+
+### Fiosrú review destination
+For a statutory review of an inadmissible/discontinued complaint, the current Fiosrú route is distinct from making a new complaint. The review request should identify the original complaint/case where available and be directed through Fiosrú's statutory review process. The project must not offer the ordinary complaint form as a substitute.
+
+### Fixed Charge Notice review/cancellation
+A request to cancel/review an FCN is a post-notice administrative route, not a new traffic incident report. The citizen interface must ask whether the person already received an FCN before presenting this branch.
+
+### Prosecution decision review
+A request to review a Garda prosecution decision is also a post-decision route. The engine should first ask whether the user has received a prosecution decision/notification and then distinguish the applicable Garda review process from any DPP review rights. It must not hard-code one universal deadline where official sources describe different review periods for different mechanisms.
+
+### New routing tests
+33. User wants to complain but has already received a Fiosrú inadmissibility decision → statutory review, not a new complaint.
+34. User wants to challenge an FCN → FCN review/cancellation, not Traffic Watch.
+35. User received a Garda decision not to prosecute → prosecution-decision review branch, not a new crime report.
+36. User asks "Where do I submit this?" → show actual official submission mechanism, not merely a general information page.
+37. Official pages contain inconsistent time limits → preserve source-specific rules and display an act-promptly warning rather than choosing silently.
+
+### Route-object minimum integrity fields
+Before a route is activated in the engine, it should have:
+- route_id
+- category
+- citizen_question
+- route_type
+- authority
+- authority_role
+- purpose_plain
+- eligibility
+- emergency_rule
+- submission_method
+- official_submission_url (if available)
+- official_info_url
+- form_url (if applicable)
+- contact
+- geographic_scope
+- deadline
+- evidence_required
+- next_steps
+- review_or_appeal
+- legal_basis
+- guidance_basis
+- source_verified
+- verified_on
+- conflict_note
