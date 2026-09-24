@@ -923,7 +923,11 @@
       "geographic_scope": "Ireland / Fiosrú jurisdiction",
       "next_steps": "Use Fiosrú accessibility support or its Access Officer where assistance is needed.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "contact": "access.officer@fiosru.ie; 0818 600 800; +353 (1) 871 6727; info@fiosru.ie for alternative formats.",
+      "evidence_required": "Describe the accessibility or communication support needed; no unnecessary complaint details should be collected by this guidance layer.",
+      "source_verified": "Official Fiosrú accessibility/contact sources reviewed 2026-09-24",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "firearms_nonresident",
@@ -1133,13 +1137,15 @@
       ],
       "geographic_scope": "Ireland / Garda jurisdiction",
       "deadline": "Normally within 12 months, with statutory possibilities for extension.",
-      "evidence_required": "Useful details include Garda identity if known, dates/times/locations, description of behaviour and supporting information; a Garda name is not required.",
+      "evidence_required": "Provide your contact details, Garda identifying information if known, date/time/location and a description of what happened; Fiosrú says you do not need the Garda member's name.",
       "next_steps": "If the citizen proceeds, direct them to the official Fiosrú complaint process. Fiosrú determines admissibility.",
       "conflict_note": "The website must not promise admissibility or tell a person that a statutory threshold has definitely been met.",
       "legal_basis": "Policing, Security and Community Safety Act 2024, ss.195-199 and s.226.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Fiosrú complaint and Victims of Crime sources reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "contact": "Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73; info@fiosru.ie; 0818 600 800; +353 (1) 871 6727.",
+      "review_or_appeal": "Fiosrú first decides admissibility. If the complaint is found inadmissible, the statutory review route may apply. If an investigation is discontinued, a statutory review route applies; a closed investigation has no internal review facility."
     }
   ],
   "required_fields": [
