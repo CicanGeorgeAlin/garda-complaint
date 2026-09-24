@@ -908,6 +908,33 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Answer the incident-type and urgency questions, then use the appropriate official route."
+    },
+    {
+      "route_id": "fiosru_complaint_screen",
+      "category": "garda_personnel",
+      "citizen_question": "I want to complain about something a Garda did or failed to do",
+      "route_type": "complaint_screening",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/about-us/faqs/",
+      "official_submission_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
+      "authority_role": [
+        "entry_point",
+        "admissibility_decision_maker"
+      ],
+      "purpose_plain": "Screen the citizen's circumstances before sending them to the statutory Fiosrú complaint route.",
+      "eligibility": "Ask whether the person was directly affected, directly witnessed the behaviour, or is acting for someone under the applicable representative rules.",
+      "emergency_rule": "Immediate danger → 999/112; death/serious harm may engage separate statutory mechanisms and should not be pre-labelled by the website.",
+      "submission_method": [
+        "online",
+        "post",
+        "garda_station"
+      ],
+      "geographic_scope": "Ireland / Garda jurisdiction",
+      "deadline": "Normally within 12 months, with statutory possibilities for extension.",
+      "evidence_required": "Useful details include Garda identity if known, dates/times/locations, description of behaviour and supporting information; a Garda name is not required.",
+      "next_steps": "If the citizen proceeds, direct them to the official Fiosrú complaint process. Fiosrú determines admissibility.",
+      "conflict_note": "The website must not promise admissibility or tell a person that a statutory threshold has definitely been met."
     }
   ],
   "required_fields": [
@@ -936,5 +963,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Crime and Traffic Watch pre-screening routers strengthened with current exclusion conditions."
+  "generated_scope": "Added dedicated Fiosru complaint pre-screening route for ordinary-language citizen entry."
 }
