@@ -190,8 +190,16 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 
     // Crime screening follows the current Garda online-reporting exclusions.
     const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|robbery|violent crime|stolen firearm|firearm stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene|happening now)/.test(q);
-    if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender)/.test(q)){
+    if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender|traffic|road)/.test(q)){
       return state.routes.find(r=>r.route_id==='station_directory');
+    }
+
+    // Specialist online forms have their own emergency gates.
+    if(/traffic|road|driving|driver/.test(q) && /danger to life|risk of violence|serious injury|serious damage|crime in progress|offender.*scene|fatal collision/.test(q)){
+      return state.routes.find(r=>r.route_id==='emergency_999_112');
+    }
+    if(/hate crime|hate incident|motivated by hate|racial|religious|homophobic|transphobic/.test(q) && /immediate risk|danger|crime in progress|happening now/.test(q)){
+      return state.routes.find(r=>r.route_id==='emergency_999_112');
     }
 
     // The online theft declaration is limited to qualifying thefts not exceeding €1,000.
@@ -206,6 +214,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     }
 
     const tests=[
+      ['fiosru.*discontinu|discontinu.*fiosru|fiosru.*stopped.*investigation','fiosru_review_discontinuance'],
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
       ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
