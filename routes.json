@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Verified route seed for Garda Citizen Access. This site guides citizens to official processes and does not itself submit complaints, reports, applications or requests.",
+  "verification_note": "Only routes with current official-source evidence are seeded here; conflicting or incomplete routes remain explicitly flagged.",
+  "routes": [
+    {
+      "route_id": "emergency_999_112",
+      "category": "emergency",
+      "citizen_question": "Emergency / immediate danger",
+      "route_type": "emergency",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
+      "notes": "999 or 112; do not wait for an online form."
+    },
+    {
+      "route_id": "fiosru_complaint",
+      "category": "garda_personnel",
+      "citizen_question": "I was directly affected by, or directly witnessed, Garda behaviour",
+      "route_type": "complaint",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
+      "notes": "Fiosrú determines admissibility; a Garda name is not required."
+    },
+    {
+      "route_id": "crime_general",
+      "category": "crime",
+      "citizen_question": "I need to report a non-emergency crime",
+      "route_type": "crime_report",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/",
+      "notes": "Use a Garda station when no specialist online route fits."
+    },
+    {
+      "route_id": "theft_declaration",
+      "category": "crime",
+      "citizen_question": "I need to report a qualifying theft online",
+      "route_type": "online_crime_report",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/theft-declaration/",
+      "notes": "Current online theft declaration is for property not exceeding €1,000 in Ireland."
+    },
+    {
+      "route_id": "traffic_watch",
+      "category": "traffic",
+      "citizen_question": "I want to report a non-emergency traffic incident",
+      "route_type": "traffic_report",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/trafficwatchreport/",
+      "notes": "Current form says reports should generally be within 6 months."
+    },
+    {
+      "route_id": "hate_crime",
+      "category": "crime",
+      "citizen_question": "I want to report a suspected hate crime or hate incident",
+      "route_type": "specialist_crime_report",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/reportahatecrime/",
+      "notes": "Emergency → 999/112."
+    },
+    {
+      "route_id": "garda_confidential",
+      "category": "information",
+      "citizen_question": "I want to give confidential information about crime or other activity",
+      "route_type": "confidential_information",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
+      "notes": "Garda Confidential: 1800 666 111."
+    },
+    {
+      "route_id": "personal_data_f20",
+      "category": "information",
+      "citizen_question": "I want to access personal data Gardaí hold about me",
+      "route_type": "data_access_request",
+      "authority": "An Garda Síochána Data Protection Unit",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
+      "notes": "F20/data-protection access route; subject to applicable law."
+    },
+    {
+      "route_id": "foi",
+      "category": "information",
+      "citizen_question": "I want administrative records held by Gardaí",
+      "route_type": "foi_request",
+      "authority": "An Garda Síochána FOI Office",
+      "status": "verified_current_with_conflict",
+      "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/",
+      "notes": "Current Garda sources describe response timing differently; preserve source-specific wording."
+    },
+    {
+      "route_id": "aie",
+      "category": "information",
+      "citizen_question": "I want environmental information held by Gardaí",
+      "route_type": "environmental_information_request",
+      "authority": "An Garda Síochána FOI Office",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/how-do-i-make-a-request-for-information-on-the-environment-.html",
+      "notes": "AIE is distinct from FOI."
+    },
+    {
+      "route_id": "police_certificate",
+      "category": "certificate",
+      "citizen_question": "I need a Garda Police Certificate for a qualifying purpose",
+      "route_type": "certificate",
+      "authority": "An Garda Síochána",
+      "status": "verified_current_with_conflict",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
+      "notes": "Specific current submission instructions must be verified before activation."
+    },
+    {
+      "route_id": "garda_vetting",
+      "category": "vetting",
+      "citizen_question": "An organisation has asked me to complete Garda Vetting",
+      "route_type": "vetting",
+      "authority": "An Garda Síochána National Vetting Bureau",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/garda-vetting/",
+      "notes": "Registered organisation initiates the application."
+    },
+    {
+      "route_id": "national_age_card",
+      "category": "citizen_service",
+      "citizen_question": "I need voluntary proof of age",
+      "route_type": "certificate_card",
+      "authority": "An Garda Síochána / Age Card service",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/national-age-card/",
+      "notes": "Voluntary proof-of-age card for people aged 18+."
+    },
+    {
+      "route_id": "unclaimed_property",
+      "category": "property",
+      "citizen_question": "I want to see whether recovered property matches something I lost",
+      "route_type": "property_discovery",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
+      "notes": "Search does not replace reporting stolen property."
+    },
+    {
+      "route_id": "fixed_charge_notice_review",
+      "category": "traffic",
+      "citizen_question": "I already received a Fixed Charge Notice and want to challenge/cancel it",
+      "route_type": "post_notice_review",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/roads-policing/fixed-charge-notices/cancelling-fixed-charge-notices.html",
+      "notes": "Must not be presented as a new traffic report."
+    },
+    {
+      "route_id": "prosecution_decision_review",
+      "category": "victim",
+      "citizen_question": "Gardaí told me they will not prosecute and I want the decision reviewed",
+      "route_type": "post_decision_review",
+      "authority": "An Garda Síochána / applicable review authority",
+      "status": "verified_current_with_conflict",
+      "official_info_url": "https://www.garda.ie/en/victim-services/garda-victim-service/information-on-prosecution/",
+      "notes": "Do not hard-code one universal deadline."
+    }
+  ],
+  "required_fields": [
+    "route_id",
+    "category",
+    "citizen_question",
+    "route_type",
+    "authority",
+    "authority_role",
+    "purpose_plain",
+    "eligibility",
+    "emergency_rule",
+    "submission_method",
+    "official_submission_url",
+    "official_info_url",
+    "form_url",
+    "contact",
+    "geographic_scope",
+    "deadline",
+    "evidence_required",
+    "next_steps",
+    "review_or_appeal",
+    "legal_basis",
+    "guidance_basis",
+    "source_verified",
+    "verified_on",
+    "conflict_note"
+  ]
+}
