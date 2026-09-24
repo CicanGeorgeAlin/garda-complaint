@@ -245,16 +245,33 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   }
   function show(route){
     const out=byId('route-engine-result'); if(!out) return;
-    if(!route){out.hidden=false;out.textContent='Please use the official service links below.';return;}
+    if(!route){
+      out.hidden=false;
+      out.innerHTML='<strong>We need a little more information</strong><p>This tool could not safely identify one official route from that description. Use the official service links below, or contact your local Garda station for non-emergency help.</p>';
+      return;
+    }
     const url=route.official_submission_url||route.official_info_url;
+    const info=route.official_info_url;
     out.hidden=false;
     out.innerHTML='<strong>Likely official route</strong><p>'+escapeHtml(route.purpose_plain||route.citizen_question||'Official service')+'</p>'+
       (route.authority?'<p><small>Official authority: '+escapeHtml(route.authority)+'</small></p>':'')+
+      (route.emergency_rule?'<p><small>Safety: '+escapeHtml(route.emergency_rule)+'</small></p>':'')+
       (route.deadline?'<p><small>Timing: '+escapeHtml(route.deadline)+'</small></p>':'')+
-      (url?'<p><a class="button" href="'+escapeAttr(url)+'" target="_blank" rel="noopener">Open official route</a></p>':'');
+      (info?'<p><a class="button" href="'+safeUrl(info)+'" target="_blank" rel="noopener noreferrer">Official information</a></p>':'')+
+      (url&&url!==info?'<p><a class="button" href="'+safeUrl(url)+'" target="_blank" rel="noopener noreferrer">Open official route</a></p>':'')+
+      '<p><small>This site only identifies a likely official route. It does not submit your report, complaint, application or request.</small></p>';
   }
   function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function escapeAttr(x){return escapeHtml(x);}
+  function safeUrl(x){
+    const v=String(x||'').trim();
+    if(/^https:\/\/(?:www\.)?(?:garda\.ie|fiosru\.ie|irishstatutebook\.ie)(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^https:\/\/vetting\.garda\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^https:\/\/agecard\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^tel:\/\/(?:112|999)$/i.test(v)||/^tel:(?:112|999)$/i.test(v)) return escapeAttr(v);
+    if(/^sms:112$/i.test(v)) return escapeAttr(v);
+    return '#';
+  }
   function wireRouter(){
     const b=byId('route-engine-go'),i=byId('route-question');
     if(!b||!i)return;
