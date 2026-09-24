@@ -347,7 +347,7 @@
       "geographic_scope": "Ireland",
       "next_steps": "Ask the organisation requesting vetting to initiate the eVetting process and provide the required identification/consent.",
       "legal_basis": "National Vetting Bureau (Children and Vulnerable Persons) Act 2012 and current Garda vetting guidance.",
-      "source_verified": "Official Garda/National Vetting Bureau sources reviewed 2026-09-24",
+      "source_verified": "Official An Garda Síochána source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána National Vetting Bureau guidance/source linked in this route.",
       "conflict_note": "Current Garda pages show different headline turnaround figures (5-day/80% and 5–8 working days). The route uses the specific FAQ processing statement and avoids promising a fixed completion time.",
@@ -377,10 +377,12 @@
       "geographic_scope": "Ireland",
       "next_steps": "Complete the application through the official Age Card process and attend the relevant Garda station for authentication.",
       "legal_basis": "Intoxicating Liquor Act 1988 (Age Card) Regulations 2007.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official An Garda Síochána source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
+      "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal."
     },
     {
       "route_id": "unclaimed_property",
@@ -404,7 +406,11 @@
       "geographic_scope": "Selected participating locations/property covered by the current pilot",
       "next_steps": "Search the official database. If the property was stolen, this does not replace reporting the theft.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "source_verified": "Official An Garda Síochána source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
+      "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal."
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -640,7 +646,11 @@
       "geographic_scope": "Ireland",
       "next_steps": "Follow the current official instructions.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "source_verified": "Official An Garda Síochána source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
+      "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal."
     },
     {
       "route_id": "youth_awards",
@@ -662,7 +672,11 @@
       "geographic_scope": "Ireland",
       "next_steps": "Follow the current official instructions.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "source_verified": "Official An Garda Síochána source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
+      "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal."
     },
     {
       "route_id": "public_cctv_institutional",
