@@ -256,12 +256,15 @@
       ],
       "form_url": "https://www.garda.ie/en/Information-centre/Freedom-of-Information/Freedom-of-Information/FOI-Application-Form1.pdf",
       "geographic_scope": "Ireland / records within FOI scope",
-      "conflict_note": "Current Garda pages/forms contain differing response-time wording; do not hard-code one universal deadline without qualification.",
+      "conflict_note": "Current Garda FOI pages contain different descriptions of the decision timeframe (4 weeks versus 20 working days). Preserve the conflict and direct the citizen to the current official FOI instructions.",
       "next_steps": "Check whether the information is within Garda's current FOI administrative scope and use the official application route.",
       "legal_basis": "Freedom of Information Act 2014.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Garda FOI sources reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "guidance_basis": "Official An Garda Síochána FOI Unit guidance/source linked in this route."
+      "guidance_basis": "Official An Garda Síochána FOI Unit guidance/source linked in this route.",
+      "deadline": "Current Garda FOI guidance states a decision should normally issue within 4 weeks of a valid request; another current Garda page refers to 20 working days. The site should follow the specific current FOI guidance/form accompanying the request rather than hard-code a single universal deadline.",
+      "evidence_required": "Written request with sufficient particulars to identify the records sought; state that the request is made under the Freedom of Information Act and give a preferred access format where applicable.",
+      "review_or_appeal": "If dissatisfied with an FOI decision, internal review and then Information Commissioner review may be available, subject to the applicable FOI rules and time limits."
     },
     {
       "route_id": "aie",
@@ -285,10 +288,13 @@
       "geographic_scope": "Ireland",
       "next_steps": "Describe the environmental information sought, provide contact details and state the preferred format.",
       "legal_basis": "European Communities (Access to Information on the Environment) Regulations 2007–2018.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Garda AIE guidance reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "deadline": "No single deadline is hard-coded here; the applicable AIE regulations govern the response and review periods.",
+      "evidence_required": "Written/electronic request with contact details, sufficient environmental-information particulars, and preferred form/manner of access.",
+      "review_or_appeal": "Internal review and an appeal to the Commissioner for Environmental Information may be available under the AIE Regulations."
     },
     {
       "route_id": "police_certificate",
