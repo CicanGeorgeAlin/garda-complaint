@@ -216,34 +216,31 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     }
 
     const tests=[
-      ['fiosru.*discontinu|discontinu.*fiosru|fiosru.*stopped.*investigation','fiosru_review_discontinuance'],
-      ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
-      ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
+      // Specialist routes must be checked before broad "garda" language.
+      ['police certificate|criminal record certificate|certificate for another country','police_certificate_router'],
+      ['vetting|background check for work|volunteer vetting','garda_vetting'],
+      ['firearm|gun licence|firearms','firearms_application'],
+      ['age card|proof of age','national_age_card'],
       ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
       ['victim|crime victim|support after crime','victim_services'],
-      ['garda|guard|member of an garda|police conduct|complain about', 'fiosru_complaint_screen'],
-      ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
-      ['hate crime|hate incident','hate_crime'],
-      ['cannot speak|cannot hear|speech impaired|deaf|hard of hearing|emergency sms|sms 112','emergency_sms_112'],
-      ['confidential|anonymous information|give information','garda_confidential'],
-      ['stolen|theft|property stolen','crime_online_router'],
       ['personal data|my data|data garda hold|gdpr','data_access_router'],
       ['foi|freedom of information|records|administrative information','foi'],
       ['environmental information|environmental data|aie','aie'],
-      ['vetting|background check for work|volunteer vetting','garda_vetting'],
-      ['firearm|gun licence|firearms','firearms_application'],
-      ['police certificate|criminal record certificate|certificate for another country','police_certificate_router'],
-      ['age card|proof of age','national_age_card'],
-      ['station|local garda|contact my station','station_directory'],
-      ['fixed charge|penalty points|traffic fine','fixed_charge_notice_review'],
-      ['victim|crime victim|support after crime','victim_services'],
-      ['property found|lost property|recovered property','unclaimed_property'],
       ['abnormal load|oversized load|wide load','abnormal_loads'],
       ['public collection|collection permit','collection_permit'],
       ['gaming permit|lottery permit|gaming licence','gaming_permit'],
       ['cctv|camera in my area|public camera','public_cctv_institutional'],
-    ];
-    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
+      ['property found|lost property|recovered property','unclaimed_property'],
+      ['cannot speak|cannot hear|speech impaired|deaf|hard of hearing|emergency sms|sms 112','emergency_sms_112'],
+      ['confidential|anonymous information|give information','garda_confidential'],
+      ['fiosru.*discontinu|discontinu.*fiosru|fiosru.*stopped.*investigation','fiosru_review_discontinuance'],
+      ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
+      ['fiosru|member of an garda|garda personnel|police conduct|complain about (a )?(garda|guard)|complaint about (a )?(garda|guard)','fiosru_complaint_screen'],
+      ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
+      ['hate crime|hate incident','hate_crime'],
+      ['stolen|theft|property stolen','crime_online_router'],
+      ['station|local garda|contact my station','station_directory'],
+    ];    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
     return null;
   }
   function show(route){
