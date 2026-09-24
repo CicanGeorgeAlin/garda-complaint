@@ -309,10 +309,12 @@
       ],
       "form_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-police-certificate-application-form-feb-2022.pdf",
       "geographic_scope": "Ireland / qualifying purposes",
-      "conflict_note": "Current Garda pages differ on parts of the submission workflow; do not hard-code one universal delivery method without qualification.",
+      "conflict_note": "The same current Garda page says the application can be completed online, while its FAQ says to submit the completed application and certified documents by post. The site must preserve this conflict rather than assert a single submission method.",
       "next_steps": "Check the qualifying purpose and current Garda submission instructions before sending the application.",
       "emergency_rule": "Not an emergency service.",
-      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route."
+      "guidance_basis": "An Garda Síochána, Data Protection / FOI / Police Certificates page, reviewed 2026-09-24.",
+      "source_verified": "Official Garda source reviewed 2026-09-24",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "garda_vetting",
@@ -923,9 +925,11 @@
         "route_to_specialist_process"
       ],
       "geographic_scope": "Ireland",
-      "conflict_note": "Do not describe Police Certificate as a general criminal-record disclosure or as Garda Vetting; current Garda eligibility is purpose-specific.",
+      "conflict_note": "The same current Garda page says the application can be completed online, while its FAQ says to submit the completed application and certified documents by post. The site must preserve this conflict rather than assert a single submission method.",
       "next_steps": "Identify the requesting organisation/country and purpose, then use the applicable official Garda route.",
-      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route."
+      "guidance_basis": "An Garda Síochána, Data Protection / FOI / Police Certificates page, reviewed 2026-09-24.",
+      "source_verified": "Official Garda source reviewed 2026-09-24",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "station_directory",
