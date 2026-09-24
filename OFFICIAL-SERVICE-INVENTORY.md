@@ -811,3 +811,53 @@ A route can have multiple authorities involved without becoming multiple citizen
 - review body;
 - citizen's next action.
 This prevents the common error of treating every authority mentioned in a process as a separate place the citizen must apply to.
+
+
+## Audit 13 — statutory death/serious-harm boundary and service inventory recheck (24 September 2026)
+
+### Section 203 is a referral/investigation pathway, not an ordinary citizen complaint form
+Current Fiosrú material confirms that section 203(1) of the Policing, Security and Community Safety Act 2024 requires the Garda Commissioner, subject to the statutory provision, to refer without delay a matter that appears to indicate that an act or omission of Garda personnel may have resulted in death or serious harm. Fiosrú then appoints a designated officer to investigate under section 208(1)(b). A referral does not itself mean a Garda has been accused of wrongdoing.
+
+Sources:
+https://www.fiosru.ie/news-and-publications/latest-news/updated-fiosru-statement-following-receipt-of-s203-referral-15-may-2026/
+https://www.fiosru.ie/news-and-publications/latest-news/fiosru-completes-independent-investigation-into-fatal-incident-in-dublin-city-centre/
+
+### Citizen-facing routing rule for death/serious harm
+If a citizen describes death or serious harm following contact with Garda personnel, the site must NOT tell the citizen that they personally "submit a section 203 referral". Instead:
+- emergency / immediate danger remains 999/112;
+- the site explains that a statutory referral/investigation framework exists;
+- it directs the citizen to the appropriate Fiosrú contact/information route where the citizen needs to provide information or seek assistance;
+- it does not pre-judge whether the statutory threshold is met;
+- it clearly distinguishes a Fiosrú complaint under Part 6 from a section 203 statutory referral/investigation.
+
+### National service inventory recheck
+Current Garda's Online Services page and sitemap continue to list the core online-service categories:
+- Garda Vetting
+- Data Protection / FOI / Police Certificates
+- Firearms Licensing
+- Abnormal Loads
+- Online Crime Reporting
+- Online Hate Crime Reporting
+- National Age Card
+- Unclaimed Property
+The sitemap additionally exposes roads-policing services such as Traffic Watch, Fixed Charge Notices, Abnormal Loads, and property found in taxis/PSVs and forms.
+
+Sources:
+https://www.garda.ie/en/about-us/online-services/
+https://www.garda.ie/en/sitemap/
+
+### Routing test additions
+29. Death/serious harm after Garda contact → explain statutory framework; do not label citizen action as "s203 referral".
+30. Death/serious harm + immediate danger → emergency route first.
+31. Death/serious harm, incident concluded, citizen has information → Fiosrú information/contact pathway without asserting statutory qualification.
+32. Citizen asks "Can I make a s203 complaint?" → explain that s203 is a statutory referral/investigation mechanism, distinct from an ordinary complaint.
+
+### Data-model requirement
+Every specialist route must carry an authority_role field with values such as:
+- entry_point
+- investigating_body
+- resolving_body
+- decision_maker
+- review_body
+- information_contact
+This prevents statutory referrals, complaints, applications and information channels from being represented as interchangeable "forms".
