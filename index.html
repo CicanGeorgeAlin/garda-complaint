@@ -185,7 +185,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   }
   function choose(){
     const q=(byId('route-question')?.value||'').toLowerCase();
-    const emergency=/emergency|danger|life|serious injury|crime in progress/.test(q);
+    const emergency=/emergency|danger to life|risk of serious injury|crime in progress|happening now|offender still (at|near) the scene|immediate danger/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
     const tests=[
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
