@@ -11,7 +11,20 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
-      "notes": "999 or 112; do not wait for an online form."
+      "notes": "999 or 112; do not wait for an online form.",
+      "authority_role": [
+        "entry_point",
+        "response_body"
+      ],
+      "purpose_plain": "Get an immediate emergency Garda response.",
+      "eligibility": "Anyone who needs an emergency Garda response in Ireland.",
+      "emergency_rule": "Emergency route itself; do not wait for an online form.",
+      "submission_method": [
+        "phone"
+      ],
+      "official_submission_url": "tel:112",
+      "geographic_scope": "Ireland",
+      "next_steps": "Follow the emergency operator's instructions."
     },
     {
       "route_id": "fiosru_complaint",
@@ -21,7 +34,23 @@
       "authority": "Fiosrú",
       "status": "verified_current",
       "official_info_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
-      "notes": "Fiosrú determines admissibility; a Garda name is not required."
+      "notes": "Fiosrú determines admissibility; a Garda name is not required.",
+      "authority_role": [
+        "entry_point",
+        "investigating_body"
+      ],
+      "purpose_plain": "Make a formal complaint about Garda personnel through the statutory complaints system.",
+      "eligibility": "Initial screening asks whether the person was directly affected or directly witnessed the Garda behaviour; Fiosrú determines admissibility.",
+      "emergency_rule": "Immediate danger overrides this route.",
+      "submission_method": [
+        "online",
+        "post",
+        "garda_station"
+      ],
+      "official_submission_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
+      "geographic_scope": "Ireland / Garda jurisdiction",
+      "deadline": "Normally within 12 months, subject to statutory extension provisions.",
+      "next_steps": "Fiosrú assesses admissibility and handles the statutory process."
     },
     {
       "route_id": "crime_general",
@@ -31,7 +60,20 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/",
-      "notes": "Use a Garda station when no specialist online route fits."
+      "notes": "Use a Garda station when no specialist online route fits.",
+      "authority_role": [
+        "entry_point",
+        "investigating_body"
+      ],
+      "purpose_plain": "Report a non-emergency crime to Gardaí.",
+      "eligibility": "Use when the matter falls within Garda jurisdiction and no more specific current online route is appropriate.",
+      "emergency_rule": "Immediate danger, crime in progress, serious injury risk or offender at/near scene → 999/112.",
+      "submission_method": [
+        "garda_station",
+        "specialist_official_route_if_available"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Garda records and assesses the report and may investigate."
     },
     {
       "route_id": "theft_declaration",
@@ -40,8 +82,21 @@
       "route_type": "online_crime_report",
       "authority": "An Garda Síochána",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/about-us/online-services/theft-declaration/",
-      "notes": "Current online theft declaration is for property not exceeding €1,000 in Ireland."
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/online-crime-reporting/",
+      "notes": "Current online theft declaration is for property not exceeding €1,000 in Ireland.",
+      "authority_role": [
+        "entry_point",
+        "investigating_body"
+      ],
+      "purpose_plain": "Submit the current online theft declaration where its conditions are met.",
+      "eligibility": "Current online declaration is for theft of property not exceeding €1,000 in Ireland.",
+      "emergency_rule": "Do not use for emergencies or categories excluded by current Garda guidance.",
+      "submission_method": [
+        "online"
+      ],
+      "official_submission_url": "https://www.garda.ie/en/about-us/online-services/theft-declaration/",
+      "geographic_scope": "Ireland excluding Northern Ireland for the current online theft declaration",
+      "next_steps": "Provide requested details; current form warns that the submission cannot be edited after submission."
     },
     {
       "route_id": "traffic_watch",
@@ -51,7 +106,21 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/trafficwatchreport/",
-      "notes": "Current form says reports should generally be within 6 months."
+      "notes": "Current form says reports should generally be within 6 months.",
+      "authority_role": [
+        "entry_point",
+        "investigating_body"
+      ],
+      "purpose_plain": "Report a qualifying non-emergency road-traffic incident through Traffic Watch.",
+      "eligibility": "Non-emergency traffic matter meeting current Traffic Watch conditions.",
+      "emergency_rule": "Emergency traffic incident → 999/112.",
+      "submission_method": [
+        "online"
+      ],
+      "official_submission_url": "https://www.garda.ie/en/trafficwatchreport/",
+      "geographic_scope": "Ireland",
+      "deadline": "Current Traffic Watch form states reports should generally be made within 6 months.",
+      "next_steps": "Garda reviews the report; an investigator may contact the reporter and request a statement."
     },
     {
       "route_id": "hate_crime",
@@ -61,7 +130,21 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/reportahatecrime/",
-      "notes": "Emergency → 999/112."
+      "notes": "Emergency → 999/112.",
+      "authority_role": [
+        "entry_point",
+        "investigating_body"
+      ],
+      "purpose_plain": "Report a suspected hate crime or hate incident.",
+      "eligibility": "Non-emergency suspected hate crime/hate incident.",
+      "emergency_rule": "Emergency → 999/112.",
+      "submission_method": [
+        "online",
+        "garda_station"
+      ],
+      "official_submission_url": "https://www.garda.ie/en/reportahatecrime/",
+      "geographic_scope": "Ireland",
+      "next_steps": "Garda assesses and responds under its hate-crime procedures."
     },
     {
       "route_id": "garda_confidential",
@@ -71,7 +154,18 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
-      "notes": "Garda Confidential: 1800 666 111."
+      "notes": "Garda Confidential: 1800 666 111.",
+      "authority_role": [
+        "information_contact"
+      ],
+      "purpose_plain": "Provide information confidentially to Gardaí.",
+      "eligibility": "People wishing to provide relevant confidential information.",
+      "submission_method": [
+        "phone"
+      ],
+      "contact": "Garda Confidential: 1800 666 111",
+      "geographic_scope": "Ireland",
+      "next_steps": "Garda receives and assesses the information."
     },
     {
       "route_id": "personal_data_f20",
@@ -81,7 +175,21 @@
       "authority": "An Garda Síochána Data Protection Unit",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
-      "notes": "F20/data-protection access route; subject to applicable law."
+      "notes": "F20/data-protection access route; subject to applicable law.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Exercise the applicable data-protection access right using the Garda F20 route.",
+      "eligibility": "Subject to GDPR, Data Protection Act 2018 and applicable exemptions.",
+      "submission_method": [
+        "official_form",
+        "post",
+        "email"
+      ],
+      "contact": "dataprotection@garda.ie; +353 (01) 666 9521",
+      "geographic_scope": "Ireland / Garda-held personal data",
+      "next_steps": "Garda Data Protection Unit processes the request subject to applicable law."
     },
     {
       "route_id": "foi",
@@ -91,7 +199,21 @@
       "authority": "An Garda Síochána FOI Office",
       "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/",
-      "notes": "Current Garda sources describe response timing differently; preserve source-specific wording."
+      "notes": "Current Garda sources describe response timing differently; preserve source-specific wording.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Make an FOI request for records within the FOI regime.",
+      "eligibility": "Subject to the Freedom of Information Act and exemptions; Garda identifies administrative areas including HR, Finance and Procurement.",
+      "submission_method": [
+        "email",
+        "post"
+      ],
+      "form_url": "https://www.garda.ie/en/Information-centre/Freedom-of-Information/Freedom-of-Information/FOI-Application-Form1.pdf",
+      "geographic_scope": "Ireland / Garda records within FOI scope",
+      "conflict_note": "Current Garda pages describe response timing differently; do not hard-code one universal deadline.",
+      "next_steps": "Identify the records sought and request access under FOI."
     },
     {
       "route_id": "aie",
@@ -101,7 +223,19 @@
       "authority": "An Garda Síochána FOI Office",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/how-do-i-make-a-request-for-information-on-the-environment-.html",
-      "notes": "AIE is distinct from FOI."
+      "notes": "AIE is distinct from FOI.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Request environmental information under the AIE regime.",
+      "eligibility": "Subject to the AIE Regulations and applicable exceptions.",
+      "submission_method": [
+        "email",
+        "post"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "The request is processed under the AIE regime."
     },
     {
       "route_id": "police_certificate",
@@ -111,7 +245,21 @@
       "authority": "An Garda Síochána",
       "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
-      "notes": "Specific current submission instructions must be verified before activation."
+      "notes": "Specific current submission instructions must be verified before activation.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Apply for a Police Certificate where current qualifying circumstances apply.",
+      "eligibility": "Specified purposes include certain foreign consular/visa, EU, overseas employment/aid and qualifying overseas study circumstances.",
+      "submission_method": [
+        "official_form",
+        "post"
+      ],
+      "form_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-police-certificate-application-form-feb-2022.pdf",
+      "geographic_scope": "Republic of Ireland residence/former residence as described by Garda",
+      "conflict_note": "Broader page mentions online completion while current FAQ specifies postal submission; verify current submission instruction before activation.",
+      "next_steps": "Complete current application and follow current submission instructions."
     },
     {
       "route_id": "garda_vetting",
@@ -121,7 +269,18 @@
       "authority": "An Garda Síochána National Vetting Bureau",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/garda-vetting/",
-      "notes": "Registered organisation initiates the application."
+      "notes": "Registered organisation initiates the application.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Complete an eVetting application initiated by a registered organisation.",
+      "eligibility": "Applicant must meet current age, identity, email and registered-organisation requirements.",
+      "submission_method": [
+        "online_through_registered_organisation"
+      ],
+      "geographic_scope": "Ireland / registered-organisation vetting process",
+      "next_steps": "The registered organisation initiates the application; applicant completes the invitation process."
     },
     {
       "route_id": "national_age_card",
@@ -131,7 +290,19 @@
       "authority": "An Garda Síochána / Age Card service",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/national-age-card/",
-      "notes": "Voluntary proof-of-age card for people aged 18+."
+      "notes": "Voluntary proof-of-age card for people aged 18+.",
+      "authority_role": [
+        "entry_point",
+        "authentication_body"
+      ],
+      "purpose_plain": "Apply for the voluntary National Age Card for proof of age.",
+      "eligibility": "People aged 18 or over, subject to current application requirements.",
+      "submission_method": [
+        "online",
+        "garda_station_authentication"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Apply through the official Age Card service and complete required Garda-station authentication."
     },
     {
       "route_id": "unclaimed_property",
@@ -141,7 +312,20 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
-      "notes": "Search does not replace reporting stolen property."
+      "notes": "Search does not replace reporting stolen property.",
+      "authority_role": [
+        "information_contact",
+        "property_handler"
+      ],
+      "purpose_plain": "Search selected recovered lost/stolen property.",
+      "eligibility": "Public search of property included in the current pilot.",
+      "submission_method": [
+        "online",
+        "garda_station"
+      ],
+      "official_submission_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
+      "geographic_scope": "Ireland",
+      "next_steps": "If a matching item is identified, follow Garda instructions; stolen property should still be reported."
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -151,7 +335,18 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/roads-policing/fixed-charge-notices/cancelling-fixed-charge-notices.html",
-      "notes": "Must not be presented as a new traffic report."
+      "notes": "Must not be presented as a new traffic report.",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Use the official FCN cancellation/review process where applicable.",
+      "eligibility": "Person who has received an FCN and meets applicable review/cancellation conditions.",
+      "submission_method": [
+        "official_route"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Use the current cancellation/review instructions for the specific notice."
     },
     {
       "route_id": "prosecution_decision_review",
@@ -161,7 +356,19 @@
       "authority": "An Garda Síochána / applicable review authority",
       "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/victim-services/garda-victim-service/information-on-prosecution/",
-      "notes": "Do not hard-code one universal deadline."
+      "notes": "Do not hard-code one universal deadline.",
+      "authority_role": [
+        "entry_point",
+        "review_body"
+      ],
+      "purpose_plain": "Request review of a Garda prosecution decision under the applicable procedure.",
+      "eligibility": "Depends on the decision and applicable review route.",
+      "submission_method": [
+        "written_request"
+      ],
+      "geographic_scope": "Ireland",
+      "conflict_note": "Official Garda publications describe different review periods for different mechanisms; do not present one universal deadline.",
+      "next_steps": "Use the review route identified in the decision/reasons notification."
     }
   ],
   "required_fields": [
@@ -189,5 +396,6 @@
     "source_verified",
     "verified_on",
     "conflict_note"
-  ]
+  ],
+  "generated_scope": "Verified route seed, enriched with minimum operational fields; routes with unresolved source conflicts remain explicitly flagged."
 }
