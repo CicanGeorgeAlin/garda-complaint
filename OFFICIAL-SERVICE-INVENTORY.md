@@ -490,3 +490,52 @@ Search results must then be classified into:
 
 This prevents search-index noise from becoming a false citizen route.
 
+
+
+## Audit 07 — newly discovered public application routes
+
+### Collection Permit
+- Garda currently hosts an official Collection Permit Application Form.
+- This should be classified as a specialist permit/application route, not a complaint or crime-report route.
+- The existence of this current official form reinforces the need for site-wide form discovery.
+- Source:
+  https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/news-archive/collection-permit-application-form.html
+
+### Gaming Permit
+- GP1 remains a verified current official application instrument.
+- It is specified under section 9A of the Gaming and Lotteries Act 1956, as inserted by the 2019 amendment.
+- The application requires the proposed gaming activity date to be at least 60 days from the application date.
+- Source:
+  https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf
+
+### FOI / AIE current operational details
+- Current Garda FAQ confirms FOI requests may be made by email or post and should identify the applicant, correspondence address and records sought.
+- Current Garda FOI page states a response no later than 4 weeks.
+- Current AIE page uses the same FOI Office route and states no initial AIE application fee.
+- The project should display these as separate legal routes even where their operational contact point is the same.
+- Sources:
+  - https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/faqs.html
+  - https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/how-do-i-make-a-request-for-information-on-the-environment-.html
+
+### Police Certificate — current page confirms postal submission
+- Current Garda Police Certificate FAQ currently instructs applicants to submit the completed application with certified identification and proof of address/previous addresses by post to the Superintendent and/or Assistant Principal Officer in the relevant Division.
+- This is more specific than the general page's reference to online completion.
+- Until the live online process is independently verified, the public site should treat postal submission as the currently explicit documented submission instruction and flag the online-completion wording for verification.
+- Source:
+  https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/
+
+### Firearms: first-time versus renewal
+- Current Garda guidance explicitly separates first-time FCA1 applications from renewal FCR forms.
+- First-time applications use FCA1 and go to the local Garda station.
+- Renewals use the pre-populated FCR form; Garda states only the pre-populated FCR is acceptable for renewal.
+- Source:
+  https://www.garda.ie/en/about-us/online-services/firearms-licensing/firearm-certificate-renewals.html
+
+## Audit 07 — routing safeguards
+
+- A permit/application must never be presented as a "complaint".
+- A review/cancellation process must never be presented as a new incident report.
+- A certificate must never be presented as Garda vetting unless the official source expressly says so.
+- Where one official page gives a broad process and another gives the specific submission method, prefer the specific current submission instruction while recording the broader page as a verification note.
+- Do not silently resolve contradictory official deadlines.
+
