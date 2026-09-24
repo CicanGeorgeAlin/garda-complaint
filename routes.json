@@ -24,7 +24,9 @@
       ],
       "official_submission_url": "tel:112",
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the emergency operator's instructions."
+      "next_steps": "Follow the emergency operator's instructions.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_complaint",
@@ -54,7 +56,9 @@
       "next_steps": "Fiosrú first assesses admissibility. An admissible complaint may be referred to An Garda Síochána for resolution under the statutory framework or investigated by Fiosrú, depending on the applicable route.",
       "conflict_note": "Current page states Fiosrú is experiencing a high volume of complaints and possible admissibility delays. It also states complaint information may be shared with Gardaí and, in applicable circumstances, other bodies.",
       "source_verified": "Fiosrú complaint page checked 24 September 2026",
-      "verified_on": "2026-09-24"
+      "verified_on": "2026-09-24",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6, especially ss.195-199.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
     },
     {
       "route_id": "crime_general",
@@ -78,7 +82,12 @@
         "official_online_specialist_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the station directory or the specialist online service identified by the router."
+      "next_steps": "Use the station directory or the specialist online service identified by the router.",
+      "legal_basis": "General criminal law and Garda statutory functions; route is operational guidance rather than a single offence-specific legal provision.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "theft_declaration",
@@ -101,7 +110,12 @@
       ],
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/theft-declaration/",
       "geographic_scope": "Ireland excluding Northern Ireland for the current theft declaration",
-      "next_steps": "Provide the requested details; the current form warns that it cannot be edited after submission."
+      "next_steps": "Provide the requested details; the current form warns that it cannot be edited after submission.",
+      "legal_basis": "Applicable Irish theft/criminal law and Garda online-reporting guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "traffic_watch",
@@ -125,7 +139,12 @@
       "official_submission_url": "https://www.garda.ie/en/trafficwatchreport/",
       "geographic_scope": "Ireland",
       "deadline": "Current Traffic Watch form says reports should generally be made within 6 months.",
-      "next_steps": "Garda reviews the report; an investigator may contact the reporter and request a statement."
+      "next_steps": "Garda reviews the report; an investigator may contact the reporter and request a statement.",
+      "legal_basis": "Road Traffic Acts and current Garda Traffic Watch operational guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "hate_crime",
@@ -150,7 +169,12 @@
       ],
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/online-hate-crime-reporting/",
       "geographic_scope": "Ireland",
-      "next_steps": "A Garda will take the report and assess whether to commence an investigation; victim-support referral is available."
+      "next_steps": "A Garda will take the report and assess whether to commence an investigation; victim-support referral is available.",
+      "legal_basis": "Applicable Irish criminal law and current Garda hate-crime reporting guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "garda_confidential",
@@ -172,7 +196,12 @@
       "contact": "1800 666 111",
       "geographic_scope": "Ireland",
       "next_steps": "Provide information through the Garda Confidential Line. The Garda site states callers can provide crime-related information confidentially.",
-      "emergency_rule": "Emergency → 999/112, not the confidential line."
+      "emergency_rule": "Emergency → 999/112, not the confidential line.",
+      "legal_basis": "Current Garda confidential-information service guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "personal_data_f20",
@@ -196,7 +225,12 @@
       ],
       "contact": "dataprotection@garda.ie; +353 (01) 666 9521",
       "geographic_scope": "Ireland / Garda-held personal data",
-      "next_steps": "Garda Data Protection Unit processes the request subject to applicable law."
+      "next_steps": "Garda Data Protection Unit processes the request subject to applicable law.",
+      "legal_basis": "GDPR and Data Protection Act 2018, subject to applicable exemptions.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána Data Protection Unit guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "foi",
@@ -220,7 +254,11 @@
       "form_url": "https://www.garda.ie/en/Information-centre/Freedom-of-Information/Freedom-of-Information/FOI-Application-Form1.pdf",
       "geographic_scope": "Ireland / records within FOI scope",
       "conflict_note": "Current Garda pages/forms contain differing response-time wording; do not hard-code one universal deadline without qualification.",
-      "next_steps": "Check whether the information is within Garda's current FOI administrative scope and use the official application route."
+      "next_steps": "Check whether the information is within Garda's current FOI administrative scope and use the official application route.",
+      "legal_basis": "Freedom of Information Act 2014.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána FOI Unit guidance/source linked in this route."
     },
     {
       "route_id": "aie",
@@ -242,7 +280,12 @@
         "email"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Describe the environmental information sought, provide contact details and state the preferred format."
+      "next_steps": "Describe the environmental information sought, provide contact details and state the preferred format.",
+      "legal_basis": "European Communities (Access to Information on the Environment) Regulations 2007–2018.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "police_certificate",
@@ -268,7 +311,8 @@
       "geographic_scope": "Ireland / qualifying purposes",
       "conflict_note": "Current Garda pages differ on parts of the submission workflow; do not hard-code one universal delivery method without qualification.",
       "next_steps": "Check the qualifying purpose and current Garda submission instructions before sending the application.",
-      "emergency_rule": "Not an emergency service."
+      "emergency_rule": "Not an emergency service.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route."
     },
     {
       "route_id": "garda_vetting",
@@ -290,7 +334,12 @@
         "online"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Ask the organisation requesting vetting to initiate the eVetting process and provide the required identification/consent."
+      "next_steps": "Ask the organisation requesting vetting to initiate the eVetting process and provide the required identification/consent.",
+      "legal_basis": "National Vetting Bureau (Children and Vulnerable Persons) Act 2012 and current Garda vetting guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána National Vetting Bureau guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "national_age_card",
@@ -312,7 +361,12 @@
         "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Complete the application through the official Age Card process and attend the relevant Garda station for authentication."
+      "next_steps": "Complete the application through the official Age Card process and attend the relevant Garda station for authentication.",
+      "legal_basis": "Intoxicating Liquor Act 1988 (Age Card) Regulations 2007.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "unclaimed_property",
@@ -334,7 +388,9 @@
       ],
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
       "geographic_scope": "Selected participating locations/property covered by the current pilot",
-      "next_steps": "Search the official database. If the property was stolen, this does not replace reporting the theft."
+      "next_steps": "Search the official database. If the property was stolen, this does not replace reporting the theft.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -358,7 +414,11 @@
       "geographic_scope": "Ireland",
       "next_steps": "Check the notice and use the official payment or cancellation/review route applicable to the specific notice.",
       "deadline": "Normal payment structure is 56 days: first 28 days at the fixed amount, followed by a further 28 days at an increased amount, subject to the current notice/rules.",
-      "conflict_note": "Cancellation/review is a separate process and is not a guarantee that a notice will be cancelled."
+      "conflict_note": "Cancellation/review is a separate process and is not a guarantee that a notice will be cancelled.",
+      "legal_basis": "Road Traffic Acts and current Fixed Charge Notice regulations/guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána / Fixed Charge Processing System guidance/source linked in this route."
     },
     {
       "route_id": "prosecution_decision_review",
@@ -381,7 +441,8 @@
       ],
       "geographic_scope": "Ireland",
       "conflict_note": "Current Garda victim information and other official guidance contain differing review-period wording in different contexts; do not hard-code a single universal deadline.",
-      "next_steps": "Identify which authority made the decision and follow the corresponding official review information."
+      "next_steps": "Identify which authority made the decision and follow the corresponding official review information.",
+      "guidance_basis": "Official An Garda Síochána / DPP depending on decision guidance/source linked in this route."
     },
     {
       "route_id": "abnormal_loads",
@@ -405,7 +466,12 @@
       "geographic_scope": "Ireland",
       "next_steps": "Check the current local-authority permit requirements first; then follow the Garda notification requirements that apply to the load.",
       "emergency_rule": "Not an emergency service.",
-      "deadline": "For the Garda notification described in current guidance, a copy is to reach the Garda National Traffic Bureau at least 4 working days before submission to the local authority."
+      "deadline": "For the Garda notification described in current guidance, a copy is to reach the Garda National Traffic Bureau at least 4 working days before submission to the local authority.",
+      "legal_basis": "Road Traffic and local-authority permitting framework; current Garda abnormal-load guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána / relevant local authority guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "collection_permit",
@@ -428,7 +494,12 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Use the current official collection-permit application and follow the responsible Garda instructions.",
-      "emergency_rule": "Not an emergency service."
+      "emergency_rule": "Not an emergency service.",
+      "legal_basis": "Public Order/collection-permit legislation and current Garda collection-permit guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "gaming_permit",
@@ -453,7 +524,12 @@
       "next_steps": "Check whether the proposed activity falls within the statutory licensing/permit regime and then use the official GP1 route.",
       "emergency_rule": "Not an emergency service.",
       "deadline": "Current GP1 form states the proposed activity date should be at least 60 days from the application.",
-      "official_submission_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf"
+      "official_submission_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf",
+      "legal_basis": "Gaming and Lotteries Act 1956, as amended, including the 2019 amendments.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána / District Superintendent guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "firearms_application",
@@ -477,7 +553,12 @@
       "geographic_scope": "Ireland",
       "next_steps": "Use the current official FCA1 and submit through the responsible Garda licensing route.",
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf",
-      "emergency_rule": "Not an emergency service."
+      "emergency_rule": "Not an emergency service.",
+      "legal_basis": "Firearms Acts 1925–2009 and current firearms licensing regulations/guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "firearms_renewal",
@@ -500,7 +581,12 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Use the current renewal instructions and pre-populated renewal documentation where applicable.",
-      "emergency_rule": "Not an emergency service."
+      "emergency_rule": "Not an emergency service.",
+      "legal_basis": "Firearms Acts 1925–2009 and current firearms licensing regulations/guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "property_found_taxis_psvs",
@@ -520,7 +606,9 @@
         "official_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Follow the current official instructions.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "youth_awards",
@@ -540,7 +628,9 @@
         "official_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Follow the current official instructions.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "public_cctv_institutional",
@@ -562,7 +652,8 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "If the concern is a particular incident or existing footage, use the relevant crime/data/property route instead of treating this as a personal CCTV installation application.",
-      "conflict_note": "Do not present the institutional public-CCTV process as a standard citizen permit form."
+      "conflict_note": "Do not present the institutional public-CCTV process as a standard citizen permit form.",
+      "guidance_basis": "Official Relevant local authority / Garda institutional process guidance/source linked in this route."
     },
     {
       "route_id": "fiosru_review",
@@ -591,7 +682,9 @@
       "source_verified": "Official Fiosrú statutory review guidance and review form checked 24 September 2026",
       "verified_on": "2026-09-24",
       "form_url": "https://www.fiosru.ie/media/vjnmvxnl/v8-review-request-form-inadmissibility.pdf",
-      "conflict_note": "Official Fiosrú review guidance provides a downloadable review form and confirms email/post submission. A separate discontinuance form is used where applicable; the website should select the form based on the decision received."
+      "conflict_note": "Official Fiosrú review guidance provides a downloadable review form and confirms email/post submission. A separate discontinuance form is used where applicable; the website should select the form based on the decision received.",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, s.224.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
     },
     {
       "route_id": "victim_services",
@@ -614,7 +707,9 @@
         "online_information"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use Garda victim-service information and the relevant Victim Service Office."
+      "next_steps": "Use Garda victim-service information and the relevant Victim Service Office.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "property_garda_possession",
@@ -636,7 +731,9 @@
         "official_information_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Identify whether the matter concerns property held by Gardaí, recovered property, or property reported stolen, then use the appropriate official route."
+      "next_steps": "Identify whether the matter concerns property held by Gardaí, recovered property, or property reported stolen, then use the appropriate official route.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "traffic_fcn_information",
@@ -657,7 +754,9 @@
         "official_notice_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the instructions on the specific notice and current Garda FCN guidance."
+      "next_steps": "Follow the instructions on the specific notice and current Garda FCN guidance.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "gsoc_legacy_transition",
@@ -678,7 +777,9 @@
         "information"
       ],
       "geographic_scope": "Ireland / legacy GSOC cases",
-      "next_steps": "No resubmission is required according to current Fiosrú guidance; Fiosrú will contact the complainant about next steps."
+      "next_steps": "No resubmission is required according to current Fiosrú guidance; Fiosrú will contact the complainant about next steps.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "data_access_router",
@@ -700,7 +801,8 @@
       ],
       "geographic_scope": "Ireland / Garda-held personal data",
       "next_steps": "Explain the data-right sought, then use the Garda Data Protection route and its current form/contact instructions.",
-      "conflict_note": "Do not present FOI as the route for a person's own personal-data access request when the Data Protection route applies."
+      "conflict_note": "Do not present FOI as the route for a person's own personal-data access request when the Data Protection route applies.",
+      "guidance_basis": "Official An Garda Síochána Data Protection Unit guidance/source linked in this route."
     },
     {
       "route_id": "emergency_sms_112",
@@ -722,7 +824,9 @@
       ],
       "official_submission_url": "sms:112",
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official 112 SMS process and provide the requested location and emergency details."
+      "next_steps": "Use the official 112 SMS process and provide the requested location and emergency details.",
+      "guidance_basis": "Official Emergency services guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "accessibility_garda",
@@ -745,7 +849,9 @@
         "in_person"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the Garda accessibility information and request reasonable assistance where appropriate."
+      "next_steps": "Use the Garda accessibility information and request reasonable assistance where appropriate.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_accessibility",
@@ -768,7 +874,9 @@
         "in_person"
       ],
       "geographic_scope": "Ireland / Fiosrú jurisdiction",
-      "next_steps": "Use Fiosrú accessibility support or its Access Officer where assistance is needed."
+      "next_steps": "Use Fiosrú accessibility support or its Access Officer where assistance is needed.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "firearms_nonresident",
@@ -790,7 +898,12 @@
         "official_contact"
       ],
       "geographic_scope": "Ireland / non-resident applicants",
-      "next_steps": "Follow the current Garda non-resident licensing information and responsible authority instructions."
+      "next_steps": "Follow the current Garda non-resident licensing information and responsible authority instructions.",
+      "legal_basis": "Firearms Acts 1925–2009 and current firearms licensing regulations/guidance.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "police_certificate_router",
@@ -811,7 +924,8 @@
       ],
       "geographic_scope": "Ireland",
       "conflict_note": "Do not describe Police Certificate as a general criminal-record disclosure or as Garda Vetting; current Garda eligibility is purpose-specific.",
-      "next_steps": "Identify the requesting organisation/country and purpose, then use the applicable official Garda route."
+      "next_steps": "Identify the requesting organisation/country and purpose, then use the applicable official Garda route.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route."
     },
     {
       "route_id": "station_directory",
@@ -833,7 +947,9 @@
         "in_person"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official station directory to identify the relevant station and its published contact details."
+      "next_steps": "Use the official station directory to identify the relevant station and its published contact details.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_victim_information",
@@ -856,7 +972,10 @@
       "geographic_scope": "Ireland / Fiosrú investigations",
       "next_steps": "Ask the Fiosrú investigating officer for the relevant information. If Fiosrú does not hold it, current guidance says the request can be forwarded to the appropriate organisation.",
       "source_verified": "Official Fiosrú victim right-to-information page checked 24 September 2026",
-      "verified_on": "2026-09-24"
+      "verified_on": "2026-09-24",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6; applicable victim-information provisions.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_post_investigation",
@@ -879,7 +998,10 @@
       "geographic_scope": "Ireland / Fiosrú investigations",
       "next_steps": "Follow the outcome notification; if a discontinuance decision is received, use the statutory review route within the applicable period.",
       "source_verified": "Official Fiosrú Victims of Crime Charter checked 24 September 2026",
-      "verified_on": "2026-09-24"
+      "verified_on": "2026-09-24",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6.",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_review_discontinuance",
@@ -906,7 +1028,11 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the discontinuance decision; extensions may be considered for good reason.",
       "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú.",
-      "conflict_note": "Official Fiosrú discontinuance review form verified 24 September 2026. Review normally requested within 28 days; good reasons may support extra time."
+      "conflict_note": "Official Fiosrú discontinuance review form verified 24 September 2026. Review normally requested within 28 days; good reasons may support extra time.",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, s.224.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
     },
     {
       "route_id": "crime_online_router",
@@ -926,7 +1052,9 @@
         "route_to_specialist_or_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Answer the incident-type and urgency questions, then use the appropriate official route."
+      "next_steps": "Answer the incident-type and urgency questions, then use the appropriate official route.",
+      "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
+      "conflict_note": "No known source conflict recorded in this verification pass."
     },
     {
       "route_id": "fiosru_complaint_screen",
@@ -953,7 +1081,11 @@
       "deadline": "Normally within 12 months, with statutory possibilities for extension.",
       "evidence_required": "Useful details include Garda identity if known, dates/times/locations, description of behaviour and supporting information; a Garda name is not required.",
       "next_steps": "If the citizen proceeds, direct them to the official Fiosrú complaint process. Fiosrú determines admissibility.",
-      "conflict_note": "The website must not promise admissibility or tell a person that a statutory threshold has definitely been met."
+      "conflict_note": "The website must not promise admissibility or tell a person that a statutory threshold has definitely been met.",
+      "legal_basis": "Policing, Security and Community Safety Act 2024, ss.195-199 and s.226.",
+      "source_verified": "Official source reviewed 2026-09-24",
+      "verified_on": "2026-09-24",
+      "guidance_basis": "Official Fiosrú guidance/source linked in this route."
     }
   ],
   "required_fields": [
@@ -982,5 +1114,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified direct Fiosru discontinuance review PDF and aligned route metadata with current statutory-review guidance."
+  "generated_scope": "Added legal-basis and verification metadata to the principal routes; preserved guidance-only routes where no single route-specific statutory provision is appropriate."
 }
