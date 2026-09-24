@@ -576,10 +576,10 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
       "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts.",
-      "source_verified": "Fiosrú review request page checked 24 September 2026",
+      "source_verified": "Official Fiosrú review pages checked 24 September 2026",
       "verified_on": "2026-09-24",
       "form_url": "https://www.fiosru.ie/media/???",
-      "conflict_note": "Current Fiosrú page confirms email/post submission and Access Officer support. The project will not invent a PDF URL; the official review page is the authoritative destination until the exact downloadable form URL is verified."
+      "conflict_note": "The current official review page confirms a PDF review form exists and gives email/post destinations, but the exact PDF asset URL was not safely resolved in this pass; do not invent it. Use the official review page as the submission destination."
     },
     {
       "route_id": "victim_services",
@@ -645,6 +645,27 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Follow the instructions on the specific notice and current Garda FCN guidance."
+    },
+    {
+      "route_id": "gsoc_legacy_transition",
+      "category": "garda_personnel",
+      "citizen_question": "I made a GSOC complaint before Fiosrú began and need to know what happens now.",
+      "route_type": "legacy_case_information",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/gsoc-complaints/",
+      "authority_role": [
+        "information_contact",
+        "case_continuation"
+      ],
+      "purpose_plain": "Understand the transition of a pre-2 April 2025 GSOC complaint to Fiosrú.",
+      "eligibility": "People with an existing GSOC complaint from before 2 April 2025.",
+      "emergency_rule": "Not a new emergency/reporting route.",
+      "submission_method": [
+        "information"
+      ],
+      "geographic_scope": "Ireland / legacy GSOC cases",
+      "next_steps": "No resubmission is required according to current Fiosrú guidance; Fiosrú will contact the complainant about next steps."
     }
   ],
   "required_fields": [
@@ -673,5 +694,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Current official-source verification refreshed 24 September 2026; Fiosru complaint/review operational details updated."
+  "generated_scope": "Fresh official-source pass completed 24 September 2026; added legacy GSOC transition and preserved unresolved review-form asset URL rather than inventing it."
 }
