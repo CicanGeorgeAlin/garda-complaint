@@ -187,6 +187,24 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     const q=(byId('route-question')?.value||'').toLowerCase();
     const emergency=/emergency|danger to life|risk of serious injury|crime in progress|happening now|offender still (at|near) the scene|immediate danger/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
+
+    // Crime screening follows the current Garda online-reporting exclusions.
+    const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|robbery|violent crime|stolen firearm|firearm stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene|happening now)/.test(q);
+    if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender)/.test(q)){
+      return state.routes.find(r=>r.route_id==='station_directory');
+    }
+
+    // The online theft declaration is limited to qualifying thefts not exceeding €1,000.
+    const hasTheft=/(theft|stolen|stole|property was taken)/.test(q);
+    const valueMatch=q.match(/(?:€|eur|euro)\\s*(\\d+(?:[.,]\\d+)?)|\\b(\\d+(?:[.,]\\d+)?)\\s*(?:euro|eur|€)/);
+    const value=valueMatch ? Number((valueMatch[1]||valueMatch[2]).replace(',','.')) : null;
+    if(hasTheft && value!==null && value<=1000 && !excludedOnlineCrime){
+      return state.routes.find(r=>r.route_id==='theft_declaration');
+    }
+    if(hasTheft && value!==null && value>1000){
+      return state.routes.find(r=>r.route_id==='station_directory');
+    }
+
     const tests=[
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
       ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
