@@ -376,40 +376,47 @@
       "category": "transport",
       "citizen_question": "I need to move an abnormal load",
       "route_type": "permit_notification",
-      "authority": "Local authority + An Garda Síochána",
+      "authority": "Relevant Local Authority + An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/faqs/?id=4853",
       "notes": "Permit authority is the relevant local authority; Garda National Traffic Bureau has a notification/traffic-policing role.",
       "authority_role": [
-        "entry_point"
+        "information_contact",
+        "traffic_policing"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
-      "eligibility": "See current official requirements.",
+      "purpose_plain": "Follow the multi-authority process for an abnormal load, including the Garda notification requirement.",
+      "eligibility": "Depends on whether the proposed load falls within the current abnormal-load requirements.",
       "submission_method": [
-        "official_route"
+        "local_authority_permit_process",
+        "garda_notification"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Identify the relevant local authority permit route and comply with the Garda notification requirement.",
+      "emergency_rule": "Not an emergency service.",
+      "deadline": "Current Garda guidance says Garda National Traffic Bureau should receive a copy of the application at least 4 working days before submission to the local authority."
     },
     {
       "route_id": "collection_permit",
       "category": "permit",
       "citizen_question": "I need a collection permit",
       "route_type": "permit_application",
-      "authority": "An Garda Síochána / relevant Garda authority",
+      "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/news-archive/collection-permit-application-form.html",
       "notes": "Use the current official collection-permit application route.",
       "authority_role": [
-        "entry_point"
+        "entry_point",
+        "decision_maker"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
-      "eligibility": "See current official requirements.",
+      "purpose_plain": "Use the official collection-permit application process where applicable.",
+      "eligibility": "Subject to the applicable collection-permit requirements.",
       "submission_method": [
-        "official_route"
+        "official_form",
+        "official_garda_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Use the current official form and instructions.",
+      "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "gaming_permit",
@@ -421,15 +428,18 @@
       "official_info_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf",
       "notes": "Current GP1 is the specified application form; proposed activity date must meet the current lead-time requirement.",
       "authority_role": [
-        "entry_point"
+        "entry_point",
+        "decision_maker"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
-      "eligibility": "See current official requirements.",
+      "purpose_plain": "Apply using the current GP1 gaming-permit form where the statutory conditions apply.",
+      "eligibility": "Subject to the Gaming and Lotteries Act framework and current application requirements.",
       "submission_method": [
-        "official_route"
+        "official_form"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Provide the information requested by the District Superintendent and follow the current permit process.",
+      "emergency_rule": "Not an emergency service.",
+      "deadline": "Current GP1 material requires the proposed gaming activity date to be at least 60 days from the application date."
     },
     {
       "route_id": "firearms_application",
@@ -438,18 +448,22 @@
       "route_type": "licence_application",
       "authority": "An Garda Síochána",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
       "notes": "FCA1 is the current first-time application form; restricted firearms have the additional current authority requirement.",
       "authority_role": [
-        "entry_point"
+        "entry_point",
+        "decision_maker"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
-      "eligibility": "See current official requirements.",
+      "purpose_plain": "Apply for a firearm certificate using the current FCA1 route.",
+      "eligibility": "Subject to the Firearms Acts and current Garda requirements; restricted firearms have additional authority requirements.",
       "submission_method": [
-        "official_route"
+        "official_form",
+        "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Complete the current FCA1 and submit it through the official local Garda route; follow current instructions for restricted firearms.",
+      "official_submission_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf",
+      "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "firearms_renewal",
@@ -461,15 +475,18 @@
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/firearm-certificate-renewals.html",
       "notes": "Garda says the pre-populated FCR is the acceptable renewal route.",
       "authority_role": [
-        "entry_point"
+        "entry_point",
+        "decision_maker"
       ],
-      "purpose_plain": "Use the current official route and instructions for this service.",
-      "eligibility": "See current official requirements.",
+      "purpose_plain": "Renew an existing firearm certificate through the current Garda renewal process.",
+      "eligibility": "Existing certificate holder with a renewal notice/current renewal process.",
       "submission_method": [
-        "official_route"
+        "official_prepopulated_form",
+        "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Follow the current official instructions."
+      "next_steps": "Use the current pre-populated FCR supplied for renewal and follow Garda instructions.",
+      "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "property_found_taxis_psvs",
@@ -583,5 +600,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified route seed enriched with current official-source verification; review route added explicitly."
+  "generated_scope": "Verified route seed enriched with specialist application and multi-authority routes."
 }
