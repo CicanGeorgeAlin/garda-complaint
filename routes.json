@@ -244,8 +244,8 @@
     {
       "route_id": "police_certificate",
       "category": "certificate",
-      "citizen_question": "I need a Garda Police Certificate for a qualifying purpose",
-      "route_type": "certificate",
+      "citizen_question": "I need a Garda Police Certificate",
+      "route_type": "police_certificate",
       "authority": "An Garda Síochána",
       "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
@@ -254,16 +254,17 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Apply for a Police Certificate where current qualifying circumstances apply.",
+      "purpose_plain": "Route qualifying Police Certificate requests while keeping them separate from Garda Vetting.",
       "eligibility": "Specified purposes include certain foreign consular/visa, EU, overseas employment/aid and qualifying overseas study circumstances.",
       "submission_method": [
         "official_form",
-        "post"
+        "post",
+        "local_garda_route"
       ],
       "form_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-police-certificate-application-form-feb-2022.pdf",
-      "geographic_scope": "Republic of Ireland residence/former residence as described by Garda",
-      "conflict_note": "Current Garda material contains inconsistent wording about online completion versus postal submission; specific current submission instructions must be checked before activation.",
-      "next_steps": "Use the current official application and submission instructions.",
+      "geographic_scope": "Ireland / qualifying purposes",
+      "conflict_note": "Current Garda pages differ on parts of the submission workflow; do not hard-code one universal delivery method without qualification.",
+      "next_steps": "Check the qualifying purpose and current Garda submission instructions before sending the application.",
       "emergency_rule": "Not an emergency service."
     },
     {
@@ -453,7 +454,7 @@
       "route_id": "firearms_application",
       "category": "firearms",
       "citizen_question": "I want to apply for a firearm certificate",
-      "route_type": "licence_application",
+      "route_type": "firearms_licensing",
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
@@ -462,22 +463,22 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Apply for a firearm certificate using the current FCA1 route.",
-      "eligibility": "Subject to the Firearms Acts and current Garda requirements; restricted firearms have additional authority requirements.",
+      "purpose_plain": "Route first-time firearm certificate applications to the official FCA1 process.",
+      "eligibility": "Eligibility and certificate conditions depend on the Firearms Acts and current Garda licensing requirements.",
       "submission_method": [
         "official_form",
         "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Complete the current FCA1 and submit it through the official local Garda route; follow current instructions for restricted firearms.",
+      "next_steps": "Use the current official FCA1 and submit through the responsible Garda licensing route.",
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf",
       "emergency_rule": "Not an emergency service."
     },
     {
       "route_id": "firearms_renewal",
       "category": "firearms",
-      "citizen_question": "I want to renew a firearm certificate",
-      "route_type": "licence_renewal",
+      "citizen_question": "I need to renew a firearm certificate",
+      "route_type": "firearms_licensing_renewal",
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/firearm-certificate-renewals.html",
@@ -486,14 +487,14 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Renew an existing firearm certificate through the current Garda renewal process.",
+      "purpose_plain": "Route firearm-certificate renewals to the official renewal process.",
       "eligibility": "Existing certificate holder with a renewal notice/current renewal process.",
       "submission_method": [
-        "official_prepopulated_form",
+        "official_form",
         "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the current pre-populated FCR supplied for renewal and follow Garda instructions.",
+      "next_steps": "Use the current renewal instructions and pre-populated renewal documentation where applicable.",
       "emergency_rule": "Not an emergency service."
     },
     {
@@ -765,8 +766,8 @@
     {
       "route_id": "firearms_nonresident",
       "category": "firearms",
-      "citizen_question": "I live outside Ireland and need a firearm certificate for Ireland",
-      "route_type": "nonresident_firearm_certificate",
+      "citizen_question": "I live outside Ireland and need information about an Irish firearm certificate",
+      "route_type": "firearms_licensing_nonresident",
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
@@ -774,14 +775,15 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Use the Garda process for a non-resident firearm certificate where the current legal conditions apply.",
+      "purpose_plain": "Identify the separate route for non-resident firearm applicants instead of applying ordinary resident assumptions.",
       "eligibility": "Non-resident applicants must satisfy the current statutory and Garda requirements.",
       "emergency_rule": "Not an emergency service.",
       "submission_method": [
-        "official_application"
+        "official_form",
+        "official_contact"
       ],
       "geographic_scope": "Ireland / non-resident applicants",
-      "next_steps": "Follow the current non-resident firearm certificate instructions and application route."
+      "next_steps": "Follow the current Garda non-resident licensing information and responsible authority instructions."
     },
     {
       "route_id": "police_certificate_router",
@@ -972,5 +974,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened notice/review and property decision routing; preserved known official deadline conflicts instead of flattening them."
+  "generated_scope": "Strengthened firearms licensing and Police Certificate routing, including resident/non-resident distinction and current source conflicts."
 }
