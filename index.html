@@ -188,6 +188,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     const emergency=/emergency|danger|life|serious injury|crime in progress/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
     const tests=[
+      ['fiosru|review my complaint|complaint was discontinued|complaint inadmissible|want a review of my complaint','fiosru_review'],
       ['garda|guard|member of an garda|police conduct|complain about', 'fiosru_complaint_screen'],
       ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
       ['hate crime|hate incident','hate_crime'],
@@ -208,11 +209,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['public collection|collection permit','collection_permit'],
       ['gaming permit|lottery permit|gaming licence','gaming_permit'],
       ['cctv|camera in my area|public camera','public_cctv_institutional'],
-      ['fiosru review|review my complaint|complaint was discontinued|complaint inadmissible','fiosru_review'],
-      ['police certificate|certificate for another country','police_certificate_router']
     ];
     for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
-    return state.routes.find(r=>r.route_id==='crime_general')||null;
+    return null;
   }
   function show(route){
     const out=byId('route-engine-result'); if(!out) return;
