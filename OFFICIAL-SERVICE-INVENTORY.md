@@ -539,3 +539,92 @@ This prevents search-index noise from becoming a false citizen route.
 - Where one official page gives a broad process and another gives the specific submission method, prefer the specific current submission instruction while recording the broader page as a verification note.
 - Do not silently resolve contradictory official deadlines.
 
+
+
+## Audit 08 — route taxonomy expansion
+
+### Immigration / visa-related Garda documents
+- Garda publishes police-certification material used for overseas visa/consular and related purposes.
+- This is a certificate route, not Garda Vetting and not a general character-reference service.
+- The eligibility and purpose must be displayed exactly as the current Garda source describes them.
+- Source:
+  https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/
+
+### Firearms licensing — delivery model
+- Firearms applications are an example of a route where the citizen-facing process combines:
+  1. an official Garda form;
+  2. a local Garda-station submission;
+  3. statutory decision-making by the relevant Garda authority;
+  4. possible additional restrictions for restricted firearms.
+- The engine should therefore store the legal decision-maker separately from the physical submission point.
+
+### Abnormal loads — multi-authority routing
+- Abnormal-load applications are not a simple Garda permit.
+- Garda guidance says the relevant local authority issues the permit while Garda National Traffic Bureau is informed and receives a copy of the application before local-authority submission.
+- The routing engine must identify the local authority as the permit authority and Garda as a required traffic-policing notification/consultation step.
+- Source:
+  https://www.garda.ie/en/faqs/?id=4853
+
+### Local Garda station as submission point
+- Several services use the local station as a submission/authentication/collection point without making the station the final decision-maker.
+- Examples now recorded:
+  - firearms applications;
+  - National Age Card authentication;
+  - victim/prosecution-review forms;
+  - certain property routes.
+- Therefore "Where do I submit this?" and "Who decides this?" must be separate fields.
+
+## Audit 08 — citizen questions the engine must answer
+
+For every discovered route, the interface should be able to answer:
+
+1. **What is this for?**
+2. **Is this an emergency?**
+3. **Can I do it online?**
+4. **Is there an official form?**
+5. **Where do I submit it?**
+6. **Who actually decides it?**
+7. **What information/evidence is required?**
+8. **Is there a deadline?**
+9. **Can someone else apply for me?**
+10. **Can I remain anonymous?**
+11. **What happens after submission?**
+12. **Can I review/appeal/challenge the decision?**
+13. **Is another authority involved?**
+14. **What is the exact legal basis?**
+15. **When was this information last verified?**
+
+## Audit 08 — data-model refinement
+
+The master route record should now contain these distinct fields:
+
+- route_id
+- citizen_question
+- plain_english_purpose
+- route_type
+- legal_basis
+- decision_maker
+- submission_point
+- jurisdiction
+- eligibility
+- nationality_or_residency_rule
+- emergency_rule
+- online_route
+- official_form
+- email
+- phone
+- postal_route
+- in_person_route
+- evidence_required
+- deadline
+- anonymity
+- confidentiality
+- next_steps
+- review_or_appeal
+- other_authority
+- source_url
+- verified_on
+- verification_status
+- source_conflict
+- notes
+
