@@ -37,7 +37,8 @@
       "notes": "Fiosrú determines admissibility; a Garda name is not required.",
       "authority_role": [
         "entry_point",
-        "investigating_body"
+        "admissibility_decision_maker",
+        "investigating_or_referral_body"
       ],
       "purpose_plain": "Make a formal complaint about Garda personnel through the statutory complaints system.",
       "eligibility": "Initial screening asks whether the person was directly affected or directly witnessed the Garda behaviour; Fiosrú determines admissibility.",
@@ -50,8 +51,10 @@
       "official_submission_url": "https://www.fiosru.ie/complaints/submit-a-complaint/",
       "geographic_scope": "Ireland / Garda jurisdiction",
       "deadline": "Normally within 12 months; a late complaint may be considered where Fiosrú accepts there is good reason for the delay.",
-      "next_steps": "Fiosrú assesses admissibility; if admitted, the complaint may be resolved by Garda or investigated by Fiosrú depending on the statutory route.",
-      "conflict_note": "Fiosrú's current submission page warns that knowingly false or misleading information is a criminal offence under s.226 and explains that complaint information may be shared in specified circumstances."
+      "next_steps": "Fiosrú first assesses admissibility. An admissible complaint may be referred to An Garda Síochána for resolution under the statutory framework or investigated by Fiosrú, depending on the applicable route.",
+      "conflict_note": "Current page states Fiosrú is experiencing a high volume of complaints and possible admissibility delays. It also states complaint information may be shared with Gardaí and, in applicable circumstances, other bodies.",
+      "source_verified": "Fiosrú complaint page checked 24 September 2026",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "crime_general",
@@ -572,7 +575,11 @@
       "contact": "review@fiosru.ie; Review Unit, Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73",
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
-      "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts."
+      "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts.",
+      "source_verified": "Fiosrú review request page checked 24 September 2026",
+      "verified_on": "2026-09-24",
+      "form_url": "https://www.fiosru.ie/media/???",
+      "conflict_note": "Current Fiosrú page confirms email/post submission and Access Officer support. The project will not invent a PDF URL; the official review page is the authoritative destination until the exact downloadable form URL is verified."
     },
     {
       "route_id": "victim_services",
@@ -666,5 +673,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified route seed expanded to victim support, property, FCN information and certificate safeguards."
+  "generated_scope": "Current official-source verification refreshed 24 September 2026; Fiosru complaint/review operational details updated."
 }
