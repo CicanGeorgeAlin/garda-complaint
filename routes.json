@@ -427,12 +427,15 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Check the notice and use the official payment or cancellation/review route applicable to the specific notice.",
-      "deadline": "Normal payment structure is 56 days: first 28 days at the fixed amount, followed by a further 28 days at an increased amount, subject to the current notice/rules.",
-      "conflict_note": "Cancellation/review is a separate process and is not a guarantee that a notice will be cancelled.",
+      "deadline": "Payment periods remain in force while a cancellation request is considered: 28 days at the initial amount, followed by a further 28 days at the increased amount. A cancellation request should be made as early as possible and does not suspend those periods.",
+      "conflict_note": "The route is labelled review/cancellation rather than 'appeal' because the current Garda guidance describes a cancellation application and states payment periods are not suspended while it is considered.",
       "legal_basis": "Road Traffic Acts and current Fixed Charge Notice regulations/guidance.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Garda FCN and cancellation guidance reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "guidance_basis": "Official An Garda Síochána / Fixed Charge Processing System guidance/source linked in this route."
+      "guidance_basis": "Official An Garda Síochána / Fixed Charge Processing System guidance/source linked in this route.",
+      "evidence_required": "Keep the Fixed Charge Notice and any supporting documents relevant to the cancellation grounds; the current Garda cancellation guidance says supporting documentation may be required.",
+      "contact": "Fixed Charge Processing Office, Parnell Street, Thurles, Co. Tipperary, E41 WV84; npo@garda.ie; 0818 50 60 80.",
+      "review_or_appeal": "Cancellation is a Garda review process, not a guarantee of cancellation. If the notice is not cancelled and the matter proceeds, the relevant court process applies."
     },
     {
       "route_id": "prosecution_decision_review",
@@ -456,7 +459,12 @@
       "geographic_scope": "Ireland",
       "conflict_note": "Current Garda victim information and other official guidance contain differing review-period wording in different contexts; do not hard-code a single universal deadline.",
       "next_steps": "Identify which authority made the decision and follow the corresponding official review information.",
-      "guidance_basis": "Official An Garda Síochána / DPP depending on decision guidance/source linked in this route."
+      "guidance_basis": "Official An Garda Síochána / DPP depending on decision guidance/source linked in this route.",
+      "evidence_required": "Keep the notification of the decision not to prosecute and, where applicable, the summary of reasons. The request for review is made in writing.",
+      "deadline": "Current Garda guidance: request summary of Garda reasons within 28 days of notification; request review within 28 days of receiving the summary. Extensions may be possible where warranted.",
+      "review_or_appeal": "Request a summary of reasons first, then a review of the decision not to prosecute. The applicable route may differ where the DPP made the decision.",
+      "source_verified": "Official Garda Information on Prosecution guidance reviewed 2026-09-24",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "abnormal_loads",
