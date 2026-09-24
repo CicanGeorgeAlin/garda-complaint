@@ -269,8 +269,8 @@
     {
       "route_id": "garda_vetting",
       "category": "vetting",
-      "citizen_question": "An organisation has asked me to complete Garda Vetting",
-      "route_type": "vetting",
+      "citizen_question": "I need Garda vetting for work, volunteering or another organisation",
+      "route_type": "vetting_service",
       "authority": "An Garda Síochána National Vetting Bureau",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/garda-vetting/",
@@ -279,20 +279,21 @@
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Complete an eVetting application initiated by a registered organisation.",
-      "eligibility": "Applicant must meet current age, identity, email and registered-organisation requirements.",
+      "purpose_plain": "Explain that vetting is initiated through a registered organisation rather than as a standalone citizen application.",
+      "eligibility": "Generally for persons aged 16 or over through a registered organisation; additional consent requirements apply for ages 16–18.",
       "submission_method": [
-        "online_through_registered_organisation"
+        "registered_organisation",
+        "online"
       ],
-      "geographic_scope": "Ireland / registered-organisation vetting process",
-      "next_steps": "The registered organisation initiates the application; applicant completes the invitation process."
+      "geographic_scope": "Ireland",
+      "next_steps": "Ask the organisation requesting vetting to initiate the eVetting process and provide the required identification/consent."
     },
     {
       "route_id": "national_age_card",
       "category": "citizen_service",
-      "citizen_question": "I need voluntary proof of age",
-      "route_type": "certificate_card",
-      "authority": "An Garda Síochána / Age Card service",
+      "citizen_question": "I need an official Garda National Age Card",
+      "route_type": "age_card",
+      "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/national-age-card/",
       "notes": "Voluntary proof-of-age card for people aged 18+.",
@@ -300,20 +301,20 @@
         "entry_point",
         "authentication_body"
       ],
-      "purpose_plain": "Apply for the voluntary National Age Card for proof of age.",
-      "eligibility": "People aged 18 or over, subject to current application requirements.",
+      "purpose_plain": "Guide eligible applicants to the voluntary National Age Card process.",
+      "eligibility": "Available to persons aged 18 or over under the current scheme.",
       "submission_method": [
         "online",
-        "garda_station_authentication"
+        "garda_station"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Apply through the official Age Card service and complete required Garda-station authentication."
+      "next_steps": "Complete the application through the official Age Card process and attend the relevant Garda station for authentication."
     },
     {
       "route_id": "unclaimed_property",
       "category": "property",
-      "citizen_question": "I want to see whether recovered property matches something I lost",
-      "route_type": "property_discovery",
+      "citizen_question": "I want to check whether property recovered by Gardaí may be mine",
+      "route_type": "property_search",
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
@@ -322,15 +323,14 @@
         "information_contact",
         "property_handler"
       ],
-      "purpose_plain": "Search selected recovered lost/stolen property.",
+      "purpose_plain": "Search the current Garda pilot database for selected unclaimed recovered property.",
       "eligibility": "Public search of property included in the current pilot.",
       "submission_method": [
-        "online",
-        "garda_station"
+        "online"
       ],
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/unclaimed-property/",
-      "geographic_scope": "Ireland",
-      "next_steps": "If a matching item is identified, follow Garda instructions; stolen property should still be reported."
+      "geographic_scope": "Selected participating locations/property covered by the current pilot",
+      "next_steps": "Search the official database. If the property was stolen, this does not replace reporting the theft."
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -800,7 +800,7 @@
     {
       "route_id": "station_directory",
       "category": "contact",
-      "citizen_question": "I need to contact or visit a Garda station",
+      "citizen_question": "I need to contact my local Garda station",
       "route_type": "station_locator",
       "authority": "An Garda Síochána",
       "status": "verified_current",
@@ -808,16 +808,16 @@
       "authority_role": [
         "information_contact"
       ],
-      "purpose_plain": "Find the official Garda station, contact information and local service details.",
+      "purpose_plain": "Find the official station and local contact information without inventing local numbers.",
       "eligibility": "Anyone needing a Garda station contact for a non-emergency matter.",
       "emergency_rule": "Emergency → 999/112.",
       "submission_method": [
-        "station",
-        "phone",
-        "email_where_available"
+        "official_directory",
+        "telephone",
+        "in_person"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official station directory to identify the appropriate station."
+      "next_steps": "Use the official station directory to identify the relevant station and its published contact details."
     },
     {
       "route_id": "fiosru_victim_information",
@@ -965,5 +965,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened information-access triage: personal data vs FOI vs environmental information."
+  "generated_scope": "Strengthened citizen-facing service routes for vetting, National Age Card, unclaimed property and station contact."
 }
