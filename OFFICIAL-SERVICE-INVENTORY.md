@@ -255,3 +255,56 @@ The next inventory pass should focus on:
 5. Dublin station/divisional operational differences;
 6. routes where the central Garda Online Services directory does not provide the complete process.
 
+
+
+## Audit 03 — victim decision/review forms and downloadable forms
+
+### Garda decision not to prosecute — victim routes
+- This is a separate route from a Fiosrú complaint.
+- Where Gardaí decide not to prosecute, the victim (and specified family/solicitor categories) may request a summary of the reasons.
+- Current Garda guidance states the request for the summary should normally be made within 28 days of receiving the notification of the decision not to prosecute.
+- If dissatisfied with the summary, the victim can request a review of the decision. The current Garda guidance states that review should normally be requested within 28 days of receiving the summary.
+- Garda states these time limits may be extended where the relevant authority is satisfied that an extension is warranted.
+- The review request is made in writing to the Chief Superintendent at the Garda station where the incident was investigated, with a Superintendent appointed to review the decision who had no prior involvement in the case.
+- Garda publishes the RS1 and RR1 forms and says copies can also be obtained at local Garda stations.
+- This route must be presented separately from:
+  - a complaint about Garda conduct (Fiosrú);
+  - an appeal/review of a court decision;
+  - a DPP decision review.
+- Source:
+  https://www.garda.ie/en/victim-services/garda-victim-service/information-on-prosecution/
+
+### Downloadable-form discovery rule
+The official Garda site contains public PDF/application forms outside the central Online Services directory. Examples verified during this audit include:
+- Firearm Certificate Application — FCA1:
+  https://www.garda.ie/en/about-us/online-services/firearms-licensing/fca1_firearm_certificate_application.pdf
+- Police Certificate application:
+  https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-police-certificate-application-form-feb-2022.pdf
+- Garda Youth Awards nomination forms:
+  https://www.garda.ie/en/crime-prevention/community-engagement/an-garda-siochana-youth-awards/
+- RS1 / RR1 victim decision-review forms:
+  available from the Garda Information on Prosecution page above.
+
+### FCA1 observations
+- The current FCA1 PDF is marked March 2023 and is based on the Firearms Acts as amended.
+- It contains separate application types including firearm certificate, restricted firearm certificate, limited firearm certificate, training firearm certificate and substitution of firearm.
+- The form collects nationality, usual residence, county, local Garda station and other personal/application details.
+- The project should link to the official FCA1 rather than reproduce it.
+- Firearms are a regulated specialist route; the public interface should not give the impression that the general crime-reporting flow is an alternative application route.
+
+### Important distinction: Garda form ≠ Garda online service
+A downloadable PDF can be an official submission instrument even when it is not listed in the central Online Services directory. Therefore the master inventory will maintain separate delivery types:
+- online service
+- downloadable form
+- station only
+- email route
+- postal route
+- multi-authority
+
+## Current verification notes
+
+- Central Online Services page was rechecked 24 September 2026.
+- Online crime declaration page was rechecked 24 September 2026 and currently excludes burglary, stolen/attempted stolen vehicles, robbery by force/threat, violent crime and stolen firearms. It also states theft declarations are for incidents in Ireland excluding Northern Ireland.
+- Police Certificate page was rechecked 24 September 2026. It currently states approximately three-week processing and contains both online-completion and postal-submission instructions; because those instructions coexist, the project should preserve the ambiguity until the live submission flow is independently checked rather than inventing a single process.
+- Garda Vetting page was rechecked 24 September 2026 and confirms the registered-organisation initiation model.
+
