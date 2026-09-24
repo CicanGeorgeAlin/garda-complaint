@@ -174,3 +174,84 @@ For each route, the master record should contain:
 
 Never invent an application form or claim that information entered into this website has been submitted to An Garda Síochána, Fiosrú, a local authority or another public body. The site is a navigation and explanation layer.
 
+
+
+## Audit 02 — additional citizen actions
+
+### Fixed Charge Notices (FCN/FPN)
+- This is a distinct citizen route and should not be buried under generic traffic reporting.
+- Garda guidance currently states that the normal statutory payment window is 56 days: first 28 days at the fixed charge amount, followed by 28 days at the amount plus 50%.
+- Garda also publishes a specific cancellation/review route. A recipient can apply for cancellation; the published guidance describes circumstances considered by the cancelling authority.
+- The project should distinguish:
+  1. pay a notice;
+  2. request a cancellation/review;
+  3. request a photograph for eligible camera speeding notices;
+  4. juvenile diversion request where the recipient is under 18;
+  5. general information about a notice.
+- Sources:
+  - https://www.garda.ie/en/roads-policing/fixed-charge-notices/
+  - https://www.garda.ie/en/roads-policing/fixed-charge-notices/cancelling-fixed-charge-notices.html
+- Do not turn Garda guidance into a statement that a cancellation will be granted; the authority decides the application.
+
+### Victim services
+- Garda has a dedicated Victim Services structure and local Garda Victim Service Offices.
+- The route is primarily support/information/communication for victims rather than a replacement for making the crime report.
+- Current Garda information says victims are entitled to information, support and protection and that divisional Victim Service Offices act as contact points.
+- Sources:
+  - https://www.garda.ie/en/victim-services/
+  - https://www.garda.ie/en/victim-services/garda-victim-service/
+
+### Traffic matters — broader routing
+The Garda traffic section identifies several different citizen needs that should eventually have separate route cards:
+- road traffic collision;
+- witnessing dangerous driving;
+- safety camera information;
+- penalty points / road offences;
+- Fixed Charge Notice;
+- NCT/driver-licence information (where the responsible authority is another body);
+- road-safety information.
+Source:
+https://www.garda.ie/en/crime/traffic-matters/
+
+### Property in Garda possession
+- Treat this separately from reporting a theft and from unclaimed-property browsing.
+- The Garda Services Provided page specifically identifies property in Garda possession as a public service.
+- Source:
+https://www.garda.ie/en/freedom-of-information/publication-scheme/services-provided.html
+
+### Property found in taxis / PSVs
+- Current Garda page says only five listed stations accept found property from taxis/PSVs and provides dedicated email addresses.
+- The same page contains PSV 15 and PSV 18 application forms.
+- This confirms that site-wide/department-level auditing is necessary because these routes are not represented by the central Online Services directory.
+- Source:
+https://www.garda.ie/en/roads-policing/roads-policing-unit/property-found-in-taxis-and-psvs-and-forms/
+
+### Unclaimed property
+- Current Garda page describes a pilot allowing members of the public to view photographs of selected lost/stolen property in Garda possession.
+- It explicitly says stolen property should still be reported to Gardaí.
+- Treat this as a recovery/search route, not as the theft-report route.
+- Source:
+https://www.garda.ie/en/about-us/online-services/unclaimed-property/
+
+## Fiosrú review route
+
+### Statutory review
+- A complainant can request a review when Fiosrú has notified them that a complaint is inadmissible or an investigation is being discontinued.
+- Current Fiosrú guidance states the request should normally be made within 28 days of being informed of the decision; a later request can be made with good reasons for the delay.
+- The requester must be the person who made the initial complaint and must provide enough information to link the request to the original complaint, including the case reference where available.
+- Current Fiosrú guidance says the review considers whether the decision was fair, reasonable and proportionate on the available facts.
+- Official review page: https://www.fiosru.ie/complaints/statutory-review/
+- Request page: https://www.fiosru.ie/complaints/statutory-review/how-to-request-a-review-of-your-inadmissible-complaint/
+- Current Fiosrú review form also covers discontinuation decisions and provides postal/email/online routes.
+- Statutory basis: section 224 of the Policing, Security and Community Safety Act 2024.
+
+## Audit priority
+
+The next inventory pass should focus on:
+1. every downloadable Garda public application/form;
+2. every route that requires a local Garda station;
+3. every route where Garda is only one part of a multi-authority process;
+4. every deadline or review/cancellation mechanism;
+5. Dublin station/divisional operational differences;
+6. routes where the central Garda Online Services directory does not provide the complete process.
+
