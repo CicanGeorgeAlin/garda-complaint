@@ -335,30 +335,33 @@
     {
       "route_id": "fixed_charge_notice_review",
       "category": "traffic",
-      "citizen_question": "I already received a Fixed Charge Notice and want to challenge/cancel it",
-      "route_type": "post_notice_review",
-      "authority": "An Garda Síochána",
+      "citizen_question": "I received a Garda Fixed Charge Notice and want to understand payment or review/cancellation options",
+      "route_type": "fixed_charge_notice",
+      "authority": "An Garda Síochána / Fixed Charge Processing System",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/roads-policing/fixed-charge-notices/cancelling-fixed-charge-notices.html",
+      "official_info_url": "https://www.garda.ie/en/roads-policing/fixed-charge-notices/",
       "notes": "Must not be presented as a new traffic report.",
       "authority_role": [
         "entry_point",
         "decision_maker"
       ],
-      "purpose_plain": "Use the official FCN cancellation/review process where applicable.",
+      "purpose_plain": "Separate payment, cancellation/review and information questions about Fixed Charge Notices.",
       "eligibility": "Person who has received an FCN and meets applicable review/cancellation conditions.",
       "submission_method": [
-        "official_route"
+        "online",
+        "post"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the current cancellation/review instructions for the specific notice."
+      "next_steps": "Check the notice and use the official payment or cancellation/review route applicable to the specific notice.",
+      "deadline": "Normal payment structure is 56 days: first 28 days at the fixed amount, followed by a further 28 days at an increased amount, subject to the current notice/rules.",
+      "conflict_note": "Cancellation/review is a separate process and is not a guarantee that a notice will be cancelled."
     },
     {
       "route_id": "prosecution_decision_review",
       "category": "victim",
-      "citizen_question": "Gardaí told me they will not prosecute and I want the decision reviewed",
-      "route_type": "post_decision_review",
-      "authority": "An Garda Síochána / applicable review authority",
+      "citizen_question": "I am a victim and want to understand or challenge a decision not to prosecute",
+      "route_type": "victim_prosecution_review",
+      "authority": "An Garda Síochána / DPP depending on decision",
       "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/victim-services/garda-victim-service/information-on-prosecution/",
       "notes": "Do not hard-code one universal deadline.",
@@ -366,14 +369,15 @@
         "entry_point",
         "review_body"
       ],
-      "purpose_plain": "Request review of a Garda prosecution decision under the applicable procedure.",
+      "purpose_plain": "Identify whether the question concerns Garda prosecution decisions or a DPP review, without conflating the two.",
       "eligibility": "Depends on the decision and applicable review route.",
       "submission_method": [
-        "written_request"
+        "written",
+        "official_form"
       ],
       "geographic_scope": "Ireland",
-      "conflict_note": "Official Garda publications describe different review periods for different mechanisms; do not present one universal deadline.",
-      "next_steps": "Use the review route identified in the decision/reasons notification."
+      "conflict_note": "Current Garda victim information and other official guidance contain differing review-period wording in different contexts; do not hard-code a single universal deadline.",
+      "next_steps": "Identify which authority made the decision and follow the corresponding official review information."
     },
     {
       "route_id": "abnormal_loads",
@@ -607,24 +611,24 @@
     {
       "route_id": "property_garda_possession",
       "category": "property",
-      "citizen_question": "I need information about property held by Gardaí",
-      "route_type": "property_process",
+      "citizen_question": "I want information about property held by Gardaí",
+      "route_type": "property_information",
       "authority": "An Garda Síochána",
-      "status": "verified_guidance_only",
-      "official_info_url": "https://www.garda.ie/en/freedom-of-information/publication-scheme/services-provided.html",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/information-centre/freedom-of-information/publication-scheme/services-provided.html",
       "authority_role": [
         "information_contact",
         "property_handler"
       ],
-      "purpose_plain": "Find the official Garda process for property in Garda possession.",
+      "purpose_plain": "Help distinguish property in Garda possession, recovered property and stolen-property reporting.",
       "eligibility": "Depends on the type and circumstances of the property.",
       "emergency_rule": "Not an emergency service.",
       "submission_method": [
-        "garda_station",
-        "official_garda_route"
+        "station",
+        "official_information_route"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official property/station instructions; exact route depends on the property type."
+      "next_steps": "Identify whether the matter concerns property held by Gardaí, recovered property, or property reported stolen, then use the appropriate official route."
     },
     {
       "route_id": "traffic_fcn_information",
@@ -968,5 +972,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened accessibility, emergency-SMS and victim-support routing."
+  "generated_scope": "Strengthened notice/review and property decision routing; preserved known official deadline conflicts instead of flattening them."
 }
