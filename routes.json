@@ -93,14 +93,14 @@
         "investigating_body"
       ],
       "purpose_plain": "Submit the current online theft declaration where its conditions are met.",
-      "eligibility": "Current online declaration is for theft of property not exceeding €1,000 in Ireland.",
-      "emergency_rule": "Do not use for emergencies or categories excluded by current Garda guidance.",
+      "eligibility": "Current form is for theft of property not exceeding €1,000 in Ireland.",
+      "emergency_rule": "Do not use for emergencies or the categories excluded by Garda's online-reporting guidance.",
       "submission_method": [
         "online"
       ],
       "official_submission_url": "https://www.garda.ie/en/about-us/online-services/theft-declaration/",
-      "geographic_scope": "Ireland excluding Northern Ireland for the current online theft declaration",
-      "next_steps": "Provide requested details; current form warns that the submission cannot be edited after submission."
+      "geographic_scope": "Ireland excluding Northern Ireland for the current theft declaration",
+      "next_steps": "Provide the requested details; the current form warns that it cannot be edited after submission."
     },
     {
       "route_id": "traffic_watch",
@@ -116,14 +116,14 @@
         "investigating_body"
       ],
       "purpose_plain": "Report a qualifying non-emergency road-traffic incident through Traffic Watch.",
-      "eligibility": "Non-emergency traffic matter meeting current Traffic Watch conditions.",
-      "emergency_rule": "Emergency traffic incident → 999/112.",
+      "eligibility": "Current Traffic Watch conditions apply; the reporter must be willing to make a statement and attend court if required.",
+      "emergency_rule": "Emergency, serious injury collision or other urgent incident → 999/112.",
       "submission_method": [
         "online"
       ],
       "official_submission_url": "https://www.garda.ie/en/trafficwatchreport/",
       "geographic_scope": "Ireland",
-      "deadline": "Current Traffic Watch form states reports should generally be made within 6 months.",
+      "deadline": "Current Traffic Watch form says reports should generally be made within 6 months.",
       "next_steps": "Garda reviews the report; an investigator may contact the reporter and request a statement."
     },
     {
@@ -888,6 +888,26 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the discontinuance decision; extensions may be considered for good reason.",
       "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú."
+    },
+    {
+      "route_id": "crime_online_router",
+      "category": "crime",
+      "citizen_question": "I want to report a crime online, but I'm not sure whether the online form is suitable",
+      "route_type": "crime_route_router",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/online-crime-reporting/",
+      "authority_role": [
+        "information_router"
+      ],
+      "purpose_plain": "Screen the incident before showing an online crime-reporting route.",
+      "eligibility": "Depends on incident type, location and current Garda online-reporting conditions.",
+      "emergency_rule": "Emergency, crime in progress, violent crime, burglary, stolen vehicle, stolen firearm or other excluded category → do not use the online declaration; use the appropriate Garda/emergency route.",
+      "submission_method": [
+        "route_to_specialist_or_station"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Answer the incident-type and urgency questions, then use the appropriate official route."
     }
   ],
   "required_fields": [
@@ -916,5 +936,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Fiosru review routes split by decision type; official inadmissibility review form linked and discontinuance form kept pending exact asset verification."
+  "generated_scope": "Crime and Traffic Watch pre-screening routers strengthened with current exclusion conditions."
 }
