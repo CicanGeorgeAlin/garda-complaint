@@ -370,3 +370,54 @@ A downloadable PDF can be an official submission instrument even when it is not 
 5. Distinguish national routes from local divisional/station arrangements.
 6. Record source date and verification status for every deadline-sensitive route.
 
+
+
+## Audit 05 — information-access routes
+
+### FOI: separate statutory route
+- An Garda Síochána is only partially included under the Freedom of Information Act 2014.
+- Current Garda guidance says the FOI scope covers administrative records relating to:
+  - Human Resources;
+  - Finance;
+  - Procurement.
+- A person anywhere in the world may make an FOI request according to current Garda FAQ guidance.
+- Requests can be made by email or in writing and should state that they are being made under the FOI Act, identify the records sought clearly, and give a correspondence address.
+- Current Garda guidance gives a normal decision period of 4 weeks on one FOI information page, while another current Garda FAQ describes 20 working days. These descriptions should be treated carefully and the project should direct users to the current official FOI guidance rather than hard-code a conflicting deadline.
+- Official sources:
+  - https://www.garda.ie/en/information-centre/freedom-of-information/
+  - https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/freedom-of-information-foi-frequently-asked-questions-faqs-.html
+  - https://www.garda.ie/en/Information-centre/Freedom-of-Information/Freedom-of-Information/FOI-Application-Form1.pdf
+
+### AIE: access to environmental information
+- Garda publishes a separate route under the European Communities (Access to Information on the Environment) Regulations.
+- An AIE request must state that it is made under the AIE Regulations, be in writing or electronic form, provide contact details, describe the environmental information as specifically as possible, and state the preferred access format where relevant.
+- Garda currently directs AIE requests to the same FOI Office email/postal route.
+- The AIE route must NOT be collapsed into FOI: it has a different legal basis and concerns environmental information.
+- Source:
+  https://www.garda.ie/en/information-centre/freedom-of-information/freedom-of-information/how-do-i-make-a-request-for-information-on-the-environment-.html
+
+### GDPR / F20: subject access
+- Current Garda F20 form is a Subject Access Request under GDPR/Data Protection Act 2018.
+- The form requires a written, signed request and acceptable proof of identity.
+- Current F20 states the normal response period is one month, with possible extension by up to two further months for complex or numerous requests.
+- It expressly distinguishes personal-data access from Garda Vetting, Police Certificate, Garda Reference and Security Clearance.
+- Current source:
+  https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/an-garda-siochana-f20-october-2019-.pdf
+
+### Information-access decision logs
+- Garda publishes FOI decision logs and a publication scheme.
+- The citizen-access engine should check whether requested information is already publicly available before directing a user to make a new FOI/AIE request.
+- Current 2026 decision logs demonstrate that the FOI decision-log system remains actively used.
+- Source:
+  https://www.garda.ie/en/information-centre/freedom-of-information/decision-log/
+
+## Audit 05 — implementation consequence
+
+The information-access branch now has at least three distinct routes:
+
+1. Personal data about yourself → GDPR/Data Protection / F20
+2. Administrative Garda records within FOI scope → FOI
+3. Environmental information → AIE
+
+The interface must ask what kind of information the citizen wants before selecting the legal route.
+
