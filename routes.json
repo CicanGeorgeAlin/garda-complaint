@@ -686,6 +686,72 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Personal data → GDPR/Data Protection access route; administrative records → FOI; environmental information → AIE; otherwise check the relevant Garda information/service route."
+    },
+    {
+      "route_id": "emergency_sms_112",
+      "category": "emergency_accessibility",
+      "citizen_question": "I am deaf, hard of hearing or speech-impaired and need emergency help",
+      "route_type": "emergency_accessibility",
+      "authority": "112 SMS Emergency Service",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
+      "authority_role": [
+        "entry_point",
+        "emergency_service"
+      ],
+      "purpose_plain": "Use the 112 SMS emergency service where a caller cannot make a voice emergency call.",
+      "eligibility": "For deaf, hard of hearing and speech-impaired users who need emergency assistance.",
+      "emergency_rule": "Emergency only. Garda warns SMS is not real-time and delivery is not guaranteed.",
+      "submission_method": [
+        "sms"
+      ],
+      "official_submission_url": "sms:112",
+      "geographic_scope": "Ireland",
+      "next_steps": "Send an emergency SMS to 112 following the current official instructions; use voice 999/112 where possible."
+    },
+    {
+      "route_id": "accessibility_garda",
+      "category": "accessibility",
+      "citizen_question": "I need help accessing a Garda service because of a disability or accessibility requirement",
+      "route_type": "accessibility_support",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/accessibility/",
+      "authority_role": [
+        "information_contact",
+        "accessibility_support"
+      ],
+      "purpose_plain": "Find Garda accessibility information and assistance options.",
+      "eligibility": "Anyone needing accessibility support to access Garda information or services.",
+      "emergency_rule": "Immediate danger → 999/112.",
+      "submission_method": [
+        "information",
+        "contact"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Use the official Garda accessibility information/contact route and request the assistance needed."
+    },
+    {
+      "route_id": "fiosru_accessibility",
+      "category": "accessibility",
+      "citizen_question": "I need accessibility support when dealing with Fiosrú",
+      "route_type": "accessibility_support",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/accessibility/",
+      "authority_role": [
+        "information_contact",
+        "accessibility_support"
+      ],
+      "purpose_plain": "Get accessibility assistance for Fiosrú services or complaint/review processes.",
+      "eligibility": "Anyone who needs accessibility support when using Fiosrú services.",
+      "emergency_rule": "Immediate danger → 999/112.",
+      "submission_method": [
+        "information",
+        "contact"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Contact the Fiosrú Access Officer or use the accessibility information provided by Fiosrú."
     }
   ],
   "required_fields": [
@@ -714,5 +780,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Verified information-access routing layer added: personal data vs FOI vs AIE."
+  "generated_scope": "Accessibility routes added for emergency communication and access to Garda/Fiosru services."
 }
