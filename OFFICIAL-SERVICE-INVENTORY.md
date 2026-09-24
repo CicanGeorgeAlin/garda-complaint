@@ -973,3 +973,78 @@ Before a route is activated in the engine, it should have:
 - source_verified
 - verified_on
 - conflict_note
+
+
+## Audit 16 — route-record prototype and verification status (24 September 2026)
+
+### Structured route seed
+The verified inventory is now ready for conversion into structured route records. The first production seed should include only routes whose official destination and conditions have been verified, while keeping unverified discoveries outside the active router.
+
+Initial active-route families:
+- emergency_999_112
+- crime_general
+- theft_declaration
+- traffic_watch
+- hate_crime
+- garda_confidential
+- fiosru_complaint
+- fiosru_review
+- personal_data_f20
+- foi
+- aie
+- police_certificate
+- garda_vetting
+- firearms_application
+- firearms_renewal
+- fixed_charge_notice_review
+- prosecution_decision_review
+- national_age_card
+- unclaimed_property
+- property_found_taxis_psvs
+- abnormal_loads
+- collection_permit
+- gaming_permit
+- youth_awards
+- public_cctv_institutional
+
+### Activation rule
+A route is "active" only when its official source and current submission destination are verified. A route may remain "research" when:
+- the destination is ambiguous;
+- the source is historical/superseded;
+- the service is institutional rather than citizen-facing;
+- the official page contains unresolved submission/deadline conflict;
+- the route requires a local authority or another body whose exact role has not yet been verified.
+
+### Verification states
+Use exactly one:
+- verified_current
+- verified_current_with_conflict
+- verified_guidance_only
+- research_required
+- superseded_or_historical
+- institutional_not_citizen_route
+
+### No synthetic forms
+The front end must never create a pretend official form for an application or complaint. Where an official form exists, link to it. Where no online form exists, explain the official alternative (email, post, station, phone or in-person) using the verified route record.
+
+### Route output contract
+Every active result shown to a citizen should answer, in this order:
+1. What this route is.
+2. Why it appears to fit what the citizen described.
+3. What the citizen should do now.
+4. Where the official submission happens.
+5. What information/evidence to prepare.
+6. What happens next.
+7. What to do if the route is unavailable or the person needs help.
+8. The legal/guidance basis, expandable rather than dominant.
+
+### Verification audit fields
+Each route record should retain:
+- source URL(s)
+- source title
+- source type (law / regulation / official guidance / official form)
+- verified date
+- verification state
+- conflict note
+- last checked by
+This provides an auditable trail without exposing unnecessary internal research detail to ordinary citizens.
