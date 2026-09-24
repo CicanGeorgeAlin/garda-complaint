@@ -157,5 +157,74 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 <p class="small"><strong>Current audit status:</strong> Dublin-first foundation built. Official-service inventory audit is now recorded in <code>OFFICIAL-SERVICE-INVENTORY.md</code>. Full national form/service inventory and section-by-section legal verification remain an active build stage.</p>
 </footer>
 </main>
-</body>
+
+<section id="route-engine" class="notice">
+  <h2>Tell us what you need</h2>
+  <p>Use plain language. This tool only helps identify the likely official route; it does not submit anything for you.</p>
+  <label for="route-question" style="display:block;margin:14px 0 7px;font-weight:700">What happened or what do you need?</label>
+  <input id="route-question" type="text" placeholder="Example: I want to complain about a Garda" style="width:100%;padding:14px;border-radius:12px;border:1px solid #444;background:#090909;color:#fff;font:inherit">
+  <button id="route-engine-go" class="button" type="button" style="margin-top:12px">Find the official route</button>
+  <p id="route-engine-status" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
+  <div id="route-engine-result" class="notice" hidden style="margin-bottom:0"></div>
+</section>
+<script>
+(function(){
+  const state={routes:[],answers:{}};
+  const byId=id=>document.getElementById(id);
+  async function loadRoutes(){
+    try{
+      const res=await fetch('./routes.json',{cache:'no-store'});
+      if(!res.ok) throw new Error('routes unavailable');
+      const data=await res.json();
+      state.routes=data.routes||[];
+      wireRouter();
+    }catch(e){
+      const box=byId('route-engine-status');
+      if(box) box.textContent='Official route directory could not be loaded. Please use the official links below.';
+    }
+  }
+  function choose(){
+    const q=(byId('route-question')?.value||'').toLowerCase();
+    const emergency=/emergency|danger|life|serious injury|crime in progress/.test(q);
+    if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
+    const tests=[
+      ['garda|guard|member of an garda|police conduct|complain about', 'fiosru_complaint_screen'],
+      ['traffic|road|driver|driving|vehicle incident','traffic_watch'],
+      ['hate crime|hate incident','hate_crime'],
+      ['confidential|anonymous information|give information','garda_confidential'],
+      ['stolen|theft|property stolen','crime_online_router'],
+      ['personal data|my data|data garda hold|gdpr','data_access_router'],
+      ['foi|records|administrative information','foi'],
+      ['environmental information|environmental data|aie','aie'],
+      ['vetting','garda_vetting'],
+      ['firearm|gun licence|firearms','firearms_application'],
+      ['police certificate|criminal record certificate','police_certificate_router'],
+      ['age card|proof of age','national_age_card'],
+      ['station|local garda','station_directory']
+    ];
+    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
+    return state.routes.find(r=>r.route_id==='crime_general')||null;
+  }
+  function show(route){
+    const out=byId('route-engine-result'); if(!out) return;
+    if(!route){out.hidden=false;out.textContent='Please use the official service links below.';return;}
+    const url=route.official_submission_url||route.official_info_url;
+    out.hidden=false;
+    out.innerHTML='<strong>Likely official route</strong><p>'+escapeHtml(route.purpose_plain||route.citizen_question||'Official service')+'</p>'+
+      (route.authority?'<p><small>Official authority: '+escapeHtml(route.authority)+'</small></p>':'')+
+      (route.deadline?'<p><small>Timing: '+escapeHtml(route.deadline)+'</small></p>':'')+
+      (url?'<p><a class="button" href="'+escapeAttr(url)+'" target="_blank" rel="noopener">Open official route</a></p>':'');
+  }
+  function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function escapeAttr(x){return escapeHtml(x);}
+  function wireRouter(){
+    const b=byId('route-engine-go'),i=byId('route-question');
+    if(!b||!i)return;
+    b.addEventListener('click',()=>show(choose()));
+    i.addEventListener('keydown',e=>{if(e.key==='Enter')show(choose())});
+    const st=byId('route-engine-status');if(st)st.textContent=state.routes.length+' official routes loaded.';
+  }
+  loadRoutes();
+})();
+</script></body>
 </html>
