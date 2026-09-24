@@ -584,7 +584,7 @@
     {
       "route_id": "victim_services",
       "category": "victim",
-      "citizen_question": "I am a victim of crime and need support or information about what happens next",
+      "citizen_question": "I am a victim of crime and need support or information",
       "route_type": "victim_support",
       "authority": "An Garda Síochána",
       "status": "verified_current",
@@ -593,15 +593,16 @@
         "information_contact",
         "support_service"
       ],
-      "purpose_plain": "Find Garda victim-service information, support and local Victim Service Office contacts.",
+      "purpose_plain": "Connect victims with Garda Victim Service Offices and relevant support information.",
       "eligibility": "Victims and people seeking information about Garda victim services.",
       "emergency_rule": "Immediate danger → 999/112.",
       "submission_method": [
-        "information",
-        "garda_victim_service_office"
+        "telephone",
+        "in_person",
+        "online_information"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the Victim Service Office/local Garda contact identified by Garda."
+      "next_steps": "Use Garda victim-service information and the relevant Victim Service Office."
     },
     {
       "route_id": "property_garda_possession",
@@ -692,51 +693,52 @@
     {
       "route_id": "emergency_sms_112",
       "category": "emergency_accessibility",
-      "citizen_question": "I am deaf, hard of hearing or speech-impaired and need emergency help",
+      "citizen_question": "I cannot make a voice emergency call and need to contact emergency services by SMS",
       "route_type": "emergency_accessibility",
-      "authority": "112 SMS Emergency Service",
+      "authority": "Emergency services",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html",
       "authority_role": [
         "entry_point",
         "emergency_service"
       ],
-      "purpose_plain": "Use the 112 SMS emergency service where a caller cannot make a voice emergency call.",
+      "purpose_plain": "Explain the 112 SMS emergency option for deaf, hard-of-hearing or speech-impaired users.",
       "eligibility": "For deaf, hard of hearing and speech-impaired users who need emergency assistance.",
-      "emergency_rule": "Emergency only. Garda warns SMS is not real-time and delivery is not guaranteed.",
+      "emergency_rule": "For qualifying emergencies only; SMS is not a real-time guaranteed service.",
       "submission_method": [
         "sms"
       ],
       "official_submission_url": "sms:112",
       "geographic_scope": "Ireland",
-      "next_steps": "Send an emergency SMS to 112 following the current official instructions; use voice 999/112 where possible."
+      "next_steps": "Use the official 112 SMS process and provide the requested location and emergency details."
     },
     {
       "route_id": "accessibility_garda",
       "category": "accessibility",
-      "citizen_question": "I need help accessing a Garda service because of a disability or accessibility requirement",
+      "citizen_question": "I need Garda information or services in an accessible way",
       "route_type": "accessibility_support",
       "authority": "An Garda Síochána",
       "status": "verified_current",
-      "official_info_url": "https://www.garda.ie/en/accessibility/",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/accessibility/",
       "authority_role": [
         "information_contact",
         "accessibility_support"
       ],
-      "purpose_plain": "Find Garda accessibility information and assistance options.",
+      "purpose_plain": "Help citizens identify accessibility support rather than forcing them through a standard digital route.",
       "eligibility": "Anyone needing accessibility support to access Garda information or services.",
       "emergency_rule": "Immediate danger → 999/112.",
       "submission_method": [
-        "information",
-        "contact"
+        "online",
+        "telephone",
+        "in_person"
       ],
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official Garda accessibility information/contact route and request the assistance needed."
+      "next_steps": "Use the Garda accessibility information and request reasonable assistance where appropriate."
     },
     {
       "route_id": "fiosru_accessibility",
       "category": "accessibility",
-      "citizen_question": "I need accessibility support when dealing with Fiosrú",
+      "citizen_question": "I need help accessing or communicating with Fiosrú",
       "route_type": "accessibility_support",
       "authority": "Fiosrú",
       "status": "verified_current",
@@ -745,15 +747,16 @@
         "information_contact",
         "accessibility_support"
       ],
-      "purpose_plain": "Get accessibility assistance for Fiosrú services or complaint/review processes.",
+      "purpose_plain": "Provide an accessible route to Fiosrú information and complaint processes.",
       "eligibility": "Anyone who needs accessibility support when using Fiosrú services.",
       "emergency_rule": "Immediate danger → 999/112.",
       "submission_method": [
-        "information",
-        "contact"
+        "online",
+        "telephone",
+        "in_person"
       ],
-      "geographic_scope": "Ireland",
-      "next_steps": "Contact the Fiosrú Access Officer or use the accessibility information provided by Fiosrú."
+      "geographic_scope": "Ireland / Fiosrú jurisdiction",
+      "next_steps": "Use Fiosrú accessibility support or its Access Officer where assistance is needed."
     },
     {
       "route_id": "firearms_nonresident",
@@ -965,5 +968,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Strengthened citizen-facing service routes for vetting, National Age Card, unclaimed property and station contact."
+  "generated_scope": "Strengthened accessibility, emergency-SMS and victim-support routing."
 }
