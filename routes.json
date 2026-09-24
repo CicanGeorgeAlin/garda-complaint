@@ -752,6 +752,70 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Contact the Fiosrú Access Officer or use the accessibility information provided by Fiosrú."
+    },
+    {
+      "route_id": "firearms_nonresident",
+      "category": "firearms",
+      "citizen_question": "I live outside Ireland and need a firearm certificate for Ireland",
+      "route_type": "nonresident_firearm_certificate",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
+      "authority_role": [
+        "entry_point",
+        "decision_maker"
+      ],
+      "purpose_plain": "Use the Garda process for a non-resident firearm certificate where the current legal conditions apply.",
+      "eligibility": "Non-resident applicants must satisfy the current statutory and Garda requirements.",
+      "emergency_rule": "Not an emergency service.",
+      "submission_method": [
+        "official_application"
+      ],
+      "geographic_scope": "Ireland / non-resident applicants",
+      "next_steps": "Follow the current non-resident firearm certificate instructions and application route."
+    },
+    {
+      "route_id": "police_certificate_router",
+      "category": "certificate",
+      "citizen_question": "I need proof of my criminal record status for another country or organisation",
+      "route_type": "certificate_router",
+      "authority": "An Garda Síochána",
+      "status": "verified_current_with_conflict",
+      "official_info_url": "https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/",
+      "authority_role": [
+        "information_router"
+      ],
+      "purpose_plain": "Help distinguish a Garda Police Certificate from Garda Vetting and other record-access routes.",
+      "eligibility": "Purpose determines whether a Police Certificate, Vetting or another route is appropriate.",
+      "emergency_rule": "Not an emergency service.",
+      "submission_method": [
+        "route_to_specialist_process"
+      ],
+      "geographic_scope": "Ireland",
+      "conflict_note": "Do not describe Police Certificate as a general criminal-record disclosure or as Garda Vetting; current Garda eligibility is purpose-specific.",
+      "next_steps": "Identify the requesting organisation/country and purpose, then use the applicable official Garda route."
+    },
+    {
+      "route_id": "station_directory",
+      "category": "contact",
+      "citizen_question": "I need to contact or visit a Garda station",
+      "route_type": "station_locator",
+      "authority": "An Garda Síochána",
+      "status": "verified_current",
+      "official_info_url": "https://www.garda.ie/en/contact-us/station-directory/",
+      "authority_role": [
+        "information_contact"
+      ],
+      "purpose_plain": "Find the official Garda station, contact information and local service details.",
+      "eligibility": "Anyone needing a Garda station contact for a non-emergency matter.",
+      "emergency_rule": "Emergency → 999/112.",
+      "submission_method": [
+        "station",
+        "phone",
+        "email_where_available"
+      ],
+      "geographic_scope": "Ireland",
+      "next_steps": "Use the official station directory to identify the appropriate station."
     }
   ],
   "required_fields": [
@@ -780,5 +844,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Accessibility routes added for emergency communication and access to Garda/Fiosru services."
+  "generated_scope": "Expanded routing for non-resident applicants, certificate disambiguation, and official station fallback."
 }
