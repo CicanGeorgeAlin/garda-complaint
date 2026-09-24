@@ -725,3 +725,52 @@ Where an online route is unavailable or unsuitable, the engine should provide th
 4. Specific online forms are shown only after their conditions are met.
 5. Official station fallback is used when no specific online route applies.
 6. The engine never stores or forwards the citizen's substantive complaint merely because they used this website.
+
+
+## Audit 11 — emergency and accessibility routing verification (24 September 2026)
+
+### Emergency decision gate
+Current Garda guidance confirms 999/112 should be used where an incident is happening now or someone is in immediate danger; examples include danger to life, risk of serious injury, crime in progress/about to happen, or an offender still at the scene or having just left. Garda also identifies 112 SMS as an emergency service for deaf, hard-of-hearing and speech-impaired users, while warning that SMS is non-real-time and delivery is not guaranteed.
+
+Sources:
+https://www.garda.ie/en/contact-us/useful-contact-numbers/useful-contacts-for-garda-units.html
+https://www.garda.ie/en/faqs/
+
+### Non-emergency fallback
+For non-emergency/general enquiries, current Garda guidance directs users to their nearest/local Garda station. The station directory should therefore remain the default fallback when no specialised online route is appropriate.
+
+### Fiosrú complaint screening
+Current Fiosrú guidance confirms:
+- direct effect or direct witnessing can support the complaint route;
+- complaints are not anonymous;
+- name and contact details are required;
+- a Garda name is not required;
+- complaints can in some circumstances be made on another person's behalf, subject to the stated representative/consent requirements.
+
+The routing engine must preserve these as screening questions and must not convert them into a guarantee of admissibility.
+
+### Accessibility
+The engine should expose an accessibility/help route rather than assuming every citizen can use a long online form. Fiosrú provides an Access Officer contact for access or practical requirements, and Garda identifies an Access Officer for assistance accessing Garda services.
+
+### High-risk specialist routes
+The engine should continue to maintain specialist pathways separately from the generic crime branch. Current Garda material includes specialist support such as the Drug-Related Intimidation Reporting Programme. Such routes may involve confidentiality, local nominated inspectors, and safety considerations.
+
+### Test additions
+16. "I cannot speak/hear and this is an emergency" → emergency guidance including 112 SMS information, with its limitations.
+17. "I need help accessing a Garda service because of a disability" → accessibility route, not a generic complaint.
+18. "I heard about Garda behaviour on social media" → do not present ordinary Fiosrú complaint eligibility as established.
+19. "I was directly affected by Garda behaviour but don't know the Garda's name" → Fiosrú screening; Garda identity is not a prerequisite.
+20. "I want to report non-emergency crime and there is no specialised online route" → local Garda station fallback.
+21. "I need help because of drug-related intimidation" → specialist safety/support route, with emergency override.
+
+### Design rule
+The engine should ask the smallest number of high-value questions first:
+1. Is anyone in immediate danger?
+2. What happened / what do you need?
+3. Did it involve Garda personnel?
+4. Did you experience it directly, witness it directly, or act on behalf of someone?
+5. Is there a specialist route?
+6. What is the relevant location/jurisdiction?
+7. What official route is available now?
+
+The engine should then explain the reason for the route before presenting the official destination.
