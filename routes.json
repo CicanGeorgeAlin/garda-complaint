@@ -490,10 +490,12 @@
       "emergency_rule": "Not an emergency service.",
       "deadline": "For the Garda notification described in current guidance, a copy is to reach the Garda National Traffic Bureau at least 4 working days before submission to the local authority.",
       "legal_basis": "Road Traffic and local-authority permitting framework; current Garda abnormal-load guidance.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official Garda abnormal-load guidance reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána / relevant local authority guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "evidence_required": "Check the applicable local-authority permit requirements and provide the load, vehicle, route and timing information requested by the relevant authority. Where Garda National Traffic Bureau notification is required, retain the permit/notification documents.",
+      "review_or_appeal": "Permit decisions are made under the applicable road-traffic/local-authority framework; any review or appeal depends on the decision-maker and permit regime. This route does not imply a generic Garda appeal."
     },
     {
       "route_id": "collection_permit",
@@ -518,10 +520,12 @@
       "next_steps": "Use the current official collection-permit application and follow the responsible Garda instructions.",
       "emergency_rule": "Not an emergency service.",
       "legal_basis": "Public Order/collection-permit legislation and current Garda collection-permit guidance.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official An Garda Síochána collection-permit source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "evidence_required": "Use the current collection-permit application and provide the organiser, purpose, dates, locations and other information requested by the form.",
+      "review_or_appeal": "If a permit decision is refused or otherwise challenged, use the specific statutory/administrative route applicable to that decision; this page does not create a generic appeal."
     },
     {
       "route_id": "gaming_permit",
@@ -548,10 +552,12 @@
       "deadline": "Current GP1 form states the proposed activity date should be at least 60 days from the application.",
       "official_submission_url": "https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf",
       "legal_basis": "Gaming and Lotteries Act 1956, as amended, including the 2019 amendments.",
-      "source_verified": "Official source reviewed 2026-09-24",
+      "source_verified": "Official An Garda Síochána GP1 source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána / District Superintendent guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass."
+      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "evidence_required": "Use the current GP1 form and provide the proposed activity, dates, location, organiser and other particulars requested. The form states the proposed activity date should be at least 60 days from application.",
+      "review_or_appeal": "Any challenge to a gaming/lottery permit decision depends on the statutory regime and decision-maker; no generic appeal is presented."
     },
     {
       "route_id": "firearms_application",
