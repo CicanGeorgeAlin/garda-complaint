@@ -576,10 +576,10 @@
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the decision; good reasons for additional time may be considered.",
       "next_steps": "Fiosrú's independent review process considers whether the decision was fair, reasonable and proportionate on the available facts.",
-      "source_verified": "Official Fiosrú review pages checked 24 September 2026",
+      "source_verified": "Official Fiosrú statutory review guidance and review form checked 24 September 2026",
       "verified_on": "2026-09-24",
-      "form_url": "https://www.fiosru.ie/media/???",
-      "conflict_note": "The current official review page confirms a PDF review form exists and gives email/post destinations, but the exact PDF asset URL was not safely resolved in this pass; do not invent it. Use the official review page as the submission destination."
+      "form_url": "https://www.fiosru.ie/media/vjnmvxnl/v8-review-request-form-inadmissibility.pdf",
+      "conflict_note": "Official Fiosrú review guidance provides a downloadable review form and confirms email/post submission. A separate discontinuance form is used where applicable; the website should select the form based on the decision received."
     },
     {
       "route_id": "victim_services",
@@ -836,7 +836,9 @@
         "contact_investigating_officer"
       ],
       "geographic_scope": "Ireland / Fiosrú investigations",
-      "next_steps": "Request the information from the Fiosrú investigating officer; Fiosrú says it can forward the request to the appropriate organisation if it does not hold the information."
+      "next_steps": "Ask the Fiosrú investigating officer for the relevant information. If Fiosrú does not hold it, current guidance says the request can be forwarded to the appropriate organisation.",
+      "source_verified": "Official Fiosrú victim right-to-information page checked 24 September 2026",
+      "verified_on": "2026-09-24"
     },
     {
       "route_id": "fiosru_post_investigation",
@@ -857,7 +859,35 @@
         "information"
       ],
       "geographic_scope": "Ireland / Fiosrú investigations",
-      "next_steps": "Follow the outcome notification; if a discontinuance decision is received, use the statutory review route within the applicable period."
+      "next_steps": "Follow the outcome notification; if a discontinuance decision is received, use the statutory review route within the applicable period.",
+      "source_verified": "Official Fiosrú Victims of Crime Charter checked 24 September 2026",
+      "verified_on": "2026-09-24"
+    },
+    {
+      "route_id": "fiosru_review_discontinuance",
+      "category": "garda_personnel",
+      "citizen_question": "Fiosrú discontinued its investigation and I want to request a review",
+      "route_type": "statutory_review",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/statutory-review/",
+      "official_submission_url": "https://www.fiosru.ie/complaints/statutory-review/how-to-request-a-review-of-your-inadmissible-complaint/",
+      "form_url": "https://www.fiosru.ie/media/???",
+      "authority_role": [
+        "entry_point",
+        "review_body"
+      ],
+      "purpose_plain": "Request a statutory review of a Fiosrú discontinuance decision.",
+      "eligibility": "Original complainant whose Fiosrú investigation has been discontinued.",
+      "emergency_rule": "Not an emergency route.",
+      "submission_method": [
+        "email",
+        "post"
+      ],
+      "contact": "review@fiosru.ie; Review Unit, Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73",
+      "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
+      "deadline": "Normally within 28 days of being informed of the discontinuance decision; extensions may be considered for good reason.",
+      "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú."
     }
   ],
   "required_fields": [
@@ -886,5 +916,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Added Fiosru victim-information and post-investigation outcome routes after fresh official-source verification."
+  "generated_scope": "Fiosru review routes split by decision type; official inadmissibility review form linked and discontinuance form kept pending exact asset verification."
 }
