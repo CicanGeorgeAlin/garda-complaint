@@ -889,8 +889,8 @@
       "authority": "Fiosrú",
       "status": "verified_current",
       "official_info_url": "https://www.fiosru.ie/complaints/statutory-review/",
-      "official_submission_url": "https://www.fiosru.ie/complaints/statutory-review/how-to-request-a-review-of-your-inadmissible-complaint/",
-      "form_url": "https://www.fiosru.ie/media/???",
+      "official_submission_url": "https://www.fiosru.ie/complaints/statutory-review/",
+      "form_url": null,
       "authority_role": [
         "entry_point",
         "review_body"
@@ -902,10 +902,11 @@
         "email",
         "post"
       ],
-      "contact": "review@fiosru.ie; Review Unit, Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73",
+      "contact": "review@fiosru.ie; 0818 600 800; Review Unit, Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73",
       "geographic_scope": "Ireland / Fiosrú complaint jurisdiction",
       "deadline": "Normally within 28 days of being informed of the discontinuance decision; extensions may be considered for good reason.",
-      "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú."
+      "next_steps": "Use the discontinuance-specific review form/process identified by Fiosrú.",
+      "conflict_note": "Fiosrú states statutory review covers inadmissible or discontinued complaints. No unverified direct PDF URL is published."
     },
     {
       "route_id": "crime_online_router",
@@ -981,5 +982,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Re-verified current hate-crime, confidential-information and general-crime routing against Garda pages on 24 September 2026."
+  "generated_scope": "Verified Fiosru statutory-review routing; removed unverified discontinuance PDF placeholder."
 }
