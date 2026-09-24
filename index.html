@@ -162,7 +162,8 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   <h2>Tell us what you need</h2>
   <p>Use plain language. This tool only helps identify the likely official route; it does not submit anything for you.</p>
   <label for="route-question" style="display:block;margin:14px 0 7px;font-weight:700">What happened or what do you need?</label>
-  <input id="route-question" type="text" placeholder="Example: I want to complain about a Garda" style="width:100%;padding:14px;border-radius:12px;border:1px solid #444;background:#090909;color:#fff;font:inherit">
+  <input id="route-question" type="text" placeholder="Example: I want to complain about a Garda" style="width:100%;padding:14px;border-radius:12px;border:1px solid #444;background:#090909;color:#fff;font:inherit" autocomplete="off" aria-describedby="route-engine-help">
+  <p id="route-engine-help" style="color:#aaa;margin:8px 0 0;font-size:.92em">You can write normally. For example: “I need to report a stolen car” or “I need a Garda Police Certificate”. Do not enter sensitive personal details here.</p>
   <button id="route-engine-go" class="button" type="button" style="margin-top:12px">Find the official route</button>
   <p id="route-engine-status" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
   <div id="route-engine-result" class="notice" hidden style="margin-bottom:0"></div>
