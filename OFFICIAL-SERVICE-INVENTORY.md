@@ -421,3 +421,72 @@ The information-access branch now has at least three distinct routes:
 
 The interface must ask what kind of information the citizen wants before selecting the legal route.
 
+
+
+## Audit 06 — Fiosrú and public-form discovery
+
+### Fiosrú current complaint system
+- Current Fiosrú complaints page confirms separate routes for:
+  - Submit a Complaint
+  - Statutory Review
+  - Victims of Crime
+  - Complaints Suitable for Resolution by An Garda Síochána
+  - GSOC complaints
+- Current complaint form says it cannot be saved mid-way and should be completed in full; after submission, the user can download a copy once and receives an acknowledgement email.
+- Current Fiosrú guidance says complaints may be made online, by post, or at a Garda station.
+- Current Fiosrú FAQ states identities are not made public, but information including who made the complaint may be shared with the Garda Commissioner and involved Gardaí where required by law; identity can become public in circumstances such as criminal proceedings.
+- Sources:
+  - https://www.fiosru.ie/complaints/
+  - https://www.fiosru.ie/complaints/submit-a-complaint/
+  - https://www.fiosru.ie/about-us/faqs/
+
+### Fiosrú review delivery
+- Current review route can be submitted by PDF via email or post.
+- Current Review Unit contact: review@fiosru.ie.
+- Current postal destination: Review Unit, Fiosrú, Office of the Police Ombudsman, 150 Upper Abbey Street, Dublin 1, D01 FT73.
+- Accessibility support is available through the Access Officer.
+- Source:
+  https://www.fiosru.ie/complaints/statutory-review/how-to-request-a-review-of-your-inadmissible-complaint/
+
+### Public-form discovery: Gaming Permit
+- Garda currently hosts an official GP1 Gaming Permit Application.
+- The form states it is specified by the Minister for Justice under section 9A of the Gaming and Lotteries Act 1956, as inserted by the Gaming and Lotteries (Amendment) Act 2019.
+- The form states an application will not be considered until all information requested by the District Superintendent has been received.
+- The form also states the proposed gaming activity date must be at least 60 days from the application date.
+- This is a strong example of a specialist regulatory route that is not visible as a standard Online Services category.
+- Source:
+  https://www.garda.ie/en/about-us/our-departments/office-of-corporate-communications/news-media/gp1-gaming-permit-application1.pdf
+
+### Public CCTV application
+- Garda search currently exposes an official Public CCTV Section 28 Application Form for Local Authorities.
+- This is a multi-authority/public-body route and should not be represented as an ordinary citizen Garda complaint.
+- Source:
+  https://www.garda.ie/en/about-us/online-services/public%20cctv/public-cctv-application-form.pdf
+
+## Audit 06 — search methodology
+
+The project must use two discovery layers:
+1. central Online Services and Services sitemap;
+2. site-wide Garda search for terms such as:
+   - application form
+   - form
+   - permit
+   - licence
+   - certificate
+   - request
+   - review
+   - cancellation
+   - notification
+   - local authority
+   - station
+
+Search results must then be classified into:
+- citizen action;
+- professional/business application;
+- Garda internal form;
+- information-only page;
+- multi-authority process;
+- historical/obsolete document.
+
+This prevents search-index noise from becoming a false citizen route.
+
