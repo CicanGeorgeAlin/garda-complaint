@@ -816,6 +816,48 @@
       ],
       "geographic_scope": "Ireland",
       "next_steps": "Use the official station directory to identify the appropriate station."
+    },
+    {
+      "route_id": "fiosru_victim_information",
+      "category": "victim",
+      "citizen_question": "I am involved in a Fiosrú investigation and want information about what is happening with the case",
+      "route_type": "victim_right_to_information",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/victims-of-crime/victims-of-crime-right-to-information/",
+      "authority_role": [
+        "information_contact",
+        "investigating_body"
+      ],
+      "purpose_plain": "Request information about significant developments and decisions in a Fiosrú investigation.",
+      "eligibility": "Victims of crime involved in a Fiosrú investigation, subject to the applicable statutory framework.",
+      "emergency_rule": "Not an emergency route.",
+      "submission_method": [
+        "contact_investigating_officer"
+      ],
+      "geographic_scope": "Ireland / Fiosrú investigations",
+      "next_steps": "Request the information from the Fiosrú investigating officer; Fiosrú says it can forward the request to the appropriate organisation if it does not hold the information."
+    },
+    {
+      "route_id": "fiosru_post_investigation",
+      "category": "garda_personnel",
+      "citizen_question": "Fiosrú finished investigating my complaint and I want to understand what happens next",
+      "route_type": "post_investigation_information",
+      "authority": "Fiosrú",
+      "status": "verified_current",
+      "official_info_url": "https://www.fiosru.ie/complaints/victims-of-crime/victims-of-crime-charter/",
+      "authority_role": [
+        "information_contact",
+        "case_continuation"
+      ],
+      "purpose_plain": "Explain the possible outcomes after a Fiosrú investigation, including DPP or Garda Commissioner pathways and applicable review rights.",
+      "eligibility": "Complainants/victims whose Fiosrú investigation has reached an outcome.",
+      "emergency_rule": "Not an emergency route.",
+      "submission_method": [
+        "information"
+      ],
+      "geographic_scope": "Ireland / Fiosrú investigations",
+      "next_steps": "Follow the outcome notification; if a discontinuance decision is received, use the statutory review route within the applicable period."
     }
   ],
   "required_fields": [
@@ -844,5 +886,5 @@
     "verified_on",
     "conflict_note"
   ],
-  "generated_scope": "Expanded routing for non-resident applicants, certificate disambiguation, and official station fallback."
+  "generated_scope": "Added Fiosru victim-information and post-investigation outcome routes after fresh official-source verification."
 }
