@@ -981,3 +981,20 @@ The final two intentionally remain unresolved because the engine should not infe
 - "I want my data" → unresolved
 
 The engine deliberately does not infer a data-access or information-access right from generic wording alone.
+
+## Crime-reporting / online-reporting / theft / traffic boundary verification — 26 Sep 2026
+
+- "I want to report a crime" → `crime_general`
+- "I want to report a crime online" → `crime_online_router`
+- "My property was stolen" → `crime_general`
+- "My property was stolen and it was worth €500" → `theft_declaration`
+- "My property was stolen and it was worth €1,001" → `station_directory`
+- "My property was stolen and I want to report it online" → `crime_general` because theft-declaration eligibility cannot be established without the value
+- "There was a burglary and I want to report it online" → `station_directory`
+- "My car was stolen and I want to report it online" → `station_directory`
+- "Someone used force to rob me" → `station_directory`
+- "I found a stolen item in a taxi" → `property_found_taxis_psvs`
+- "I want to report dangerous driving" → `traffic_watch`
+- "I want to report dangerous driving and someone is in immediate danger" → `emergency_999_112`
+
+The online-reporting exclusion gate takes precedence over generic online-reporting wording for excluded crime types. A theft without value remains unresolved for the specific online theft declaration and is therefore kept in general crime screening.
