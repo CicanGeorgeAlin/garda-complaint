@@ -160,6 +160,25 @@ These tests protect the distinction between the online-reporting eligibility scr
 
 Personal-data access must remain focused on the citizen's own data (or clearly framed authorised access), rather than treating any third-party personal-data request as a self-access route.
 
+## Fiosrú lifecycle regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to complain to Fiosrú about a Garda" | fiosru_complaint_screen |
+| "Fiosrú discontinued my complaint and I want a review" | fiosru_review |
+| "Fiosrú stopped investigating and I want a review" | fiosru_review |
+| "Fiosrú discontinued my complaint" | fiosru_review_discontinuance |
+| "Fiosrú stopped investigating my complaint" | fiosru_review_discontinuance |
+| "Fiosrú finished investigating my complaint" | fiosru_post_investigation |
+| "What happens next after Fiosrú finished investigating my complaint?" | fiosru_post_investigation |
+| "I want information about my Fiosrú investigation" | fiosru_victim_information |
+| "I need information about significant developments in my Fiosrú investigation" | fiosru_victim_information |
+| "I need help accessing Fiosrú" | fiosru_accessibility |
+| "I need an accessible Fiosrú service" | fiosru_accessibility |
+| "I want information about my Fiosrú complaint" | no automatic route |
+
+Explicit review requests must outrank the generic discontinuance route; lifecycle information questions must remain separate from complaint submission and statutory review.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
