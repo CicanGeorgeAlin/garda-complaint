@@ -1095,3 +1095,16 @@ Current production-like registry validation confirms:
 - The browser loads only the local routes.json registry; user-entered route questions are not submitted to an external service.
 - Malformed, duplicate or unsafe route records fail closed rather than being rendered as official destinations.
 - The frontend exposes documented conflict, next-step and review/appeal limitations where those fields exist.
+
+
+## Public-language independence regression — 26 Sep 2026
+
+The public-facing layer must not:
+
+- claim to be An Garda Síochána, Fiosrú, a court or a solicitor;
+- promise acceptance, cancellation, prosecution, complaint outcome or other official result;
+- claim that a citizen definitely satisfies a legal threshold merely because a matcher selected a route;
+- describe a routing suggestion as legal advice or a legal determination;
+- imply that this website itself submits a complaint, report, application, request or review.
+
+Current frontend and README wording were checked against these invariants; no prohibited impersonation or outcome-promise wording was found.
