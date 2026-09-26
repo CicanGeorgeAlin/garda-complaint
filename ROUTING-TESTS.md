@@ -111,3 +111,20 @@ The following records are currently not selected directly by a literal `route_id
 - `crime_online_router` — screening/router record for online crime reporting.
 
 This is a coverage flag, not a claim that these services are unavailable. Before treating the website as complete, each specialist record should either have a deliberate entry path in the interface or be clearly documented as a downstream/manual route.
+
+### Direct specialist coverage added — 26 Sep 2026
+
+The route engine now has deliberate entry patterns for previously uncovered citizen-facing specialist records:
+
+- Garda Youth Awards → `youth_awards`
+- found property in a taxi/PSV → `property_found_taxis_psvs`
+- property held by Gardaí → `property_garda_possession`
+- prosecution-decision questions → `prosecution_decision_review`
+- pre-Fiosrú GSOC complaint → `gsoc_legacy_transition`
+- Fiosrú post-investigation questions → `fiosru_post_investigation`
+- information about an active Fiosrú investigation → `fiosru_victim_information`
+- Fiosrú accessibility → `fiosru_accessibility`
+- Garda accessibility → `accessibility_garda`
+- uncertainty about online crime reporting → `crime_online_router`
+
+Emergency detection remains ahead of these specialist branches, and the existing theft-value and excluded-crime gates remain ahead of broad crime/property matching.
