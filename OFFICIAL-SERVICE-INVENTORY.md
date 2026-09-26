@@ -1008,12 +1008,7 @@ Current active-route families:
 - public_cctv_institutional
 
 ### Activation rule
-A route is "active" only when its official source and current submission destination are verified. A route may remain "research" when:
-- the destination is ambiguous;
-- the source is historical/superseded;
-- the service is institutional rather than citizen-facing;
-- the official page contains unresolved submission/deadline conflict;
-- the route requires a local authority or another body whose exact role has not yet been verified.
+A route is "active" only when its official source and current destination have been sufficiently verified for the route's declared verification state. A route must remain outside the active router when its destination is ambiguous, its source is historical/superseded, it is not a citizen-facing route, its submission/deadline position remains unresolved, or the responsible authority is not sufficiently verified. A conflict-aware route may remain active when the conflicting official sources are documented and the citizen is warned to check the current official guidance.
 
 ### Verification states
 Use exactly one:
