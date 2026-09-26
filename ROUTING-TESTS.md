@@ -1368,3 +1368,23 @@ Negative invariants:
 - institutional public-CCTV requests remain distinct from personal-data access;
 - a request for the user's own data must not be routed to FOI merely because records or information are mentioned;
 - Police Certificate, Garda Vetting and criminal-record routes remain distinct from a personal-data access request.
+
+## Certificate and vetting dispute-boundary regression — 26 Sep 2026
+
+Specialist service names must not override explicit complaint/appeal/challenge/dispute intent.
+
+| Input | Expected route |
+|---|---|
+| “I need a Garda Police Certificate” | police_certificate_router |
+| “I need a Police Certificate for another country” | police_certificate_router |
+| “I need Garda vetting for work” | garda_vetting |
+| “I want a National Age Card” | national_age_card |
+| “I want to complain about my Garda Police Certificate” | unresolved |
+| “I want to appeal my Garda Police Certificate” | unresolved |
+| “I want to complain about Garda vetting” | unresolved |
+| “I want to challenge my Garda vetting” | unresolved |
+
+Negative invariants:
+- explicit dispute language must not become a fresh certificate/vetting application;
+- ordinary certificate and vetting requests remain routable;
+- specialist dispute wording remains unresolved unless a verified dedicated review route exists.
