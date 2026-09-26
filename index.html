@@ -287,7 +287,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 
     // An explicit Garda Police Certificate request is distinct from the broader
     // certificate-routing screen for unspecified overseas/organisation requirements.
-    if(/\b(?:garda\s+)?police certificate\b/.test(q)){
+    if(/\bgarda\s+police certificate\b/.test(q)){
       return state.routes.find(r=>r.route_id==='police_certificate');
     }
 
