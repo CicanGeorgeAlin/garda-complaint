@@ -95,6 +95,17 @@ The route engine must recognize natural-language ordering differences where the 
 
 These cases protect against overly rigid phrase ordering while retaining the existing conservative ambiguity rules.
 
+## High-consequence semantic regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "Someone used force to rob me" | station_directory |
+| "My firearm was stolen" | station_directory |
+| "Fiosrú discontinued my complaint and I want a review" | fiosru_review |
+| "Fiosrú stopped investigating and I want a review" | fiosru_review |
+
+These cases ensure excluded online-crime categories, stolen firearms, and explicit Fiosrú review requests retain the correct precedence.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
