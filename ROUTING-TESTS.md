@@ -331,3 +331,21 @@ Accessibility support must remain distinct from the emergency SMS 112 route. The
 | “I cannot speak and there is immediate danger” | `emergency_999_112` |
 | “I need accessibility information” | no automatic crime route |
 
+
+## Fiosrú review false-positive regressions — 26 Sep 2026
+
+A generic request to review or appeal a complaint must not be routed to Fiosrú unless the wording establishes Fiosrú context or a specific Fiosrú decision such as inadmissibility/discontinuation. This preserves the distinction between a general complaint and the statutory Fiosrú review process.
+
+| Input | Expected route |
+|---|---|
+| “I want to review my complaint” | fiosru_review must NOT be selected |
+| “I want to appeal my complaint” | fiosru_review must NOT be selected |
+| “I want to review my Fiosrú complaint” | fiosru_review |
+| “I want to appeal a Fiosrú decision” | fiosru_review |
+| “Fiosrú said my complaint is inadmissible” | fiosru_review |
+| “Fiosrú discontinued my complaint” | fiosru_review_discontinuance |
+| “My complaint was discontinued and I want a review” | fiosru_review |
+| “Fiosrú finished investigating my complaint; what happens next?” | fiosru_post_investigation |
+| “I need information about my Fiosrú investigation” | fiosru_victim_information |
+| “I want to complain about a Garda member” | fiosru_complaint_screen |
+
