@@ -534,3 +534,15 @@ Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic r
 - `verified_current_with_conflict` results must warn that official sources contain a documented difference and direct the citizen to the linked official guidance.
 - `verified_guidance_only` results must say that the route is supported by current official guidance and that exact legal/eligibility details may depend on circumstances.
 - Unknown or research-only states must not be presented as fully verified.
+
+
+## Emergency SMS precedence regression — 26 Sep 2026
+
+The generic emergency matcher must not intercept the dedicated Emergency SMS route when the phrase is specifically about emergency SMS/text access. Explicit danger indicators still take precedence.
+
+| Input | Expected route |
+|---|---|
+| “I am deaf and need emergency SMS” | emergency_sms_112 |
+| “I need emergency SMS” | emergency_sms_112 |
+| “I am deaf and there is immediate danger” | emergency_999_112 |
+| “I need emergency help and someone is in danger” | emergency_999_112 |
