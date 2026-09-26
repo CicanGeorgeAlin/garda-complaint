@@ -932,3 +932,14 @@ Emergency SMS is a dedicated emergency-access route. Deafness, hearing/speech im
 | “I need Garda vetting for employment” | garda_vetting |
 | “I need a gaming permit” | gaming_permit |
 | “I need a public collection permit” | collection_permit |
+
+## Emergency SMS / voice-call wording regression — 26 Sep 2026
+
+Purpose: preserve the dedicated Emergency SMS route when a user explains that they cannot make a voice emergency call, while retaining 999/112 precedence where the wording independently describes immediate danger.
+
+- "I cannot make a voice emergency call and need to contact emergency services by SMS" → `emergency_sms_112`
+- "I need emergency SMS" → `emergency_sms_112`
+- "I need to contact emergency services by text" → `emergency_sms_112`
+- "I am deaf and there is immediate danger" → `emergency_999_112`
+- "I cannot speak and someone is in danger" → `emergency_999_112`
+- "There is an emergency and someone is seriously injured" → `emergency_999_112`
