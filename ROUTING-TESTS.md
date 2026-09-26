@@ -128,3 +128,29 @@ The route engine now has deliberate entry patterns for previously uncovered citi
 - uncertainty about online crime reporting → `crime_online_router`
 
 Emergency detection remains ahead of these specialist branches, and the existing theft-value and excluded-crime gates remain ahead of broad crime/property matching.
+
+### Regression cases for expanded specialist routing — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “I want to nominate someone for a Garda Youth Award” | `youth_awards` |
+| “I found property in a taxi” | `property_found_taxis_psvs` |
+| “Gardaí are holding my property” | `property_garda_possession` |
+| “I want to challenge a decision not to prosecute” | `prosecution_decision_review` |
+| “I made a GSOC complaint before Fiosrú started” | `gsoc_legacy_transition` |
+| “Fiosrú finished investigating my complaint; what happens next?” | `fiosru_post_investigation` |
+| “I need information about my Fiosrú investigation” | `fiosru_victim_information` |
+| “I need accessible help from Fiosrú” | `fiosru_accessibility` |
+| “I need Garda services in an accessible format” | `accessibility_garda` |
+| “I want to report a crime online but don't know if the form applies” | `crime_online_router` |
+
+### Currency parser regression
+
+The theft-value parser must continue to interpret:
+
+- €1,000 → `theft_declaration`
+- €1,001 → `station_directory`
+- €1,500.00 → `station_directory`
+- €1.500,00 → `station_directory`
+
+The parser must not treat a thousands separator as a decimal point.
