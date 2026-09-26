@@ -215,6 +215,24 @@ A Police Certificate and Garda Vetting are distinct services. Ambiguous certific
 
 Stolen-firearm reporting must remain ahead of the generic firearms application route. Renewal and non-resident language must also remain ahead of generic application matching.
 
+## Fixed Charge / prosecution-decision boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I received a Fixed Charge Notice" | traffic_fcn_information |
+| "I got a traffic fine" | traffic_fcn_information |
+| "I want information about penalty points" | traffic_fcn_information |
+| "I received a Fixed Charge Notice and want to challenge it" | fixed_charge_notice_review |
+| "I want to review my fixed charge notice" | fixed_charge_notice_review |
+| "I want to cancel a fixed charge notice" | fixed_charge_notice_review |
+| "I want to challenge the decision not to prosecute" | prosecution_decision_review |
+| "I want to review the decision not to prosecute" | prosecution_decision_review |
+| "I want to appeal a prosecution decision" | prosecution_decision_review |
+| "I want to review a prosecution decision" | prosecution_decision_review |
+| "I want information about a prosecution decision" | no automatic route |
+
+Action language must identify the relevant object before selecting a review route; general information requests must not be promoted into a review.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
