@@ -101,7 +101,7 @@
       "authority": "An Garda Síochána",
       "status": "verified_current",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/online-crime-reporting/",
-      "notes": "Current online theft declaration is for property not exceeding €1,000 in Ireland.",
+      "notes": "The live specific online Theft Declaration page states property not exceeding €1,000 in Ireland; an older/general Garda reporting page still displays €500, so the conflict is retained explicitly.",
       "authority_role": [
         "entry_point",
         "investigating_body"
@@ -116,10 +116,10 @@
       "geographic_scope": "Ireland excluding Northern Ireland for the current theft declaration",
       "next_steps": "Provide the requested details; the current form warns that it cannot be edited after submission.",
       "legal_basis": "Applicable Irish theft/criminal law and Garda online-reporting guidance.",
-      "source_verified": "Official source reviewed 2026-09-24",
-      "verified_on": "2026-09-24",
+      "source_verified": "Official specific Garda Theft Declaration and online-crime sources re-checked 2026-09-26",
+      "verified_on": "2026-09-26",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "conflict_note": "The live specific Theft Declaration page states a €1,000 ceiling, while an older/general Garda reporting page still states €500. Preserve the conflict and use the specific current Theft Declaration route for the operational threshold.",
       "verification_status": "verified_current_with_conflict"
     },
     {
