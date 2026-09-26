@@ -306,6 +306,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
+    // Explicit prosecution decisions are post-decision routes and must outrank
+    // the broad victim-support matcher below.
+    if(/(?:received|got|was notified of|challenge|review|appeal).*(?:decision not to prosecute|prosecution decision)|(?:decision not to prosecute|prosecution decision).*(?:received|got|notified|challenge|review|appeal)/.test(q)){
+      return state.routes.find(r=>r.route_id==='prosecution_decision_review');
+    }
+
     // A completed Fiosrú decision is outcome-dependent. If the citizen has a
     // decision but has not identified inadmissibility/discontinuance, keep them
     // on the post-investigation information path rather than guessing a review.
