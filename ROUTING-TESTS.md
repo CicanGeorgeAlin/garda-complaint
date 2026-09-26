@@ -1434,3 +1434,29 @@ Negative invariants:
 - firearm non-resident wording must remain ahead of generic firearm application matching;
 - firearm renewal must remain distinct from a fresh application;
 - verified specialist application routes remain available when no dispute is stated.
+
+## Fiosrú lifecycle boundary verification — 27 Sep 2026
+
+Live-source matcher validation confirms the lifecycle states remain separated.
+
+| Input | Expected route |
+|---|---|
+| “I need help accessing Fiosrú” | fiosru_accessibility |
+| “I need an accessible way to contact Fiosrú” | fiosru_accessibility |
+| “I am a victim and need information about a Fiosrú investigation” | fiosru_victim_information |
+| “I want information about significant developments in my Fiosrú investigation” | fiosru_victim_information |
+| “My Fiosrú investigation is ongoing and I need information” | fiosru_victim_information |
+| “My Fiosrú investigation is finished and I want information” | fiosru_post_investigation |
+| “Fiosrú completed its investigation and I want to know what happens next” | fiosru_post_investigation |
+| “Fiosrú discontinued my complaint and I want a review” | fiosru_review_discontinuance |
+| “My Fiosrú complaint was discontinued” | fiosru_review_discontinuance |
+| “I want to complain to Fiosrú about Garda conduct” | fiosru_complaint_screen |
+| “I want to appeal a Fiosrú decision” | fiosru_post_investigation |
+| “Fiosrú gave me a decision and I want information about it” | fiosru_post_investigation |
+
+Negative invariants:
+- accessibility requests must not become complaint routes;
+- ongoing-investigation information must not become post-investigation information;
+- completed-investigation information must not become victim-information route;
+- explicit discontinuance must remain on the discontinuance/review pathway;
+- generic Fiosrú decision language must not be upgraded to the specific statutory review route without the required outcome wording.
