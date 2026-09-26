@@ -122,6 +122,27 @@ These cases ensure excluded online-crime categories, stolen firearms, and explic
 
 Emergency indicators must continue to outrank accessibility routing when immediate danger is described.
 
+## Online-crime boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to report a crime online" | crime_online_router |
+| "Can I report a crime online?" | crime_online_router |
+| "I want to use the online crime form" | crime_online_router |
+| "I want to report a burglary online" | station_directory |
+| "Can I report my stolen car online?" | station_directory |
+| "I want to report a robbery online" | station_directory |
+| "I want to report violent crime online" | station_directory |
+| "My firearm was stolen and I want to report it online" | station_directory |
+| "There was a burglary but nobody is in danger now" | station_directory |
+| "My car was stolen yesterday" | station_directory |
+| "I want to report a non-emergency incident" | crime_general |
+| "I want to report a crime" | crime_general |
+| "I need information about a crime" | no automatic crime route |
+| "Something happened yesterday" | no automatic crime route |
+
+These tests protect the distinction between the online-reporting eligibility screen and general crime reporting.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
