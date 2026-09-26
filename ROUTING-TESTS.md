@@ -295,6 +295,29 @@ Specific taxi/PSV found-property language must outrank generic found-property ro
 
 Permit/application language must not automatically convert complaint, appeal, challenge, objection or dispute wording into an application route.
 
+## Generic-action ambiguity regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to complain" | no automatic route |
+| "I want to report something" | no automatic route |
+| "I need information" | no automatic route |
+| "I want a review" | no automatic route |
+| "I want to appeal" | no automatic route |
+| "I want to challenge something" | no automatic route |
+| "Something happened" | no automatic route |
+| "I have a problem with Gardaí" | no automatic route |
+| "I need help with Gardaí" | no automatic route |
+| "I want to complain about a Garda" | fiosru_complaint_screen |
+| "I want to report a crime" | crime_general |
+| "I want to report dangerous driving" | traffic_watch |
+| "I want to review my fixed charge notice" | fixed_charge_notice_review |
+| "I want to review a prosecution decision" | prosecution_decision_review |
+| "I want to appeal a prosecution decision" | prosecution_decision_review |
+| "I want to review a Fiosrú decision" | fiosru_review |
+
+Generic action words must not select a route without a sufficiently specific object, authority or circumstance.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
