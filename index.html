@@ -299,13 +299,16 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     }
     const url=route.official_submission_url||route.official_info_url;
     const info=route.official_info_url;
+    const safeInfo=info?safeUrl(info):'';
+    const safeRoute=url?safeUrl(url):'';
     out.hidden=false;
     out.innerHTML='<strong>Likely official route</strong><p>'+escapeHtml(route.purpose_plain||route.citizen_question||'Official service')+'</p>'+
       (route.authority?'<p><small>Official authority: '+escapeHtml(route.authority)+'</small></p>':'')+
       (route.emergency_rule?'<p><small>Safety: '+escapeHtml(route.emergency_rule)+'</small></p>':'')+
       (route.deadline?'<p><small>Timing: '+escapeHtml(route.deadline)+'</small></p>':'')+
-      (info?'<p><a class="button" href="'+safeUrl(info)+'" target="_blank" rel="noopener noreferrer">Official information</a></p>':'')+
-      (url&&url!==info?'<p><a class="button" href="'+safeUrl(url)+'" target="_blank" rel="noopener noreferrer">Open official route</a></p>':'')+
+      (safeInfo?'<p><a class="button" href="'+safeInfo+'" target="_blank" rel="noopener noreferrer">Official information</a></p>':'')+
+      (safeRoute&&safeRoute!==safeInfo?'<p><a class="button" href="'+safeRoute+'" target="_blank" rel="noopener noreferrer">Open official route</a></p>':'')+
+      (!safeInfo&&!safeRoute?'<p><small>The official destination could not be safely opened from this page. Please use the official service links below.</small></p>':'')+
       '<p><small>This site only identifies a likely official route. It does not submit your report, complaint, application or request.</small></p>';
   }
   function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
