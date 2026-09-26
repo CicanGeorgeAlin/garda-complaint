@@ -1303,3 +1303,28 @@ Specialist application language must not swallow explicit complaint, appeal, cha
 | “I want to complain about an abnormal-load application” | unresolved |
 
 Negative invariant: a specialist application/service route must not be selected solely because its noun appears when the citizen explicitly describes a complaint, appeal, challenge, objection or dispute about that service.
+
+## Crime, hate-crime, traffic and victim-support precedence regression — 26 Sep 2026
+
+Explicit reporting language for a specialist incident must not be swallowed by the broader victim-support route.
+
+| Input | Expected route |
+|---|---|
+| “I am a victim of crime and need support” | victim_services |
+| “I experienced a hate crime” | hate_crime |
+| “I witnessed a hate incident” | hate_crime |
+| “I want to report a hate crime” | hate_crime |
+| “I am a victim of a hate crime and want to report it” | hate_crime |
+| “I was involved in a non-emergency road traffic incident” | traffic_watch |
+| “I want to report a dangerous driver” | traffic_watch |
+| “I want to report a road traffic collision” | traffic_watch |
+| “I am a victim of crime and need victim support” | victim_services |
+| “I have information about crime and want to provide it confidentially” | garda_confidential |
+| “There is an immediate danger during a hate incident” | emergency_999_112 |
+| “There is serious injury risk during a road traffic incident” | emergency_999_112 |
+
+Negative invariants:
+- generic victim-support wording must not override explicit hate-crime reporting;
+- generic victim-support wording must not override explicit Traffic Watch reporting;
+- emergency conditions must continue to override specialist reporting routes;
+- confidential-information wording remains distinct from ordinary crime reporting unless an emergency is present.
