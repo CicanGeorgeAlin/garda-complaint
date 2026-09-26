@@ -274,6 +274,27 @@ Emergency indicators must outrank specialist routing. Accessibility need alone m
 
 Specific taxi/PSV found-property language must outrank generic found-property routing. Lost-property language must not be converted into the specialist taxi/PSV found-property route merely because a taxi is mentioned.
 
+## Specialist application boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I need a National Age Card" | national_age_card |
+| "I need proof of age" | national_age_card |
+| "I want to nominate someone for a Garda Youth Award" | youth_awards |
+| "I want a Garda Youth Award nomination form" | youth_awards |
+| "I need a collection permit" | collection_permit |
+| "I need a public collection permit" | collection_permit |
+| "I need a gaming permit" | gaming_permit |
+| "I need a lottery permit" | gaming_permit |
+| "I need an abnormal load permit" | abnormal_loads |
+| "I have an oversized load" | abnormal_loads |
+| "I want to request public CCTV footage" | public_cctv_institutional |
+| "I want public CCTV in my area" | public_cctv_institutional |
+| "I want to complain about CCTV" | no automatic route |
+| "I want to complain about a collection permit" | no automatic route |
+
+Permit/application language must not automatically convert complaint, appeal, challenge, objection or dispute wording into an application route.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
