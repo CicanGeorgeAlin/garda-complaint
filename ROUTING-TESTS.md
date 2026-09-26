@@ -277,3 +277,21 @@ Traffic Watch and Fixed Charge Notice routes must remain distinct. General FCN/p
 | “A dangerous driver is causing serious injury right now” | `emergency_999_112` |
 | “I have a driving licence question” | no automatic crime route |
 
+
+## Property-route collision regressions — 26 Sep 2026
+
+Explicit specialist property language must be resolved before generic theft-value parsing. This prevents a monetary value in a taxi/PSV property question, or the word “stolen” in a Garda-held-property question, from changing the intended process.
+
+| Input | Expected route |
+|---|---|
+| “I found property in a taxi” | `property_found_taxis_psvs` |
+| “I found property in a PSV worth €500” | `property_found_taxis_psvs` |
+| “Taxi found property worth €1,500” | `property_found_taxis_psvs` |
+| “Gardaí are holding my property” | `property_garda_possession` |
+| “Gardaí are holding my stolen property” | `property_garda_possession` |
+| “I found property at a Garda station” | `unclaimed_property` |
+| “I found a stolen item” | `crime_general` |
+| “My property was stolen and it was worth €500” | `theft_declaration` |
+| “My property was stolen and it was worth €1,500” | `station_directory` |
+| “I need information about property” | no automatic crime route |
+
