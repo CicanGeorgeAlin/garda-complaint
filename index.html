@@ -202,7 +202,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
     // Crime screening follows the current Garda online-reporting exclusions.
-    const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|car was stolen|stolen car|robbery|violent crime|stolen firearm|firearm stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene)/.test(q);
+    const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|car was stolen|stolen car|robbery|robbed|used force to rob|violent crime|stolen firearm|firearm stolen|firearm was stolen|firearm has been stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene)/.test(q);
     if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender|traffic|road)/.test(q)){
       return state.routes.find(r=>r.route_id==='station_directory');
     }
@@ -267,6 +267,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(/firearm|gun licence|firearms/.test(q) && /non.?resident|outside ireland|living abroad|resident outside/.test(q)){
       return state.routes.find(r=>r.route_id==='firearms_nonresident');
     }
+
+    const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
+    if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
