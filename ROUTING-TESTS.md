@@ -1318,6 +1318,7 @@ Explicit reporting language for a specialist incident must not be swallowed by t
 | “I was involved in a non-emergency road traffic incident” | traffic_watch |
 | “I want to report a dangerous driver” | traffic_watch |
 | “I want to report a road traffic collision” | traffic_watch |
+| “I need support after a traffic incident” | victim_services |
 | “I am a victim of crime and need victim support” | victim_services |
 | “I have information about crime and want to provide it confidentially” | garda_confidential |
 | “There is an immediate danger during a hate incident” | emergency_999_112 |
