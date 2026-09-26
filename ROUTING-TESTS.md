@@ -958,8 +958,8 @@ Purpose: keep the distinct Fiosrú complaint, statutory review, discontinuance, 
 - "Fiosrú completed its investigation and I want to know what happens next" → `fiosru_post_investigation`
 - "I want information about my Fiosrú investigation" → `fiosru_victim_information`
 - "I need information about significant developments in my Fiosrú investigation" → `fiosru_victim_information`
-- "I want to review a Fiosrú decision" → `fiosru_review`
-- "I want to appeal a Fiosrú decision" → `fiosru_review`
+- "I want to review a Fiosrú decision" → `fiosru_post_investigation`
+- "I want to appeal a Fiosrú decision" → `fiosru_post_investigation`
 - "I want to complain to Fiosrú" → unresolved
 - "I witnessed Garda behaviour" → unresolved
 
@@ -1236,3 +1236,5 @@ These cases protect the rule that a citizen who has already received an outcome 
 | “I want to review a Fiosrú decision” | fiosru_review |
 
 The first four Fiosrú cases intentionally use the post-investigation information route because the outcome is not identified as inadmissibility or discontinuance; current Fiosrú guidance states that a completed/closed investigation has no general internal review, while inadmissibility and discontinuance have a statutory review route. The prosecution cases must outrank the generic victim-support matcher once a prosecution decision is explicitly described.
+
+The generic Fiosrú “decision” wording is intentionally not treated as proof that the decision was an inadmissibility or discontinuance decision. Current Fiosrú guidance limits the statutory review route to those two decision types; a completed/closed investigation does not have a general internal review.
