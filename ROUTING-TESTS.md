@@ -517,3 +517,11 @@ Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic r
 - Verification state is metadata for audit transparency; it must not bypass the frontend's independent destination allowlist.
 - tel:112 and tel:999 are valid emergency destinations under the frontend allowlist.
 - firearms_nonresident and fiosru_complaint_screen have now been source-verified; the former remains conflict-aware and the latter is verified_current.
+
+
+## Verification metadata completeness regression
+
+- Every `verified_current` route has `verified_on`.
+- Every `verified_current_with_conflict` route has an explicit conflict/maintenance note.
+- Every `verified_guidance_only` route has an explicit guidance-only rationale.
+- No route may rely on the aggregate audit ledger alone to explain its verification state.
