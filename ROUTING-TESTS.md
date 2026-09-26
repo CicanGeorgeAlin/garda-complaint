@@ -81,6 +81,20 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I need information about penalty points" | traffic_fcn_information |
 | "I need information about a certificate" | no automatic crime route |
 
+## Semantic gap regressions — 26 Sep 2026
+
+The route engine must recognize natural-language ordering differences where the citizen places the object before the requested action:
+
+| Input | Expected route |
+|---|---|
+| "I received a Fixed Charge Notice and want to challenge it" | fixed_charge_notice_review |
+| "I received a fixed charge and want a review" | fixed_charge_notice_review |
+| "I want to complain to Fiosrú about a Garda" | fiosru_complaint_screen |
+| "I am a victim of Garda conduct" | fiosru_complaint_screen |
+| "I want to complain about a Garda" | fiosru_complaint_screen |
+
+These cases protect against overly rigid phrase ordering while retaining the existing conservative ambiguity rules.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
