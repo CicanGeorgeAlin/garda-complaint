@@ -1499,3 +1499,16 @@ Negative invariants:
 | “I want to report a dangerous driver” | traffic_watch |
 
 Negative invariant: support/help wording after a traffic or road incident must not by itself be interpreted as an instruction to submit a Traffic Watch report.
+
+
+## Active-assault emergency precedence correction — 27 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “Someone is being seriously assaulted” | emergency_999_112 |
+| “Someone is being assaulted” | emergency_999_112 |
+| “I need emergency SMS; there is an immediate threat of violence” | emergency_999_112 |
+| “I need emergency services by SMS” | emergency_sms_112 |
+| “There is a risk of serious injury” | emergency_999_112 |
+
+Negative invariant: an emergency SMS request must never suppress a separately stated immediate threat, serious assault, or serious-injury condition.
