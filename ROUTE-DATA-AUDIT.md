@@ -87,3 +87,15 @@ The following route records intentionally lack one or both of `legal_basis` and 
 - Missing `legal_basis` but with `verified_on`: `police_certificate`, `unclaimed_property`, `prosecution_decision_review`, `property_found_taxis_psvs`, `youth_awards`, `fiosru_accessibility`, `police_certificate_router`.
 
 The runtime does not require these optional metadata fields in order to load a route. Their absence is therefore a documented data-quality state, not evidence that the underlying service is legally unverified or unsafe. Before high-stakes publication, the applicable primary-law/source mapping should be completed where reasonably available.
+
+
+## Primary-source spot verification — 26 Sep 2026
+
+Fresh checks against current Garda public pages support the following route records:
+
+- `police_certificate`: current Garda Police Certificates page distinguishes Police Certificates from Garda Vetting and lists the qualifying purposes and application requirements. citeturn0search6
+- `victim_services`: current Garda Victim Services pages describe Victim Service Offices as contact/support points for victims and state that victims are entitled to information, support and protection. citeturn0search0turn0search3
+- `traffic_fcn_information` / fixed-charge cancellation: current Garda guidance confirms a separate cancellation/review process and states that the 28-day/56-day payment periods are not suspended while a cancellation request is considered. citeturn0search1
+- `emergency_sms_112`: current Garda guidance confirms 112 SMS for deaf, hard-of-hearing and speech-impaired people in the Republic of Ireland and describes it as an emergency service. citeturn0search4turn0search7
+
+These checks support the route purpose and do not by themselves replace route-by-route statutory verification.
