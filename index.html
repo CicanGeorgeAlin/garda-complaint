@@ -285,6 +285,12 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       return null;
     }
 
+    // An explicit Garda Police Certificate request is distinct from the broader
+    // certificate-routing screen for unspecified overseas/organisation requirements.
+    if(/\b(?:garda\s+)?police certificate\b/.test(q)){
+      return state.routes.find(r=>r.route_id==='police_certificate');
+    }
+
     const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
