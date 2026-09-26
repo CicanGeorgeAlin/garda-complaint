@@ -291,6 +291,15 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       return state.routes.find(r=>r.route_id==='police_certificate');
     }
 
+    // Fixed Charge Notice information and cancellation/review questions are one
+    // service family; distinguish explicit review/challenge wording from general notice help.
+    if(/(?:fixed charge|fixed charge notice|traffic fine)/.test(q) && /(?:information|understand|pay|payment)/.test(q)){
+      return state.routes.find(r=>r.route_id==='traffic_fcn_information');
+    }
+    if(/(?:complain|challenge|review|cancel|appeal).*(?:fixed charge|traffic fine)|(?:fixed charge|traffic fine).*(?:complain|challenge|review|cancel|appeal)/.test(q)){
+      return state.routes.find(r=>r.route_id==='fixed_charge_notice_review');
+    }
+
     const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
