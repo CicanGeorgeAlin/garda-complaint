@@ -276,6 +276,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='crime_general');
     }
 
+    // Explicit anonymity/confidentiality requests must not fall through to
+    // ordinary crime reporting. Garda guidance states that crime information can
+    // be provided without giving a name through the Garda Confidential line.
+    if(/(?:report|information|tell|provide).*(?:anonymously|anonymous|confidentially|confidential)|(?:anonymously|anonymous|confidentially|confidential).*(?:report|information|tell|provide)/.test(q)){
+      return state.routes.find(r=>r.route_id==='garda_confidential');
+    }
+
     // Explicit dispute language must be screened before specialist application
     // matchers, otherwise a phrase such as “complain about my firearm renewal”
     // could be mistaken for a fresh renewal request.
