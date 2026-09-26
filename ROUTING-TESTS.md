@@ -1388,3 +1388,23 @@ Negative invariants:
 - explicit dispute language must not become a fresh certificate/vetting application;
 - ordinary certificate and vetting requests remain routable;
 - specialist dispute wording remains unresolved unless a verified dedicated review route exists.
+
+## Property-route and Gardaí normalization regression — 27 Sep 2026
+
+Property routes must remain distinct after Irish-accent normalization and must not collapse into generic theft handling when a more specific property process is stated.
+
+| Input | Expected route |
+|---|---|
+| “I found property in a taxi” | property_found_taxis_psvs |
+| “I found property in a PSV” | property_found_taxis_psvs |
+| “My property is being held by Gardaí” | property_garda_possession |
+| “Gardaí are holding my property” | property_garda_possession |
+| “I found property” | unclaimed_property |
+| “I lost my property” | unresolved |
+| “My property was stolen” | crime_general |
+| “I want to check recovered property that belongs to me” | unclaimed_property |
+
+Negative invariants:
+- `Gardaí` and `Garda` must behave consistently after normalization;
+- taxi/PSV property must remain ahead of generic property routes;
+- stolen property must not be mistaken for an unclaimed-property lookup without qualifying recovered-property language.
