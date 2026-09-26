@@ -1168,3 +1168,15 @@ The frontend must reject a route directory that is missing, empty, malformed, co
 ## Public-identity and independence regression — 26 Sep 2026
 
 Citizen-facing wording must clearly identify the project as independent and must not imply that the website is An Garda Síochána, Fiosrú, a court, a solicitor, or an official submission portal. References such as “Official Garda route” must describe the linked destination, not the identity of this project. The site must not claim to receive, submit, forward, or guarantee official complaints, reports, applications, or requests.
+
+## Route metadata completeness regression — 26 Sep 2026
+
+The route registry must preserve the fields needed for safe public rendering and auditability:
+
+- all 41 routes have unique `route_id` values and populated `next_steps` and `conflict_note` fields;
+- every route has an explicit `verification_status` from the approved state model;
+- `source_conflict=true` is present only on the four documented source-conflict routes: `theft_declaration`, `foi`, `prosecution_decision_review` and `firearms_nonresident`;
+- optional fields such as `deadline`, `evidence_required`, `review_or_appeal`, `legal_basis`, `official_submission_url`, `form_url` and `contact` are not fabricated merely for schema uniformity; when absent, the frontend must continue to render safely without inventing detail;
+- the seven documented route-level legal-basis exceptions remain intentional and are not treated as missing verification.
+
+This regression protects metadata integrity without turning optional service-specific fields into unsupported legal claims.
