@@ -4,7 +4,7 @@ An independent citizen-navigation website for finding the appropriate official r
 
 ## What this project does
 
-The website helps a person describe a situation in plain language and identifies a **likely official route** based on the project's verified route data.
+The website helps a person describe a situation in plain language and identifies a **likely official route** based on the project's audited route data and explicit verification states.
 
 It is a navigation and explanation layer only. It does **not**:
 
