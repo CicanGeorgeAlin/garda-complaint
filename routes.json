@@ -985,12 +985,13 @@
       "next_steps": "Follow the current Garda non-resident licensing information and responsible authority instructions.",
       "legal_basis": "Firearms Acts 1925–2009 and current firearms licensing regulations/guidance.",
       "source_verified": "Official An Garda Síochána firearms licensing sources reviewed 2026-09-24",
-      "verified_on": "2026-09-24",
+      "verified_on": "2026-09-26",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current Garda application/renewal form and provide the identity, residence, firearm, competence, security and other supporting information requested by the applicable form. Additional authority is required for restricted firearms where applicable.",
       "review_or_appeal": "The firearms licensing decision-maker is the relevant Superintendent/Chief Superintendent under the firearms licensing framework. Any refusal/revocation or other decision should be handled using the specific statutory route applicable to that decision; do not present a generic appeal route.",
-      "verification_status": "research_required"
+      "verification_status": "verified_current_with_conflict",
+      "notes": " Current Garda guidance confirms the dedicated non-resident firearm certificate route; older form/guideline materials may differ in procedural detail, so retain source-level verification for future maintenance."
     },
     {
       "route_id": "police_certificate_router",
@@ -1182,11 +1183,12 @@
       "conflict_note": "The website must not promise admissibility or tell a person that a statutory threshold has definitely been met.",
       "legal_basis": "Policing, Security and Community Safety Act 2024, ss.195-199 and s.226.",
       "source_verified": "Official Fiosrú complaint and Victims of Crime sources reviewed 2026-09-24",
-      "verified_on": "2026-09-24",
+      "verified_on": "2026-09-26",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "contact": "Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73; info@fiosru.ie; 0818 600 800; +353 (1) 871 6727.",
       "review_or_appeal": "Fiosrú first decides admissibility. If the complaint is found inadmissible, the statutory review route may apply. If an investigation is discontinued, a statutory review route applies; a closed investigation has no internal review facility.",
-      "verification_status": "research_required"
+      "verification_status": "verified_current",
+      "notes": " Current Fiosrú guidance confirms complaints about Garda conduct are handled through Fiosrú, with certain admitted service-level complaints potentially referred to An Garda Síochána for resolution."
     }
   ],
   "required_fields": [
