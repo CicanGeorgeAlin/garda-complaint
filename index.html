@@ -200,6 +200,12 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     const q=rawQ.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     // Emergency SMS wording must remain on the dedicated SMS route unless the text
     // also describes an actual immediate danger that requires 999/112 voice response.
+    // A request for a person's own personal data stays on the data-protection path
+    // even when the user mentions FOI; FOI is not the default route for own personal data.
+    if(/(?:foi|freedom of information).*(?:my|own).*personal (?:data|information)|(?:my|own).*personal (?:data|information).*\b(?:foi|freedom of information)\b/.test(q)){
+      return state.routes.find(r=>r.route_id==='personal_data_f20');
+    }
+
     const emergencySms=/(?:\bemergency\b.*(?:sms|text|text message)|(?:sms|text|text message).*\bemergency\b|emergency services?\s+by\s+(?:sms|text)|sms\s*112|text\s*112)/.test(q)
       && !/(?:danger to life|immediate danger|risk of serious injury|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergencySms) return state.routes.find(r=>r.route_id==='emergency_sms_112');
@@ -297,7 +303,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['crime victim|victim support|support after crime|victim of crime','victim_services'],
       ['(?:correct|rectify|amend|understand).*personal (?:information|data)|personal (?:information|data).*(?:correct|rectify|amend|understand)','data_access_router'],
       ['personal data.*(?:about|held about) me|data garda hold.*me|my personal records|my garda personal records|my garda data|garda.*data.*about me|gdpr.*(?:my|personal) data','personal_data_f20'],
-      ['environmental information|environmental data|environmental records|pollution information|aie','aie'],
+      ['environmental information|environmental data|environmental records|pollution information|pollution records|pollution data|aie','aie'],
       ['foi|freedom of information|foi request|request under foi|administrative information','foi'],
       ['abnormal load|oversized load|wide load','abnormal_loads'],
       ['public collection|collection permit','collection_permit'],
