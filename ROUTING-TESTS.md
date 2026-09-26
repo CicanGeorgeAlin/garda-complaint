@@ -525,3 +525,12 @@ Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic r
 - Every `verified_current_with_conflict` route has an explicit conflict/maintenance note.
 - Every `verified_guidance_only` route has an explicit guidance-only rationale.
 - No route may rely on the aggregate audit ledger alone to explain its verification state.
+
+
+## Frontend verification-state routing regression
+
+- The frontend must reject a route registry record whose `verification_status` is missing or outside the approved vocabulary.
+- `verified_current` results may state that current official sources were verified.
+- `verified_current_with_conflict` results must warn that official sources contain a documented difference and direct the citizen to the linked official guidance.
+- `verified_guidance_only` results must say that the route is supported by current official guidance and that exact legal/eligibility details may depend on circumstances.
+- Unknown or research-only states must not be presented as fully verified.
