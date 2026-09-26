@@ -78,7 +78,7 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want to report dangerous driving" | traffic_watch |
 | "I am a victim of Garda conduct" | fiosru_complaint_screen |
 | "I was a victim of a crime and need support" | victim_services |
-| "I need information about penalty points" | fixed_charge_notice_review |
+| "I need information about penalty points" | traffic_fcn_information |
 | "I need information about a certificate" | no automatic crime route |
 
 ## Safety invariants
@@ -257,3 +257,23 @@ Every registered route is assigned an intentional entry role. A route may be a d
 | fiosru_complaint_screen | direct Garda-personnel complaint screening gate |
 
 **Coverage result: 41/41 route IDs have an intentional entry role.**
+
+## Traffic / FCN collision regressions — 26 Sep 2026
+
+Traffic Watch and Fixed Charge Notice routes must remain distinct. General FCN/penalty-point information belongs to the FCN information route; an explicit challenge, cancellation, review or appeal belongs to the FCN review route. Non-emergency dangerous-driving reports belong to Traffic Watch. Emergency indicators remain authoritative before all of these routes.
+
+| Input | Expected route |
+|---|---|
+| “I want to report dangerous driving” | `traffic_watch` |
+| “I want to report a dangerous driver” | `traffic_watch` |
+| “I want to report a non-emergency traffic incident” | `traffic_watch` |
+| “I received a Fixed Charge Notice” | `traffic_fcn_information` |
+| “What penalty points apply?” | `traffic_fcn_information` |
+| “I want information about a traffic fine” | `traffic_fcn_information` |
+| “I want to challenge my Fixed Charge Notice” | `fixed_charge_notice_review` |
+| “I want to appeal my Fixed Charge Notice” | `fixed_charge_notice_review` |
+| “Can I cancel this Fixed Charge Notice?” | `fixed_charge_notice_review` |
+| “There is immediate danger from a driver” | `emergency_999_112` |
+| “A dangerous driver is causing serious injury right now” | `emergency_999_112` |
+| “I have a driving licence question” | no automatic crime route |
+
