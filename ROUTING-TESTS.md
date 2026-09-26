@@ -1082,3 +1082,16 @@ The citizen-facing route result must preserve important registry limitations ins
 - Routes with review_or_appeal display the applicable review/appeal qualification.
 - All registry-provided result text is HTML-escaped before rendering.
 - The result continues to state that the website only identifies a likely official route and does not submit anything on the citizen's behalf.
+
+
+## Release defensive validation regression — 26 Sep 2026
+
+Current production-like registry validation confirms:
+
+- 41 route records load from the real registry with 0 duplicate route IDs.
+- Every route has the required core fields used by the frontend.
+- Every populated official information/submission/form destination passes the frontend official-domain allowlist.
+- The route renderer HTML-escapes registry-provided explanatory fields before insertion into the result container.
+- The browser loads only the local routes.json registry; user-entered route questions are not submitted to an external service.
+- Malformed, duplicate or unsafe route records fail closed rather than being rendered as official destinations.
+- The frontend exposes documented conflict, next-step and review/appeal limitations where those fields exist.
