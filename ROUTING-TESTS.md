@@ -1118,3 +1118,8 @@ The registry distinguishes documented official-source conflicts from other mater
 - Other conflict_note text is treated as an important route note, not automatically as evidence that sources disagree.
 - The frontend labels these two cases differently so citizens are not told that every caution represents a source conflict.
 - The four currently documented source-conflict routes are theft_declaration, foi, prosecution_decision_review and firearms_nonresident.
+
+
+## Route-level legal-basis metadata safety regression — 26 Sep 2026
+
+Routes lacking a `legal_basis` field must not receive a fabricated statutory citation. Verification status may rely on the documented official-service source basis where the route is a service/guidance route; statutory detail must remain in the legal/source map unless directly verified at route level.
