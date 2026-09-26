@@ -181,7 +181,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
         throw new Error('invalid route directory');
       }
       const validRoutes=data.routes.every(r=>r && typeof r==='object' && typeof r.route_id==='string' && r.route_id.trim() && typeof r.purpose_plain==='string' && r.purpose_plain.trim() && typeof r.official_info_url==='string' && r.official_info_url.trim());
-      if(!validRoutes) throw new Error('malformed route record');
+      const routeIds=data.routes.map(r=>r.route_id.trim());
+      const uniqueRouteIds=new Set(routeIds);
+      if(!validRoutes || uniqueRouteIds.size!==routeIds.length) throw new Error('malformed route directory');
       state.routes=data.routes;
       wireRouter();
     }catch(e){
