@@ -114,100 +114,34 @@ This is a coverage flag, not a claim that these services are unavailable. Before
 
 ### Direct specialist coverage added — 26 Sep 2026
 
-The route engine now has deliberate entry patterns for previously uncovered citizen-facing specialist records:
+The route engine has deliberate citizen-language entry patterns for the specialist records previously identified as needing review:
 
 - Garda Youth Awards → `youth_awards`
 - found property in a taxi/PSV → `property_found_taxis_psvs`
 - property held by Gardaí → `property_garda_possession`
-- prosecution-decision questions → `prosecution_decision_review`
+- prosecution-decision challenge/review language → `prosecution_decision_review`
 - pre-Fiosrú GSOC complaint → `gsoc_legacy_transition`
 - Fiosrú post-investigation questions → `fiosru_post_investigation`
 - information about an active Fiosrú investigation → `fiosru_victim_information`
 - Fiosrú accessibility → `fiosru_accessibility`
 - Garda accessibility → `accessibility_garda`
 - uncertainty about online crime reporting → `crime_online_router`
+- emergency SMS/accessibility emergency language → `emergency_sms_112`
 
-Emergency detection remains ahead of these specialist branches, and the existing theft-value and excluded-crime gates remain ahead of broad crime/property matching.
+Emergency detection remains ahead of these specialist routes.
 
-### Regression cases for expanded specialist routing — 26 Sep 2026
+### Registry-to-engine reconciliation — 26 Sep 2026
 
-| Input | Expected route |
-|---|---|
-| “I want to nominate someone for a Garda Youth Award” | `youth_awards` |
-| “I found property in a taxi” | `property_found_taxis_psvs` |
-| “Gardaí are holding my property” | `property_garda_possession` |
-| “I want to challenge a decision not to prosecute” | `prosecution_decision_review` |
-| “I made a GSOC complaint before Fiosrú started” | `gsoc_legacy_transition` |
-| “Fiosrú finished investigating my complaint; what happens next?” | `fiosru_post_investigation` |
-| “I need information about my Fiosrú investigation” | `fiosru_victim_information` |
-| “I need accessible help from Fiosrú” | `fiosru_accessibility` |
-| “I need Garda services in an accessible format” | `accessibility_garda` |
-| “I want to report a crime online but don't know if the form applies” | `crime_online_router` |
+A literal `route_id` search is not a sufficient reachability test because the engine intentionally uses `state.routes.find(...)` inside shared matcher arrays and uses screening/router records for some downstream services.
 
-### Currency parser regression
+The current architecture therefore treats these as deliberate downstream records rather than unreachable routes:
 
-The theft-value parser must continue to interpret:
+- `fiosru_complaint` — entered through `fiosru_complaint_screen`, which provides the statutory complaint submission destination.
+- `personal_data_f20` — entered through `data_access_router`, because the correct data-protection sub-route depends on the request.
+- `police_certificate` — entered through `police_certificate_router`, because purpose and destination must be distinguished from Garda Vetting.
+- `property_found_taxis_psvs`, `property_garda_possession`, `prosecution_decision_review`, `youth_awards`, `gsoc_legacy_transition`, `emergency_sms_112`, `accessibility_garda`, `fiosru_accessibility`, `fiosru_victim_information`, `fiosru_post_investigation`, and `crime_online_router` have deliberate natural-language entry patterns.
 
-- €1,000 → `theft_declaration`
-- €1,001 → `station_directory`
-- €1,500.00 → `station_directory`
-- €1.500,00 → `station_directory`
-
-The parser must not treat a thousands separator as a decimal point.
-
-### Runtime destination-safety regression — 26 Sep 2026
-
-The route loader must fail closed if a route contains an unsafe `official_info_url` or populated `official_submission_url`. The rendered-link layer must also reject such destinations independently. This prevents a malformed or tampered route record from becoming a clickable external destination.
-
-### Prosecution-review false-positive regression — 26 Sep 2026
-
-The prosecution-decision specialist route is intentionally limited to explicit challenge/review/appeal language. A question merely asking for general information about prosecution decisions must not be treated as a request to challenge a decision.
-
-| Input | Expected route |
-|---|---|
-| “I want information about prosecution decisions” | no automatic crime route |
-| “What is a prosecution decision?” | no automatic crime route |
-| “I want to challenge a decision not to prosecute” | `prosecution_decision_review` |
-| “Can I appeal a decision not to prosecute?” | `prosecution_decision_review` |
-
-### Fiosrú precedence regression — 26 Sep 2026
-
-Explicit review language must take precedence over general investigation-information or post-investigation language. Discontinuance/inadmissibility remains a more specific review subtype.
-
-| Input | Expected route |
-|---|---|
-| “Fiosrú finished investigating my complaint; what happens next?” | `fiosru_post_investigation` |
-| “Fiosrú finished investigating my complaint and I want a review” | `fiosru_review` |
-| “I need information about my Fiosrú investigation” | `fiosru_victim_information` |
-| “Fiosrú said my complaint is inadmissible and I want a review” | `fiosru_review_discontinuance` or the applicable statutory review route only where the specific decision matches the discontinuance/inadmissibility rules |
-
-### FCN information-vs-review regression — 26 Sep 2026
-
-Fixed Charge Notice information is now separated from challenge/review language. The router should not interpret a person asking how an FCN works, or asking about penalty points, as a request to cancel or review a notice.
-
-| Input | Expected route |
-|---|---|
-| “I received a Fixed Charge Notice and want to understand it” | `traffic_fcn_information` |
-| “What are the penalty points for this?” | `traffic_fcn_information` |
-| “I want to challenge my Fixed Charge Notice” | `fixed_charge_notice_review` |
-| “Can I cancel this Fixed Charge Notice?” | `fixed_charge_notice_review` |
-| “I want information about traffic fines” | `traffic_fcn_information` |
-
-### Broad-language ambiguity regressions — 26 Sep 2026
-
-The matcher should prefer a conservative result when a broad term does not establish the specialist process.
-
-| Input | Expected route |
-|---|---|
-| “I need a certificate” | no automatic crime route |
-| “I need a criminal record check” | no automatic crime route |
-| “I need information about a camera” | no automatic crime route |
-| “I need information about property” | no automatic crime route |
-| “I have a driving licence question” | no automatic crime route |
-| “I want information about traffic fines” | `traffic_fcn_information` |
-| “I found a stolen item” | `crime_general` |
-| “I found property at a Garda station” | `unclaimed_property` |
-
+The remaining validation requirement is semantic regression testing: a route being reachable is not enough; broad citizen wording must still remain unresolved when the available information is insufficient, and emergency/specialist precedence must continue to hold.
 ## Route coverage ledger — 26 Sep 2026
 
 Every registered route is assigned an intentional entry role. A route may be a direct natural-language destination or a downstream destination reached through a screening/router record; downstream status is deliberate, not an accidental coverage gap.
