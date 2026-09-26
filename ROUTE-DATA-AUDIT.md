@@ -48,3 +48,21 @@ The browser router now fails closed if the loaded route directory contains:
 - an official_info_url, populated official_submission_url, or populated form_url outside the same front-end official-destination allowlist used for rendered links.
 
 This is a second safety boundary in addition to the repository audit. The renderer also independently filters destinations before creating clickable links. Latest runtime hardening commits: 5b0b0652215079394854be7962cdc8ff61575636 (destination validation) and 2ca8bba4964b63e4f4923f73306c70f46392d6fe (form_url validation).
+
+
+## Live public-source verification — 26 Sep 2026
+
+A fresh public-source check was completed against current Garda/Fiosrú pages on 26 Sep 2026.
+
+### Confirmed current points
+- The specific Garda Theft Declaration page states that it is for theft of property not exceeding €1,000 in Ireland. The separate Garda Online Crime Reporting page confirms the principal exclusions, including burglary, stolen/attempted-stolen vehicles, robbery involving force/threat, violent crime and stolen firearms.
+- Garda Traffic Watch currently describes the service as non-emergency and states that reports should be made within 6 months; emergencies must use 999/112.
+- Fiosrú currently states that ordinary complaints are normally made within 12 months, and its Statutory Review page states that reviews of inadmissibility/discontinuance decisions should normally be requested within 28 days, with reasons for lateness where applicable.
+
+### Preserved source conflicts
+- A still-indexed Garda general reporting page states an older €500 theft threshold, while the live specific Theft Declaration page states €1,000. The project treats the specific live route as the current operational threshold and records the conflict rather than reproducing €500 as current.
+- Garda's current prosecution-information page states 28 days for a review after the summary of reasons, while the current Victims Charter PDF states 56 days from notification of the decision. The project must preserve this conflict and direct users to the current official instructions/forms rather than inventing a single universal deadline.
+- Garda FOI pages currently contain differing timing wording (4 weeks and 20 working days). The project should preserve this source inconsistency and avoid presenting one value as an uncontested universal rule.
+
+### Verification limitation
+This audit verifies the public pages as observed on 26 Sep 2026. It does not prove that every linked form or destination will remain unchanged after publication. Periodic re-verification remains required.
