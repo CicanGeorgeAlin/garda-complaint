@@ -1158,3 +1158,8 @@ Specialist routes must preserve their narrower distinctions before broad matcher
 ## Traffic and property high-consequence collision regression — 26 Sep 2026
 
 Traffic and property terms must not override more specific routes. Fixed Charge information stays separate from Fixed Charge review/cancellation; prosecution-decision review stays separate from ordinary Traffic Watch; dangerous driving with immediate-danger language reaches emergency screening; taxi/PSV found-property and Garda-held-property wording precede generic theft/recovered-property routing; and online-reporting exclusions remain protected from the general online-crime route.
+
+
+## Registry integrity and fail-closed regression — 26 Sep 2026
+
+The frontend must reject a route directory that is missing, empty, malformed, contains duplicate `route_id` values, uses an unknown verification state, or contains a destination outside the approved allowlist. Emergency `tel:112`/other permitted emergency destinations are explicit allowlist exceptions. A failed registry load must leave the user with official-link guidance rather than attempting to route from incomplete data.
