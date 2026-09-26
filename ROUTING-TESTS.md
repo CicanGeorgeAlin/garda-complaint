@@ -1163,3 +1163,8 @@ Traffic and property terms must not override more specific routes. Fixed Charge 
 ## Registry integrity and fail-closed regression — 26 Sep 2026
 
 The frontend must reject a route directory that is missing, empty, malformed, contains duplicate `route_id` values, uses an unknown verification state, or contains a destination outside the approved allowlist. Emergency `tel:112`/other permitted emergency destinations are explicit allowlist exceptions. A failed registry load must leave the user with official-link guidance rather than attempting to route from incomplete data.
+
+
+## Public-identity and independence regression — 26 Sep 2026
+
+Citizen-facing wording must clearly identify the project as independent and must not imply that the website is An Garda Síochána, Fiosrú, a court, a solicitor, or an official submission portal. References such as “Official Garda route” must describe the linked destination, not the identity of this project. The site must not claim to receive, submit, forward, or guarantee official complaints, reports, applications, or requests.
