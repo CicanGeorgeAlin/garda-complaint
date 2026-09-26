@@ -198,6 +198,12 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     // Normalize Irish accents so natural spellings such as Fiosrú and Gardaí
     // are treated consistently by the plain-language matcher.
     const q=rawQ.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    // Emergency SMS wording must remain on the dedicated SMS route unless the text
+    // also describes an actual immediate danger that requires 999/112 voice response.
+    const emergencySms=/(?:\bemergency\b.*(?:sms|text|text message)|(?:sms|text|text message).*\bemergency\b|emergency services?\s+by\s+(?:sms|text)|sms\s*112|text\s*112)/.test(q)
+      && !/(?:danger to life|immediate danger|risk of serious injury|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
+    if(emergencySms) return state.routes.find(r=>r.route_id==='emergency_sms_112');
+
     const emergency=/(?:\bemergency\b(?!\s*(?:sms|text|text message|services?\s+by\s+(?:sms|text)))|danger to life|immediate danger|risk of serious injury|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
