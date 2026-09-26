@@ -179,6 +179,24 @@ Personal-data access must remain focused on the citizen's own data (or clearly f
 
 Explicit review requests must outrank the generic discontinuance route; lifecycle information questions must remain separate from complaint submission and statutory review.
 
+## Police Certificate / Garda Vetting boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I need a police certificate" | police_certificate_router |
+| "I need a Garda police certificate" | police_certificate_router |
+| "I need a criminal record certificate for another country" | police_certificate_router |
+| "I need Garda vetting for work" | garda_vetting |
+| "I need vetting for employment" | garda_vetting |
+| "I need vetting for volunteering" | garda_vetting |
+| "I need e-vetting for a job" | garda_vetting |
+| "I need a police certificate for a job" | police_certificate_router |
+| "I need a background check for work" | garda_vetting |
+| "I need a certificate to work in another country" | no automatic route |
+| "I need information about certificates" | no automatic route |
+
+A Police Certificate and Garda Vetting are distinct services. Ambiguous certificate/background-check wording must not be treated as proof of either route without sufficient context.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
