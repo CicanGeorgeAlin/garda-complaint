@@ -1216,3 +1216,23 @@ Post-decision language must take precedence over generic complaint/report langua
 - “I want to complain about a Garda” with no prior Fiosrú decision → complaint screening, not a review route.
 
 The interface must preserve the distinction between an original complaint/report, a post-decision review, and an information request about an ongoing or completed process.
+
+## Post-decision ambiguity and prosecution-review precedence regression — 26 Sep 2026
+
+These cases protect the rule that a citizen who has already received an outcome must not be sent back to the beginning or have a review process guessed from incomplete outcome wording.
+
+| Input | Expected route |
+|---|---|
+| “Fiosrú gave me a decision and I want to review it” | fiosru_post_investigation |
+| “Fiosrú gave me a decision and I want to appeal it” | fiosru_post_investigation |
+| “Fiosrú finished investigating and I want a review” | fiosru_post_investigation |
+| “Fiosrú closed my investigation and I want a review” | fiosru_post_investigation |
+| “Fiosrú said my complaint is inadmissible and I want a review” | fiosru_review |
+| “Fiosrú discontinued its investigation and I want a review” | fiosru_review |
+| “I am a victim and received a decision not to prosecute” | prosecution_decision_review |
+| “I received a decision not to prosecute and want to review it” | prosecution_decision_review |
+| “I received a prosecution decision and want to review it” | prosecution_decision_review |
+| “I want information about a prosecution decision” | unresolved |
+| “I want to review a Fiosrú decision” | fiosru_review |
+
+The first four Fiosrú cases intentionally use the post-investigation information route because the outcome is not identified as inadmissibility or discontinuance; current Fiosrú guidance states that a completed/closed investigation has no general internal review, while inadmissibility and discontinuance have a statutory review route. The prosecution cases must outrank the generic victim-support matcher once a prosecution decision is explicitly described.
