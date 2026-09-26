@@ -36,6 +36,13 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I need a National Age Card" | national_age_card |
 | "I want to check recovered property" | unclaimed_property |
 | "I don't know what Garda service I need" | no automatic crime route |
+| "I want to report a crime" | crime_general |
+| "I need a permit for gaming" | gaming_permit |
+| "I want environmental records about pollution" | aie |
+| "I want my personal records about me" | data_access_router |
+| "Fiosrú said my complaint is inadmissible" | fiosru_review |
+| "Fiosrú discontinued my complaint" | fiosru_review_discontinuance |
+| "I want to report a non-emergency incident" | crime_general |
 
 ## Safety invariants
 
