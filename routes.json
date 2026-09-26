@@ -938,12 +938,14 @@
       ],
       "official_submission_url": "sms:112",
       "geographic_scope": "Ireland",
-      "next_steps": "Use the official 112 SMS process and provide the requested location and emergency details.",
+      "next_steps": "Use the official 112 SMS process; the Garda guidance says the mobile phone must be registered for the service before use. Provide the requested location and emergency details. SMS is non-real-time and delivery is not guaranteed.",
       "guidance_basis": "Official Emergency services guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "conflict_note": "Current Garda emergency-SMS guidance limits the service to deaf, hard of hearing and speech-impaired users who need emergency assistance. Mobile registration is required before use, and SMS is non-real-time with no guarantee of delivery.",
       "verification_status": "verified_guidance_only",
       "notes": "Official Garda emergency-SMS guidance confirms the service and eligibility; this is guidance-only because SMS emergency handling has specific operational limitations and is not a substitute for ordinary reporting.",
-      "source_conflict": false
+      "source_conflict": false,
+      "source_verified": "Official Garda emergency contact guidance re-checked 2026-09-26",
+      "verified_on": "2026-09-26"
     },
     {
       "route_id": "accessibility_garda",
