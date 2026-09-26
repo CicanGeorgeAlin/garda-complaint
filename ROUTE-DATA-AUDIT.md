@@ -149,3 +149,16 @@ Current official-source checks also support the remaining core navigation famili
 - `unclaimed_property` / `property_garda_possession`: current Garda property guidance supports distinguishing selected unclaimed/recovered-property services from property being held by Gardaí and from theft reporting.
 
 These checks complete the source-scope review of the remaining core route families. Individual operational pages and deadlines remain subject to future change.
+
+
+## Remaining core-route ledger entries — 26 Sep 2026
+
+The following five core routes were already covered by the service inventory and routing regression suite but were not individually named in the audit ledger. They are now explicitly recorded:
+
+- `fiosru_complaint`: current Fiosrú complaint guidance provides the official complaint submission route and explains the statutory complaint process.
+- `theft_declaration`: current specific Garda Theft Declaration page states the current €1,000-or-less scope; the repository separately records the older €500 indexed-source conflict.
+- `garda_vetting`: current Garda Vetting guidance provides the dedicated vetting service and keeps it distinct from Police Certificates.
+- `fixed_charge_notice_review`: current Garda fixed-charge cancellation guidance provides a separate cancellation/review process from general traffic reporting.
+- `fiosru_complaint_screen`: current Fiosrú complaint guidance supports screening Garda-personnel conduct complaints into the Fiosrú process rather than ordinary crime reporting.
+
+With these entries, all 41 route IDs are now represented somewhere in the audit documentation or its explicit exception/verification ledgers.
