@@ -337,8 +337,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       // hate-crime route before the broader victim-support matcher.
       ['(?:report|reporting|experienced|witnessed|incident).*(?:hate crime|hate incident|motivated by hate)|(?:hate crime|hate incident).*(?:report|reporting|experienced|witnessed|incident)','hate_crime'],
       // Explicit non-emergency road-traffic reporting should reach Traffic Watch
-      // before generic victim-support language.
-      ['(?:report|reporting|incident|collision|driver|driving).*(?:traffic|road)|(?:traffic|road).*(?:report|reporting|incident|collision|driver|driving)','traffic_watch'],
+      // before generic victim-support language. Keep bare support-after-incident
+      // wording broad enough for victim services rather than assuming a report.
+      ['(?:report|reporting|report.*(?:driver|driving)|dangerous driver|dangerous driving|traffic watch|road traffic collision|traffic incident report|road traffic incident report)','traffic_watch'],
       ['crime victim|victim support|support after crime|victim of crime','victim_services'],
       ['(?:correct|rectify|amend|understand).*personal (?:information|data)|personal (?:information|data).*(?:correct|rectify|amend|understand)','data_access_router'],
       ['personal data.*(?:about|held about) me|data garda hold.*me|my personal records|my garda personal records|my garda data|garda.*data.*about me|gdpr.*(?:my|personal) data','personal_data_f20'],
