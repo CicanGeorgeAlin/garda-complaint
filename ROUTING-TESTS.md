@@ -516,4 +516,4 @@ Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic r
 - The current registry must contain 41 route records with 41 unique route IDs.
 - Verification state is metadata for audit transparency; it must not bypass the frontend's independent destination allowlist.
 - tel:112 and tel:999 are valid emergency destinations under the frontend allowlist.
-- firearms_nonresident and fiosru_complaint_screen remain explicitly marked research_required until their source/legal verification is completed; they must not be described elsewhere as fully legally verified.
+- firearms_nonresident and fiosru_complaint_screen have now been source-verified; the former remains conflict-aware and the latter is verified_current.
