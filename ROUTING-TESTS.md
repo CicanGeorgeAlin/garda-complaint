@@ -444,3 +444,25 @@ Confidential-information routing requires explicit confidentiality or anonymity 
 | “I want to remain anonymous when giving information” | garda_confidential |
 | “I need confidential information about a Garda service” | garda_confidential |
 
+
+## Awards / permits / CCTV collision regressions — 26 Sep 2026
+
+These specialist service routes require their service-specific terms. Generic requests for a “permit”, “award”, “camera”, or “load” must not be assigned a specialist route without sufficient context.
+
+| Input | Expected route |
+|---|---|
+| “I want to nominate a young person for a Garda Youth Award” | youth_awards |
+| “I want information about the Garda Youth Awards” | youth_awards |
+| “I need an abnormal load permit” | abnormal_loads |
+| “I need an oversized load permit” | abnormal_loads |
+| “I want a public collection permit” | collection_permit |
+| “I need a permit for a public collection” | collection_permit |
+| “I need a gaming permit” | gaming_permit |
+| “I need a lottery permit for gaming” | gaming_permit |
+| “I want information about public CCTV” | public_cctv_institutional |
+| “I want to request public CCTV footage” | public_cctv_institutional |
+| “I want a permit” | no automatic route |
+| “I want an award” | no automatic route |
+| “I saw a camera” | no automatic route |
+| “I need information about a load” | no automatic route |
+
