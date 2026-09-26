@@ -114,3 +114,21 @@ Current Garda public pages were checked for additional specialist routes:
 - `emergency_sms_112`: current Garda guidance confirms 112 SMS for deaf, hard-of-hearing and speech-impaired people, while warning that SMS is non-real-time and should only be used for emergencies. citeturn0search6turn0search7
 
 These checks verify the current official service existence and scope; they do not substitute for a complete section-by-section legal audit of every eligibility condition.
+
+
+## Further specialist-source verification — 26 Sep 2026
+
+Additional current official-source checks support these route families:
+
+- `firearms_application`, `firearms_renewal`, `firearms_nonresident`: current Garda firearms guidance distinguishes first applications, renewals and non-resident applications and provides the applicable FCA1/FCR/non-resident forms. The project keeps the three routes separate rather than treating every firearms query as a single application type.
+- `gaming_permit`: current Garda guidance provides a gaming permit route and the GP1 application process; the published guidance includes advance timing requirements for proposed gaming activity. The project treats this as an application/service route, not a complaint route.
+- `data_access_router` / `personal_data_f20`: current Garda data-protection guidance distinguishes personal-data access from FOI and other information regimes and provides the relevant Data Access Request process.
+- `foi`: current Garda FOI guidance confirms a distinct Freedom of Information process for records within its statutory scope. Where published timing wording differs between Garda pages, the project preserves the discrepancy rather than selecting one value without qualification.
+- `aie`: current Garda guidance treats Access to Information on the Environment as a distinct regime from FOI, with its own request process and environmental-information scope.
+- `fiosru_review`: current Fiosrú statutory-review guidance confirms a separate review route for specified inadmissibility/discontinuance decisions and a normal 28-day period.
+- `fiosru_review_discontinuance`: current Fiosrú material distinguishes discontinuance decisions from the broader review process; the routing engine therefore keeps explicit discontinuance language separate from generic Fiosrú review wording.
+- `fiosru_post_investigation`: current Fiosrú material provides information about outcomes/next steps after an investigation; this is kept separate from requesting a statutory review.
+- `fiosru_victim_information`: current Fiosrú material contains a dedicated information route for victims of crime during relevant investigations; this is kept separate from ordinary complaint submission and statutory review.
+- `gsoc_legacy_transition`: current Fiosrú material documents the transition of relevant pre-2 April 2025 GSOC matters to Fiosrú; the project retains this as a legacy-transition route rather than presenting it as a new complaint process.
+
+These checks establish current official service scope. They do not remove the need for periodic re-checking of forms, deadlines and statutory wording.
