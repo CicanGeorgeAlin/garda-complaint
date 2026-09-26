@@ -719,6 +719,26 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Property / theft semantic collision stress regressions — 26 Sep 2026
+
+Specialist property-process wording must be evaluated before generic theft parsing. The presence of “stolen”, a monetary value, or a taxi/PSV reference must not redirect a clearly identified property-handling process.
+
+| Input | Expected route |
+|---|---|
+| “I found property” | `unclaimed_property` |
+| “I found lost property” | `unclaimed_property` |
+| “I found property in a taxi” | `property_found_taxis_psvs` |
+| “I found stolen property in a taxi” | `property_found_taxis_psvs` |
+| “I found property in a PSV worth €500” | `property_found_taxis_psvs` |
+| “Taxi found property worth €1,500” | `property_found_taxis_psvs` |
+| “Gardaí are holding my property” | `property_garda_possession` |
+| “Gardaí are holding my stolen property” | `property_garda_possession` |
+| “My stolen property is being held by Gardaí” | `property_garda_possession` |
+| “My property was stolen and it was worth €500” | `theft_declaration` |
+| “My property was stolen and it was worth €1,500” | `station_directory` |
+| “I found a stolen item” | `crime_general` |
+| “I need information about property” | no automatic crime route |
+
 ## Crime-reporting / theft-value semantic stress regressions — 26 Sep 2026
 
 The online crime boundary must remain conservative. Explicit excluded categories go to the station route; qualifying theft values may use the theft declaration; a theft with no stated value remains general crime screening.
