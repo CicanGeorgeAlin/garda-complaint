@@ -998,3 +998,20 @@ The engine deliberately does not infer a data-access or information-access right
 - "I want to report dangerous driving and someone is in immediate danger" → `emergency_999_112`
 
 The online-reporting exclusion gate takes precedence over generic online-reporting wording for excluded crime types. A theft without value remains unresolved for the specific online theft declaration and is therefore kept in general crime screening.
+
+## Property-route boundary verification — 26 Sep 2026
+
+- "I found property" → `unclaimed_property`
+- "I found lost property" → `unclaimed_property`
+- "I want to check whether property recovered by Gardaí may be mine" → `unclaimed_property`
+- "I want to check whether recovered property may belong to me" → `unclaimed_property`
+- "I found property in a taxi" → `property_found_taxis_psvs`
+- "I found stolen property in a taxi" → `property_found_taxis_psvs`
+- "I found property in a PSV" → `property_found_taxis_psvs`
+- "Gardaí are holding my property" → `property_garda_possession`
+- "Gardaí are holding my stolen property" → `property_garda_possession`
+- "My stolen property is being held by Gardaí" → `property_garda_possession`
+- "I found a stolen item" → `crime_general`
+- "A taxi passenger left property" → unresolved
+
+Specialist property context takes precedence over generic theft wording. A generic taxi-passenger statement remains unresolved because it does not establish whether the user is reporting found property, lost property or another process.
