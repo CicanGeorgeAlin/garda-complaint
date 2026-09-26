@@ -15,6 +15,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "There was a burglary last night" | station_directory |
 | "My property was stolen and it was worth €500" | theft_declaration |
 | "My property was stolen and it was worth €1,500" | station_directory |
+| "My property was stolen and it was worth €1,000" | theft_declaration |
+| "My property was stolen and it was worth €1,001" | station_directory |
+| "My property was stolen and it was worth €1,500.00" | station_directory |
+| "My property was stolen and it was worth €1,500,00" | station_directory |
 | "I want to report a non-emergency dangerous driving incident" | traffic_watch |
 | "There is an immediate danger from a driver" | emergency_999_112 |
 | "I want to report a hate crime" | hate_crime |
