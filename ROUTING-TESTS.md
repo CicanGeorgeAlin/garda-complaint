@@ -38,6 +38,9 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I need Garda vetting for work" | garda_vetting |
 | "I need a police certificate for another country" | police_certificate_router |
 | "I want a firearm certificate" | firearms_application |
+| "I want to renew my firearm certificate" | firearms_renewal |
+| "I am a non-resident applying for a firearm certificate" | firearms_nonresident |
+| "I need to renew my firearms licence" | firearms_renewal |
 | "I need to contact my local Garda station" | station_directory |
 | "I received a Fixed Charge Notice and want to challenge it" | fixed_charge_notice_review |
 | "I am a crime victim and need support" | victim_services |
