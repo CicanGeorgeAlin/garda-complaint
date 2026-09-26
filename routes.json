@@ -479,14 +479,14 @@
         "official_form"
       ],
       "geographic_scope": "Ireland",
-      "conflict_note": "Current Garda victim information and other official guidance contain differing review-period wording in different contexts; do not hard-code a single universal deadline.",
-      "next_steps": "Identify which authority made the decision and follow the corresponding official review information.",
+      "conflict_note": "Current official Garda sources contain a material timing difference: the prosecution-information page states 28 days for the review after receiving the summary of reasons, while the Victims Charter states 56 days from receiving the notification of the decision not to prosecute. Do not present either period as a universal deadline without explaining the source/context.",
+      "next_steps": "Identify which authority made the decision and follow the corresponding current official review information and form, checking the notification and summary dates.",
       "guidance_basis": "Official An Garda Síochána / DPP depending on decision guidance/source linked in this route.",
       "evidence_required": "Keep the notification of the decision not to prosecute and, where applicable, the summary of reasons. The request for review is made in writing.",
-      "deadline": "Current Garda guidance: request summary of Garda reasons within 28 days of notification; request review within 28 days of receiving the summary. Extensions may be possible where warranted.",
+      "deadline": "Official Garda sources differ: the current prosecution-information page states 28 days for the review after receiving the summary of reasons, while the current Victims Charter states 56 days for requesting the review from the original notification of the decision not to prosecute. Extensions may be possible where warranted.",
       "review_or_appeal": "Request a summary of reasons first, then a review of the decision not to prosecute. The applicable route may differ where the DPP made the decision.",
-      "source_verified": "Official Garda Information on Prosecution guidance reviewed 2026-09-24",
-      "verified_on": "2026-09-24",
+      "source_verified": "Official Garda Information on Prosecution page and Victims Charter re-checked 2026-09-26",
+      "verified_on": "2026-09-26",
       "verification_status": "verified_current_with_conflict"
     },
     {
