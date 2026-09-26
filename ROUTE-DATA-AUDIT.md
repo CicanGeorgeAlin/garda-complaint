@@ -1,6 +1,6 @@
 # Route Data Integrity Audit
 
-Verified against the `main` branch on 24 September 2026.
+Verified against the `main` branch on 26 September 2026.
 
 ## Results
 
@@ -12,7 +12,7 @@ Verified against the `main` branch on 24 September 2026.
 ## Approved destination domains
 
 - garda.ie
-- fiosru.ie
+- fiosru.ie and www.fiosru.ie
 - irishstatutebook.ie
 - vetting.garda.ie
 - agecard.ie
