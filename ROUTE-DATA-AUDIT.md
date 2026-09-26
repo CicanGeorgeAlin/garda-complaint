@@ -166,6 +166,8 @@ With these entries, all 41 route IDs are now represented somewhere in the audit 
 
 ## Verification-state reconciliation — 26 Sep 2026
 
+The legacy `status` field is intentionally retained as a separate service/route descriptor and is not required to equal `verification_status`. In particular, `verification_status` describes source-verification confidence, while `status` may preserve route semantics such as guidance-only, conflict, or institutional handling. Frontend safety and citizen-facing verification messaging use `verification_status`, not the legacy field.
+
 The route registry now carries an explicit `verification_status` on all 41 records using the inventory's approved vocabulary.
 
 Current distribution:
