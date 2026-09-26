@@ -99,3 +99,18 @@ Fresh checks against current Garda public pages support the following route reco
 - `emergency_sms_112`: current Garda guidance confirms 112 SMS for deaf, hard-of-hearing and speech-impaired people in the Republic of Ireland and describes it as an emergency service. citeturn0search4turn0search7
 
 These checks support the route purpose and do not by themselves replace route-by-route statutory verification.
+
+
+## Specialist-source verification — 26 Sep 2026
+
+Current Garda public pages were checked for additional specialist routes:
+
+- `national_age_card`: current Garda page confirms the voluntary National Age Card is proof of age for people aged 18+, is not an identity card, and uses an online application followed by Garda-station authentication. citeturn0search5
+- `abnormal_loads`: current Garda guidance confirms the specialised-vehicle permit framework and that route/authority requirements can involve Garda, Local Authority and/or Minister for Transport processes depending on the movement. citeturn0search3turn0search12
+- `public_cctv_institutional`: current Garda Public CCTV guidance confirms the Garda Síochána (Recording Devices) Act 2023 framework and that Section 28 applications concern Local Authorities seeking Commissioner authorisation for public CCTV schemes. citeturn0search1turn0search13
+- `property_found_taxis_psvs`: current Garda guidance confirms a dedicated route for property found in taxis/PSVs and identifies five receiving stations. citeturn0search0turn0search2
+- `youth_awards`: current Garda 2026 Youth Awards guidance provides individual/group/special-achievement/community-safety nomination routes and directs people to local Garda contacts where a local scheme is being run. citeturn0search9turn0search10
+- `collection_permit`: current Garda publication provides a Collection Permit application form under the Street and House to House Collections Act 1962. citeturn0search8turn0search56
+- `emergency_sms_112`: current Garda guidance confirms 112 SMS for deaf, hard-of-hearing and speech-impaired people, while warning that SMS is non-real-time and should only be used for emergencies. citeturn0search6turn0search7
+
+These checks verify the current official service existence and scope; they do not substitute for a complete section-by-section legal audit of every eligibility condition.
