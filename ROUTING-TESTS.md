@@ -154,3 +154,7 @@ The theft-value parser must continue to interpret:
 - €1.500,00 → `station_directory`
 
 The parser must not treat a thousands separator as a decimal point.
+
+### Runtime destination-safety regression — 26 Sep 2026
+
+The route loader must fail closed if a route contains an unsafe `official_info_url` or populated `official_submission_url`. The rendered-link layer must also reject such destinations independently. This prevents a malformed or tampered route record from becoming a clickable external destination.
