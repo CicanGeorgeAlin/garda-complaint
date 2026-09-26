@@ -1408,3 +1408,29 @@ Negative invariants:
 - `Gardaí` and `Garda` must behave consistently after normalization;
 - taxi/PSV property must remain ahead of generic property routes;
 - stolen property must not be mistaken for an unclaimed-property lookup without qualifying recovered-property language.
+
+## Specialist permit renewal and non-resident precedence regression — 27 Sep 2026
+
+Fresh applications, renewals and non-resident firearm requests must remain distinct from explicit disputes.
+
+| Input | Expected route |
+|---|---|
+| “I need a firearm certificate” | firearms_application |
+| “I need to renew my firearm certificate” | firearms_renewal |
+| “I am living abroad and need a firearm certificate” | firearms_nonresident |
+| “I am a non-resident applying for a firearm certificate” | firearms_nonresident |
+| “I want to complain about my firearm certificate” | unresolved |
+| “I want to appeal my firearm renewal” | unresolved |
+| “I need a collection permit” | collection_permit |
+| “I want to renew my collection permit” | collection_permit |
+| “I want to challenge my collection permit application” | unresolved |
+| “I need a gaming permit” | gaming_permit |
+| “I want to appeal my gaming permit” | unresolved |
+| “I need an abnormal load permit” | abnormal_loads |
+| “I want to complain about my abnormal load application” | unresolved |
+
+Negative invariants:
+- explicit dispute language must never be interpreted as a new specialist application;
+- firearm non-resident wording must remain ahead of generic firearm application matching;
+- firearm renewal must remain distinct from a fresh application;
+- verified specialist application routes remain available when no dispute is stated.
