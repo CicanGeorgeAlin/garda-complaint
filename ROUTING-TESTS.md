@@ -372,3 +372,21 @@ The online-crime route is a screening route, not a blanket replacement for ordin
 | “My property was stolen and it was worth €1,500; can I report it online?” | station_directory |
 | “I am reporting something that happened yesterday” | no automatic crime route |
 
+
+## Complaint / victim-support collision regressions — 26 Sep 2026
+
+Explicit victim-support requests should remain on the victim-services route even when the person describes a crime. Garda-personnel conduct complaints should remain on the Fiosrú complaint-screen route rather than being treated as ordinary crime reports.
+
+| Input | Expected route |
+|---|---|
+| “I am a victim of a crime and need support” | victim_services |
+| “I was a victim of a crime and need victim support” | victim_services |
+| “I am a crime victim and need support after the incident” | victim_services |
+| “I want to report a crime” | crime_general |
+| “I want to report a crime and need support as a victim” | victim_services |
+| “I want to complain about a Garda member” | fiosru_complaint_screen |
+| “I was affected by Garda conduct and want to complain” | fiosru_complaint_screen |
+| “I want to report a crime committed by someone else” | crime_general |
+| “I need support after a crime but do not want to report it here” | victim_services |
+| “I want information about victim services” | victim_services |
+
