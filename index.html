@@ -319,7 +319,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='fixed_charge_notice_review');
     }
 
-    const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
+    const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review|fiosr.?u.*inadmissible.*review|review.*fiosr.?u.*inadmissible)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
     // Explicit prosecution decisions are post-decision routes and must outrank
@@ -341,6 +341,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // or guessing a review mechanism.
     if(/(?:review|appeal|challenge|object|dispute)/.test(q) && /(?:decision|complaint|report|case|outcome|investigation)/.test(q)){
       return null;
+    }
+
+    // Support-after-incident wording is not a reporting instruction. Keep it on
+    // victim support rather than the Traffic Watch reporting route.
+    if(/(?:support|help).*(?:traffic|road) incident|(?:traffic|road) incident.*(?:support|help)/.test(q) && !/(?:report|reporting|dangerous driver|dangerous driving|traffic watch)/.test(q)){
+      return state.routes.find(r=>r.route_id==='victim_services');
     }
 
     const tests=[
