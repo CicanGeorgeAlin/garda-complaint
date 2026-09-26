@@ -254,6 +254,26 @@ Action language must identify the relevant object before selecting a review rout
 
 Emergency indicators must outrank specialist routing. Accessibility need alone must not be treated as an emergency, while explicit immediate danger must remain on the emergency path.
 
+## Property-route boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I found property in a taxi" | property_found_taxis_psvs |
+| "I found property in a PSV" | property_found_taxis_psvs |
+| "Property was found in a taxi" | property_found_taxis_psvs |
+| "A taxi passenger left property" | no automatic route |
+| "I found property" | unclaimed_property |
+| "I found lost property" | unclaimed_property |
+| "I found recovered property" | unclaimed_property |
+| "I found a stolen item" | crime_general |
+| "Gardaí are holding my property" | property_garda_possession |
+| "My property is held by Garda" | property_garda_possession |
+| "I want to know about property Gardaí are holding" | property_garda_possession |
+| "I lost property in a taxi" | unclaimed_property |
+| "I need information about lost property" | unclaimed_property |
+
+Specific taxi/PSV found-property language must outrank generic found-property routing. Lost-property language must not be converted into the specialist taxi/PSV found-property route merely because a taxi is mentioned.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
