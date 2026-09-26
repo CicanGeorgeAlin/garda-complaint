@@ -225,7 +225,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 
     // The online theft declaration is limited to qualifying thefts not exceeding €1,000.
     const hasTheft=/(theft|stolen|stole|property was taken)/.test(q);
-    const valueMatch=q.match(/(?:€|eur|euro)\s*(\d+(?:[.,]\d+)?)|\b(\d+(?:[.,]\d+)?)\s*(?:euro|eur|€)/);
+    const valueMatch=q.match(/(?:€|eur|euro)\s*(\d+(?:(?:[.,]\d+)+)?)|\b(\d+(?:(?:[.,]\d+)+)?)\s*(?:euro|eur|€)/);
     const rawValue=valueMatch ? (valueMatch[1]||valueMatch[2]) : null;
     // Accept both common Irish/European decimal notation and thousands separators.
     let normalizedValue=rawValue;
