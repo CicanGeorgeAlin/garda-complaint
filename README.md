@@ -52,3 +52,8 @@ Before publishing or relying on a route for a high-stakes matter, re-check the c
 ### Source conflicts and route notes
 
 The registry distinguishes documented differences between official sources from other important route caveats. Routes with a genuine documented source conflict carry `source_conflict: true` and `verification_status: verified_current_with_conflict`. Other `conflict_note` text is displayed as an important route note and must not be interpreted as evidence that official sources disagree.
+
+
+### Regression coverage
+
+`ROUTING-TESTS.md` contains the maintained routing regression matrix, including semantic, precedence, accessibility, emergency, privacy, destination-safety, registry-integrity, and verification-language safeguards. These tests document expected routing behavior; they are not legal determinations and do not establish that every possible natural-language input is covered.
