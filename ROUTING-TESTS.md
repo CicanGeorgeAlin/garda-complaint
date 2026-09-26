@@ -508,3 +508,12 @@ Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic r
 | “I want to report a road traffic incident” | traffic_watch |
 | “I want to challenge a traffic fine because I disagree with it” | traffic_fcn_information |
 
+
+
+## Route verification-state integrity regression
+
+- Every route record must contain exactly one value from the approved verification-state vocabulary.
+- The current registry must contain 41 route records with 41 unique route IDs.
+- Verification state is metadata for audit transparency; it must not bypass the frontend's independent destination allowlist.
+- tel:112 and tel:999 are valid emergency destinations under the frontend allowlist.
+- firearms_nonresident and fiosru_complaint_screen remain explicitly marked research_required until their source/legal verification is completed; they must not be described elsewhere as fully legally verified.
