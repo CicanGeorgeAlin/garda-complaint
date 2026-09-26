@@ -1035,3 +1035,23 @@ Specialist property context takes precedence over generic theft wording. A gener
 - "I want to challenge an abnormal load permit" → unresolved
 
 Explicit Police Certificate wording is separated from the broader certificate router; generic permit complaints/challenges are not treated as new permit applications.
+
+## Fixed Charge / prosecution-decision / Traffic Watch boundary verification — 26 Sep 2026
+
+- "I received a Fixed Charge Notice" → `traffic_fcn_information`
+- "I received a fixed charge and want information" → `traffic_fcn_information`
+- "I received a Fixed Charge Notice and want to challenge it" → `fixed_charge_notice_review`
+- "I received a fixed charge and want a review" → `fixed_charge_notice_review`
+- "I want to challenge a fixed charge notice" → `fixed_charge_notice_review`
+- "I want to appeal a fixed charge" → `fixed_charge_notice_review`
+- "I want to complain about a traffic fine" → `fixed_charge_notice_review`
+- "I want information about a prosecution decision" → unresolved
+- "I want to challenge a decision not to prosecute" → `prosecution_decision_review`
+- "I want to review a decision not to prosecute" → `prosecution_decision_review`
+- "I want to appeal a prosecution decision" → `prosecution_decision_review`
+- "I want to report dangerous driving" → `traffic_watch`
+- "I want to report a traffic incident" → `traffic_watch`
+- "I want to report a traffic incident and someone is in immediate danger" → `emergency_999_112`
+- "I want to appeal something about traffic" → unresolved
+
+The engine distinguishes FCN information/payment from cancellation/review wording and does not infer a prosecution-decision review from generic information wording.
