@@ -66,3 +66,14 @@ A fresh public-source check was completed against current Garda/Fiosrú pages on
 
 ### Verification limitation
 This audit verifies the public pages as observed on 26 Sep 2026. It does not prove that every linked form or destination will remain unchanged after publication. Periodic re-verification remains required.
+
+
+## Final integrity reconciliation — 26 Sep 2026
+
+The repository was reconciled after the latest routing-hardening changes.
+
+- `routes.json`: 41 route records, 41 unique route IDs.
+- `ROUTING-TESTS.md`: all expected route IDs referenced by the regression tables resolve to the live registry; no unknown route IDs were found.
+- `index.html`: routing and destination validation remain aligned with the documented safety architecture.
+- `README.md`: public project description remains aligned with the independent-navigation model and does not claim submission or legal decision-making.
+- Latest verification date: 26 Sep 2026.
