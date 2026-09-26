@@ -143,6 +143,23 @@ Emergency indicators must continue to outrank accessibility routing when immedia
 
 These tests protect the distinction between the online-reporting eligibility screen and general crime reporting.
 
+## Data/records boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to see personal data Gardaí hold about me" | data_access_router |
+| "I want my personal records about me" | data_access_router |
+| "I need information about my Garda data" | data_access_router |
+| "I want Garda records under FOI" | foi |
+| "I want to make an FOI request" | foi |
+| "I want environmental information held by Gardaí" | aie |
+| "I want environmental records about pollution" | aie |
+| "I want records about an incident" | no automatic crime route |
+| "I want information about Garda records" | no automatic crime route |
+| "I want my neighbour's personal data" | no automatic crime route |
+
+Personal-data access must remain focused on the citizen's own data (or clearly framed authorised access), rather than treating any third-party personal-data request as a self-access route.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
