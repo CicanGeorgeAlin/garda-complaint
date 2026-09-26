@@ -7,6 +7,8 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | Test input | Expected route |
 |---|---|
 | "Someone is in immediate danger right now" | emergency_999_112 |
+| "A crime is happening now but nobody is in immediate danger" | no automatic crime route |
+| "I am reporting something that happened yesterday" | no automatic crime route |
 | "There is a crime in progress" | emergency_999_112 |
 | "I want to complain about a Garda member" | fiosru_complaint_screen |
 | "Fiosrú said my complaint is inadmissible and I want a review" | fiosru_review |
