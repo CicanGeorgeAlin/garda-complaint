@@ -158,3 +158,14 @@ The parser must not treat a thousands separator as a decimal point.
 ### Runtime destination-safety regression — 26 Sep 2026
 
 The route loader must fail closed if a route contains an unsafe `official_info_url` or populated `official_submission_url`. The rendered-link layer must also reject such destinations independently. This prevents a malformed or tampered route record from becoming a clickable external destination.
+
+### Prosecution-review false-positive regression — 26 Sep 2026
+
+The prosecution-decision specialist route is intentionally limited to explicit challenge/review/appeal language. A question merely asking for general information about prosecution decisions must not be treated as a request to challenge a decision.
+
+| Input | Expected route |
+|---|---|
+| “I want information about prosecution decisions” | no automatic crime route |
+| “What is a prosecution decision?” | no automatic crime route |
+| “I want to challenge a decision not to prosecute” | `prosecution_decision_review` |
+| “Can I appeal a decision not to prosecute?” | `prosecution_decision_review` |
