@@ -197,6 +197,24 @@ Explicit review requests must outrank the generic discontinuance route; lifecycl
 
 A Police Certificate and Garda Vetting are distinct services. Ambiguous certificate/background-check wording must not be treated as proof of either route without sufficient context.
 
+## Firearms boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to apply for a firearm certificate" | firearms_application |
+| "I want a gun licence" | firearms_application |
+| "I need a firearms licence" | firearms_application |
+| "I want to renew my firearm certificate" | firearms_renewal |
+| "I need to renew my firearms licence" | firearms_renewal |
+| "I am a non-resident applying for a firearm certificate" | firearms_nonresident |
+| "I am a non resident applying for a gun licence" | firearms_nonresident |
+| "My firearm was stolen" | station_directory |
+| "My firearm has been stolen and I need to report it" | station_directory |
+| "I need information about firearms" | firearms_application |
+| "I want a firearm certificate for the first time" | firearms_application |
+
+Stolen-firearm reporting must remain ahead of the generic firearms application route. Renewal and non-resident language must also remain ahead of generic application matching.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
