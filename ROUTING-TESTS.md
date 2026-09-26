@@ -1138,3 +1138,8 @@ The route-result renderer must independently pass both information and submissio
 ## Keyboard and focus accessibility regression — 26 Sep 2026
 
 The route engine must remain operable by keyboard: the primary control is a real button, Enter in the question input runs the same route action, and links, button, input, and disclosure-summary controls retain visible `focus-visible` styling. Mobile controls retain the established minimum 44px target size, while reduced-motion users must not be forced into smooth scrolling.
+
+
+## High-consequence emergency precedence regression — 26 Sep 2026
+
+Emergency routing remains first in the decision sequence. Requests explicitly seeking emergency services by SMS/text without danger-language may route to `emergency_sms_112`; wording such as immediate danger, danger to life, serious injury risk, crime in progress, or a person being in danger must override the SMS wording and route to `emergency_999_112`. Ambiguous non-emergency wording must not silently receive emergency treatment.
