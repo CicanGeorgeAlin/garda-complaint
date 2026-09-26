@@ -276,6 +276,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='crime_general');
     }
 
+    // A request for CCTV showing the requester, or Garda records/information
+    // about the requester, concerns personal data rather than the institutional
+    // public-CCTV route.
+    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records|information).*(?:from|held by|held with|about).*(?:garda|cctv)|garda.*(?:records|information).*(?:about me|on me)/.test(q)){
+      return state.routes.find(r=>r.route_id==='personal_data_f20');
+    }
+
     // Explicit anonymity/confidentiality requests must not fall through to
     // ordinary crime reporting. Garda guidance states that crime information can
     // be provided without giving a name through the Garda Confidential line.
