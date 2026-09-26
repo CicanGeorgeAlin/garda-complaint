@@ -306,6 +306,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
+    // A completed Fiosrú decision is outcome-dependent. If the citizen has a
+    // decision but has not identified inadmissibility/discontinuance, keep them
+    // on the post-investigation information path rather than guessing a review.
+    if(/fiosr.?u/.test(q) && /(?:decision|outcome|finished|completed|closed)/.test(q) && /(?:review|appeal|challenge|what happens next)/.test(q)){
+      return state.routes.find(r=>r.route_id==='fiosru_post_investigation');
+    }
+
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
       ['police certificate|garda police certificate|certificate for another country|criminal record certificate.*another country','police_certificate_router'],
@@ -317,7 +324,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       ['property held by garda|property.*garda possession|garda.*holding my property','property_garda_possession'],
       ['(?:challenge|review|cancel|appeal).*fixed charge|fixed charge.*(?:challenge|review|cancel|appeal)','fixed_charge_notice_review'],
       ['fixed charge notice|penalty points|traffic fine','traffic_fcn_information'],
-      ['challenge.*decision not to prosecute|review.*decision not to prosecute|appeal.*decision not to prosecute|appeal.*prosecution decision|want to challenge.*prosecution decision|want to review.*prosecution decision|challenge.*prosecution decision|review.*prosecution decision','prosecution_decision_review'],
+      ['(?:challenge|review|appeal).*(?:decision not to prosecute|prosecution decision)|(?:decision not to prosecute|prosecution decision).*(?:challenge|review|appeal)|(?:received|got|was notified of).*(?:decision not to prosecute|prosecution decision)','prosecution_decision_review'],
       ['crime victim|victim support|support after crime|victim of crime','victim_services'],
       ['(?:correct|rectify|amend|understand).*personal (?:information|data)|personal (?:information|data).*(?:correct|rectify|amend|understand)','data_access_router'],
       ['personal data.*(?:about|held about) me|data garda hold.*me|my personal records|my garda personal records|my garda data|garda.*data.*about me|gdpr.*(?:my|personal) data','personal_data_f20'],
