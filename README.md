@@ -47,3 +47,8 @@ Official public-service pages and legal information can change. A clean structur
 
 Before publishing or relying on a route for a high-stakes matter, re-check the current official source and any applicable deadline or eligibility condition.
 
+
+
+### Source conflicts and route notes
+
+The registry distinguishes documented differences between official sources from other important route caveats. Routes with a genuine documented source conflict carry `source_conflict: true` and `verification_status: verified_current_with_conflict`. Other `conflict_note` text is displayed as an important route note and must not be interpreted as evidence that official sources disagree.
