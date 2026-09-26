@@ -1180,3 +1180,15 @@ The route registry must preserve the fields needed for safe public rendering and
 - the seven documented route-level legal-basis exceptions remain intentional and are not treated as missing verification.
 
 This regression protects metadata integrity without turning optional service-specific fields into unsupported legal claims.
+
+## Status versus verification-state regression — 26 Sep 2026
+
+The registry intentionally keeps `status` and `verification_status` separate:
+
+- `verification_status` describes the verification confidence/currentness used by the frontend for public safety language;
+- `status` preserves the route/service's operational classification, including guidance-only and institutional distinctions;
+- a difference between the two fields is not, by itself, a source conflict;
+- `source_conflict=true` remains reserved for the four documented cross-source conflicts, while route-specific caveats such as the Police Certificate page's internally inconsistent submission wording remain in `conflict_note` without being promoted to the source-conflict model;
+- `public_cctv_institutional` must remain visibly institutional even though its underlying official guidance is current.
+
+The frontend must continue to base public verification wording on `verification_status`, not infer legal eligibility or source disagreement from `status` alone.
