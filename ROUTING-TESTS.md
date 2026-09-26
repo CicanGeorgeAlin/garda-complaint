@@ -192,3 +192,18 @@ Fixed Charge Notice information is now separated from challenge/review language.
 | “I want to challenge my Fixed Charge Notice” | `fixed_charge_notice_review` |
 | “Can I cancel this Fixed Charge Notice?” | `fixed_charge_notice_review` |
 | “I want information about traffic fines” | `traffic_fcn_information` |
+
+### Broad-language ambiguity regressions — 26 Sep 2026
+
+The matcher should prefer a conservative result when a broad term does not establish the specialist process.
+
+| Input | Expected route |
+|---|---|
+| “I need a certificate” | no automatic crime route |
+| “I need a criminal record check” | no automatic crime route |
+| “I need information about a camera” | no automatic crime route |
+| “I need information about property” | no automatic crime route |
+| “I have a driving licence question” | no automatic crime route |
+| “I want information about traffic fines” | `traffic_fcn_information` |
+| “I found a stolen item” | `crime_general` |
+| “I found property at a Garda station” | `unclaimed_property` |
