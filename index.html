@@ -315,7 +315,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A completed Fiosrú decision is outcome-dependent. If the citizen has a
     // decision but has not identified inadmissibility/discontinuance, keep them
     // on the post-investigation information path rather than guessing a review.
-    if(/fiosr.?u/.test(q) && /(?:decision|outcome|finished|completed|closed)/.test(q) && /(?:review|appeal|challenge|what happens next)/.test(q)){
+    if(/fiosr.?u/.test(q) && /(?:decision|outcome|finished|completed|closed)/.test(q) && /(?:review|appeal|challenge|information|what happens next)/.test(q)){
       return state.routes.find(r=>r.route_id==='fiosru_post_investigation');
     }
 
