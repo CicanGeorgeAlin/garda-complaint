@@ -169,3 +169,14 @@ The prosecution-decision specialist route is intentionally limited to explicit c
 | “What is a prosecution decision?” | no automatic crime route |
 | “I want to challenge a decision not to prosecute” | `prosecution_decision_review` |
 | “Can I appeal a decision not to prosecute?” | `prosecution_decision_review` |
+
+### Fiosrú precedence regression — 26 Sep 2026
+
+Explicit review language must take precedence over general investigation-information or post-investigation language. Discontinuance/inadmissibility remains a more specific review subtype.
+
+| Input | Expected route |
+|---|---|
+| “Fiosrú finished investigating my complaint; what happens next?” | `fiosru_post_investigation` |
+| “Fiosrú finished investigating my complaint and I want a review” | `fiosru_review` |
+| “I need information about my Fiosrú investigation” | `fiosru_victim_information` |
+| “Fiosrú said my complaint is inadmissible and I want a review” | `fiosru_review_discontinuance` or the applicable statutory review route only where the specific decision matches the discontinuance/inadmissibility rules |
