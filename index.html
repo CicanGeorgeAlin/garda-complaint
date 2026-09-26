@@ -283,8 +283,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='firearms_nonresident');
     }
 
-    // A complaint about an application/permit is not itself an application for that permit.
-    if(/complain(?:t)?|appeal|challenge|object|dispute/.test(q) && /collection permit|gaming permit|lottery permit|abnormal load|age card|youth award/.test(q)){
+    // A complaint, appeal, challenge or objection about a specialist application/service
+    // is not itself a request for that underlying service. Keep the router unresolved
+    // unless a distinct, verified post-decision route exists.
+    if(/complain(?:t)?|appeal|challenge|object|dispute/.test(q) && /collection permit|gaming permit|lottery permit|abnormal load|age card|youth award|firearm|gun licence|firearms|police certificate/.test(q)){
       return null;
     }
 
