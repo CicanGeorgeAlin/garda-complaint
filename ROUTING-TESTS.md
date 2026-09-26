@@ -180,3 +180,15 @@ Explicit review language must take precedence over general investigation-informa
 | “Fiosrú finished investigating my complaint and I want a review” | `fiosru_review` |
 | “I need information about my Fiosrú investigation” | `fiosru_victim_information` |
 | “Fiosrú said my complaint is inadmissible and I want a review” | `fiosru_review_discontinuance` or the applicable statutory review route only where the specific decision matches the discontinuance/inadmissibility rules |
+
+### FCN information-vs-review regression — 26 Sep 2026
+
+Fixed Charge Notice information is now separated from challenge/review language. The router should not interpret a person asking how an FCN works, or asking about penalty points, as a request to cancel or review a notice.
+
+| Input | Expected route |
+|---|---|
+| “I received a Fixed Charge Notice and want to understand it” | `traffic_fcn_information` |
+| “What are the penalty points for this?” | `traffic_fcn_information` |
+| “I want to challenge my Fixed Charge Notice” | `fixed_charge_notice_review` |
+| “Can I cancel this Fixed Charge Notice?” | `fixed_charge_notice_review` |
+| “I want information about traffic fines” | `traffic_fcn_information` |
