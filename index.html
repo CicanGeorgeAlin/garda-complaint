@@ -335,6 +335,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='fiosru_post_investigation');
     }
 
+    // Generic review/appeal/challenge language is not enough to identify a lawful
+    // post-decision route. Explicit route-specific gates above have already handled
+    // known processes; otherwise fail closed instead of restarting a complaint/report
+    // or guessing a review mechanism.
+    if(/(?:review|appeal|challenge|object|dispute)/.test(q) && /(?:decision|complaint|report|case|outcome|investigation)/.test(q)){
+      return null;
+    }
+
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
       ['police certificate|garda police certificate|certificate for another country|criminal record certificate.*another country','police_certificate_router'],
