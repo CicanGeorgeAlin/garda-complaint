@@ -166,7 +166,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   <p id="route-engine-help" style="color:#aaa;margin:8px 0 0;font-size:.92em">You can write normally. For example: “I need to report a stolen car” or “I need a Garda Police Certificate”. Do not enter sensitive personal details here.</p>
   <button id="route-engine-go" class="button" type="button" style="margin-top:12px">Find the official route</button>
   <p id="route-engine-status" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
-  <div id="route-engine-result" class="notice" hidden style="margin-bottom:0"></div>
+  <div id="route-engine-result" class="notice" hidden aria-live="polite" aria-atomic="true" style="margin-bottom:0"></div>
 </section>
 <script>
 (function(){
