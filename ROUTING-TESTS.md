@@ -412,3 +412,20 @@ The information-access routes are intentionally distinct. Personal-data wording 
 | “I need information” | no automatic crime route |
 | “I want CCTV footage” | no automatic crime route |
 
+
+## Firearms-route collision regressions — 26 Sep 2026
+
+Firearms routing must preserve the distinction between first-time/general applications, renewals, and non-resident applications. The specialist branches run before the generic firearms matcher. Emergency screening and excluded-crime handling remain higher priority.
+
+| Input | Expected route |
+|---|---|
+| “I want a firearm certificate” | firearms_application |
+| “I want to apply for a gun licence” | firearms_application |
+| “I want to renew my firearm certificate” | firearms_renewal |
+| “I need to renew my firearms licence” | firearms_renewal |
+| “I am a non-resident applying for a firearm certificate” | firearms_nonresident |
+| “I live abroad and want to apply for a firearm certificate” | firearms_nonresident |
+| “I need information about firearms” | firearms_application |
+| “My firearm was stolen” | station_directory |
+| “My firearm was stolen and I want to report it online” | station_directory |
+
