@@ -52,6 +52,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I need information about Fiosrú" | no automatic crime route |
 | "I have a driving licence question" | no automatic crime route |
 | "I want to report dangerous driving" | traffic_watch |
+| "I am a victim of Garda conduct" | fiosru_complaint_screen |
+| "I was a victim of a crime and need support" | victim_services |
+| "I need information about penalty points" | fixed_charge_notice_review |
+| "I need information about a certificate" | no automatic crime route |
 
 ## Safety invariants
 
