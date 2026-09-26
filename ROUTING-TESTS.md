@@ -1015,3 +1015,23 @@ The online-reporting exclusion gate takes precedence over generic online-reporti
 - "A taxi passenger left property" → unresolved
 
 Specialist property context takes precedence over generic theft wording. A generic taxi-passenger statement remains unresolved because it does not establish whether the user is reporting found property, lost property or another process.
+
+## Certificate / vetting / firearms / permit boundary verification — 26 Sep 2026
+
+- "I need a Garda Police Certificate" → `police_certificate`
+- "I want a police certificate" → `police_certificate_router`
+- "I need a criminal record certificate for another country" → `police_certificate_router`
+- "I need a certificate for another country" → `police_certificate_router` because the router is the safer place to distinguish Police Certificate from Vetting when the certificate type is unspecified
+- "I need Garda vetting for work" → `garda_vetting`
+- "I need vetting for volunteering" → `garda_vetting`
+- "I want to renew my firearm certificate" → `firearms_renewal`
+- "I am a non-resident applying for a firearm certificate" → `firearms_nonresident`
+- "I want a firearm certificate" → `firearms_application`
+- "I want to renew my gun licence" → `firearms_renewal`
+- "I want to apply for a collection permit" → `collection_permit`
+- "I want a gaming permit" → `gaming_permit`
+- "I need an abnormal load permit" → `abnormal_loads`
+- "I want to complain about a collection permit" → unresolved
+- "I want to challenge an abnormal load permit" → unresolved
+
+Explicit Police Certificate wording is separated from the broader certificate router; generic permit complaints/challenges are not treated as new permit applications.
