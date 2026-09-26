@@ -185,8 +185,11 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     }
   }
   function choose(){
-    const q=(byId('route-question')?.value||'').toLowerCase().trim();
-    if(!q) return null;
+    const rawQ=(byId('route-question')?.value||'').toLowerCase().trim();
+    if(!rawQ) return null;
+    // Normalize Irish accents so natural spellings such as Fiosrú and Gardaí
+    // are treated consistently by the plain-language matcher.
+    const q=rawQ.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     const emergency=/\b(emergency|danger to life|risk of serious injury|crime in progress|happening now|offender still (at|near) the scene|immediate danger)\b/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
