@@ -1203,3 +1203,16 @@ Regression expectations:
 - “Someone is being seriously assaulted” → 999/112 emergency route.
 - “There is a risk of serious injury” → 999/112 emergency route.
 - “I need to report a non-emergency incident by text” must not be silently converted into the emergency SMS route.
+
+## Complaint and review lifecycle high-consequence regression — 26 Sep 2026
+
+Post-decision language must take precedence over generic complaint/report language where the citizen has already received a decision:
+
+- “Fiosrú said my complaint is inadmissible and I want to challenge it” → statutory Fiosrú review, not a new complaint.
+- “Fiosrú discontinued its investigation and I want a review” → discontinuance-specific Fiosrú review, not a new complaint.
+- “Fiosrú finished investigating and I want to know what happens next” → post-investigation information, not a new complaint or automatic appeal.
+- “I am a victim and received a decision not to prosecute” → prosecution-decision review pathway, not a new crime report.
+- “I received a Fixed Charge Notice and want to challenge/cancel it” → FCN review/cancellation, not Traffic Watch.
+- “I want to complain about a Garda” with no prior Fiosrú decision → complaint screening, not a review route.
+
+The interface must preserve the distinction between an original complaint/report, a post-decision review, and an information request about an ongoing or completed process.
