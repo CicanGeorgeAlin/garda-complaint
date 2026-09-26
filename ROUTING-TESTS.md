@@ -349,3 +349,26 @@ A generic request to review or appeal a complaint must not be routed to Fiosrú 
 | “I need information about my Fiosrú investigation” | fiosru_victim_information |
 | “I want to complain about a Garda member” | fiosru_complaint_screen |
 
+
+## Crime-reporting / online-reporting boundary regressions — 26 Sep 2026
+
+The online-crime route is a screening route, not a blanket replacement for ordinary crime reporting. Generic online-reporting wording may identify the screening process, but excluded crime categories must remain directed to the station route, and emergency indicators must remain authoritative.
+
+| Input | Expected route |
+|---|---|
+| “I want to report a crime” | crime_general |
+| “I want to report a crime online” | crime_online_router |
+| “I want to report a crime online but don't know if the form applies” | crime_online_router |
+| “Can I report this crime online?” | crime_online_router |
+| “There was a burglary and I want to report it online” | station_directory |
+| “My car was stolen and I want to report it online” | station_directory |
+| “Someone robbed me and I want to report it online” | station_directory |
+| “My firearm was stolen and I want to report it online” | station_directory |
+| “A violent crime happened and I want to report it online” | station_directory |
+| “There is a crime in progress” | emergency_999_112 |
+| “Someone is in immediate danger” | emergency_999_112 |
+| “My property was stolen and it was worth €500” | theft_declaration |
+| “My property was stolen and it was worth €500; can I report it online?” | theft_declaration |
+| “My property was stolen and it was worth €1,500; can I report it online?” | station_directory |
+| “I am reporting something that happened yesterday” | no automatic crime route |
+
