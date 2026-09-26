@@ -254,8 +254,8 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
-      ['police certificate|criminal record certificate|certificate for another country','police_certificate_router'],
-      ['vetting|background check for work|volunteer vetting','garda_vetting'],
+      ['police certificate|garda police certificate|certificate for another country|criminal record certificate.*another country','police_certificate_router'],
+      ['garda vetting|vetting for work|vetting for employment|vetting for volunteering|e.?vetting|background check for work|volunteer vetting','garda_vetting'],
       ['firearm|gun licence|firearms','firearms_application'],
       ['age card|proof of age','national_age_card'],
       ['fixed charge|fixed charge notice|penalty points|traffic fine','fixed_charge_notice_review'],
