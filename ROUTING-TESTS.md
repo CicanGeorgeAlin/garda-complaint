@@ -89,3 +89,25 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 4. Unknown questions must not default to crime reporting.
 5. Fiosrú review language must be checked before the general Garda-complaint route.
 6. The website only identifies an official route; it does not itself submit a complaint, crime report, application, or request.
+
+## Registry-vs-engine coverage note — 26 Sep 2026
+
+The route registry contains 41 records, but not every record is intended to be a top-level natural-language matcher. Some are downstream routes, information-only records, accessibility/utility routes, or specialist records reached after a broader screening question.
+
+The following records are currently not selected directly by a literal `route_id` branch in `index.html` and should therefore be reviewed during future routing work rather than assumed to have direct matcher coverage:
+
+- `personal_data_f20` — downstream personal-data access route; `data_access_router` is the screening entry.
+- `prosecution_decision_review` — specialist victim-review destination.
+- `property_found_taxis_psvs` — specialist property process.
+- `youth_awards` — specialist nomination service.
+- `property_garda_possession` — property-information service.
+- `traffic_fcn_information` — information-only FCN record; the broader FCN route currently screens this topic.
+- `gsoc_legacy_transition` — legacy-case information.
+- `emergency_sms_112` — accessibility emergency route.
+- `accessibility_garda` — accessibility support.
+- `fiosru_accessibility` — Fiosrú accessibility support.
+- `fiosru_victim_information` — information for people involved in a Fiosrú investigation.
+- `fiosru_post_investigation` — post-investigation information.
+- `crime_online_router` — screening/router record for online crime reporting.
+
+This is a coverage flag, not a claim that these services are unavailable. Before treating the website as complete, each specialist record should either have a deliberate entry path in the interface or be clearly documented as a downstream/manual route.
