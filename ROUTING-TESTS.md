@@ -1279,3 +1279,27 @@ Negative invariants:
 - Explicit prosecution-decision wording must remain ahead of the broad victim-support matcher.
 - Generic Garda complaint/review language must not be promoted to a Fiosrú statutory review without a Fiosrú outcome and qualifying decision type; where the process is not identifiable, fail closed rather than silently restarting the complaint.
 - A new crime report must not be converted into a post-decision process merely because the sentence contains appeal.
+
+
+## Specialist application versus complaint/review boundary regression — 26 Sep 2026
+
+Specialist application language must not swallow explicit complaint, appeal, challenge, objection or dispute wording when no distinct verified review route has been established.
+
+| Input | Expected route |
+|---|---|
+| “I want a Garda Police Certificate” | police_certificate |
+| “I need a Police Certificate for another country” | police_certificate_router |
+| “I want to complain about my Garda Police Certificate” | unresolved |
+| “I want to appeal my Garda Police Certificate” | unresolved |
+| “I want to challenge my firearm licence application” | unresolved |
+| “I want to complain about my firearm renewal” | unresolved |
+| “I need to renew my firearm certificate” | firearms_renewal |
+| “I need a firearm certificate” | firearms_application |
+| “I need a National Age Card” | national_age_card |
+| “I want to complain about my National Age Card” | unresolved |
+| “I need a gaming permit” | gaming_permit |
+| “I want to challenge my gaming permit application” | unresolved |
+| “I need an abnormal-load permit” | abnormal_loads |
+| “I want to complain about an abnormal-load application” | unresolved |
+
+Negative invariant: a specialist application/service route must not be selected solely because its noun appears when the citizen explicitly describes a complaint, appeal, challenge, objection or dispute about that service.
