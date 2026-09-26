@@ -1248,3 +1248,34 @@ The generic Fiosrú “decision” wording is intentionally not treated as proof
 - “I want information about my Fiosrú investigation” → `fiosru_victim_information`
 
 The router may recognize an explicitly post-decision information request, but must not infer a process from a bare statement that a decision or outcome exists.
+
+
+## Fiosrú lifecycle false-positive matrix regression — 26 Sep 2026
+
+The lifecycle matcher must not let broad words such as “review”, “appeal”, “decision”, “investigation” or “information” cross between distinct Fiosrú processes.
+
+| Input | Expected route |
+|---|---|
+| “Fiosrú is investigating my complaint and I want information” | fiosru_victim_information |
+| “I want information about my completed Fiosrú investigation” | fiosru_post_investigation |
+| “Fiosrú finished my investigation and I want information” | fiosru_post_investigation |
+| “Fiosrú discontinued my investigation and I want a review” | fiosru_review |
+| “Fiosrú said my complaint is inadmissible and I want a review” | fiosru_review |
+| “Fiosrú gave me a decision and I want information” | fiosru_post_investigation |
+| “Fiosrú gave me a decision and I want to appeal it” | fiosru_post_investigation |
+| “I want to review my Garda complaint” | fiosru_complaint_screen |
+| “I want to appeal a Garda complaint” | fiosru_complaint_screen |
+| “I have a Garda investigation and want information” | unresolved unless a specific information route is identified |
+| “I want to review a prosecution decision” | prosecution_decision_review |
+| “I received a decision not to prosecute and need victim support” | prosecution_decision_review |
+| “I want victim support after a crime” | victim_services |
+| “I want to report a crime and later appeal it” | crime_general |
+
+Negative invariants:
+
+- The bare words review, appeal, decision, investigation and information must not independently select a route.
+- An ongoing Fiosrú investigation with an information request must not be converted into post-investigation information merely because information appears.
+- Explicit inadmissibility/discontinuance must remain the gateway to the statutory Fiosrú review route.
+- Explicit prosecution-decision wording must remain ahead of the broad victim-support matcher.
+- Generic Garda complaint/review language must not be promoted to a Fiosrú statutory review without a Fiosrú outcome and qualifying decision type.
+- A new crime report must not be converted into a post-decision process merely because the sentence contains appeal.
