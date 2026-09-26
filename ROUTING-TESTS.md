@@ -390,3 +390,25 @@ Explicit victim-support requests should remain on the victim-services route even
 | “I need support after a crime but do not want to report it here” | victim_services |
 | “I want information about victim services” | victim_services |
 
+
+## Data-access / FOI / AIE collision regressions — 26 Sep 2026
+
+The information-access routes are intentionally distinct. Personal-data wording routes to the data-access screening process; explicit FOI wording routes to FOI; environmental-information wording routes to AIE. A generic request for “records” or “information” remains unresolved rather than being assigned a legal regime by guesswork.
+
+| Input | Expected route |
+|---|---|
+| “I want to see personal data Gardaí hold about me” | data_access_router |
+| “I want my personal records about me” | data_access_router |
+| “What personal data does Garda hold about me?” | data_access_router |
+| “I want to make an FOI request” | foi |
+| “I want Garda records under FOI” | foi |
+| “I want administrative information under FOI” | foi |
+| “I want environmental information held by Gardaí” | aie |
+| “I want environmental records about pollution” | aie |
+| “I want environmental information under AIE” | aie |
+| “I want Garda records” | no automatic crime route |
+| “I want information about an incident” | no automatic crime route |
+| “I want my data” | no automatic crime route |
+| “I need information” | no automatic crime route |
+| “I want CCTV footage” | no automatic crime route |
+
