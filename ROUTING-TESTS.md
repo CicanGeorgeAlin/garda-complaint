@@ -295,3 +295,21 @@ Explicit specialist property language must be resolved before generic theft-valu
 | “My property was stolen and it was worth €1,500” | `station_directory` |
 | “I need information about property” | no automatic crime route |
 
+
+## Certificate / vetting collision regressions — 26 Sep 2026
+
+Certificate-related language must not be treated as interchangeable. The router may identify a police-certificate topic without inventing the person's destination or purpose. Generic “certificate” and generic “criminal record check” questions remain unresolved unless the wording establishes a supported specialist route.
+
+| Input | Expected route |
+|---|---|
+| “I need a Garda Police Certificate” | `police_certificate_router` |
+| “I need a police certificate for another country” | `police_certificate_router` |
+| “I need a criminal record certificate for another country” | `police_certificate_router` |
+| “I need Garda vetting for work” | `garda_vetting` |
+| “I need vetting for employment” | `garda_vetting` |
+| “I need eVetting for volunteering” | `garda_vetting` |
+| “I need a criminal record check” | no automatic crime route |
+| “I need a certificate” | no automatic crime route |
+| “I need information about a certificate” | no automatic crime route |
+| “I need a certificate for work” | no automatic crime route |
+
