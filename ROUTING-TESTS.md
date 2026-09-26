@@ -1153,3 +1153,8 @@ The router keeps the information-access regimes distinct: a person's own Garda p
 ## Specialist application and certificate precedence regression — 26 Sep 2026
 
 Specialist routes must preserve their narrower distinctions before broad matchers: firearm renewal and non-resident firearm wording precede general firearm application; explicit Garda Police Certificate wording precedes the generic certificate router; Garda Vetting remains separate from Police Certificates; and permit/application routes remain distinct from complaints or challenges against those services.
+
+
+## Traffic and property high-consequence collision regression — 26 Sep 2026
+
+Traffic and property terms must not override more specific routes. Fixed Charge information stays separate from Fixed Charge review/cancellation; prosecution-decision review stays separate from ordinary Traffic Watch; dangerous driving with immediate-danger language reaches emergency screening; taxi/PSV found-property and Garda-held-property wording precede generic theft/recovered-property routing; and online-reporting exclusions remain protected from the general online-crime route.
