@@ -279,7 +279,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A request for CCTV showing the requester, or Garda records/information
     // about the requester, concerns personal data rather than the institutional
     // public-CCTV route.
-    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records|information).*(?:from|held by|held with|about).*(?:garda|cctv)|garda.*(?:records|information).*(?:about me|on me)/.test(q)){
+    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)/.test(q)){
       return state.routes.find(r=>r.route_id==='personal_data_f20');
     }
 
