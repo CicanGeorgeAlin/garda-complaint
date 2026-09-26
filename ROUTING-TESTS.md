@@ -719,6 +719,19 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Emergency text / SMS precedence regression — 26 Sep 2026
+
+The emergency gate must not capture SMS/text-specific requests merely because they contain the word “emergency”. Bare emergency danger language must still retain precedence.
+
+| Input | Expected route |
+|---|---|
+| “I need emergency text” | `emergency_sms_112` |
+| “I need emergency text information” | `emergency_sms_112` |
+| “I need emergency SMS” | `emergency_sms_112` |
+| “I need to contact emergency services by text” | `emergency_sms_112` |
+| “There is an emergency and someone is in danger” | `emergency_999_112` |
+| “There is an emergency and someone is seriously injured” | `emergency_999_112` |
+
 ## Information-access semantic stress regressions — 26 Sep 2026
 
 The router must not infer FOI, AIE or personal-data rights from generic “information”, “records”, “data” or “CCTV” wording. A specific legal regime must be established by the citizen's wording before routing.
