@@ -964,3 +964,20 @@ Purpose: keep the distinct Fiosrú complaint, statutory review, discontinuance, 
 - "I witnessed Garda behaviour" → unresolved
 
 The final two intentionally remain unresolved because the engine should not infer admissibility or the correct statutory process from an underspecified complaint request alone.
+
+## FOI / GDPR-F20 / AIE semantic boundary verification — 26 Sep 2026
+
+- "I want to access personal data Gardaí hold about me" → `personal_data_f20`
+- "I want a GDPR request for my personal data held by Gardaí" → `personal_data_f20`
+- "I want to correct personal information Gardaí hold about me" → `data_access_router`
+- "I want FOI information about my own personal data" → `personal_data_f20`
+- "I want to make a Freedom of Information request to Gardaí" → `foi`
+- "I need information under FOI" → `foi`
+- "I want environmental information from Gardaí" → `aie`
+- "I need pollution records" → `aie`
+- "I want information about pollution held by Gardaí" → `aie`
+- "I want my neighbour's personal data" → unresolved
+- "I want information about Garda records" → unresolved
+- "I want my data" → unresolved
+
+The engine deliberately does not infer a data-access or information-access right from generic wording alone.
