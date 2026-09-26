@@ -1192,3 +1192,14 @@ The registry intentionally keeps `status` and `verification_status` separate:
 - `public_cctv_institutional` must remain visibly institutional even though its underlying official guidance is current.
 
 The frontend must continue to base public verification wording on `verification_status`, not infer legal eligibility or source disagreement from `status` alone.
+
+## Emergency SMS eligibility and urgent-violence regression — 26 Sep 2026
+
+Current Garda emergency guidance confirms that 112 SMS is an emergency service for deaf, hard-of-hearing and speech-impaired users, requires prior mobile registration, and is non-real-time with no guarantee of delivery. The router must therefore keep SMS as an accessibility-specific emergency pathway and must never let SMS wording suppress an actual urgent-emergency classification.
+
+Regression expectations:
+- “I need emergency services by SMS” may identify the 112 SMS information route, with its emergency-only and registration limitations displayed.
+- “I need emergency SMS; there is an immediate threat of violence” → 999/112 emergency route.
+- “Someone is being seriously assaulted” → 999/112 emergency route.
+- “There is a risk of serious injury” → 999/112 emergency route.
+- “I need to report a non-emergency incident by text” must not be silently converted into the emergency SMS route.
