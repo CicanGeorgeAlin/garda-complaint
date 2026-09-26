@@ -219,7 +219,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(/(?:found property|found .*property|property (?:was|has been) found).*taxi|property.*taxi.*psv|found.*psv|taxi.*found property/.test(q)){
       return state.routes.find(r=>r.route_id==='property_found_taxis_psvs');
     }
-    if(/property (?:is|was|held|has been held) by garda|property.*garda possession|garda.*holding .*property|property garda.*holding/.test(q)){
+    if(/property (?:is|was|held|has been held) by garda|property.*being held.*garda|property.*garda possession|garda.*holding .*property|property garda.*holding/.test(q)){
       return state.routes.find(r=>r.route_id==='property_garda_possession');
     }
 
