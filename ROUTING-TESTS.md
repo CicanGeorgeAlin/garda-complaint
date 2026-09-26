@@ -1486,3 +1486,16 @@ Negative invariants:
 - a generic Garda complaint review must not be silently converted into a Fiosrú statutory review;
 - a generic crime-report appeal must not be converted into a new report or victim-support route;
 - an unresolved outcome remains unresolved until the user identifies enough facts to select a verified route.
+
+
+## Fiosrú inadmissibility and traffic-support routing correction — 27 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “Fiosrú said my complaint is inadmissible and I want a review” | fiosru_review |
+| “I need support after a traffic incident” | victim_services |
+| “I need help after a road traffic incident” | victim_services |
+| “I want to report a road traffic incident” | traffic_watch |
+| “I want to report a dangerous driver” | traffic_watch |
+
+Negative invariant: support/help wording after a traffic or road incident must not by itself be interpreted as an instruction to submit a Traffic Watch report.
