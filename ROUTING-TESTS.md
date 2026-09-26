@@ -429,3 +429,18 @@ Firearms routing must preserve the distinction between first-time/general applic
 | “My firearm was stolen” | station_directory |
 | “My firearm was stolen and I want to report it online” | station_directory |
 
+
+## Confidential-information collision regressions — 26 Sep 2026
+
+Confidential-information routing requires explicit confidentiality or anonymity intent. Generic phrases such as “give information” must not intercept ordinary crime, traffic, firearms, or service questions.
+
+| Input | Expected route |
+|---|---|
+| “I want to give information” | no automatic route |
+| “I want to give information about dangerous driving” | traffic_watch |
+| “I want to give information about a crime” | crime_general |
+| “I want to give information anonymously” | garda_confidential |
+| “I want to report this confidentially” | garda_confidential |
+| “I want to remain anonymous when giving information” | garda_confidential |
+| “I need confidential information about a Garda service” | garda_confidential |
+
