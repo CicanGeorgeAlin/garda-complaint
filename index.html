@@ -198,7 +198,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     // Normalize Irish accents so natural spellings such as Fiosrú and Gardaí
     // are treated consistently by the plain-language matcher.
     const q=rawQ.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text message))|danger to life|immediate danger|risk of serious injury|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
+    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text message|services?\s+by\s+(?:sms|text)))|danger to life|immediate danger|risk of serious injury|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
     // Crime screening follows the current Garda online-reporting exclusions.
