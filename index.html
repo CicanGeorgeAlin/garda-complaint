@@ -177,7 +177,10 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       const res=await fetch('./routes.json',{cache:'no-store'});
       if(!res.ok) throw new Error('routes unavailable');
       const data=await res.json();
-      state.routes=data.routes||[];
+      if(!data || !Array.isArray(data.routes) || data.routes.length===0){
+        throw new Error('invalid route directory');
+      }
+      state.routes=data.routes;
       wireRouter();
     }catch(e){
       const box=byId('route-engine-status');
