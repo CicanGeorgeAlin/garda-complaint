@@ -43,6 +43,9 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "Fiosrú said my complaint is inadmissible" | fiosru_review |
 | "Fiosrú discontinued my complaint" | fiosru_review_discontinuance |
 | "I want to report a non-emergency incident" | crime_general |
+| "I need information about Fiosrú" | no automatic crime route |
+| "I have a driving licence question" | no automatic crime route |
+| "I want to report dangerous driving" | traffic_watch |
 
 ## Safety invariants
 
