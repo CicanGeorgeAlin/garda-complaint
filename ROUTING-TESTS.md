@@ -719,6 +719,29 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Information-access semantic stress regressions — 26 Sep 2026
+
+The router must not infer FOI, AIE or personal-data rights from generic “information”, “records”, “data” or “CCTV” wording. A specific legal regime must be established by the citizen's wording before routing.
+
+| Input | Expected route |
+|---|---|
+| “I want to see personal data Gardaí hold about me” | `data_access_router` |
+| “What personal data does Garda hold about me?” | `data_access_router` |
+| “I want my Garda personal records” | `data_access_router` |
+| “I want my neighbour’s personal data” | no automatic route |
+| “I want my data” | no automatic route |
+| “I want to make an FOI request” | `foi` |
+| “I want Garda records under FOI” | `foi` |
+| “I want administrative information under FOI” | `foi` |
+| “I want environmental information held by Gardaí” | `aie` |
+| “I want environmental records about pollution” | `aie` |
+| “I want environmental information under AIE” | `aie` |
+| “I want Garda records” | no automatic route |
+| “I want information about an incident” | no automatic route |
+| “I need information” | no automatic route |
+| “I want CCTV footage” | no automatic route |
+| “I want public CCTV footage” | `public_cctv_institutional` |
+
 ## Property / theft semantic collision stress regressions — 26 Sep 2026
 
 Specialist property-process wording must be evaluated before generic theft parsing. The presence of “stolen”, a monetary value, or a taxi/PSV reference must not redirect a clearly identified property-handling process.
