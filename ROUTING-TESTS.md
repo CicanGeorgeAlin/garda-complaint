@@ -47,6 +47,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want environmental records about pollution" | aie |
 | "I want my personal records about me" | data_access_router |
 | "Fiosrú said my complaint is inadmissible" | fiosru_review |
+| "I want to complain to Fiosrú about a Garda" | fiosru_complaint_screen |
+| "I want to review my Fiosrú complaint" | fiosru_review |
+| "I want to appeal a Fiosrú decision" | fiosru_review |
+| "I want information about my Fiosrú complaint" | no automatic crime route |
 | "Fiosrú discontinued my complaint" | fiosru_review_discontinuance |
 | "I want to report a non-emergency incident" | crime_general |
 | "I need information about Fiosrú" | no automatic crime route |
