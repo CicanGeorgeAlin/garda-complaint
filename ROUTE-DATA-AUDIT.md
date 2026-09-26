@@ -132,3 +132,20 @@ Additional current official-source checks support these route families:
 - `gsoc_legacy_transition`: current Fiosrú material documents the transition of relevant pre-2 April 2025 GSOC matters to Fiosrú; the project retains this as a legacy-transition route rather than presenting it as a new complaint process.
 
 These checks establish current official service scope. They do not remove the need for periodic re-checking of forms, deadlines and statutory wording.
+
+
+## Final core-routing source verification — 26 Sep 2026
+
+Current official-source checks also support the remaining core navigation families:
+
+- `emergency_999_112`: current Garda guidance directs emergencies and immediate danger to 999/112; the website therefore screens emergency indicators before all specialist routes.
+- `station_directory`: current Garda guidance continues to identify local Garda stations as the general contact/reporting point for non-emergency matters where no dedicated online route applies. The project does not invent station numbers; it directs users to official station information.
+- `crime_general`: current Garda reporting guidance distinguishes general crime reporting from the limited online crime-reporting service. The routing engine therefore does not treat every crime report as eligible for the online route.
+- `crime_online_router`: current Garda online-crime guidance confirms that the online process is limited and excludes specified categories; the repository's exclusion gate is intentionally conservative.
+- `traffic_watch`: current Traffic Watch guidance confirms its non-emergency scope and separate reporting process.
+- `hate_crime`: current Garda hate-crime guidance provides a dedicated route and directs emergencies to 999/112.
+- `garda_confidential`: current Garda information confirms the Garda Confidential service as a separate information channel; the routing matcher requires explicit confidentiality/anonymity intent so generic “give information” wording is not misrouted.
+- `accessibility_garda` / `fiosru_accessibility`: current Garda and Fiosrú accessibility information supports keeping accessibility assistance separate from ordinary complaint/report routes.
+- `unclaimed_property` / `property_garda_possession`: current Garda property guidance supports distinguishing selected unclaimed/recovered-property services from property being held by Gardaí and from theft reporting.
+
+These checks complete the source-scope review of the remaining core route families. Individual operational pages and deadlines remain subject to future change.
