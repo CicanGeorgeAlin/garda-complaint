@@ -239,6 +239,11 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(hasTheft && value!==null && value>1000){
       return state.routes.find(r=>r.route_id==='station_directory');
     }
+    // A theft without a stated value is not enough to establish eligibility
+    // for the online declaration; keep it in general crime screening.
+    if(hasTheft && value===null){
+      return state.routes.find(r=>r.route_id==='crime_general');
+    }
 
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
@@ -263,7 +268,6 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       ['member of an garda|garda personnel|police conduct|complain about (a )?(garda|guard)|complaint about (a )?(garda|guard)','fiosru_complaint_screen'],
       ['traffic watch|dangerous driving|dangerous driver|traffic incident|road traffic incident|road traffic collision|driving incident|driver.*reported|report.*driver|report.*driving','traffic_watch'],
       ['hate crime|hate incident','hate_crime'],
-      ['stolen|theft|property stolen','crime_online_router'],
       ['report (a )?(crime|incident)|want to report (a )?(crime|incident)','crime_general'],
       ['station|local garda|contact my station','station_directory'],
     ];    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
