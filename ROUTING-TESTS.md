@@ -1460,3 +1460,29 @@ Negative invariants:
 - completed-investigation information must not become victim-information route;
 - explicit discontinuance must remain on the discontinuance/review pathway;
 - generic Fiosrú decision language must not be upgraded to the specific statutory review route without the required outcome wording.
+
+## Generic review/appeal/challenge fail-closed regression — 27 Sep 2026
+
+Generic post-decision language must not be converted into a specific review route unless a verified route-specific gate identifies the process and decision type.
+
+| Input | Expected route |
+|---|---|
+| “I want to review my Garda complaint” | unresolved |
+| “I want to appeal a Garda complaint” | unresolved |
+| “I want to challenge my Garda decision” | unresolved |
+| “I want to review my crime report” | unresolved |
+| “I want to appeal my crime report” | unresolved |
+| “I want to challenge my case” | unresolved |
+| “I want to dispute the outcome of my investigation” | unresolved |
+| “I want to review my fixed charge notice” | fixed_charge_notice_review |
+| “I want to review a prosecution decision” | prosecution_decision_review |
+| “Fiosrú said my complaint is inadmissible and I want a review” | fiosru_review |
+| “Fiosrú discontinued my investigation and I want a review” | fiosru_review |
+| “Fiosrú gave me a decision and I want information about it” | fiosru_post_investigation |
+
+Negative invariants:
+- generic words such as review, appeal, challenge, object and dispute must not independently identify a statutory process;
+- explicit known review routes must continue to outrank the generic fail-closed gate;
+- a generic Garda complaint review must not be silently converted into a Fiosrú statutory review;
+- a generic crime-report appeal must not be converted into a new report or victim-support route;
+- an unresolved outcome remains unresolved until the user identifies enough facts to select a verified route.
