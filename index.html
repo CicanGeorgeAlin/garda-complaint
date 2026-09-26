@@ -293,7 +293,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // Explicit dispute language must be screened before specialist application
     // matchers, otherwise a phrase such as “complain about my firearm renewal”
     // could be mistaken for a fresh renewal request.
-    if(/complain(?:t)?|appeal|challenge|object|dispute/.test(q) && /collection permit|gaming permit|lottery permit|abnormal load|age card|youth award|firearm|gun licence|firearms|police certificate/.test(q)){
+    if(/complain(?:t)?|appeal|challenge|object|dispute/.test(q) && /collection permit|gaming permit|lottery permit|abnormal load|age card|youth award|firearm|gun licence|firearms|police certificate|garda vetting|vetting/.test(q)){
       return null;
     }
 
