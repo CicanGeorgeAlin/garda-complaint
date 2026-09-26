@@ -39,3 +39,12 @@ This distinction is intentional:
 - **Institutional route:** must not be presented as an ordinary citizen application.
 
 The structural audit therefore treats missing metadata in these categories as an item for future source review, not as permission to manufacture data.
+
+## Runtime validation — 26 Sep 2026
+
+The browser router now fails closed if the loaded route directory contains:
+- a malformed core route record;
+- a duplicate route_id; or
+- an official_info_url or populated official_submission_url outside the same front-end official-destination allowlist used for rendered links.
+
+This is a second safety boundary in addition to the repository audit. The renderer also independently filters destinations before creating clickable links. Latest runtime hardening commit: 5b0b0652215079394854be7962cdc8ff61575636.
