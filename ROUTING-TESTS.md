@@ -233,6 +233,27 @@ Stolen-firearm reporting must remain ahead of the generic firearms application r
 
 Action language must identify the relevant object before selecting a review route; general information requests must not be promoted into a review.
 
+## Emergency / confidential-information boundary regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I want to give information anonymously about dangerous driving" | garda_confidential |
+| "I want to report dangerous driving" | traffic_watch |
+| "I want to give information confidentially" | garda_confidential |
+| "Can I report anonymously?" | garda_confidential |
+| "I want to report a hate incident" | hate_crime |
+| "A hate incident is happening now and there is immediate danger" | emergency_999_112 |
+| "There is a crime in progress" | emergency_999_112 |
+| "Someone is in immediate danger right now" | emergency_999_112 |
+| "I am deaf and need emergency SMS" | emergency_sms_112 |
+| "I need emergency SMS" | emergency_sms_112 |
+| "I need help because I cannot hear" | emergency_sms_112 |
+| "I cannot hear and need emergency help" | emergency_999_112 |
+| "I cannot speak and someone is in danger" | emergency_999_112 |
+| "I need an accessible Garda service" | accessibility_garda |
+
+Emergency indicators must outrank specialist routing. Accessibility need alone must not be treated as an emergency, while explicit immediate danger must remain on the emergency path.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
