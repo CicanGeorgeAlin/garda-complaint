@@ -169,13 +169,16 @@ With these entries, all 41 route IDs are now represented somewhere in the audit 
 The route registry now carries an explicit `verification_status` on all 41 records using the inventory's approved vocabulary.
 
 Current distribution:
-- `verified_current`: 22
-- `verified_current_with_conflict`: 3
+- `verified_current`: 23
+- `verified_current_with_conflict`: 4
 - `verified_guidance_only`: 14
-- `research_required`: 2
+- `research_required`: 0
 - `superseded_or_historical`: 0
 - `institutional_not_citizen_route`: 0
 
 The two `research_required` records remain in the registry for controlled routing research/audit purposes and are not being represented as fully legally verified. The frontend's existing route safety validation continues to validate destination structure independently of this metadata.
 
 Emergency destinations such as `tel:112` and `tel:999` remain explicitly permitted by the frontend allowlist alongside approved official HTTPS domains.
+
+
+The two previously research-required records, `firearms_nonresident` and `fiosru_complaint_screen`, were subsequently rechecked against current official sources on 26 Sep 2026 and promoted to verified states. `firearms_nonresident` retains a conflict-aware status because procedural source materials differ in age/detail; `fiosru_complaint_screen` is verified current.
