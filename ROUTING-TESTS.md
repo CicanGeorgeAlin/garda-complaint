@@ -1143,3 +1143,8 @@ The route engine must remain operable by keyboard: the primary control is a real
 ## High-consequence emergency precedence regression — 26 Sep 2026
 
 Emergency routing remains first in the decision sequence. Requests explicitly seeking emergency services by SMS/text without danger-language may route to `emergency_sms_112`; wording such as immediate danger, danger to life, serious injury risk, crime in progress, or a person being in danger must override the SMS wording and route to `emergency_999_112`. Ambiguous non-emergency wording must not silently receive emergency treatment.
+
+
+## Data-access regime boundary regression — 26 Sep 2026
+
+The router keeps the information-access regimes distinct: a person's own Garda personal data routes to the GDPR/F20 path even when FOI is mentioned; correction/rectification wording uses the data-access router; general FOI wording uses FOI; environmental-information wording uses AIE; and generic `my data` wording remains unresolved rather than being assigned by guesswork.
