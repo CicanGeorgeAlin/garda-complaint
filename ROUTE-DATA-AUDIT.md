@@ -77,3 +77,13 @@ The repository was reconciled after the latest routing-hardening changes.
 - `index.html`: routing and destination validation remain aligned with the documented safety architecture.
 - `README.md`: public project description remains aligned with the independent-navigation model and does not claim submission or legal decision-making.
 - Latest verification date: 26 Sep 2026.
+
+
+## Metadata exception ledger — 26 Sep 2026
+
+The following route records intentionally lack one or both of `legal_basis` and `verified_on`; these are not silently treated as fully legally verified:
+
+- Missing both fields: `emergency_999_112`, `public_cctv_institutional`, `victim_services`, `property_garda_possession`, `traffic_fcn_information`, `gsoc_legacy_transition`, `data_access_router`, `emergency_sms_112`, `accessibility_garda`, `station_directory`, `crime_online_router`.
+- Missing `legal_basis` but with `verified_on`: `police_certificate`, `unclaimed_property`, `prosecution_decision_review`, `property_found_taxis_psvs`, `youth_awards`, `fiosru_accessibility`, `police_certificate_router`.
+
+The runtime does not require these optional metadata fields in order to load a route. Their absence is therefore a documented data-quality state, not evidence that the underlying service is legally unverified or unsafe. Before high-stakes publication, the applicable primary-law/source mapping should be completed where reasonably available.
