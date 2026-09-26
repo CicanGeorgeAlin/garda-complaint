@@ -37,6 +37,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want environmental information held by Gardaí" | aie |
 | "I need Garda vetting for work" | garda_vetting |
 | "I need a police certificate for another country" | police_certificate_router |
+| "I need Garda vetting for employment" | garda_vetting |
+| "I need eVetting for volunteering" | garda_vetting |
+| "I need a criminal record check" | no automatic crime route |
+| "I need a certificate" | no automatic crime route |
 | "I want a firearm certificate" | firearms_application |
 | "I want to renew my firearm certificate" | firearms_renewal |
 | "I am a non-resident applying for a firearm certificate" | firearms_nonresident |
