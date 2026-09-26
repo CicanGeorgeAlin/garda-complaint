@@ -34,6 +34,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want to give information confidentially" | garda_confidential |
 | "I want to see personal data Gardaí hold about me" | data_access_router |
 | "I want Garda records under FOI" | foi |
+| "I want records about an incident" | no automatic crime route |
+| "I want my personal records about me" | data_access_router |
+| "I want environmental records about pollution" | aie |
+| "I want to make an FOI request" | foi |
 | "I want environmental information held by Gardaí" | aie |
 | "I need Garda vetting for work" | garda_vetting |
 | "I need a police certificate for another country" | police_certificate_router |
