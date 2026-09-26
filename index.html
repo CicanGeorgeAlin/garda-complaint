@@ -212,12 +212,27 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     const valueMatch=q.match(/(?:€|eur|euro)\\s*(\\d+(?:[.,]\\d+)?)|\\b(\\d+(?:[.,]\\d+)?)\\s*(?:euro|eur|€)/);
     const rawValue=valueMatch ? (valueMatch[1]||valueMatch[2]) : null;
     // Accept both common Irish/European decimal notation and thousands separators.
-    const value=rawValue ? Number(
-      rawValue.includes(',') && rawValue.includes('.') ? rawValue.replace(/,/g,'') :
-      /,\\d{3}$/.test(rawValue) ? rawValue.replace(/,/g,'') :
-      /\\.\\d{3}$/.test(rawValue) ? rawValue.replace(/\\./g,'') :
-      rawValue.replace(',','.')
-    ) : null;
+    let normalizedValue=rawValue;
+    if(rawValue){
+      const lastComma=rawValue.lastIndexOf(',');
+      const lastDot=rawValue.lastIndexOf('.');
+      if(lastComma>=0 && lastDot>=0){
+        // The final separator is treated as the decimal separator; earlier
+        // separators are treated as thousands separators.
+        if(lastComma>lastDot){
+          normalizedValue=rawValue.replace(/\\./g,'').replace(',','.');
+        }else{
+          normalizedValue=rawValue.replace(/,/g,'');
+        }
+      }else if(/,\\d{3}$/.test(rawValue)){
+        normalizedValue=rawValue.replace(/,/g,'');
+      }else if(/\\.\\d{3}$/.test(rawValue)){
+        normalizedValue=rawValue.replace(/\\./g,'');
+      }else{
+        normalizedValue=rawValue.replace(',','.');
+      }
+    }
+    const value=normalizedValue ? Number(normalizedValue) : null;
     if(hasTheft && value!==null && value<=1000 && !excludedOnlineCrime){
       return state.routes.find(r=>r.route_id==='theft_declaration');
     }
