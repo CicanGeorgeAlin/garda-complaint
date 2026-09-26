@@ -943,3 +943,24 @@ Purpose: preserve the dedicated Emergency SMS route when a user explains that th
 - "I am deaf and there is immediate danger" → `emergency_999_112`
 - "I cannot speak and someone is in danger" → `emergency_999_112`
 - "There is an emergency and someone is seriously injured" → `emergency_999_112`
+
+## Fiosrú lifecycle precedence verification — 26 Sep 2026
+
+Purpose: keep the distinct Fiosrú complaint, statutory review, discontinuance, post-investigation and victim-information routes separated by explicit lifecycle wording.
+
+- "I want to complain about a Garda" → `fiosru_complaint_screen`
+- "I want to make a complaint to Fiosrú about a Garda" → `fiosru_complaint_screen`
+- "Fiosrú discontinued my complaint and I want a review" → `fiosru_review`
+- "Fiosrú stopped investigating my complaint and I want a review" → `fiosru_review`
+- "Fiosrú discontinued my complaint" → `fiosru_review_discontinuance`
+- "Fiosrú stopped investigating my complaint" → `fiosru_review_discontinuance`
+- "Fiosrú finished investigating my complaint" → `fiosru_post_investigation`
+- "Fiosrú completed its investigation and I want to know what happens next" → `fiosru_post_investigation`
+- "I want information about my Fiosrú investigation" → `fiosru_victim_information`
+- "I need information about significant developments in my Fiosrú investigation" → `fiosru_victim_information`
+- "I want to review a Fiosrú decision" → `fiosru_review`
+- "I want to appeal a Fiosrú decision" → `fiosru_review`
+- "I want to complain to Fiosrú" → unresolved
+- "I witnessed Garda behaviour" → unresolved
+
+The final two intentionally remain unresolved because the engine should not infer admissibility or the correct statutory process from an underspecified complaint request alone.
