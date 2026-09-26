@@ -27,7 +27,8 @@
       "next_steps": "Follow the emergency operator's instructions.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "verified_on": "2026-09-26"
     },
     {
       "route_id": "fiosru_complaint",
@@ -723,7 +724,8 @@
       "next_steps": "If the concern is a particular incident or existing footage, use the relevant crime/data/property route instead of treating this as a personal CCTV installation application.",
       "conflict_note": "Do not present the institutional public-CCTV process as a standard citizen permit form.",
       "guidance_basis": "Official Relevant local authority / Garda institutional process guidance/source linked in this route.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "verified_on": "2026-09-26"
     },
     {
       "route_id": "fiosru_review",
@@ -782,7 +784,8 @@
       "next_steps": "Use Garda victim-service information and the relevant Victim Service Office.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda victim-service guidance confirms the service scope and support role; this record is guidance-only because the route is primarily a support/navigation service rather than a single statutory submission form."
     },
     {
       "route_id": "property_garda_possession",
@@ -807,7 +810,8 @@
       "next_steps": "Identify whether the matter concerns property held by Gardaí, recovered property, or property reported stolen, then use the appropriate official route.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda property guidance supports the route distinction; the record remains guidance-only because the exact operational handling of property held by Gardaí can depend on the local station/process."
     },
     {
       "route_id": "traffic_fcn_information",
@@ -831,7 +835,8 @@
       "next_steps": "Follow the instructions on the specific notice and current Garda FCN guidance.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda fixed-charge guidance supports the information route; the record remains guidance-only because individual cancellation/review eligibility depends on the notice and applicable procedure."
     },
     {
       "route_id": "gsoc_legacy_transition",
@@ -855,7 +860,8 @@
       "next_steps": "No resubmission is required according to current Fiosrú guidance; Fiosrú will contact the complainant about next steps.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Fiosrú/GSOC transition information supports the historical-routing distinction; the record remains guidance-only because eligibility depends on when the legacy complaint arose and its procedural status."
     },
     {
       "route_id": "data_access_router",
@@ -879,7 +885,8 @@
       "next_steps": "Explain the data-right sought, then use the Garda Data Protection route and its current form/contact instructions.",
       "conflict_note": "Do not present FOI as the route for a person's own personal-data access request when the Data Protection route applies.",
       "guidance_basis": "Official An Garda Síochána Data Protection Unit guidance/source linked in this route.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda data-protection guidance supports the specialist access routes; the router is guidance-only because the correct statutory/data-right sub-route depends on the nature of the information sought."
     },
     {
       "route_id": "emergency_sms_112",
@@ -904,7 +911,8 @@
       "next_steps": "Use the official 112 SMS process and provide the requested location and emergency details.",
       "guidance_basis": "Official Emergency services guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda emergency-SMS guidance confirms the service and eligibility; this is guidance-only because SMS emergency handling has specific operational limitations and is not a substitute for ordinary reporting."
     },
     {
       "route_id": "accessibility_garda",
@@ -930,7 +938,8 @@
       "next_steps": "Use the Garda accessibility information and request reasonable assistance where appropriate.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda accessibility information supports this assistance route; it is guidance-only because accessibility support is an accommodation layer rather than a standalone statutory complaint/report submission."
     },
     {
       "route_id": "fiosru_accessibility",
@@ -960,7 +969,8 @@
       "evidence_required": "Describe the accessibility or communication support needed; no unnecessary complaint details should be collected by this guidance layer.",
       "source_verified": "Official Fiosrú accessibility/contact sources reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Fiosrú accessibility information supports this assistance route; it is guidance-only because the Access Officer route supports access to Fiosrú services rather than deciding the underlying complaint."
     },
     {
       "route_id": "firearms_nonresident",
@@ -1016,7 +1026,8 @@
       "guidance_basis": "An Garda Síochána, Data Protection / FOI / Police Certificates page, reviewed 2026-09-24.",
       "source_verified": "Official Garda source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda Police Certificate guidance supports the distinction from Garda Vetting; this router is guidance-only because the correct certificate pathway depends on the purpose and destination."
     },
     {
       "route_id": "station_directory",
@@ -1041,7 +1052,8 @@
       "next_steps": "Use the official station directory to identify the relevant station and its published contact details.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda station information supports this fallback route; it is guidance-only because the appropriate station depends on the citizen's location and matter."
     },
     {
       "route_id": "fiosru_victim_information",
@@ -1153,7 +1165,8 @@
       "next_steps": "Answer the incident-type and urgency questions, then use the appropriate official route.",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "notes": "Official Garda online-crime guidance supports the limited online service; this router is guidance-only because eligibility depends on the specific crime category and exclusions."
     },
     {
       "route_id": "fiosru_complaint_screen",
