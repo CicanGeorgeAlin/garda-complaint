@@ -32,10 +32,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want to report a hate crime" | hate_crime |
 | "A hate incident is happening now and there is immediate danger" | emergency_999_112 |
 | "I want to give information confidentially" | garda_confidential |
-| "I want to see personal data Gardaí hold about me" | data_access_router |
+| "I want to see personal data Gardaí hold about me" | personal_data_f20 |
 | "I want Garda records under FOI" | foi |
 | "I want records about an incident" | no automatic crime route |
-| "I want my personal records about me" | data_access_router |
+| "I want my personal records about me" | personal_data_f20 |
 | "I want environmental records about pollution" | aie |
 | "I want to make an FOI request" | foi |
 | "I want environmental information held by Gardaí" | aie |
@@ -65,7 +65,7 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I want to report a crime" | crime_general |
 | "I need a permit for gaming" | gaming_permit |
 | "I want environmental records about pollution" | aie |
-| "I want my personal records about me" | data_access_router |
+| "I want my personal records about me" | personal_data_f20 |
 | "Fiosrú said my complaint is inadmissible" | fiosru_review |
 | "I want to complain to Fiosrú about a Garda" | fiosru_complaint_screen |
 | "I want to review my Fiosrú complaint" | fiosru_review |
@@ -147,9 +147,9 @@ These tests protect the distinction between the online-reporting eligibility scr
 
 | Input | Expected route |
 |---|---|
-| "I want to see personal data Gardaí hold about me" | data_access_router |
-| "I want my personal records about me" | data_access_router |
-| "I need information about my Garda data" | data_access_router |
+| "I want to see personal data Gardaí hold about me" | personal_data_f20 |
+| "I want my personal records about me" | personal_data_f20 |
+| "I need information about my Garda data" | personal_data_f20 |
 | "I want Garda records under FOI" | foi |
 | "I want to make an FOI request" | foi |
 | "I want environmental information held by Gardaí" | aie |
@@ -333,7 +333,7 @@ The route registry contains 41 records, but not every record is intended to be a
 
 The following records are currently not selected directly by a literal `route_id` branch in `index.html` and should therefore be reviewed during future routing work rather than assumed to have direct matcher coverage:
 
-- `personal_data_f20` — downstream personal-data access route; `data_access_router` is the screening entry.
+- `personal_data_f20` — direct own-personal-data access destination; `data_access_router` remains the narrower correction/rectification/understanding gate.
 - `prosecution_decision_review` — specialist victim-review destination.
 - `property_found_taxis_psvs` — specialist property process.
 - `youth_awards` — specialist nomination service.
@@ -374,7 +374,7 @@ A literal `route_id` search is not a sufficient reachability test because the en
 The current architecture therefore treats these as deliberate downstream records rather than unreachable routes:
 
 - `fiosru_complaint` — entered through `fiosru_complaint_screen`, which provides the statutory complaint submission destination.
-- `personal_data_f20` — entered through `data_access_router`, because the correct data-protection sub-route depends on the request.
+- `personal_data_f20` — selected directly for clearly stated access to the citizen’s own Garda personal data; `data_access_router` remains available for correction/rectification/understanding requests.
 - `police_certificate` — entered through `police_certificate_router`, because purpose and destination must be distinguished from Garda Vetting.
 - `property_found_taxis_psvs`, `property_garda_possession`, `prosecution_decision_review`, `youth_awards`, `gsoc_legacy_transition`, `emergency_sms_112`, `accessibility_garda`, `fiosru_accessibility`, `fiosru_victim_information`, `fiosru_post_investigation`, and `crime_online_router` have deliberate natural-language entry patterns.
 
@@ -392,7 +392,7 @@ Every registered route is assigned an intentional entry role. A route may be a d
 | traffic_watch | direct traffic gate |
 | hate_crime | direct specialist gate |
 | garda_confidential | direct confidential-information gate |
-| personal_data_f20 | downstream from data_access_router |
+| personal_data_f20 | direct own-personal-data access gate |
 | foi | direct information-access gate |
 | aie | direct information-access gate |
 | police_certificate | downstream from police_certificate_router |
@@ -821,9 +821,9 @@ The router must not infer FOI, AIE or personal-data rights from generic “infor
 
 | Input | Expected route |
 |---|---|
-| “I want to see personal data Gardaí hold about me” | `data_access_router` |
-| “What personal data does Garda hold about me?” | `data_access_router` |
-| “I want my Garda personal records” | `data_access_router` |
+| “I want to see personal data Gardaí hold about me” | `personal_data_f20` |
+| “What personal data does Garda hold about me?” | `personal_data_f20` |
+| “I want my Garda personal records” | `personal_data_f20` |
 | “I want my neighbour’s personal data” | no automatic route |
 | “I want my data” | no automatic route |
 | “I want to make an FOI request” | `foi` |
