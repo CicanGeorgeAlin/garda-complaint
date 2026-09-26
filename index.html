@@ -213,7 +213,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       && !/(?:danger to life|immediate danger|immediate threat(?: or)? risk of violence|immediate threat of violence|risk of violence|risk of serious injury|serious assault|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergencySms) return state.routes.find(r=>r.route_id==='emergency_sms_112');
 
-    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text|text message|services?\s+by\s+(?:sms|text)))|danger to life|immediate danger|risk of serious injury|serious assault|immediate threat of violence|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
+    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text|text message|services?\s+by\s+(?:sms|text)))|danger to life|immediate danger|risk of serious injury|serious assault|seriously assaulted|being assaulted|immediate threat of violence|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
     // Crime screening follows the current Garda online-reporting exclusions.
