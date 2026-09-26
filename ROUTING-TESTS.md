@@ -8,6 +8,10 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 |---|---|
 | "Someone is in immediate danger right now" | emergency_999_112 |
 | "A crime is happening now but nobody is in immediate danger" | no automatic crime route |
+| "My car was stolen yesterday" | station_directory |
+| "Someone used force to rob me" | station_directory |
+| "My firearm was stolen" | station_directory |
+| "There was a burglary but nobody is in danger now" | station_directory |
 | "I am reporting something that happened yesterday" | no automatic crime route |
 | "There is a crime in progress" | emergency_999_112 |
 | "I want to complain about a Garda member" | fiosru_complaint_screen |
