@@ -719,6 +719,33 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Ambiguous-input negative matrix — 26 Sep 2026
+
+These cases intentionally remain unresolved. The router must not manufacture a route when the citizen has not supplied enough information to distinguish the relevant service.
+
+| Input | Expected route |
+|---|---|
+| “I want to complain” | unresolved |
+| “I want to report something” | unresolved |
+| “I want a review” | unresolved |
+| “I want to appeal” | unresolved |
+| “I want to challenge something” | unresolved |
+| “I have a problem with Gardaí” | unresolved |
+| “I need information about Garda records” | unresolved |
+| “I want my data” | unresolved |
+| “I want my neighbour’s personal data” | unresolved |
+| “I want CCTV footage” | unresolved |
+| “I want information about an incident” | unresolved |
+| “I want to report something about my neighbour” | unresolved |
+| “I need a certificate to work in another country” | unresolved |
+| “I want information about a prosecution decision” | unresolved |
+| “A taxi passenger left property” | unresolved |
+| “I want to complain about a collection permit” | unresolved |
+| “I want to challenge an abnormal load permit” | unresolved |
+| “I want to complain about a youth award” | unresolved |
+
+“Unresolved” means the production chooser returns no route; it is not a legal conclusion about the underlying matter.
+
 ## Stolen-property specialist precedence regression — 26 Sep 2026
 
 Generic theft parsing must not intercept specialist property-process wording when the same sentence also contains “stolen”.
