@@ -1071,3 +1071,14 @@ The legal map, official service inventory, route registry and frontend must pres
 | Environmental information | Keep AIE distinct from FOI |
 
 These are documentation-consistency invariants as well as routing invariants: changing one layer must not silently erase a documented official-source conflict or convert guidance into a legal determination.
+
+
+## Frontend route-result disclosure regression — 26 Sep 2026
+
+The citizen-facing route result must preserve important registry limitations instead of collapsing them into a generic status label:
+
+- verified_current_with_conflict routes display the documented conflict_note.
+- Routes with next_steps display the current next-step guidance.
+- Routes with review_or_appeal display the applicable review/appeal qualification.
+- All registry-provided result text is HTML-escaped before rendering.
+- The result continues to state that the website only identifies a likely official route and does not submit anything on the citizen's behalf.
