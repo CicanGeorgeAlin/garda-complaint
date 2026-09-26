@@ -1123,3 +1123,8 @@ The registry distinguishes documented official-source conflicts from other mater
 ## Route-level legal-basis metadata safety regression — 26 Sep 2026
 
 Routes lacking a `legal_basis` field must not receive a fabricated statutory citation. Verification status may rely on the documented official-service source basis where the route is a service/guidance route; statutory detail must remain in the legal/source map unless directly verified at route level.
+
+
+## Verification-language safety regression — 26 Sep 2026
+
+Verification-state messaging describes the status of the underlying official source, not the citizen's legal eligibility, admissibility, qualification, entitlement, or likelihood of acceptance. Public route text must not convert `verified_current` into a guarantee or legal determination. `verified_current_with_conflict` must identify the documented source difference without resolving it as a legal conclusion, and `verified_guidance_only` must retain its circumstance-dependent limitation.
