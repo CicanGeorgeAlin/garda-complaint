@@ -69,7 +69,7 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "Fiosrú said my complaint is inadmissible" | fiosru_review |
 | "I want to complain to Fiosrú about a Garda" | fiosru_complaint_screen |
 | "I want to review my Fiosrú complaint" | fiosru_review |
-| "I want to appeal a Fiosrú decision" | fiosru_review |
+| "I want to appeal a Fiosrú decision" | fiosru_post_investigation |
 | "I want information about my Fiosrú complaint" | no automatic crime route |
 | "Fiosrú discontinued my complaint" | fiosru_review_discontinuance |
 | "I want to report a non-emergency incident" | crime_general |
@@ -314,7 +314,7 @@ Permit/application language must not automatically convert complaint, appeal, ch
 | "I want to review my fixed charge notice" | fixed_charge_notice_review |
 | "I want to review a prosecution decision" | prosecution_decision_review |
 | "I want to appeal a prosecution decision" | prosecution_decision_review |
-| "I want to review a Fiosrú decision" | fiosru_review |
+| "I want to review a Fiosrú decision" | fiosru_post_investigation |
 
 Generic action words must not select a route without a sufficiently specific object, authority or circumstance.
 
@@ -512,7 +512,7 @@ A generic request to review or appeal a complaint must not be routed to Fiosrú 
 | “I want to review my complaint” | fiosru_review must NOT be selected |
 | “I want to appeal my complaint” | fiosru_review must NOT be selected |
 | “I want to review my Fiosrú complaint” | fiosru_review |
-| “I want to appeal a Fiosrú decision” | fiosru_review |
+| “I want to appeal a Fiosrú decision” | fiosru_post_investigation |
 | “Fiosrú said my complaint is inadmissible” | fiosru_review |
 | “Fiosrú discontinued my complaint” | fiosru_review_discontinuance |
 | “My complaint was discontinued and I want a review” | fiosru_review |
@@ -652,7 +652,7 @@ Certificate and vetting requests must remain distinguishable, while Fiosrú life
 | “I have an old GSOC complaint from before Fiosrú” | gsoc_legacy_transition |
 | “Fiosrú stopped my investigation” | fiosru_review_discontinuance |
 | “Fiosrú discontinued my complaint and I want to review it” | fiosru_review |
-| “I want to review my Fiosrú decision” | fiosru_review |
+| “I want to review my Fiosrú decision” | fiosru_post_investigation |
 | “Fiosrú finished investigating my complaint; what happens next?” | fiosru_post_investigation |
 | “I need information about my Fiosrú investigation” | fiosru_victim_information |
 | “I need help accessing Fiosrú” | fiosru_accessibility |
@@ -926,7 +926,7 @@ Emergency SMS is a dedicated emergency-access route. Deafness, hearing/speech im
 | “Garda is holding my property” | property_garda_possession |
 | “Fiosrú discontinued my complaint and I want to review it” | fiosru_review |
 | “Fiosrú stopped my investigation” | fiosru_review_discontinuance |
-| “I want to review my Fiosrú decision” | fiosru_review |
+| “I want to review my Fiosrú decision” | fiosru_post_investigation |
 | “I want information about my Fiosrú investigation” | fiosru_victim_information |
 | “I need a Garda Police Certificate” | police_certificate_router |
 | “I need Garda vetting for employment” | garda_vetting |
@@ -1233,7 +1233,7 @@ These cases protect the rule that a citizen who has already received an outcome 
 | “I received a decision not to prosecute and want to review it” | prosecution_decision_review |
 | “I received a prosecution decision and want to review it” | prosecution_decision_review |
 | “I want information about a prosecution decision” | unresolved |
-| “I want to review a Fiosrú decision” | fiosru_review |
+| “I want to review a Fiosrú decision” | fiosru_post_investigation |
 
 The first four Fiosrú cases intentionally use the post-investigation information route because the outcome is not identified as inadmissibility or discontinuance; current Fiosrú guidance states that a completed/closed investigation has no general internal review, while inadmissibility and discontinuance have a statutory review route. The prosecution cases must outrank the generic victim-support matcher once a prosecution decision is explicitly described.
 
