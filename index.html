@@ -32,7 +32,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 <p class="subtitle">Tell us what you need. Find the correct official route. Understand the important rules, rights, information and next steps — without having to understand the bureaucracy first.</p>
 </header>
 
-<div id="emergency"></div>\n<section class="notice" aria-label="Emergency">
+<div id="emergency"></div><section class="notice" aria-label="Emergency">
 <h2>🚨 Is someone in immediate danger?</h2>
 <p>If there is danger to life, serious injury, a crime in progress/about to happen, or an offender still at or just left the scene, use <strong>999 or 112</strong>.</p>
 <a class="button" href="tel:112">CALL 112</a>
@@ -165,7 +165,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   <input id="route-question" type="text" placeholder="Example: I want to complain about a Garda" style="width:100%;padding:14px;border-radius:12px;border:1px solid #444;background:#090909;color:#fff;font:inherit" autocomplete="off" aria-describedby="route-engine-help">
   <p id="route-engine-help" style="color:#aaa;margin:8px 0 0;font-size:.92em">You can write normally. For example: “I need to report a stolen car” or “I need a Garda Police Certificate”. Do not enter sensitive personal details here.</p>
   <button id="route-engine-go" class="button" type="button" style="margin-top:12px">Find the official route</button>
-  <p id="route-engine-status" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
+  <p id="route-engine-status" role="status" aria-live="polite" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
   <div id="route-engine-result" class="notice" hidden aria-live="polite" aria-atomic="true" style="margin-bottom:0"></div>
 </section>
 <script>
