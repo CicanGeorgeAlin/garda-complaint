@@ -313,3 +313,21 @@ Certificate-related language must not be treated as interchangeable. The router 
 | “I need information about a certificate” | no automatic crime route |
 | “I need a certificate for work” | no automatic crime route |
 
+
+## Accessibility / Emergency SMS collision regressions — 26 Sep 2026
+
+Accessibility support must remain distinct from the emergency SMS 112 route. The general emergency gate remains first, so an accessibility-related description that also establishes immediate danger routes to emergency services rather than ordinary accessibility support.
+
+| Input | Expected route |
+|---|---|
+| “I cannot speak and need to contact emergency services by SMS” | `emergency_sms_112` |
+| “I cannot hear and need information about SMS 112” | `emergency_sms_112` |
+| “I am deaf and need emergency SMS information” | `emergency_sms_112` |
+| “I need Garda services in an accessible format” | `accessibility_garda` |
+| “I need accessible help from Gardaí” | `accessibility_garda` |
+| “I need accessible help from Fiosrú” | `fiosru_accessibility` |
+| “I need to communicate with Fiosrú accessibly” | `fiosru_accessibility` |
+| “I am deaf and someone is in immediate danger” | `emergency_999_112` |
+| “I cannot speak and there is immediate danger” | `emergency_999_112` |
+| “I need accessibility information” | no automatic crime route |
+
