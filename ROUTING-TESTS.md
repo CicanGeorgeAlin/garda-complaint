@@ -719,6 +719,28 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Crime-reporting / theft-value semantic stress regressions — 26 Sep 2026
+
+The online crime boundary must remain conservative. Explicit excluded categories go to the station route; qualifying theft values may use the theft declaration; a theft with no stated value remains general crime screening.
+
+| Input | Expected route |
+|---|---|
+| “I want to report a crime” | `crime_general` |
+| “I want to report a crime online” | `crime_online_router` |
+| “Can I report this crime online?” | `crime_online_router` |
+| “My property was stolen and it was worth €500” | `theft_declaration` |
+| “My property was stolen and it was worth €1,000” | `theft_declaration` |
+| “My property was stolen and it was worth €1,001” | `station_directory` |
+| “My property was stolen and it was worth €1,500” | `station_directory` |
+| “My property was stolen” | `crime_general` |
+| “There was a burglary last night” | `station_directory` |
+| “My car was stolen” | `station_directory` |
+| “My firearm was stolen” | `station_directory` |
+| “Someone robbed me” | `station_directory` |
+| “A violent crime happened” | `station_directory` |
+| “There is a crime in progress” | `emergency_999_112` |
+| “Someone is in immediate danger” | `emergency_999_112` |
+
 ## Fiosrú / prosecution-decision appeal-boundary regressions — 26 Sep 2026
 
 Generic “appeal” or “challenge” language must not be assigned to a legal review route unless the wording identifies the relevant decision/process. Fiosrú review wording remains tied to Fiosrú context; prosecution-decision review requires the prosecution decision to be identified.
