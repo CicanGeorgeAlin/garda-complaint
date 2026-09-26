@@ -1238,3 +1238,13 @@ These cases protect the rule that a citizen who has already received an outcome 
 The first four Fiosrú cases intentionally use the post-investigation information route because the outcome is not identified as inadmissibility or discontinuance; current Fiosrú guidance states that a completed/closed investigation has no general internal review, while inadmissibility and discontinuance have a statutory review route. The prosecution cases must outrank the generic victim-support matcher once a prosecution decision is explicitly described.
 
 The generic Fiosrú “decision” wording is intentionally not treated as proof that the decision was an inadmissibility or discontinuance decision. Current Fiosrú guidance limits the statutory review route to those two decision types; a completed/closed investigation does not have a general internal review.
+
+## Fiosrú post-decision information boundary regression — 26 Sep 2026
+
+- “Fiosrú gave me a decision and I want information about it” → `fiosru_post_investigation`
+- “Fiosrú gave me an outcome and I want information about it” → `fiosru_post_investigation`
+- “Fiosrú gave me a decision” → unresolved
+- “Fiosrú gave me an outcome” → unresolved
+- “I want information about my Fiosrú investigation” → `fiosru_victim_information`
+
+The router may recognize an explicitly post-decision information request, but must not infer a process from a bare statement that a decision or outcome exists.
