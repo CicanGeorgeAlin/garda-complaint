@@ -1329,3 +1329,22 @@ Negative invariants:
 - generic victim-support wording must not override explicit Traffic Watch reporting;
 - emergency conditions must continue to override specialist reporting routes;
 - confidential-information wording remains distinct from ordinary crime reporting unless an emergency is present.
+
+## Confidential-information versus ordinary crime-report precedence regression — 26 Sep 2026
+
+Explicit anonymity/confidentiality requests must not fall through to ordinary crime-report routes.
+
+| Input | Expected route |
+|---|---|
+| “I want to report a crime anonymously” | garda_confidential |
+| “I want to provide information about a crime anonymously” | garda_confidential |
+| “I want to give information confidentially” | garda_confidential |
+| “I want to report a crime” | crime_general |
+| “I want to report a crime online” | crime_online_router |
+| “I need to contact my local Garda station” | station_directory |
+
+Negative invariants:
+- anonymity/confidentiality wording must not be swallowed by `crime_general`;
+- ordinary crime reporting without anonymity remains `crime_general`;
+- explicit online-reporting wording remains `crime_online_router`;
+- emergency precedence remains unchanged.
