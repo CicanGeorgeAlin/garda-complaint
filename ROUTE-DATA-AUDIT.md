@@ -205,3 +205,18 @@ The route registry distinguishes a documented official-source conflict from an o
 - `firearms_nonresident`
 
 Other populated `conflict_note` values may describe an important operational, procedural, eligibility, terminology, or cautionary note without asserting that official sources disagree. The frontend therefore labels the two cases separately.
+
+
+## Route-level legal-basis metadata exceptions — 26 September 2026
+
+A route record does not receive an invented statutory citation merely to satisfy a schema field. The following seven routes currently have `verified_current` or `verified_current_with_conflict` status while their individual registry record has no `legal_basis` value:
+
+- `emergency_999_112`
+- `police_certificate`
+- `unclaimed_property`
+- `prosecution_decision_review`
+- `property_found_taxis_psvs`
+- `youth_awards`
+- `public_cctv_institutional`
+
+Their source basis is documented in the legal/source map and/or official-service inventory. This is a metadata completeness limitation, not a basis for fabricating legislation. Future enrichment should add a route-level legal basis only after direct source verification.
