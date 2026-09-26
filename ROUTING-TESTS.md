@@ -719,6 +719,32 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Full precedence stress matrix — 26 Sep 2026
+
+These cases are checked against the complete ordering of the production `choose()` function, not isolated specialist regexes. The purpose is to catch broad earlier gates intercepting a more specific route.
+
+| Input | Expected route |
+|---|---|
+| “My firearm was stolen” | `station_directory` |
+| “I want to renew my firearm certificate” | `firearms_renewal` |
+| “My property was stolen and it was worth €500” | `theft_declaration` |
+| “I found stolen property in a taxi” | `property_found_taxis_psvs` |
+| “Gardaí are holding my stolen property” | `property_garda_possession` |
+| “Fiosrú discontinued my complaint and I want a review” | `fiosru_review` |
+| “Fiosrú stopped investigating my complaint” | `fiosru_review_discontinuance` |
+| “Fiosrú finished investigating my complaint” | `fiosru_post_investigation` |
+| “I want information about my Fiosrú investigation” | `fiosru_victim_information` |
+| “I want to appeal the prosecution decision” | `prosecution_decision_review` |
+| “I received a fixed charge and want a review” | `fixed_charge_notice_review` |
+| “I want to report this crime online” | `crime_online_router` |
+| “There was a burglary and I want to report it online” | `station_directory` |
+| “I want to report dangerous driving” | `traffic_watch` |
+| “I want to give information anonymously about dangerous driving” | `garda_confidential` |
+| “I am deaf and need emergency text” | `emergency_sms_112` |
+| “I am deaf and there is immediate danger” | `emergency_999_112` |
+
+The matrix is intentionally small and high-consequence: it tests precedence boundaries rather than attempting to prove legal eligibility from free text.
+
 ## Emergency text / SMS precedence regression — 26 Sep 2026
 
 The emergency gate must not capture SMS/text-specific requests merely because they contain the word “emergency”. Bare emergency danger language must still retain precedence.
