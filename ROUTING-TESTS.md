@@ -1133,3 +1133,8 @@ Verification-state messaging describes the status of the underlying official sou
 ## Route-result destination safety regression — 26 Sep 2026
 
 The route-result renderer must independently pass both information and submission destinations through the approved URL allowlist before placing them in an anchor. Rendered route text remains HTML-escaped, external links use `noopener noreferrer`, and the page must never use an unvalidated registry URL directly in `innerHTML`.
+
+
+## Keyboard and focus accessibility regression — 26 Sep 2026
+
+The route engine must remain operable by keyboard: the primary control is a real button, Enter in the question input runs the same route action, and links, button, input, and disclosure-summary controls retain visible `focus-visible` styling. Mobile controls retain the established minimum 44px target size, while reduced-motion users must not be forced into smooth scrolling.
