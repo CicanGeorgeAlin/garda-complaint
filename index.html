@@ -245,6 +245,13 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       return state.routes.find(r=>r.route_id==='crime_general');
     }
 
+    if(/firearm|gun licence|firearms/.test(q) && /renew|renewal|renewing|renew my/.test(q)){
+      return state.routes.find(r=>r.route_id==='firearms_renewal');
+    }
+    if(/firearm|gun licence|firearms/.test(q) && /non.?resident|outside ireland|living abroad|resident outside/.test(q)){
+      return state.routes.find(r=>r.route_id==='firearms_nonresident');
+    }
+
     const tests=[
       // Specialist routes must be checked before broad "garda" language.
       ['police certificate|criminal record certificate|certificate for another country','police_certificate_router'],
