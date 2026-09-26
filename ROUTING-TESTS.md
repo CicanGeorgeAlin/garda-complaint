@@ -1263,8 +1263,8 @@ The lifecycle matcher must not let broad words such as “review”, “appeal�
 | “Fiosrú said my complaint is inadmissible and I want a review” | fiosru_review |
 | “Fiosrú gave me a decision and I want information” | fiosru_post_investigation |
 | “Fiosrú gave me a decision and I want to appeal it” | fiosru_post_investigation |
-| “I want to review my Garda complaint” | fiosru_complaint_screen |
-| “I want to appeal a Garda complaint” | fiosru_complaint_screen |
+| “I want to review my Garda complaint” | unresolved |
+| “I want to appeal a Garda complaint” | unresolved |
 | “I have a Garda investigation and want information” | unresolved unless a specific information route is identified |
 | “I want to review a prosecution decision” | prosecution_decision_review |
 | “I received a decision not to prosecute and need victim support” | prosecution_decision_review |
@@ -1277,5 +1277,5 @@ Negative invariants:
 - An ongoing Fiosrú investigation with an information request must not be converted into post-investigation information merely because information appears.
 - Explicit inadmissibility/discontinuance must remain the gateway to the statutory Fiosrú review route.
 - Explicit prosecution-decision wording must remain ahead of the broad victim-support matcher.
-- Generic Garda complaint/review language must not be promoted to a Fiosrú statutory review without a Fiosrú outcome and qualifying decision type.
+- Generic Garda complaint/review language must not be promoted to a Fiosrú statutory review without a Fiosrú outcome and qualifying decision type; where the process is not identifiable, fail closed rather than silently restarting the complaint.
 - A new crime report must not be converted into a post-decision process merely because the sentence contains appeal.
