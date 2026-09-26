@@ -106,6 +106,22 @@ These cases protect against overly rigid phrase ordering while retaining the exi
 
 These cases ensure excluded online-crime categories, stolen firearms, and explicit Fiosrú review requests retain the correct precedence.
 
+## Accessibility/emergency precedence regressions — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| "I am deaf and need emergency SMS" | emergency_sms_112 |
+| "I need emergency SMS" | emergency_sms_112 |
+| "I cannot hear and need emergency help" | emergency_999_112 |
+| "I am deaf and there is immediate danger" | emergency_999_112 |
+| "I cannot speak and someone is in danger" | emergency_999_112 |
+| "I am hard of hearing and there is a crime in progress" | emergency_999_112 |
+| "I need help because I cannot hear" | emergency_sms_112 |
+| "I need an accessible Garda service" | accessibility_garda |
+| "I need help accessing Fiosrú" | fiosru_accessibility |
+
+Emergency indicators must continue to outrank accessibility routing when immediate danger is described.
+
 ## Safety invariants
 
 1. Emergency indicators must be evaluated before every specialist route.
