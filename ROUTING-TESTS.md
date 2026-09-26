@@ -207,3 +207,53 @@ The matcher should prefer a conservative result when a broad term does not estab
 | “I want information about traffic fines” | `traffic_fcn_information` |
 | “I found a stolen item” | `crime_general` |
 | “I found property at a Garda station” | `unclaimed_property` |
+
+## Route coverage ledger — 26 Sep 2026
+
+Every registered route is assigned an intentional entry role. A route may be a direct natural-language destination or a downstream destination reached through a screening/router record; downstream status is deliberate, not an accidental coverage gap.
+
+| Route ID | Entry role |
+|---|---|
+| emergency_999_112 | direct emergency gate |
+| fiosru_complaint | downstream from fiosru_complaint_screen |
+| crime_general | direct general-crime gate |
+| theft_declaration | direct theft-value gate |
+| traffic_watch | direct traffic gate |
+| hate_crime | direct specialist gate |
+| garda_confidential | direct confidential-information gate |
+| personal_data_f20 | downstream from data_access_router |
+| foi | direct information-access gate |
+| aie | direct information-access gate |
+| police_certificate | downstream from police_certificate_router |
+| garda_vetting | direct specialist gate |
+| national_age_card | direct specialist gate |
+| unclaimed_property | direct property gate |
+| fixed_charge_notice_review | direct explicit review/cancellation gate |
+| prosecution_decision_review | direct explicit review/appeal gate |
+| abnormal_loads | direct specialist gate |
+| collection_permit | direct specialist gate |
+| gaming_permit | direct specialist gate |
+| firearms_application | direct firearms gate |
+| firearms_renewal | direct renewal gate |
+| property_found_taxis_psvs | direct specialist property gate |
+| youth_awards | direct specialist gate |
+| public_cctv_institutional | direct institutional-service gate |
+| fiosru_review | direct explicit Fiosrú review gate |
+| victim_services | direct crime-victim support gate |
+| property_garda_possession | direct specialist property gate |
+| traffic_fcn_information | direct FCN-information gate |
+| gsoc_legacy_transition | direct legacy-case gate |
+| data_access_router | direct personal-data screening gate |
+| emergency_sms_112 | direct accessibility-emergency gate |
+| accessibility_garda | direct accessibility gate |
+| fiosru_accessibility | direct accessibility gate |
+| firearms_nonresident | direct non-resident firearms gate |
+| police_certificate_router | direct certificate-purpose screening gate |
+| station_directory | direct station/contact and excluded-crime fallback |
+| fiosru_victim_information | direct Fiosrú-investigation information gate |
+| fiosru_post_investigation | direct post-investigation gate |
+| fiosru_review_discontinuance | direct discontinuance gate |
+| crime_online_router | direct online-crime screening gate |
+| fiosru_complaint_screen | direct Garda-personnel complaint screening gate |
+
+**Coverage result: 41/41 route IDs have an intentional entry role.**
