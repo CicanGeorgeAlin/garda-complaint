@@ -32,6 +32,8 @@ A field-presence review found some routes without a `legal_basis` or `verified_o
 
 The affected records were reviewed against their current official destinations. In particular, the current Garda pages confirm the emergency contact route, station directory, victim-services information, public-CCTV institutional process, online crime-reporting route, and data-protection/police-certificate service pages; the current Fiosrú site confirms the GSOC transition route and current complaint structure. The project should not invent statutory bases or verification dates where the source record does not establish them.
 
+The registry uses its implemented field names (for example `submission_method`, `geographic_scope`, `authority_role`, `guidance_basis`, and `conflict_note`) rather than requiring every conceptual field listed in the wider data model. A conceptual field such as “submission point” therefore must not be treated as a missing JSON property when the route already expresses the same function through its implemented schema.
+
 This distinction is intentional:
 - **Verified service record:** may carry a dated source verification.
 - **Navigation/router record:** may inherit its substantive rules from the destination route and need not duplicate every legal field.
