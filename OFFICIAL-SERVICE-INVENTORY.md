@@ -978,9 +978,9 @@ Before a route is activated in the engine, it should have:
 ## Audit 16 — route-record prototype and verification status (24 September 2026)
 
 ### Structured route seed
-The verified inventory is now ready for conversion into structured route records. The first production seed should include only routes whose official destination and conditions have been verified, while keeping unverified discoveries outside the active router.
+The verified inventory has since been converted into the current structured route registry. The active router contains only route families admitted under the project's verification and destination-safety rules; unverified discoveries remain outside the active router.
 
-Initial active-route families:
+Current active-route families:
 - emergency_999_112
 - crime_general
 - theft_declaration
