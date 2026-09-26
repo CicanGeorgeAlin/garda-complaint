@@ -302,7 +302,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
   function escapeAttr(x){return escapeHtml(x);}
   function safeUrl(x){
     const v=String(x||'').trim();
-    if(/^https:\/\/(?:www\.)?(?:garda\.ie|fiosru\.ie|irishstatutebook\.ie)(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^https:\/\/(?:www\.)?garda\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^https:\/\/(?:www\.)?fiosru\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
+    if(/^https:\/\/(?:www\.)?irishstatutebook\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
     if(/^https:\/\/vetting\.garda\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
     if(/^https:\/\/agecard\.ie(?:\/|$)/i.test(v)) return escapeAttr(v);
     if(/^tel:\/\/(?:112|999)$/i.test(v)||/^tel:(?:112|999)$/i.test(v)) return escapeAttr(v);
