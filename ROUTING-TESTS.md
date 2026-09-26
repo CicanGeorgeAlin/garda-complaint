@@ -56,6 +56,9 @@ These are expected outcomes, not legal determinations. Emergency screening must 
 | "I need a permit for gaming" | gaming_permit |
 | "I need information about an abnormal load" | abnormal_loads |
 | "I want public CCTV in my area" | public_cctv_institutional |
+| "I found property at a Garda station" | unclaimed_property |
+| "I need information about a camera" | no automatic crime route |
+| "My property was stolen" | crime_general |
 | "I need a National Age Card" | national_age_card |
 | "I want to check recovered property" | unclaimed_property |
 | "I don't know what Garda service I need" | no automatic crime route |
