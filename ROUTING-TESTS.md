@@ -719,6 +719,21 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Emergency SMS / accessibility semantic boundary regression — 26 Sep 2026
+
+Emergency SMS is a dedicated emergency-access route. Deafness, hearing/speech impairment or a general accessibility need must not by itself be treated as a request for SMS 112. Explicit emergency danger still takes the emergency 999/112 route first.
+
+| Input | Expected route |
+|---|---|
+| “I need emergency SMS” | `emergency_sms_112` |
+| “I need to contact emergency services by SMS” | `emergency_sms_112` |
+| “I need SMS 112 information” | `emergency_sms_112` |
+| “I am deaf and there is immediate danger” | `emergency_999_112` |
+| “I cannot hear and need emergency help” | `emergency_999_112` |
+| “I am deaf and need accessible Garda help” | `accessibility_garda` |
+| “I cannot hear and need an accessible Garda service” | `accessibility_garda` |
+| “I cannot speak and need accessibility support from Gardaí” | `accessibility_garda` |
+
 ## Additional precedence stress cases — 26 Sep 2026
 
 | Input | Expected route |
