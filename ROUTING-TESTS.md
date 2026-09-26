@@ -719,6 +719,17 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Stolen-property specialist precedence regression — 26 Sep 2026
+
+Generic theft parsing must not intercept specialist property-process wording when the same sentence also contains “stolen”.
+
+| Input | Expected route |
+|---|---|
+| “I found stolen property in a taxi” | `property_found_taxis_psvs` |
+| “Gardaí are holding my stolen property” | `property_garda_possession` |
+| “My stolen property is being held by Gardaí” | `property_garda_possession` |
+| “I found property in a taxi” | `property_found_taxis_psvs` |
+
 ## Full precedence stress matrix — 26 Sep 2026
 
 These cases are checked against the complete ordering of the production `choose()` function, not isolated specialist regexes. The purpose is to catch broad earlier gates intercepting a more specific route.
