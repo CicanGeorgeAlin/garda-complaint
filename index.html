@@ -214,7 +214,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
     // Crime screening follows the current Garda online-reporting exclusions.
-    const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|car was stolen|stolen car|robbery|robbed|used force to rob|violent crime|stolen firearm|firearm stolen|firearm was stolen|firearm has been stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene)/.test(q);
+    const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|car was stolen|stolen car|robbery|robbed|used force to rob|force to rob|violent crime|stolen firearm|firearm stolen|firearm was stolen|firearm has been stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene)/.test(q);
     if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender|traffic|road)/.test(q)){
       return state.routes.find(r=>r.route_id==='station_directory');
     }
@@ -228,7 +228,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     }
 
     // Explicit property-process language takes precedence over generic theft-value parsing.
-    if(/(?:found property|found .*property|property (?:was|has been) found).*taxi|property.*taxi.*psv|found.*psv|taxi.*found property/.test(q)){
+    if(/(?:found property|found .*property|found (?:a )?stolen (?:item|property)|property (?:was|has been) found).*taxi|property.*taxi.*psv|found.*psv|taxi.*found property/.test(q)){
       return state.routes.find(r=>r.route_id==='property_found_taxis_psvs');
     }
     if(/property (?:is|was|held|has been held) by garda|property.*being held.*garda|property.*garda possession|garda.*holding .*property|property garda.*holding/.test(q)){
