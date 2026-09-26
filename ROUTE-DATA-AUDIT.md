@@ -193,3 +193,15 @@ The two previously research-required records, `firearms_nonresident` and `fiosru
 The registry contains 41 unique routes and 32 populated `verified_on` fields. Twenty-eight populated route dates remain `2026-09-24`, reflecting the most recent route-level verification for those records; they have not been relabeled to 26 Sep merely because the repository audit continued on that date. The aggregate audit date therefore does not mean every route was substantively re-verified on the same day.
 
 The eight routes with a 26 Sep route-level verification date are the routes directly rechecked during the latest audit work. Future maintenance should update `verified_on` only when the underlying source has actually been rechecked.
+
+
+## Source-conflict metadata — 26 September 2026
+
+The route registry distinguishes a documented official-source conflict from an ordinary route caveat. The boolean `source_conflict` is reserved for the four routes whose `verification_status` is `verified_current_with_conflict`:
+
+- `theft_declaration`
+- `foi`
+- `prosecution_decision_review`
+- `firearms_nonresident`
+
+Other populated `conflict_note` values may describe an important operational, procedural, eligibility, terminology, or cautionary note without asserting that official sources disagree. The frontend therefore labels the two cases separately.
