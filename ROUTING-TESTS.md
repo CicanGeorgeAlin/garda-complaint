@@ -1055,3 +1055,19 @@ Explicit Police Certificate wording is separated from the broader certificate ro
 - "I want to appeal something about traffic" → unresolved
 
 The engine distinguishes FCN information/payment from cancellation/review wording and does not infer a prosecution-decision review from generic information wording.
+
+## Cross-layer legal/source consistency regression — 26 Sep 2026
+
+The legal map, official service inventory, route registry and frontend must preserve the same distinctions when official sources conflict. In particular:
+
+| Consistency rule | Required treatment |
+|---|---|
+| Theft declaration threshold | Use the specific current €1,000 route operationally while retaining the older €500 source conflict |
+| Garda prosecution-decision review timing | Do not hard-code one universal deadline; preserve the 28-day / 56-day source-context distinction |
+| Garda FOI timing | Preserve the 4-week / 20-working-day source conflict rather than presenting one universal period |
+| Fiosrú complaint period | Present 12 months as the normal period with the statutory late-complaint possibility, without guaranteeing acceptance |
+| Fiosrú statutory review | Present 28 days as the normal period for the applicable inadmissibility/discontinuance review route, with good-reason extension wording where supported |
+| Own Garda personal data | Keep Data Protection/F20 distinct from FOI |
+| Environmental information | Keep AIE distinct from FOI |
+
+These are documentation-consistency invariants as well as routing invariants: changing one layer must not silently erase a documented official-source conflict or convert guidance into a legal determination.
