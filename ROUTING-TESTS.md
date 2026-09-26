@@ -1348,3 +1348,23 @@ Negative invariants:
 - ordinary crime reporting without anonymity remains `crime_general`;
 - explicit online-reporting wording remains `crime_online_router`;
 - emergency precedence remains unchanged.
+
+## Personal-data versus institutional CCTV regression — 26 Sep 2026
+
+Requests for the person's own Garda-held information must not be confused with the institutional public-CCTV route.
+
+| Input | Expected route |
+|---|---|
+| “I want public CCTV in my area” | public_cctv_institutional |
+| “I want information about public CCTV in my area” | public_cctv_institutional |
+| “I want CCTV footage of me” | personal_data_f20 |
+| “I want CCTV footage showing me” | personal_data_f20 |
+| “I want my personal data from Garda CCTV” | personal_data_f20 |
+| “I want my Garda personal records” | personal_data_f20 |
+| “I want Garda records about me” | personal_data_f20 |
+| “I want information about Garda records held about me” | personal_data_f20 |
+
+Negative invariants:
+- institutional public-CCTV requests remain distinct from personal-data access;
+- a request for the user's own data must not be routed to FOI merely because records or information are mentioned;
+- Police Certificate, Garda Vetting and criminal-record routes remain distinct from a personal-data access request.
