@@ -214,6 +214,14 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       return state.routes.find(r=>r.route_id==='emergency_999_112');
     }
 
+    // Explicit property-process language takes precedence over generic theft-value parsing.
+    if(/found property.*taxi|property.*taxi.*psv|found.*psv|taxi.*found property/.test(q)){
+      return state.routes.find(r=>r.route_id==='property_found_taxis_psvs');
+    }
+    if(/property held by garda|property.*garda possession|garda.*holding my property/.test(q)){
+      return state.routes.find(r=>r.route_id==='property_garda_possession');
+    }
+
     // The online theft declaration is limited to qualifying thefts not exceeding €1,000.
     const hasTheft=/(theft|stolen|stole|property was taken)/.test(q);
     const valueMatch=q.match(/(?:€|eur|euro)\s*(\d+(?:[.,]\d+)?)|\b(\d+(?:[.,]\d+)?)\s*(?:euro|eur|€)/);
