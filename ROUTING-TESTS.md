@@ -466,3 +466,24 @@ These specialist service routes require their service-specific terms. Generic re
 | “I saw a camera” | no automatic route |
 | “I need information about a load” | no automatic route |
 
+
+## Certificate / vetting / Fiosrú lifecycle regressions — 26 Sep 2026
+
+Certificate and vetting requests must remain distinguishable, while Fiosrú lifecycle wording must preserve the distinction between legacy GSOC matters, discontinuance, review, post-investigation outcomes, victim information, and accessibility.
+
+| Input | Expected route |
+|---|---|
+| “I need a Garda Police Certificate” | police_certificate_router |
+| “I need a police certificate for another country” | police_certificate_router |
+| “I need Garda vetting for employment” | garda_vetting |
+| “I need vetting for volunteering” | garda_vetting |
+| “I need a criminal record certificate for work” | no automatic route |
+| “I have an old GSOC complaint from before Fiosrú” | gsoc_legacy_transition |
+| “Fiosrú stopped my investigation” | fiosru_review_discontinuance |
+| “Fiosrú discontinued my complaint and I want to review it” | fiosru_review |
+| “I want to review my Fiosrú decision” | fiosru_review |
+| “Fiosrú finished investigating my complaint; what happens next?” | fiosru_post_investigation |
+| “I need information about my Fiosrú investigation” | fiosru_victim_information |
+| “I need help accessing Fiosrú” | fiosru_accessibility |
+| “I need an accessible Garda service” | accessibility_garda |
+
