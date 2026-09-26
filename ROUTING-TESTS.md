@@ -719,6 +719,25 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Input-normalization regression matrix — 26 Sep 2026
+
+The production chooser normalizes case and removes Unicode combining accents before matching. These representative variants must preserve the same route.
+
+| Input variant | Expected route |
+|---|---|
+| “I NEED EMERGENCY SMS” | `emergency_sms_112` |
+| “I need emergency text” | `emergency_sms_112` |
+| “I AM DEAF AND THERE IS IMMEDIATE DANGER” | `emergency_999_112` |
+| “FIOSRÚ STOPPED INVESTIGATING MY COMPLAINT” | `fiosru_review_discontinuance` |
+| “Fiosrú finished investigating my complaint” | `fiosru_post_investigation` |
+| “I want to appeal the Fiosrú decision” | `fiosru_review` |
+| “I received a FIXED CHARGE and want a review” | `fixed_charge_notice_review` |
+| “My property was stolen and it was worth €1.000,00” | `theft_declaration` |
+| “My property was stolen and it was worth €1.001,00” | `station_directory` |
+| “I WANT TO REPORT THIS CRIME ONLINE” | `crime_online_router` |
+| “There was a BURGLARY and I want to report it online” | `station_directory` |
+| “I WANT TO COMPLAIN TO FIOSRÚ ABOUT A GARDA” | `fiosru_complaint_screen` |
+
 ## Ambiguous-input negative matrix — 26 Sep 2026
 
 These cases intentionally remain unresolved. The router must not manufacture a route when the citizen has not supplied enough information to distinguish the relevant service.
