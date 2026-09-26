@@ -28,7 +28,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_current",
-      "verified_on": "2026-09-26"
+      "verified_on": "2026-09-26",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_complaint",
@@ -61,7 +62,8 @@
       "verified_on": "2026-09-24",
       "legal_basis": "Policing, Security and Community Safety Act 2024, Part 6, especially ss.195-199.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "crime_general",
@@ -91,7 +93,8 @@
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "theft_declaration",
@@ -120,7 +123,8 @@
       "verified_on": "2026-09-26",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "The live specific Theft Declaration page states a €1,000 ceiling, while an older/general Garda reporting page still states €500. Preserve the conflict and use the specific current Theft Declaration route for the operational threshold.",
-      "verification_status": "verified_current_with_conflict"
+      "verification_status": "verified_current_with_conflict",
+      "source_conflict": true
     },
     {
       "route_id": "traffic_watch",
@@ -150,7 +154,8 @@
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "hate_crime",
@@ -181,7 +186,8 @@
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "garda_confidential",
@@ -209,7 +215,8 @@
       "verified_on": "2026-09-24",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "personal_data_f20",
@@ -242,7 +249,8 @@
       "deadline": "Current F20 guidance states Garda should respond within one month, with a possible extension of up to two further months for complex or numerous requests.",
       "evidence_required": "Signed written request and acceptable proof of identity; additional authority/consent documentation may be needed for representative or third-party requests.",
       "review_or_appeal": "If dissatisfied with the response or handling, the applicable data-protection complaint/rights route may include the Data Protection Commission; the specific response should be reviewed before selecting an escalation.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "foi",
@@ -274,7 +282,8 @@
       "deadline": "Current Garda FOI guidance states a decision should normally issue within 4 weeks of a valid request; another current Garda page refers to 20 working days. The site should follow the specific current FOI guidance/form accompanying the request rather than hard-code a single universal deadline.",
       "evidence_required": "Written request with sufficient particulars to identify the records sought; state that the request is made under the Freedom of Information Act and give a preferred access format where applicable.",
       "review_or_appeal": "If dissatisfied with an FOI decision, internal review and then Information Commissioner review may be available, subject to the applicable FOI rules and time limits.",
-      "verification_status": "verified_current_with_conflict"
+      "verification_status": "verified_current_with_conflict",
+      "source_conflict": true
     },
     {
       "route_id": "aie",
@@ -305,7 +314,8 @@
       "deadline": "No single deadline is hard-coded here; the applicable AIE regulations govern the response and review periods.",
       "evidence_required": "Written/electronic request with contact details, sufficient environmental-information particulars, and preferred form/manner of access.",
       "review_or_appeal": "Internal review and an appeal to the Commissioner for Environmental Information may be available under the AIE Regulations.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "police_certificate",
@@ -335,7 +345,8 @@
       "guidance_basis": "An Garda Síochána, Data Protection / FOI / Police Certificates page, reviewed 2026-09-24.",
       "source_verified": "Official Garda source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "garda_vetting",
@@ -366,7 +377,8 @@
       "deadline": "Current Garda guidance says completed applications are usually processed within 5–8 working days of receipt; the National Vetting Bureau notes that processing times can vary.",
       "evidence_required": "Proof of identity is required; the registered organisation initiates the vetting process and the applicant completes the invitation/application steps.",
       "review_or_appeal": "For application problems, contact the registered organisation's Liaison Person; applicants do not obtain Garda vetting forms directly from the National Vetting Bureau.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "national_age_card",
@@ -396,7 +408,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "unclaimed_property",
@@ -425,7 +438,8 @@
       "verified_on": "2026-09-24",
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -457,7 +471,8 @@
       "evidence_required": "Keep the Fixed Charge Notice and any supporting documents relevant to the cancellation grounds; the current Garda cancellation guidance says supporting documentation may be required.",
       "contact": "Fixed Charge Processing Office, Parnell Street, Thurles, Co. Tipperary, E41 WV84; npo@garda.ie; 0818 50 60 80.",
       "review_or_appeal": "Cancellation is a Garda review process, not a guarantee of cancellation. If the notice is not cancelled and the matter proceeds, the relevant court process applies.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "prosecution_decision_review",
@@ -487,7 +502,8 @@
       "review_or_appeal": "Request a summary of reasons first, then a review of the decision not to prosecute. The applicable route may differ where the DPP made the decision.",
       "source_verified": "Official Garda Information on Prosecution page and Victims Charter re-checked 2026-09-26",
       "verified_on": "2026-09-26",
-      "verification_status": "verified_current_with_conflict"
+      "verification_status": "verified_current_with_conflict",
+      "source_conflict": true
     },
     {
       "route_id": "abnormal_loads",
@@ -519,7 +535,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Check the applicable local-authority permit requirements and provide the load, vehicle, route and timing information requested by the relevant authority. Where Garda National Traffic Bureau notification is required, retain the permit/notification documents.",
       "review_or_appeal": "Permit decisions are made under the applicable road-traffic/local-authority framework; any review or appeal depends on the decision-maker and permit regime. This route does not imply a generic Garda appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "collection_permit",
@@ -550,7 +567,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current collection-permit application and provide the organiser, purpose, dates, locations and other information requested by the form.",
       "review_or_appeal": "If a permit decision is refused or otherwise challenged, use the specific statutory/administrative route applicable to that decision; this page does not create a generic appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "gaming_permit",
@@ -583,7 +601,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current GP1 form and provide the proposed activity, dates, location, organiser and other particulars requested. The form states the proposed activity date should be at least 60 days from application.",
       "review_or_appeal": "Any challenge to a gaming/lottery permit decision depends on the statutory regime and decision-maker; no generic appeal is presented.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "firearms_application",
@@ -615,7 +634,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current Garda application/renewal form and provide the identity, residence, firearm, competence, security and other supporting information requested by the applicable form. Additional authority is required for restricted firearms where applicable.",
       "review_or_appeal": "The firearms licensing decision-maker is the relevant Superintendent/Chief Superintendent under the firearms licensing framework. Any refusal/revocation or other decision should be handled using the specific statutory route applicable to that decision; do not present a generic appeal route.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "firearms_renewal",
@@ -646,7 +666,8 @@
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "evidence_required": "Use the current Garda application/renewal form and provide the identity, residence, firearm, competence, security and other supporting information requested by the applicable form. Additional authority is required for restricted firearms where applicable.",
       "review_or_appeal": "The firearms licensing decision-maker is the relevant Superintendent/Chief Superintendent under the firearms licensing framework. Any refusal/revocation or other decision should be handled using the specific statutory route applicable to that decision; do not present a generic appeal route.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "property_found_taxis_psvs",
@@ -673,7 +694,8 @@
       "verified_on": "2026-09-24",
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "youth_awards",
@@ -700,7 +722,8 @@
       "verified_on": "2026-09-24",
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "public_cctv_institutional",
@@ -725,7 +748,8 @@
       "conflict_note": "Do not present the institutional public-CCTV process as a standard citizen permit form.",
       "guidance_basis": "Official Relevant local authority / Garda institutional process guidance/source linked in this route.",
       "verification_status": "verified_current",
-      "verified_on": "2026-09-26"
+      "verified_on": "2026-09-26",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_review",
@@ -758,7 +782,8 @@
       "legal_basis": "Policing, Security and Community Safety Act 2024, s.224.",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "review_or_appeal": "Statutory review under section 224; normally request within 28 days of being informed of the inadmissibility decision, with good reasons for extra time considered.",
-      "verification_status": "verified_current"
+      "verification_status": "verified_current",
+      "source_conflict": false
     },
     {
       "route_id": "victim_services",
@@ -785,7 +810,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda victim-service guidance confirms the service scope and support role; this record is guidance-only because the route is primarily a support/navigation service rather than a single statutory submission form."
+      "notes": "Official Garda victim-service guidance confirms the service scope and support role; this record is guidance-only because the route is primarily a support/navigation service rather than a single statutory submission form.",
+      "source_conflict": false
     },
     {
       "route_id": "property_garda_possession",
@@ -811,7 +837,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda property guidance supports the route distinction; the record remains guidance-only because the exact operational handling of property held by Gardaí can depend on the local station/process."
+      "notes": "Official Garda property guidance supports the route distinction; the record remains guidance-only because the exact operational handling of property held by Gardaí can depend on the local station/process.",
+      "source_conflict": false
     },
     {
       "route_id": "traffic_fcn_information",
@@ -836,7 +863,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda fixed-charge guidance supports the information route; the record remains guidance-only because individual cancellation/review eligibility depends on the notice and applicable procedure."
+      "notes": "Official Garda fixed-charge guidance supports the information route; the record remains guidance-only because individual cancellation/review eligibility depends on the notice and applicable procedure.",
+      "source_conflict": false
     },
     {
       "route_id": "gsoc_legacy_transition",
@@ -861,7 +889,8 @@
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Fiosrú/GSOC transition information supports the historical-routing distinction; the record remains guidance-only because eligibility depends on when the legacy complaint arose and its procedural status."
+      "notes": "Official Fiosrú/GSOC transition information supports the historical-routing distinction; the record remains guidance-only because eligibility depends on when the legacy complaint arose and its procedural status.",
+      "source_conflict": false
     },
     {
       "route_id": "data_access_router",
@@ -886,7 +915,8 @@
       "conflict_note": "Do not present FOI as the route for a person's own personal-data access request when the Data Protection route applies.",
       "guidance_basis": "Official An Garda Síochána Data Protection Unit guidance/source linked in this route.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda data-protection guidance supports the specialist access routes; the router is guidance-only because the correct statutory/data-right sub-route depends on the nature of the information sought."
+      "notes": "Official Garda data-protection guidance supports the specialist access routes; the router is guidance-only because the correct statutory/data-right sub-route depends on the nature of the information sought.",
+      "source_conflict": false
     },
     {
       "route_id": "emergency_sms_112",
@@ -912,7 +942,8 @@
       "guidance_basis": "Official Emergency services guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda emergency-SMS guidance confirms the service and eligibility; this is guidance-only because SMS emergency handling has specific operational limitations and is not a substitute for ordinary reporting."
+      "notes": "Official Garda emergency-SMS guidance confirms the service and eligibility; this is guidance-only because SMS emergency handling has specific operational limitations and is not a substitute for ordinary reporting.",
+      "source_conflict": false
     },
     {
       "route_id": "accessibility_garda",
@@ -939,7 +970,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda accessibility information supports this assistance route; it is guidance-only because accessibility support is an accommodation layer rather than a standalone statutory complaint/report submission."
+      "notes": "Official Garda accessibility information supports this assistance route; it is guidance-only because accessibility support is an accommodation layer rather than a standalone statutory complaint/report submission.",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_accessibility",
@@ -970,7 +1002,8 @@
       "source_verified": "Official Fiosrú accessibility/contact sources reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Fiosrú accessibility information supports this assistance route; it is guidance-only because the Access Officer route supports access to Fiosrú services rather than deciding the underlying complaint."
+      "notes": "Official Fiosrú accessibility information supports this assistance route; it is guidance-only because the Access Officer route supports access to Fiosrú services rather than deciding the underlying complaint.",
+      "source_conflict": false
     },
     {
       "route_id": "firearms_nonresident",
@@ -1001,7 +1034,8 @@
       "evidence_required": "Use the current Garda application/renewal form and provide the identity, residence, firearm, competence, security and other supporting information requested by the applicable form. Additional authority is required for restricted firearms where applicable.",
       "review_or_appeal": "The firearms licensing decision-maker is the relevant Superintendent/Chief Superintendent under the firearms licensing framework. Any refusal/revocation or other decision should be handled using the specific statutory route applicable to that decision; do not present a generic appeal route.",
       "verification_status": "verified_current_with_conflict",
-      "notes": "Current Garda guidance confirms the dedicated non-resident firearm certificate route; older form/guideline materials may differ in procedural detail, so retain source-level verification for future maintenance."
+      "notes": "Current Garda guidance confirms the dedicated non-resident firearm certificate route; older form/guideline materials may differ in procedural detail, so retain source-level verification for future maintenance.",
+      "source_conflict": true
     },
     {
       "route_id": "police_certificate_router",
@@ -1027,7 +1061,8 @@
       "source_verified": "Official Garda source reviewed 2026-09-24",
       "verified_on": "2026-09-24",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda Police Certificate guidance supports the distinction from Garda Vetting; this router is guidance-only because the correct certificate pathway depends on the purpose and destination."
+      "notes": "Official Garda Police Certificate guidance supports the distinction from Garda Vetting; this router is guidance-only because the correct certificate pathway depends on the purpose and destination.",
+      "source_conflict": false
     },
     {
       "route_id": "station_directory",
@@ -1053,7 +1088,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda station information supports this fallback route; it is guidance-only because the appropriate station depends on the citizen's location and matter."
+      "notes": "Official Garda station information supports this fallback route; it is guidance-only because the appropriate station depends on the citizen's location and matter.",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_victim_information",
@@ -1081,7 +1117,8 @@
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "review_or_appeal": "If the requested information concerns a decision that can be reviewed, Fiosrú should explain the applicable review procedure; do not treat every information request as an appeal.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_post_investigation",
@@ -1109,7 +1146,8 @@
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "review_or_appeal": "Outcome-specific. A closed investigation has no internal review facility according to the current Fiosrú Victims of Crime Charter; discontinuance has a statutory review route.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_review_discontinuance",
@@ -1142,7 +1180,8 @@
       "verified_on": "2026-09-24",
       "guidance_basis": "Official Fiosrú guidance/source linked in this route.",
       "review_or_appeal": "Statutory review under section 224; normally request within 28 days of being informed of the discontinuance decision, with good reasons for extra time considered.",
-      "verification_status": "verified_guidance_only"
+      "verification_status": "verified_guidance_only",
+      "source_conflict": false
     },
     {
       "route_id": "crime_online_router",
@@ -1166,7 +1205,8 @@
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
       "conflict_note": "No known source conflict recorded in this verification pass.",
       "verification_status": "verified_guidance_only",
-      "notes": "Official Garda online-crime guidance supports the limited online service; this router is guidance-only because eligibility depends on the specific crime category and exclusions."
+      "notes": "Official Garda online-crime guidance supports the limited online service; this router is guidance-only because eligibility depends on the specific crime category and exclusions.",
+      "source_conflict": false
     },
     {
       "route_id": "fiosru_complaint_screen",
@@ -1201,7 +1241,8 @@
       "contact": "Fiosrú, 150 Upper Abbey Street, Dublin 1, D01 FT73; info@fiosru.ie; 0818 600 800; +353 (1) 871 6727.",
       "review_or_appeal": "Fiosrú first decides admissibility. If the complaint is found inadmissible, the statutory review route may apply. If an investigation is discontinued, a statutory review route applies; a closed investigation has no internal review facility.",
       "verification_status": "verified_current",
-      "notes": " Current Fiosrú guidance confirms complaints about Garda conduct are handled through Fiosrú, with certain admitted service-level complaints potentially referred to An Garda Síochána for resolution."
+      "notes": " Current Fiosrú guidance confirms complaints about Garda conduct are handled through Fiosrú, with certain admitted service-level complaints potentially referred to An Garda Síochána for resolution.",
+      "source_conflict": false
     }
   ],
   "required_fields": [
