@@ -180,7 +180,8 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       if(!data || !Array.isArray(data.routes) || data.routes.length===0){
         throw new Error('invalid route directory');
       }
-      const validRoutes=data.routes.every(r=>r && typeof r==='object' && typeof r.route_id==='string' && r.route_id.trim() && typeof r.purpose_plain==='string' && r.purpose_plain.trim() && typeof r.official_info_url==='string' && r.official_info_url.trim() && safeUrl(r.official_info_url)!=='#' && (!r.official_submission_url || safeUrl(r.official_submission_url)!=='#') && (!r.form_url || safeUrl(r.form_url)!=='#'));
+      const verificationStates=new Set(['verified_current','verified_current_with_conflict','verified_guidance_only','research_required','superseded_or_historical','institutional_not_citizen_route']);
+      const validRoutes=data.routes.every(r=>r && typeof r==='object' && typeof r.route_id==='string' && r.route_id.trim() && typeof r.purpose_plain==='string' && r.purpose_plain.trim() && typeof r.official_info_url==='string' && r.official_info_url.trim() && verificationStates.has(r.verification_status) && safeUrl(r.official_info_url)!=='#' && (!r.official_submission_url || safeUrl(r.official_submission_url)!=='#') && (!r.form_url || safeUrl(r.form_url)!=='#'));
       const routeIds=data.routes.map(r=>r.route_id.trim());
       const uniqueRouteIds=new Set(routeIds);
       if(!validRoutes || uniqueRouteIds.size!==routeIds.length) throw new Error('malformed route directory');
@@ -317,8 +318,14 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
     const info=route.official_info_url;
     const safeInfo=info?safeUrl(info):'';
     const safeRoute=url?safeUrl(url):'';
+    const statusText={
+      verified_current:'Current official-source status: verified.',
+      verified_current_with_conflict:'Current official sources contain a documented difference. Check the linked official guidance before acting.',
+      verified_guidance_only:'Current official guidance supports this route. Exact legal or eligibility details may depend on the circumstances.'
+    }[route.verification_status]||'This route is not currently presented as fully verified.';
     out.hidden=false;
     out.innerHTML='<strong>Likely official route</strong><p>'+escapeHtml(route.purpose_plain||route.citizen_question||'Official service')+'</p>'+
+      '<p><small>'+escapeHtml(statusText)+'</small></p>'+
       (route.authority?'<p><small>Official authority: '+escapeHtml(route.authority)+'</small></p>':'')+
       (route.emergency_rule?'<p><small>Safety: '+escapeHtml(route.emergency_rule)+'</small></p>':'')+
       (route.deadline?'<p><small>Timing: '+escapeHtml(route.deadline)+'</small></p>':'')+
