@@ -99,7 +99,7 @@
       "citizen_question": "I need to report a qualifying theft online",
       "route_type": "online_crime_report",
       "authority": "An Garda Síochána",
-      "status": "verified_current",
+      "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/online-crime-reporting/",
       "notes": "The live specific online Theft Declaration page states property not exceeding €1,000 in Ireland; an older/general Garda reporting page still displays €500, so the conflict is retained explicitly.",
       "authority_role": [
@@ -978,7 +978,7 @@
       "citizen_question": "I live outside Ireland and need information about an Irish firearm certificate",
       "route_type": "firearms_licensing_nonresident",
       "authority": "An Garda Síochána",
-      "status": "verified_current",
+      "status": "verified_current_with_conflict",
       "official_info_url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
       "authority_role": [
         "entry_point",
@@ -997,11 +997,11 @@
       "source_verified": "Official An Garda Síochána firearms licensing sources reviewed 2026-09-24",
       "verified_on": "2026-09-26",
       "guidance_basis": "Official An Garda Síochána guidance/source linked in this route.",
-      "conflict_note": "No known source conflict recorded in this verification pass.",
+      "conflict_note": "Current Garda guidance confirms a dedicated non-resident firearm certificate route, but older form/guideline materials may differ in procedural detail. Preserve the route while directing users to the current official instructions rather than assuming older form requirements remain current.",
       "evidence_required": "Use the current Garda application/renewal form and provide the identity, residence, firearm, competence, security and other supporting information requested by the applicable form. Additional authority is required for restricted firearms where applicable.",
       "review_or_appeal": "The firearms licensing decision-maker is the relevant Superintendent/Chief Superintendent under the firearms licensing framework. Any refusal/revocation or other decision should be handled using the specific statutory route applicable to that decision; do not present a generic appeal route.",
       "verification_status": "verified_current_with_conflict",
-      "notes": " Current Garda guidance confirms the dedicated non-resident firearm certificate route; older form/guideline materials may differ in procedural detail, so retain source-level verification for future maintenance."
+      "notes": "Current Garda guidance confirms the dedicated non-resident firearm certificate route; older form/guideline materials may differ in procedural detail, so retain source-level verification for future maintenance."
     },
     {
       "route_id": "police_certificate_router",
