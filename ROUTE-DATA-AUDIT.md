@@ -45,6 +45,6 @@ The structural audit therefore treats missing metadata in these categories as an
 The browser router now fails closed if the loaded route directory contains:
 - a malformed core route record;
 - a duplicate route_id; or
-- an official_info_url or populated official_submission_url outside the same front-end official-destination allowlist used for rendered links.
+- an official_info_url, populated official_submission_url, or populated form_url outside the same front-end official-destination allowlist used for rendered links.
 
-This is a second safety boundary in addition to the repository audit. The renderer also independently filters destinations before creating clickable links. Latest runtime hardening commit: 5b0b0652215079394854be7962cdc8ff61575636.
+This is a second safety boundary in addition to the repository audit. The renderer also independently filters destinations before creating clickable links. Latest runtime hardening commits: 5b0b0652215079394854be7962cdc8ff61575636 (destination validation) and 2ca8bba4964b63e4f4923f73306c70f46392d6fe (form_url validation).
