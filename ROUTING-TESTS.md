@@ -719,6 +719,24 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency help and someone is in danger” | emergency_999_112 |
 
 
+## Fiosrú / prosecution-decision appeal-boundary regressions — 26 Sep 2026
+
+Generic “appeal” or “challenge” language must not be assigned to a legal review route unless the wording identifies the relevant decision/process. Fiosrú review wording remains tied to Fiosrú context; prosecution-decision review requires the prosecution decision to be identified.
+
+| Input | Expected route |
+|---|---|
+| “I want to appeal” | no automatic route |
+| “I want to challenge something” | no automatic route |
+| “I want to review my complaint” | no automatic route |
+| “I want to appeal my Fiosrú decision” | `fiosru_review` |
+| “I want to review my Fiosrú complaint” | `fiosru_review` |
+| “Fiosrú said my complaint is inadmissible and I want a review” | `fiosru_review` |
+| “Fiosrú discontinued my complaint and I want a review” | `fiosru_review` |
+| “I want to challenge the decision not to prosecute” | `prosecution_decision_review` |
+| “I want to review the decision not to prosecute” | `prosecution_decision_review` |
+| “I want to appeal the prosecution decision” | `prosecution_decision_review` |
+| “I want to challenge a decision” | no automatic route |
+
 ## Emergency SMS / accessibility semantic boundary regression — 26 Sep 2026
 
 Emergency SMS is a dedicated emergency-access route. Deafness, hearing/speech impairment or a general accessibility need must not by itself be treated as a request for SMS 112. Explicit emergency danger still takes the emergency 999/112 route first.
