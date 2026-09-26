@@ -180,6 +180,8 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       if(!data || !Array.isArray(data.routes) || data.routes.length===0){
         throw new Error('invalid route directory');
       }
+      const validRoutes=data.routes.every(r=>r && typeof r==='object' && typeof r.route_id==='string' && r.route_id.trim() && typeof r.purpose_plain==='string' && r.purpose_plain.trim() && typeof r.official_info_url==='string' && r.official_info_url.trim());
+      if(!validRoutes) throw new Error('malformed route record');
       state.routes=data.routes;
       wireRouter();
     }catch(e){
