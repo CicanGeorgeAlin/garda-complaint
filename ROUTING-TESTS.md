@@ -1148,3 +1148,8 @@ Emergency routing remains first in the decision sequence. Requests explicitly se
 ## Data-access regime boundary regression — 26 Sep 2026
 
 The router keeps the information-access regimes distinct: a person's own Garda personal data routes to the GDPR/F20 path even when FOI is mentioned; correction/rectification wording uses the data-access router; general FOI wording uses FOI; environmental-information wording uses AIE; and generic `my data` wording remains unresolved rather than being assigned by guesswork.
+
+
+## Specialist application and certificate precedence regression — 26 Sep 2026
+
+Specialist routes must preserve their narrower distinctions before broad matchers: firearm renewal and non-resident firearm wording precede general firearm application; explicit Garda Police Certificate wording precedes the generic certificate router; Garda Vetting remains separate from Police Certificates; and permit/application routes remain distinct from complaints or challenges against those services.
