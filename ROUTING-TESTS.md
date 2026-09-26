@@ -1108,3 +1108,13 @@ The public-facing layer must not:
 - imply that this website itself submits a complaint, report, application, request or review.
 
 Current frontend and README wording were checked against these invariants; no prohibited impersonation or outcome-promise wording was found.
+
+
+## Source-conflict versus route-note regression — 26 Sep 2026
+
+The registry distinguishes documented official-source conflicts from other material route caveats:
+
+- source_conflict=true is reserved for routes with a documented difference between official sources.
+- Other conflict_note text is treated as an important route note, not automatically as evidence that sources disagree.
+- The frontend labels these two cases differently so citizens are not told that every caution represents a source conflict.
+- The four currently documented source-conflict routes are theft_declaration, foi, prosecution_decision_review and firearms_nonresident.
