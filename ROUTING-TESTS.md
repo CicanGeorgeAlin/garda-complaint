@@ -546,3 +546,24 @@ The generic emergency matcher must not intercept the dedicated Emergency SMS rou
 | “I need emergency SMS” | emergency_sms_112 |
 | “I am deaf and there is immediate danger” | emergency_999_112 |
 | “I need emergency help and someone is in danger” | emergency_999_112 |
+
+
+## Additional precedence stress cases — 26 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “I need emergency SMS” | emergency_sms_112 |
+| “I need help using Garda services because I cannot hear” | emergency_sms_112 |
+| “I want to give information anonymously about dangerous driving” | garda_confidential |
+| “I want to report dangerous driving” | traffic_watch |
+| “I want to report a stolen firearm” | station_directory |
+| “I found property in a taxi” | property_found_taxis_psvs |
+| “Garda is holding my property” | property_garda_possession |
+| “Fiosrú discontinued my complaint and I want to review it” | fiosru_review |
+| “Fiosrú stopped my investigation” | fiosru_review_discontinuance |
+| “I want to review my Fiosrú decision” | fiosru_review |
+| “I want information about my Fiosrú investigation” | fiosru_victim_information |
+| “I need a Garda Police Certificate” | police_certificate_router |
+| “I need Garda vetting for employment” | garda_vetting |
+| “I need a gaming permit” | gaming_permit |
+| “I need a public collection permit” | collection_permit |
