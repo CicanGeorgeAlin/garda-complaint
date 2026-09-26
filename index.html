@@ -369,6 +369,9 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
       (route.authority?'<p><small>Official authority: '+escapeHtml(route.authority)+'</small></p>':'')+
       (route.emergency_rule?'<p><small>Safety: '+escapeHtml(route.emergency_rule)+'</small></p>':'')+
       (route.deadline?'<p><small>Timing: '+escapeHtml(route.deadline)+'</small></p>':'')+
+      (route.conflict_note&&route.verification_status==='verified_current_with_conflict'?'<p><small>Source note: '+escapeHtml(route.conflict_note)+'</small></p>':'')+
+      (route.next_steps?'<p><small>Next step: '+escapeHtml(route.next_steps)+'</small></p>':'')+
+      (route.review_or_appeal?'<p><small>Review / appeal: '+escapeHtml(route.review_or_appeal)+'</small></p>':'')+
       (safeInfo?'<p><a class="button" href="'+safeInfo+'" target="_blank" rel="noopener noreferrer">Official information</a></p>':'')+
       (safeRoute&&safeRoute!==safeInfo?'<p><a class="button" href="'+safeRoute+'" target="_blank" rel="noopener noreferrer">Open official route</a></p>':'')+
       (!safeInfo&&!safeRoute?'<p><small>The official destination could not be safely opened from this page. Please use the official service links below.</small></p>':'')+
