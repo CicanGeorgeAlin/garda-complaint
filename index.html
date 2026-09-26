@@ -215,7 +215,7 @@ a:focus,summary:focus{outline:2px solid #fff;outline-offset:3px}
 
     // Crime screening follows the current Garda online-reporting exclusions.
     const excludedOnlineCrime=/(burglary|attempted burglary|stolen vehicle|vehicle stolen|car stolen|car was stolen|stolen car|robbery|robbed|used force to rob|force to rob|violent crime|stolen firearm|firearm stolen|firearm was stolen|firearm has been stolen|evidence (is|was) left|offender (is|was) still (at|near) the scene)/.test(q);
-    if(excludedOnlineCrime && /(crime|stolen|theft|robbery|burglary|vehicle|firearm|evidence|offender|traffic|road)/.test(q)){
+    if(excludedOnlineCrime && /(crime|stolen|theft|rob|robbery|burglary|vehicle|firearm|evidence|offender|traffic|road)/.test(q)){
       return state.routes.find(r=>r.route_id==='station_directory');
     }
 
