@@ -487,3 +487,24 @@ Certificate and vetting requests must remain distinguishable, while Fiosrú life
 | “I need help accessing Fiosrú” | fiosru_accessibility |
 | “I need an accessible Garda service” | accessibility_garda |
 
+
+## Accessibility / property / traffic review precedence regressions — 26 Sep 2026
+
+Emergency SMS, property-process, fixed-charge, prosecution-review, and traffic routes must remain distinguishable when wording overlaps. Emergency indicators remain authoritative before every specialist route.
+
+| Input | Expected route |
+|---|---|
+| “I cannot speak and need emergency help” | emergency_999_112 |
+| “I am deaf and need emergency SMS” | emergency_sms_112 |
+| “I need help using Garda services because I cannot hear” | emergency_sms_112 |
+| “I found property” | unclaimed_property |
+| “I found property in a taxi” | property_found_taxis_psvs |
+| “Garda is holding my property” | property_garda_possession |
+| “I want information about a fixed charge notice” | traffic_fcn_information |
+| “I want to challenge my fixed charge notice” | fixed_charge_notice_review |
+| “I want to review the decision not to prosecute” | prosecution_decision_review |
+| “I want to report dangerous driving” | traffic_watch |
+| “There is dangerous driving and someone is in immediate danger” | emergency_999_112 |
+| “I want to report a road traffic incident” | traffic_watch |
+| “I want to challenge a traffic fine because I disagree with it” | traffic_fcn_information |
+
