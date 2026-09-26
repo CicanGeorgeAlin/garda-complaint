@@ -176,7 +176,7 @@ Current distribution:
 - `superseded_or_historical`: 0
 - `institutional_not_citizen_route`: 0
 
-The two `research_required` records remain in the registry for controlled routing research/audit purposes and are not being represented as fully legally verified. The frontend's existing route safety validation continues to validate destination structure independently of this metadata.
+No `research_required` records remain in the active registry. The current verification-state distribution records all 41 routes under the approved states above. The frontend's existing route safety validation continues to validate destination structure independently of this metadata.
 
 Emergency destinations such as `tel:112` and `tel:999` remain explicitly permitted by the frontend allowlist alongside approved official HTTPS domains.
 
