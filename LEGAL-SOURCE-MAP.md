@@ -113,3 +113,18 @@ Each item in the eventual master catalogue should record:
 First operational location: Dublin.
 
 The legal framework is national. County/city pages should add local operational information without duplicating the national law database.
+
+
+## Registry reconciliation
+
+The structured route registry is maintained separately in `routes.json`. This legal map is not intended to repeat all 41 route IDs; it records the statutory and primary-source framework that the route registry and service inventory use.
+
+Current registry state checked 26 September 2026:
+- 41 route records
+- 41 unique route IDs
+- verification states are assigned in `routes.json`
+- route-level source detail and verification notes are maintained in `OFFICIAL-SERVICE-INVENTORY.md`
+- structural/destination verification is maintained in `ROUTE-DATA-AUDIT.md`
+- routing behavior and regression expectations are maintained in `ROUTING-TESTS.md`
+
+A route should not be treated as legally verified merely because its topic appears in this source map. Route-level verification status, source date, documented conflicts and guidance-only limitations remain authoritative for activation and presentation.
