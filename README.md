@@ -6,6 +6,8 @@ An independent citizen-navigation website for finding the appropriate official r
 
 The website helps a person describe a situation in plain language and identifies a **likely official route** based on the project's audited route data and explicit verification states.
 
+The intended value is the translation layer: a citizen does not need to know the name of the Garda or Fiosrú service first. The site starts with the person's situation, explains **why a route fits** and **what to do next**, then hands the citizen to the official authority. It is deliberately not a replacement for Garda.ie, Fiosrú or an official submission system.
+
 It is a navigation and explanation layer only. It does **not**:
 
 - act as An Garda Síochána or Fiosrú;
