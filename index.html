@@ -407,16 +407,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const primary=safeRoute||safeInfo;
     const primaryLabel=safeRoute?'Go to official process':'Open official information';
     const secondary=safeRoute&&safeInfo&&safeRoute!==safeInfo?'<a class="button alt" href="'+safeInfo+'" target="_blank" rel="noopener noreferrer">Read official information</a>':'';
-    out.innerHTML='<strong>We found your likely route</strong>'+
+    out.innerHTML='<strong>Your likely official route</strong>'+
       '<p class="route-result-purpose">'+escapeHtml(route.purpose_plain||'Official service')+'</p>'+
-      '<p class="route-why"><strong>Why:</strong> '+escapeHtml(why)+'</p>'+
+      '<p class="route-why"><strong>Why this route:</strong> '+escapeHtml(why)+'</p>'+
       '<p class="route-next"><strong>What to do next:</strong> '+escapeHtml(next)+'</p>'+
       (primary?'<a class="button" href="'+primary+'" target="_blank" rel="noopener noreferrer">'+primaryLabel+'</a>':'')+
       secondary+
       (details.length?'<details class="route-details"><summary>Important details</summary>'+details.join('')+'<p><small>'+escapeHtml(statusText)+'</small></p></details>':'<p class="route-status"><small>'+escapeHtml(statusText)+'</small></p>')+
       (!safeInfo&&!safeRoute?'<p><small>The official destination could not be safely opened from this page. Please use the official service links below.</small></p>':'')+
       '<p class="route-disclaimer"><small>This site identifies a likely official route. It does not submit anything for you.</small></p>';
-    out.scrollIntoView({behavior:'smooth',block:'nearest'});
+    const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    out.scrollIntoView({behavior:reduced?'auto':'smooth',block:'nearest'});
   }
   function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function escapeAttr(x){return escapeHtml(x);}
