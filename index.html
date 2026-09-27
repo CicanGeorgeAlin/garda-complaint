@@ -43,34 +43,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <p class="small" style="margin-top:10px">For emergencies only. This website is not an emergency service.</p>
 </section>
 
-<section class="section" id="start">
-<h2>What do you need to do?</h2>
-<p class="intro">You do not need to know the legal name of the process.</p>
-<div class="grid">
-<article class="card"><h3>⚖️ Something involving Garda personnel</h3><p>Complain about something a Garda/member of Garda personnel did or failed to do.</p><a href="#complaint">Understand the complaint route →</a></article>
-<article class="card"><h3>📝 Report a crime</h3><p>Find the appropriate Garda reporting route. Online reporting is limited to specified circumstances.</p><a href="https://www.garda.ie/en/victim-services/reporting-a-crime-faqs/" target="_blank" rel="noopener">Official reporting guidance →</a></article>
-<article class="card"><h3>🚗 Traffic / road incident</h3><p>For eligible non-emergency traffic incidents, use the official Traffic Watch route.</p><a href="https://www.garda.ie/en/trafficwatchreport/" target="_blank" rel="noopener">Traffic Watch →</a></article>
-<article class="card"><h3>🏳️ Hate crime / hate incident</h3><p>Use the dedicated Garda reporting route. Never use it for an emergency.</p><a href="https://www.garda.ie/en/reportahatecrime/" target="_blank" rel="noopener">Hate crime reporting →</a></article>
-<article class="card"><h3>🔐 Give information</h3><p>Provide information through the Garda Confidential route.</p><a href="tel:1800666111">1800 666 111 →</a></article>
-<article class="card"><h3>📄 Garda service / request</h3><p>Find official applications, certificates, vetting, firearms, data protection, FOI and other services.</p><a href="https://www.garda.ie/en/about-us/online-services/" target="_blank" rel="noopener">All Garda online services →</a></article>
-<article class="card"><h3>🔎 Access your Garda data</h3><p>Find the official Data Access Request route for personal data held by An Garda Síochána.</p><a href="https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/" target="_blank" rel="noopener">Data protection / F20 →</a></article>
-<article class="card"><h3>❓ I'm not sure</h3><p>You can start with the facts. The important question is what happened and where.</p><a href="#how">See the simple process →</a></article>
-</div>
-</section>
-
-<section class="section" id="finder">
-<h2>🧭 Start with your situation</h2>
-<p class="intro">Choose the closest description. You do not need to know the legal name of the process.</p>
-<div class="grid">
-<article class="card"><h3>Someone is in danger now</h3><p>Immediate danger, serious injury, crime in progress or an offender still at the scene.</p><a href="#emergency">Emergency guidance →</a></article>
-<article class="card"><h3>I want to report something</h3><p>A crime, traffic incident, hate crime or other incident.</p><a href="#routes">Find reporting routes →</a></article>
-<article class="card"><h3>I want to complain about Garda personnel</h3><p>A concern about what a Garda member did or failed to do.</p><a href="#complaint">Fiosrú complaint route →</a></article>
-<article class="card"><h3>I need a Garda service or application</h3><p>Certificate, licence, vetting, permit, property or another public service.</p><a href="#routes">Find services →</a></article>
-<article class="card"><h3>I want information or records</h3><p>Your personal data, Garda administrative records or environmental information.</p><a href="#information-access">Information-access routes →</a></article>
-<article class="card"><h3>I received a decision and want to challenge it</h3><p>A Fiosrú decision, Garda prosecution decision, cancellation decision or another review route.</p><a href="#reviews">Review routes →</a></article>
-</div>
-</section>
-
 <section class="section" id="information-access">
 <h2>🔎 Information &amp; records</h2>
 <div class="grid">
@@ -463,10 +435,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       main.insertBefore(finder, emergencyNotice ? emergencyNotice.nextElementSibling : null);
       finder.classList.add('route-engine-main');
     }
-    ['start','finder'].forEach(id=>{
-      const el=document.getElementById(id);
-      if(el) el.classList.add('hidden-duplicate');
-    });
     if(main){
       const sections=[...main.querySelectorAll('section.section')].filter(s=>!['start','finder'].includes(s.id));
       const details=document.createElement('details');
