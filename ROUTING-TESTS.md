@@ -1512,3 +1512,21 @@ Negative invariant: support/help wording after a traffic or road incident must n
 | “There is a risk of serious injury” | emergency_999_112 |
 
 Negative invariant: an emergency SMS request must never suppress a separately stated immediate threat, serious assault, or serious-injury condition.
+
+
+## Information, lifecycle and specialist-precedence correction — 27 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “I need information about my Garda records” | personal_data_f20 |
+| “Fiosrú discontinued my complaint and I want a review” | fiosru_review_discontinuance |
+| “I received a decision not to prosecute” | unresolved |
+| “I received a decision not to prosecute and want to review it” | prosecution_decision_review |
+| “I live abroad and need a firearm certificate” | firearms_nonresident |
+| “I am living abroad and need a firearm certificate” | firearms_nonresident |
+
+Negative invariants:
+- a bare prosecution decision must not be treated as an automatic review request;
+- discontinuance must remain distinct from the broader Fiosrú post-investigation route;
+- non-resident firearm wording must outrank the generic firearm application route;
+- requests for the user's own Garda records must remain on the personal-data path.
