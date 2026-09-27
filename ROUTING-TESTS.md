@@ -1547,3 +1547,31 @@ Negative invariants:
 - confidentiality must not turn a Garda-personnel complaint into a Garda Confidential information route;
 - GDPR/data-protection wording concerning the user's own data must reach personal-data access;
 - ongoing Fiosrú investigation information must remain distinct from completed-investigation information.
+
+
+## End-to-end adversarial routing audit — 27 Sep 2026
+
+A 65-case adversarial matrix was executed against the live routing function and current 41-route registry. Result: **65/65 passed**.
+
+Coverage included:
+- emergency versus emergency-SMS precedence;
+- active assault, offender-at/near-scene and crime-in-progress wording;
+- non-emergency traffic wording;
+- traffic reporting versus post-incident victim support;
+- theft thresholds and excluded online-crime categories;
+- Garda-personnel complaints versus confidential information;
+- GDPR/personal-data versus FOI/AIE;
+- Police Certificate versus Police Certificate routing;
+- Garda Vetting versus challenge/dispute wording;
+- firearms application, renewal and non-resident precedence;
+- specialist permits and dispute fail-closed behavior;
+- property found in taxis/PSVs, Garda-held property and unclaimed property;
+- fixed-charge information versus review;
+- prosecution-decision review intent gating;
+- Fiosrú inadmissibility, discontinuance, ongoing-investigation and post-investigation lifecycle states;
+- accessibility and legacy GSOC routing;
+- crime-online versus general crime versus station-directory questions;
+- victim-support wording;
+- generic review/challenge wording failing closed.
+
+The matrix is a regression safeguard, not a legal determination and not proof that every possible natural-language input is covered.
