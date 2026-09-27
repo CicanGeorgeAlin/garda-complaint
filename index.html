@@ -464,7 +464,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const finder=document.getElementById('route-engine');
     const emergency=document.getElementById('emergency');
     if(main&&finder&&emergency&&finder.parentElement!==main){
-      main.insertBefore(finder, emergency.nextElementSibling);
+      const emergencyNotice=emergency.nextElementSibling;
+      main.insertBefore(finder, emergencyNotice ? emergencyNotice.nextElementSibling : null);
       finder.classList.add('route-engine-main');
     }
     ['start','finder'].forEach(id=>{
@@ -481,7 +482,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
         if(section.id) details.id=section.id;
         if(index===0) details.open=false;
         const summary=document.createElement('summary');
-        summary.textContent=heading.textContent.replace(/^\S+\s*/,'').trim();
+        summary.textContent=heading.textContent.trim();
         const body=document.createElement('div');
         body.className='details-body';
         while(section.firstChild){
