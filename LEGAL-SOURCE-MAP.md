@@ -65,6 +65,16 @@ https://www.garda.ie/en/about-us/online-services/
 Data Protection / F20 / FOI / Police Certificates:
 https://www.garda.ie/en/about-us/online-services/data-protection-foi-police-certificates/
 
+## Information-law statutory anchors
+
+The route registry treats these as separate legal regimes and does not merge them into a generic “information request” route:
+
+- **Freedom of Information Act 2014** — section 12 sets the statutory request mechanism; Schedule 1 limits the Garda Síochána FOI scope, including the specified administrative records exception. Primary source: https://www.irishstatutebook.ie/eli/2014/act/30/enacted/en/html
+- **Data Protection Act 2018** — the Act operates alongside the GDPR for Irish data-protection law. Section 44 expressly cross-references access under the FOI Act and environmental-information regulations. Primary source: https://www.irishstatutebook.ie/eli/2018/act/7/enacted/en/html
+- **European Communities (Access to Information on the Environment) Regulations 2007 (S.I. No. 133/2007)** — AIE is a distinct environmental-information regime. The Freedom of Information Act 2014 expressly recognizes that a request may instead fall under the AIE Regulations. Primary statutory references: https://www.irishstatutebook.ie/eli/2014/act/30/enacted/en/html and the Irish Statute Book regulations register.
+
+These statutory anchors support the project's separation of the personal-data, data-access, FOI and AIE route families. They do not replace route-specific current Garda guidance or the applicable exemptions, procedures and deadlines.
+
 ## Design rule
 
 The website must distinguish:
