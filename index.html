@@ -326,7 +326,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 
     // Explicit prosecution decisions are post-decision routes and must outrank
     // the broad victim-support matcher below.
-    if(/(?:received|got|was notified of).*(?:decision not to prosecute|prosecution decision)|(?:decision not to prosecute|prosecution decision).*(?:received|got|notified|challenge|review|appeal)/.test(q)){
+    if(/(?:decision not to prosecute|prosecution decision).*(?:challenge|review|appeal)|(?:challenge|review|appeal).*(?:decision not to prosecute|prosecution decision)/.test(q)){
       return state.routes.find(r=>r.route_id==='prosecution_decision_review');
     }
 
