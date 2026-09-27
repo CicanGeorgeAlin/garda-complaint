@@ -279,7 +279,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A request for CCTV showing the requester, or Garda records/information
     // about the requester, concerns personal data rather than the institutional
     // public-CCTV route.
-    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)/.test(q)){
+    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)|(?:information|records).*(?:my|me).*(?:garda|held by garda)|(?:garda).*(?:records|information).*(?:my|me)/.test(q)){
       return state.routes.find(r=>r.route_id==='personal_data_f20');
     }
 
@@ -300,7 +300,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     if(/firearm|gun licence|firearms/.test(q) && /renew|renewal|renewing|renew my/.test(q)){
       return state.routes.find(r=>r.route_id==='firearms_renewal');
     }
-    if(/firearm|gun licence|firearms/.test(q) && /non.?resident|outside ireland|living abroad|resident outside/.test(q)){
+    if(/firearm|gun licence|firearms/.test(q) && /non.?resident|outside ireland|living abroad|live abroad|resident outside/.test(q)){
       return state.routes.find(r=>r.route_id==='firearms_nonresident');
     }
 
@@ -319,12 +319,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       return state.routes.find(r=>r.route_id==='fixed_charge_notice_review');
     }
 
-    const fiosruReviewFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review|fiosr.?u.*inadmissible.*review|review.*fiosr.?u.*inadmissible)/.test(q);
+    const fiosruDiscontinuanceFirst=/(fiosr.?u.*(?:discontinued|stopped).*review|review.*fiosr.?u.*(?:discontinued|stopped)|(?:discontinued|stopped).*fiosr.?u.*review)/.test(q);
+    if(fiosruDiscontinuanceFirst) return state.routes.find(r=>r.route_id==='fiosru_review_discontinuance');
+    const fiosruReviewFirst=/(fiosr.?u.*inadmissible.*review|review.*fiosr.?u.*inadmissible)/.test(q);
     if(fiosruReviewFirst) return state.routes.find(r=>r.route_id==='fiosru_review');
 
     // Explicit prosecution decisions are post-decision routes and must outrank
     // the broad victim-support matcher below.
-    if(/(?:received|got|was notified of|challenge|review|appeal).*(?:decision not to prosecute|prosecution decision)|(?:decision not to prosecute|prosecution decision).*(?:received|got|notified|challenge|review|appeal)/.test(q)){
+    if(/(?:received|got|was notified of).*(?:decision not to prosecute|prosecution decision)|(?:decision not to prosecute|prosecution decision).*(?:received|got|notified|challenge|review|appeal)/.test(q)){
       return state.routes.find(r=>r.route_id==='prosecution_decision_review');
     }
 
