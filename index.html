@@ -381,7 +381,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     if(!route){
       out.hidden=false;
       out.innerHTML='<strong>We need a little more information.</strong><p>We could not safely identify one official route from that description.</p><p><small>Use the official links in More information, or contact your local Garda station for non-emergency help.</small></p>';
-      const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n    out.scrollIntoView({behavior:reduced?'auto':'smooth',block:'nearest'});
+      const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      out.scrollIntoView({behavior:reduced?'auto':'smooth',block:'nearest'});
       return;
     }
     const info=route.official_info_url;
