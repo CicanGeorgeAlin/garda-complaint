@@ -415,7 +415,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       secondary+
       (details.length?'<details class="route-details"><summary>Important details</summary>'+details.join('')+'<p><small>'+escapeHtml(statusText)+'</small></p></details>':'<p class="route-status"><small>'+escapeHtml(statusText)+'</small></p>')+
       (!safeInfo&&!safeRoute?'<p><small>The official destination could not be safely opened from this page. Please use the official service links below.</small></p>':'')+
-      '<p class="route-disclaimer"><small>This site identifies a likely official route. It does not submit anything for you.</small></p>';
+      '<p class="route-disclaimer"><small>Independent guide only. This site does not submit anything for you.</small></p>';
     const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     out.scrollIntoView({behavior:reduced?'auto':'smooth',block:'nearest'});
   }
