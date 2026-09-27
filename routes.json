@@ -250,7 +250,8 @@
       "evidence_required": "Signed written request and acceptable proof of identity; additional authority/consent documentation may be needed for representative or third-party requests.",
       "review_or_appeal": "If dissatisfied with the response or handling, the applicable data-protection complaint/rights route may include the Data Protection Commission; the specific response should be reviewed before selecting an escalation.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "foi",
@@ -283,7 +284,8 @@
       "evidence_required": "Written request with sufficient particulars to identify the records sought; state that the request is made under the Freedom of Information Act and give a preferred access format where applicable.",
       "review_or_appeal": "If dissatisfied with an FOI decision, internal review and then Information Commissioner review may be available, subject to the applicable FOI rules and time limits.",
       "verification_status": "verified_current_with_conflict",
-      "source_conflict": true
+      "source_conflict": true,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "aie",
@@ -315,7 +317,8 @@
       "evidence_required": "Written/electronic request with contact details, sufficient environmental-information particulars, and preferred form/manner of access.",
       "review_or_appeal": "Internal review and an appeal to the Commissioner for Environmental Information may be available under the AIE Regulations.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "police_certificate",
@@ -378,7 +381,8 @@
       "evidence_required": "Proof of identity is required; the registered organisation initiates the vetting process and the applicant completes the invitation/application steps.",
       "review_or_appeal": "For application problems, contact the registered organisation's Liaison Person; applicants do not obtain Garda vetting forms directly from the National Vetting Bureau.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "national_age_card",
@@ -409,7 +413,8 @@
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "unclaimed_property",
@@ -439,7 +444,8 @@
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "fixed_charge_notice_review",
@@ -472,7 +478,8 @@
       "contact": "Fixed Charge Processing Office, Parnell Street, Thurles, Co. Tipperary, E41 WV84; npo@garda.ie; 0818 50 60 80.",
       "review_or_appeal": "Cancellation is a Garda review process, not a guarantee of cancellation. If the notice is not cancelled and the matter proceeds, the relevant court process applies.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "prosecution_decision_review",
@@ -503,7 +510,8 @@
       "source_verified": "Official Garda Information on Prosecution page and Victims Charter re-checked 2026-09-26",
       "verified_on": "2026-09-26",
       "verification_status": "verified_current_with_conflict",
-      "source_conflict": true
+      "source_conflict": true,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "abnormal_loads",
@@ -695,7 +703,8 @@
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "youth_awards",
@@ -723,7 +732,8 @@
       "evidence_required": "Use the current official service instructions and provide the identification, consent, nomination or property details requested by that service.",
       "review_or_appeal": "Any review or challenge depends on the specific service and decision-maker; this route does not imply a generic appeal.",
       "verification_status": "verified_current",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "public_cctv_institutional",
@@ -749,7 +759,8 @@
       "guidance_basis": "Official Relevant local authority / Garda institutional process guidance/source linked in this route.",
       "verification_status": "verified_current",
       "verified_on": "2026-09-26",
-      "source_conflict": false
+      "source_conflict": false,
+      "emergency_rule": "Emergency, immediate danger or serious injury risk overrides this service route; use 999/112."
     },
     {
       "route_id": "fiosru_review",
