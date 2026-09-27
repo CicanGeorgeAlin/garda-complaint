@@ -190,7 +190,7 @@ The two previously research-required records, `firearms_nonresident` and `fiosru
 
 ## Verification-date integrity note — 26 Sep 2026
 
-The registry contains 41 unique routes and 32 populated `verified_on` fields. Twenty-six populated route dates remain `2026-09-24`, while six are `2026-09-26`, reflecting the most recent route-level verification for those records; the 26 Sep audit date does not relabel routes that were not substantively re-verified. The aggregate audit date therefore does not mean every route was substantively re-verified on the same day.
+The registry contains 41 unique routes and 33 populated `verified_on` fields. Twenty-six populated route dates remain `2026-09-24`, while seven are `2026-09-26`, reflecting the most recent route-level verification for those records; eight routes intentionally have no route-level `verified_on` value because their source verification is documented at the service/inventory level. The 26 Sep audit date does not relabel routes that were not substantively re-verified. The aggregate audit date therefore does not mean every route was substantively re-verified on the same day.
 
 The eight routes with a 26 Sep route-level verification date are the routes directly rechecked during the latest audit work. Future maintenance should update `verified_on` only when the underlying source has actually been rechecked.
 
