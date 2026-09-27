@@ -1530,3 +1530,20 @@ Negative invariants:
 - discontinuance must remain distinct from the broader Fiosrú post-investigation route;
 - non-resident firearm wording must outrank the generic firearm application route;
 - requests for the user's own Garda records must remain on the personal-data path.
+
+
+## Accessibility, confidentiality and Fiosrú lifecycle correction — 27 Sep 2026
+
+| Input | Expected route |
+|---|---|
+| “I want to complain about a Garda confidentially” | unresolved |
+| “I want my personal data under GDPR” | personal_data_f20 |
+| “I need information about my ongoing Fiosrú investigation” | fiosru_victim_information |
+| “Fiosrú is investigating my complaint and I want information” | fiosru_victim_information |
+| “Fiosrú finished my investigation and I want information” | fiosru_post_investigation |
+| “I want to report a crime anonymously” | garda_confidential |
+
+Negative invariants:
+- confidentiality must not turn a Garda-personnel complaint into a Garda Confidential information route;
+- GDPR/data-protection wording concerning the user's own data must reach personal-data access;
+- ongoing Fiosrú investigation information must remain distinct from completed-investigation information.
