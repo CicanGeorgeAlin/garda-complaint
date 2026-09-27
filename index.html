@@ -213,7 +213,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       && !/(?:danger to life|immediate danger|immediate threat(?: or)? risk of violence|immediate threat of violence|risk of violence|risk of serious injury|serious assault|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
     if(emergencySms) return state.routes.find(r=>r.route_id==='emergency_sms_112');
 
-    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text|text message|services?\s+by\s+(?:sms|text)))|danger to life|immediate danger|risk of serious injury|serious assault|seriously assaulted|being assaulted|immediate threat of violence|crime in progress|offender still (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q);
+    const emergency=/(?:\bemergency\b(?!\s*(?:sms|text|text message|services?\s+by\s+(?:sms|text)))(?!\s+report)|danger to life|immediate danger|risk of serious injury|serious assault|seriously assaulted|being assaulted|immediate threat of violence|crime in progress|offender(?: still)? (?:at|near) the scene|someone is in danger|person is in danger|life[- ]threatening)/.test(q) && !/\bnon[- ]emergency\b/.test(q);
     if(emergency) return state.routes.find(r=>r.route_id==='emergency_999_112');
 
     // Crime screening follows the current Garda online-reporting exclusions.
@@ -234,7 +234,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     if(/(?:found property|found .*property|found (?:a )?stolen (?:item|property)|property (?:was|has been) found).*taxi|property.*taxi.*psv|found.*psv|taxi.*found property/.test(q)){
       return state.routes.find(r=>r.route_id==='property_found_taxis_psvs');
     }
-    if(/property (?:is|was|held|has been held) by garda(?:i)?|property.*being held.*garda(?:i)?|property.*garda(?:i)? possession|garda(?:i)?.*holding .*property|property garda(?:i)?.*holding/.test(q)){
+    if(/property (?:is|was|held|has been held) by garda(?:i)?|property.*being held.*garda(?:i)?|property.*garda(?:i)? possession|garda(?:i)?.*holding .*property|property garda(?:i)?.*holding|garda(?:i)?.*(?:have|has|is holding|holds).*property/.test(q)){
       return state.routes.find(r=>r.route_id==='property_garda_possession');
     }
 
@@ -279,7 +279,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A request for CCTV showing the requester, or Garda records/information
     // about the requester, concerns personal data rather than the institutional
     // public-CCTV route.
-    if(/(?:gdpr|data protection).*(?:my|personal).*data|(?:my|personal).*data.*(?:gdpr|data protection)|(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)|(?:information|records).*(?:my|me).*(?:garda|held by garda)|(?:garda).*(?:records|information).*(?:my|me)/.test(q)){
+    if(/(?:access|see|obtain|get).*(?:my|own).*(?:garda )?(?:records|data|information)|(?:garda|gardai).*(?:records|information).*(?:about me|on me)|(?:gdpr|data protection).*(?:my|personal).*data|(?:my|personal).*data.*(?:gdpr|data protection)|(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)|(?:information|records).*(?:my|me).*(?:garda|held by garda)|(?:garda).*(?:records|information).*(?:my|me)/.test(q)){
       return state.routes.find(r=>r.route_id==='personal_data_f20');
     }
 
@@ -355,7 +355,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 
     // Support-after-incident wording is not a reporting instruction. Keep it on
     // victim support rather than the Traffic Watch reporting route.
-    if(/(?:support|help).*(?:traffic|road) incident|(?:traffic|road) incident.*(?:support|help)/.test(q) && !/(?:report|reporting|dangerous driver|dangerous driving|traffic watch)/.test(q)){
+    if(/(?:support|help).*(?:traffic|road)(?: traffic)? incident|(?:traffic|road) incident.*(?:support|help)|(?:support|help).*collision|collision.*(?:support|help)/.test(q) && !/(?:report|reporting|dangerous driver|dangerous driving|traffic watch)/.test(q)){
       return state.routes.find(r=>r.route_id==='victim_services');
     }
 
@@ -378,7 +378,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       // before generic victim-support language. Keep bare support-after-incident
       // wording broad enough for victim services rather than assuming a report.
       ['(?:report|reporting).*(?:traffic|road|driver|driving)|dangerous driver|dangerous driving|traffic watch|road traffic collision|traffic incident report|road traffic incident report','traffic_watch'],
-      ['crime victim|victim support|support after crime|victim of crime','victim_services'],
+      ['crime victim|victim support|support after crime|victim of crime|help after (?:a )?crime','victim_services'],
       ['(?:correct|rectify|amend|understand).*personal (?:information|data)|personal (?:information|data).*(?:correct|rectify|amend|understand)','data_access_router'],
       ['personal data.*(?:about|held about) me|data garda hold.*me|my personal records|my garda personal records|my garda data|garda.*data.*about me|gdpr.*(?:my|personal) data','personal_data_f20'],
       ['environmental information|environmental data|environmental records|pollution information|pollution records|pollution data|pollution.*(?:information|records|data)|information.*pollution|records.*pollution|data.*pollution','aie'],
@@ -387,7 +387,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       ['public collection|collection permit','collection_permit'],
       ['gaming permit|permit for gaming|lottery permit|gaming licence','gaming_permit'],
       ['public cctv|public CCTV|camera in my area|public camera|cctv footage.*public|request.*public cctv','public_cctv_institutional'],
-      ['check.*(?:recovered|unclaimed).*property.*(?:mine|belong)|recovered property.*(?:mine|belong)|unclaimed property.*(?:mine|belong)|property recovered by garda.*(?:mine|belong)','unclaimed_property'],
+      ['check.*(?:recovered|unclaimed).*property.*(?:mine|belong)|recovered property.*(?:mine|belong)|unclaimed property|property recovered by garda.*(?:mine|belong)','unclaimed_property'],
       ['property found|found property|lost property|recovered property|property.*found','unclaimed_property'],
       ['emergency sms|emergency text|emergency services by sms|emergency services by text|sms 112|text 112','emergency_sms_112'],
       ['confidential information|confidential report|confidentially|remain confidential|anonymous information|anonymous report|report anonymously|give information anonymously|give information confidentially','garda_confidential'],
@@ -403,7 +403,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       ['hate crime|hate incident','hate_crime'],
       ['report.*crime online|online crime report|online reporting.*crime|crime.*online form','crime_online_router'],
       ['report (a )?(crime|incident)|want to report (a )?(crime|incident)','crime_general'],
-      ['station|local garda|contact my station','station_directory'],
+      ['where to report|where can i report|find my garda station|station|local garda|contact my station','station_directory'],
     ];    for(const [pattern,id] of tests) if(new RegExp(pattern).test(q)) return state.routes.find(r=>r.route_id===id);
     return null;
   }
