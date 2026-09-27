@@ -279,13 +279,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A request for CCTV showing the requester, or Garda records/information
     // about the requester, concerns personal data rather than the institutional
     // public-CCTV route.
-    if(/(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)|(?:information|records).*(?:my|me).*(?:garda|held by garda)|(?:garda).*(?:records|information).*(?:my|me)/.test(q)){
+    if(/(?:gdpr|data protection).*(?:my|personal).*data|(?:my|personal).*data.*(?:gdpr|data protection)|(?:cctv|camera|footage).*(?:of me|showing me|shows me|my image|my personal data)|(?:my personal data|my records|records).*(?:from|held by|held with|about).*(?:garda|cctv)|(?:information|data).*(?:garda|cctv).*(?:about me|on me)|garda.*(?:records|information).*(?:about me|on me)|(?:information|records).*(?:my|me).*(?:garda|held by garda)|(?:garda).*(?:records|information).*(?:my|me)/.test(q)){
       return state.routes.find(r=>r.route_id==='personal_data_f20');
     }
 
+    // Confidentiality is a reporting-information route, not a substitute for a
+    // Garda-personnel complaint. Keep explicit complaint language unresolved unless
+    // a dedicated confidential information request is actually described.
+    if(/(?:complain|complaint).*(?:garda|guard|garda personnel).*(?:anonymously|anonymous|confidentially|confidential)|(?:anonymously|anonymous|confidentially|confidential).*(?:complain|complaint).*(?:garda|guard|garda personnel)/.test(q)){
+      return null;
+    }
     // Explicit anonymity/confidentiality requests must not fall through to
-    // ordinary crime reporting. Garda guidance states that crime information can
-    // be provided without giving a name through the Garda Confidential line.
+    // ordinary crime reporting.
     if(/(?:report|information|tell|provide).*(?:anonymously|anonymous|confidentially|confidential)|(?:anonymously|anonymous|confidentially|confidential).*(?:report|information|tell|provide)/.test(q)){
       return state.routes.find(r=>r.route_id==='garda_confidential');
     }
@@ -333,6 +338,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     // A completed Fiosrú decision is outcome-dependent. If the citizen has a
     // decision but has not identified inadmissibility/discontinuance, keep them
     // on the post-investigation information path rather than guessing a review.
+    if(/fiosr.?u/.test(q) && /(?:investigat|complaint)/.test(q) && /(?:ongoing|investigating|under investigation|current)/.test(q) && /(?:information|update|updates|developments|progress)/.test(q)){
+      return state.routes.find(r=>r.route_id==='fiosru_victim_information');
+    }
     if(/fiosr.?u/.test(q) && /(?:decision|outcome|finished|completed|closed)/.test(q) && /(?:review|appeal|challenge|information|what happens next)/.test(q)){
       return state.routes.find(r=>r.route_id==='fiosru_post_investigation');
     }
