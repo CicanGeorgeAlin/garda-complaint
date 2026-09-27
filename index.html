@@ -478,6 +478,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
         if(!heading || section.dataset.compactWrapped) return;
         const details=document.createElement('details');
         details.className='compact-details';
+        if(section.id) details.id=section.id;
         if(index===0) details.open=false;
         const summary=document.createElement('summary');
         summary.textContent=heading.textContent.replace(/^\S+\s*/,'').trim();
