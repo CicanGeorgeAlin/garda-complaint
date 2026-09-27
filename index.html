@@ -423,7 +423,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const b=byId('route-engine-go'),i=byId('route-question');
     if(!b||!i)return;
     b.addEventListener('click',()=>show(choose()));
-    i.addEventListener('keydown',e=>{if(e.key==='Enter')show(choose())});
+    i.addEventListener('keydown',e=>{if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();show(choose())}});
     const st=byId('route-engine-status');if(st)st.textContent=state.routes.length+' official routes loaded.';
   }
   // Compact-first presentation: put the route finder immediately after the emergency notice,
