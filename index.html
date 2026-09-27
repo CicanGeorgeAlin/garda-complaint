@@ -25,21 +25,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .button,.card a{min-height:44px;align-items:center}.button{display:flex;justify-content:center}.card a{display:inline-flex}
 @media (max-width:560px){main{padding-left:12px;padding-right:12px}.grid{grid-template-columns:1fr}.notice{padding:18px}.button{width:100%}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.lead{max-width:700px;margin:0 auto 8px}.route-lead{font-size:clamp(23px,6vw,32px);letter-spacing:-.025em}.section{margin-top:26px}.section>h2{font-size:22px}.compact-details{border:1px solid var(--line);border-radius:16px;margin:12px 0;background:#0d0d0d}.compact-details summary{cursor:pointer;padding:16px;font-weight:750;font-size:17px}.compact-details .details-body{padding:0 16px 16px}.compact-details .details-body .section{margin-top:12px}.route-engine-main{margin:20px 0 8px!important}.route-engine-main h2{font-size:24px}.route-engine-main p{margin-top:6px}.route-engine-main input{font-size:16px!important}.route-engine-main .button{margin-top:12px}.quick-note{color:#aaa;font-size:13px;text-align:center;margin:8px auto 0}.hidden-duplicate{display:none!important}@media(max-width:560px){header{padding-top:22px}.eyebrow{letter-spacing:.16em}.subtitle{font-size:16px}.notice{margin:16px 0}.section{margin-top:20px}}\n</style>
+.author{margin:2px 0 8px;color:#fff;font-size:12px;font-weight:800;letter-spacing:.22em}.lead{max-width:700px;margin:0 auto 8px}.route-lead{font-size:clamp(23px,6vw,32px);letter-spacing:-.025em}.section{margin-top:26px}.section>h2{font-size:22px}.compact-details{border:1px solid var(--line);border-radius:16px;margin:12px 0;background:#0d0d0d}.compact-details summary{cursor:pointer;padding:16px;font-weight:750;font-size:17px}.compact-details .details-body{padding:0 16px 16px}.compact-details .details-body .section{margin-top:12px}.route-engine-main{margin:20px 0 8px!important}.route-engine-main h2{font-size:24px}.route-engine-main p{margin-top:6px}.route-engine-main input{font-size:16px!important}.route-engine-main .button{margin-top:12px}.quick-note{color:#aaa;font-size:13px;text-align:center;margin:8px auto 0}.hidden-duplicate{display:none!important}@media(max-width:560px){header{padding-top:22px}.eyebrow{letter-spacing:.16em}.subtitle{font-size:16px}.notice{margin:16px 0}.section{margin-top:20px}}\n</style>
 </head>
 <body>
 <main>
 <header>
 <div class="eyebrow">Independent citizen guide · Dublin · Republic of Ireland</div>
 <h1>GARDA<br>CITIZEN ACCESS</h1>
+<p class="author">CICAN GEORGE ALIN</p>
 <p class="subtitle">Tell us what you need. We will help you find the right official route.</p>
 </header>
 
 <div id="emergency"></div><section class="notice" aria-label="Emergency">
-<h2>🚨 Is someone in immediate danger?</h2>
-<p>If there is danger to life, serious injury, a crime in progress/about to happen, or an offender still at or just left the scene, use <strong>999 or 112</strong>.</p>
+<h2>🚨 Emergency?</h2>
+<p>If someone is in immediate danger, there is serious injury, or a crime is happening now, call <strong>999 or 112</strong>.</p>
 <a class="button" href="tel:112">CALL 112</a>
-<p class="small" style="margin-top:10px">This website is not an emergency service.</p>
+<p class="small" style="margin-top:10px">For emergencies only. This website is not an emergency service.</p>
 </section>
 
 <section class="section" id="start">
@@ -157,16 +158,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 <p><a href="https://www.irishstatutebook.ie/eli/2024/act/1/enacted/en/html" target="_blank" rel="noopener" style="color:#fff">Irish Statute Book →</a></p>
 <p><a href="https://www.fiosru.ie/" target="_blank" rel="noopener" style="color:#fff">Fiosrú →</a> · <a href="https://www.garda.ie/en/about-us/online-services/" target="_blank" rel="noopener" style="color:#fff">Garda Online Services →</a></p>
 <p class="small">Legal and operational information can change. Each route is being checked against primary legislation and current official Garda/Fiosrú sources before it is treated as verified. Current operational pages may change without notice.</p>
-<p class="small">Independent citizen guide · Dublin first · Republic of Ireland framework.</p>
+<p class="small"><strong>CICAN GEORGE ALIN</strong> · Independent citizen guide · Dublin first · Republic of Ireland framework.</p>
 </footer>
 </main>
 
 <section id="route-engine" class="notice">
-  <h2>What do you need help with?</h2>
-  <p class="quick-note">Write it in your own words. We only use this to identify the likely official route.</p>
+  <h2>What do you need?</h2>
+  <p class="quick-note">Just describe it in your own words.</p>
   <label for="route-question" style="display:block;margin:14px 0 7px;font-weight:700">What happened, or what do you need?</label>
   <input id="route-question" type="text" placeholder="Example: I want to complain about a Garda" style="width:100%;padding:14px;border-radius:12px;border:1px solid #444;background:#090909;color:#fff;font:inherit" autocomplete="off" aria-describedby="route-engine-help">
-  <p id="route-engine-help" style="color:#aaa;margin:8px 0 0;font-size:.92em">Example: “I want to report a stolen car” or “I need a Garda Police Certificate”. Do not enter sensitive personal details.</p>
+  <p id="route-engine-help" style="color:#aaa;margin:8px 0 0;font-size:.92em">Example: “I want to report a stolen car” or “I need a Garda Police Certificate”.<br>Do not enter sensitive personal details.</p>
   <button id="route-engine-go" class="button" type="button" style="margin-top:12px">Find my official route</button>
   <p id="route-engine-status" role="status" aria-live="polite" style="color:#999;margin:10px 0 0">Loading official route directory…</p>
   <div id="route-engine-result" class="notice" hidden aria-live="polite" aria-atomic="true" style="margin-bottom:0"></div>
